@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html data-html-server-rendered="true" lang="en" data-vue-tag="%7B%22lang%22:%7B%22ssr%22:%22en%22%7D%7D">
+  <head>
+    <title>Use Video and Google Apps in your Classroom like a Pro! - Gridsome</title><meta name="gridsome:hash" content="6d1e7dd52e8c17cf4930f349c6afc1a78b2e1c5e"><meta data-vue-tag="ssr" charset="utf-8"><meta data-vue-tag="ssr" name="generator" content="Gridsome v0.7.12"><meta data-vue-tag="ssr" data-key="viewport" name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta data-vue-tag="ssr" data-key="format-detection" name="format-detection" content="telephone=no"><link data-vue-tag="ssr" rel="icon" href="data:,"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="16x16" href="/site/assets/static/favicon.ce0531f.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="32x32" href="/site/assets/static/favicon.ac8d93a.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="96x96" href="/site/assets/static/favicon.b9532cc.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="76x76" href="/site/assets/static/favicon.f22e9f3.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="152x152" href="/site/assets/static/favicon.62d22cb.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="120x120" href="/site/assets/static/favicon.1539b60.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="167x167" href="/site/assets/static/favicon.dc0cdc5.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="180x180" href="/site/assets/static/favicon.7b22250.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"><link data-vue-tag="ssr" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css"><link rel="preload" href="/site/assets/css/0.styles.dded6410.css" as="style"><link rel="preload" href="/site/assets/js/app.e5c95575.js" as="script"><link rel="preload" href="/site/assets/js/page--src--templates--course-template-vue.a9c4e657.js" as="script"><link rel="prefetch" href="/site/assets/js/page--node-modules--gridsome--app--pages--404-vue.8ed2c588.js"><link rel="prefetch" href="/site/assets/js/page--src--pages--about-vue.d8fdab17.js"><link rel="prefetch" href="/site/assets/js/page--src--templates--index-template-vue.6cecc577.js"><link rel="prefetch" href="/site/assets/js/page--src--templates--tag-vue.c6b527ba.js"><link rel="prefetch" href="/site/assets/js/vendors~page--src--templates--course-template-vue~page--src--templates--index-template-vue.4ec5035c.js"><link rel="stylesheet" href="/site/assets/css/0.styles.dded6410.css"><style data-vue-tag="vuetify" type="text/css" id="vuetify-theme-stylesheet" nonce="undefined">.v-application a { color: #1976d2; }
+.v-application .primary {
+  background-color: #1976d2 !important;
+  border-color: #1976d2 !important;
+}
+.v-application .primary--text {
+  color: #1976d2 !important;
+  caret-color: #1976d2 !important;
+}
+.v-application .primary.lighten-5 {
+  background-color: #c7fdff !important;
+  border-color: #c7fdff !important;
+}
+.v-application .primary--text.text--lighten-5 {
+  color: #c7fdff !important;
+  caret-color: #c7fdff !important;
+}
+.v-application .primary.lighten-4 {
+  background-color: #a8e0ff !important;
+  border-color: #a8e0ff !important;
+}
+.v-application .primary--text.text--lighten-4 {
+  color: #a8e0ff !important;
+  caret-color: #a8e0ff !important;
+}
+.v-application .primary.lighten-3 {
+  background-color: #8ac5ff !important;
+  border-color: #8ac5ff !important;
+}
+.v-application .primary--text.text--lighten-3 {
+  color: #8ac5ff !important;
+  caret-color: #8ac5ff !important;
+}
+.v-application .primary.lighten-2 {
+  background-color: #6aaaff !important;
+  border-color: #6aaaff !important;
+}
+.v-application .primary--text.text--lighten-2 {
+  color: #6aaaff !important;
+  caret-color: #6aaaff !important;
+}
+.v-application .primary.lighten-1 {
+  background-color: #488fef !important;
+  border-color: #488fef !important;
+}
+.v-application .primary--text.text--lighten-1 {
+  color: #488fef !important;
+  caret-color: #488fef !important;
+}
+.v-application .primary.darken-1 {
+  background-color: #005eb6 !important;
+  border-color: #005eb6 !important;
+}
+.v-application .primary--text.text--darken-1 {
+  color: #005eb6 !important;
+  caret-color: #005eb6 !important;
+}
+.v-application .primary.darken-2 {
+  background-color: #00479b !important;
+  border-color: #00479b !important;
+}
+.v-application .primary--text.text--darken-2 {
+  color: #00479b !important;
+  caret-color: #00479b !important;
+}
+.v-application .primary.darken-3 {
+  background-color: #003180 !important;
+  border-color: #003180 !important;
+}
+.v-application .primary--text.text--darken-3 {
+  color: #003180 !important;
+  caret-color: #003180 !important;
+}
+.v-application .primary.darken-4 {
+  background-color: #001e67 !important;
+  border-color: #001e67 !important;
+}
+.v-application .primary--text.text--darken-4 {
+  color: #001e67 !important;
+  caret-color: #001e67 !important;
+}
+.v-application .secondary {
+  background-color: #424242 !important;
+  border-color: #424242 !important;
+}
+.v-application .secondary--text {
+  color: #424242 !important;
+  caret-color: #424242 !important;
+}
+.v-application .secondary.lighten-5 {
+  background-color: #c1c1c1 !important;
+  border-color: #c1c1c1 !important;
+}
+.v-application .secondary--text.text--lighten-5 {
+  color: #c1c1c1 !important;
+  caret-color: #c1c1c1 !important;
+}
+.v-application .secondary.lighten-4 {
+  background-color: #a6a6a6 !important;
+  border-color: #a6a6a6 !important;
+}
+.v-application .secondary--text.text--lighten-4 {
+  color: #a6a6a6 !important;
+  caret-color: #a6a6a6 !important;
+}
+.v-application .secondary.lighten-3 {
+  background-color: #8b8b8b !important;
+  border-color: #8b8b8b !important;
+}
+.v-application .secondary--text.text--lighten-3 {
+  color: #8b8b8b !important;
+  caret-color: #8b8b8b !important;
+}
+.v-application .secondary.lighten-2 {
+  background-color: #727272 !important;
+  border-color: #727272 !important;
+}
+.v-application .secondary--text.text--lighten-2 {
+  color: #727272 !important;
+  caret-color: #727272 !important;
+}
+.v-application .secondary.lighten-1 {
+  background-color: #595959 !important;
+  border-color: #595959 !important;
+}
+.v-application .secondary--text.text--lighten-1 {
+  color: #595959 !important;
+  caret-color: #595959 !important;
+}
+.v-application .secondary.darken-1 {
+  background-color: #2c2c2c !important;
+  border-color: #2c2c2c !important;
+}
+.v-application .secondary--text.text--darken-1 {
+  color: #2c2c2c !important;
+  caret-color: #2c2c2c !important;
+}
+.v-application .secondary.darken-2 {
+  background-color: #171717 !important;
+  border-color: #171717 !important;
+}
+.v-application .secondary--text.text--darken-2 {
+  color: #171717 !important;
+  caret-color: #171717 !important;
+}
+.v-application .secondary.darken-3 {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+.v-application .secondary--text.text--darken-3 {
+  color: #000000 !important;
+  caret-color: #000000 !important;
+}
+.v-application .secondary.darken-4 {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+.v-application .secondary--text.text--darken-4 {
+  color: #000000 !important;
+  caret-color: #000000 !important;
+}
+.v-application .accent {
+  background-color: #82b1ff !important;
+  border-color: #82b1ff !important;
+}
+.v-application .accent--text {
+  color: #82b1ff !important;
+  caret-color: #82b1ff !important;
+}
+.v-application .accent.lighten-5 {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+.v-application .accent--text.text--lighten-5 {
+  color: #ffffff !important;
+  caret-color: #ffffff !important;
+}
+.v-application .accent.lighten-4 {
+  background-color: #f8ffff !important;
+  border-color: #f8ffff !important;
+}
+.v-application .accent--text.text--lighten-4 {
+  color: #f8ffff !important;
+  caret-color: #f8ffff !important;
+}
+.v-application .accent.lighten-3 {
+  background-color: #daffff !important;
+  border-color: #daffff !important;
+}
+.v-application .accent--text.text--lighten-3 {
+  color: #daffff !important;
+  caret-color: #daffff !important;
+}
+.v-application .accent.lighten-2 {
+  background-color: #bce8ff !important;
+  border-color: #bce8ff !important;
+}
+.v-application .accent--text.text--lighten-2 {
+  color: #bce8ff !important;
+  caret-color: #bce8ff !important;
+}
+.v-application .accent.lighten-1 {
+  background-color: #9fccff !important;
+  border-color: #9fccff !important;
+}
+.v-application .accent--text.text--lighten-1 {
+  color: #9fccff !important;
+  caret-color: #9fccff !important;
+}
+.v-application .accent.darken-1 {
+  background-color: #6596e2 !important;
+  border-color: #6596e2 !important;
+}
+.v-application .accent--text.text--darken-1 {
+  color: #6596e2 !important;
+  caret-color: #6596e2 !important;
+}
+.v-application .accent.darken-2 {
+  background-color: #467dc6 !important;
+  border-color: #467dc6 !important;
+}
+.v-application .accent--text.text--darken-2 {
+  color: #467dc6 !important;
+  caret-color: #467dc6 !important;
+}
+.v-application .accent.darken-3 {
+  background-color: #2364aa !important;
+  border-color: #2364aa !important;
+}
+.v-application .accent--text.text--darken-3 {
+  color: #2364aa !important;
+  caret-color: #2364aa !important;
+}
+.v-application .accent.darken-4 {
+  background-color: #004c90 !important;
+  border-color: #004c90 !important;
+}
+.v-application .accent--text.text--darken-4 {
+  color: #004c90 !important;
+  caret-color: #004c90 !important;
+}
+.v-application .error {
+  background-color: #ff5252 !important;
+  border-color: #ff5252 !important;
+}
+.v-application .error--text {
+  color: #ff5252 !important;
+  caret-color: #ff5252 !important;
+}
+.v-application .error.lighten-5 {
+  background-color: #ffe4d5 !important;
+  border-color: #ffe4d5 !important;
+}
+.v-application .error--text.text--lighten-5 {
+  color: #ffe4d5 !important;
+  caret-color: #ffe4d5 !important;
+}
+.v-application .error.lighten-4 {
+  background-color: #ffc6b9 !important;
+  border-color: #ffc6b9 !important;
+}
+.v-application .error--text.text--lighten-4 {
+  color: #ffc6b9 !important;
+  caret-color: #ffc6b9 !important;
+}
+.v-application .error.lighten-3 {
+  background-color: #ffa99e !important;
+  border-color: #ffa99e !important;
+}
+.v-application .error--text.text--lighten-3 {
+  color: #ffa99e !important;
+  caret-color: #ffa99e !important;
+}
+.v-application .error.lighten-2 {
+  background-color: #ff8c84 !important;
+  border-color: #ff8c84 !important;
+}
+.v-application .error--text.text--lighten-2 {
+  color: #ff8c84 !important;
+  caret-color: #ff8c84 !important;
+}
+.v-application .error.lighten-1 {
+  background-color: #ff6f6a !important;
+  border-color: #ff6f6a !important;
+}
+.v-application .error--text.text--lighten-1 {
+  color: #ff6f6a !important;
+  caret-color: #ff6f6a !important;
+}
+.v-application .error.darken-1 {
+  background-color: #df323b !important;
+  border-color: #df323b !important;
+}
+.v-application .error--text.text--darken-1 {
+  color: #df323b !important;
+  caret-color: #df323b !important;
+}
+.v-application .error.darken-2 {
+  background-color: #bf0025 !important;
+  border-color: #bf0025 !important;
+}
+.v-application .error--text.text--darken-2 {
+  color: #bf0025 !important;
+  caret-color: #bf0025 !important;
+}
+.v-application .error.darken-3 {
+  background-color: #9f0010 !important;
+  border-color: #9f0010 !important;
+}
+.v-application .error--text.text--darken-3 {
+  color: #9f0010 !important;
+  caret-color: #9f0010 !important;
+}
+.v-application .error.darken-4 {
+  background-color: #800000 !important;
+  border-color: #800000 !important;
+}
+.v-application .error--text.text--darken-4 {
+  color: #800000 !important;
+  caret-color: #800000 !important;
+}
+.v-application .info {
+  background-color: #2196f3 !important;
+  border-color: #2196f3 !important;
+}
+.v-application .info--text {
+  color: #2196f3 !important;
+  caret-color: #2196f3 !important;
+}
+.v-application .info.lighten-5 {
+  background-color: #d4ffff !important;
+  border-color: #d4ffff !important;
+}
+.v-application .info--text.text--lighten-5 {
+  color: #d4ffff !important;
+  caret-color: #d4ffff !important;
+}
+.v-application .info.lighten-4 {
+  background-color: #b5ffff !important;
+  border-color: #b5ffff !important;
+}
+.v-application .info--text.text--lighten-4 {
+  color: #b5ffff !important;
+  caret-color: #b5ffff !important;
+}
+.v-application .info.lighten-3 {
+  background-color: #95e8ff !important;
+  border-color: #95e8ff !important;
+}
+.v-application .info--text.text--lighten-3 {
+  color: #95e8ff !important;
+  caret-color: #95e8ff !important;
+}
+.v-application .info.lighten-2 {
+  background-color: #75ccff !important;
+  border-color: #75ccff !important;
+}
+.v-application .info--text.text--lighten-2 {
+  color: #75ccff !important;
+  caret-color: #75ccff !important;
+}
+.v-application .info.lighten-1 {
+  background-color: #51b0ff !important;
+  border-color: #51b0ff !important;
+}
+.v-application .info--text.text--lighten-1 {
+  color: #51b0ff !important;
+  caret-color: #51b0ff !important;
+}
+.v-application .info.darken-1 {
+  background-color: #007cd6 !important;
+  border-color: #007cd6 !important;
+}
+.v-application .info--text.text--darken-1 {
+  color: #007cd6 !important;
+  caret-color: #007cd6 !important;
+}
+.v-application .info.darken-2 {
+  background-color: #0064ba !important;
+  border-color: #0064ba !important;
+}
+.v-application .info--text.text--darken-2 {
+  color: #0064ba !important;
+  caret-color: #0064ba !important;
+}
+.v-application .info.darken-3 {
+  background-color: #004d9f !important;
+  border-color: #004d9f !important;
+}
+.v-application .info--text.text--darken-3 {
+  color: #004d9f !important;
+  caret-color: #004d9f !important;
+}
+.v-application .info.darken-4 {
+  background-color: #003784 !important;
+  border-color: #003784 !important;
+}
+.v-application .info--text.text--darken-4 {
+  color: #003784 !important;
+  caret-color: #003784 !important;
+}
+.v-application .success {
+  background-color: #4caf50 !important;
+  border-color: #4caf50 !important;
+}
+.v-application .success--text {
+  color: #4caf50 !important;
+  caret-color: #4caf50 !important;
+}
+.v-application .success.lighten-5 {
+  background-color: #dcffd6 !important;
+  border-color: #dcffd6 !important;
+}
+.v-application .success--text.text--lighten-5 {
+  color: #dcffd6 !important;
+  caret-color: #dcffd6 !important;
+}
+.v-application .success.lighten-4 {
+  background-color: #beffba !important;
+  border-color: #beffba !important;
+}
+.v-application .success--text.text--lighten-4 {
+  color: #beffba !important;
+  caret-color: #beffba !important;
+}
+.v-application .success.lighten-3 {
+  background-color: #a2ff9e !important;
+  border-color: #a2ff9e !important;
+}
+.v-application .success--text.text--lighten-3 {
+  color: #a2ff9e !important;
+  caret-color: #a2ff9e !important;
+}
+.v-application .success.lighten-2 {
+  background-color: #85e783 !important;
+  border-color: #85e783 !important;
+}
+.v-application .success--text.text--lighten-2 {
+  color: #85e783 !important;
+  caret-color: #85e783 !important;
+}
+.v-application .success.lighten-1 {
+  background-color: #69cb69 !important;
+  border-color: #69cb69 !important;
+}
+.v-application .success--text.text--lighten-1 {
+  color: #69cb69 !important;
+  caret-color: #69cb69 !important;
+}
+.v-application .success.darken-1 {
+  background-color: #2d9437 !important;
+  border-color: #2d9437 !important;
+}
+.v-application .success--text.text--darken-1 {
+  color: #2d9437 !important;
+  caret-color: #2d9437 !important;
+}
+.v-application .success.darken-2 {
+  background-color: #00791e !important;
+  border-color: #00791e !important;
+}
+.v-application .success--text.text--darken-2 {
+  color: #00791e !important;
+  caret-color: #00791e !important;
+}
+.v-application .success.darken-3 {
+  background-color: #006000 !important;
+  border-color: #006000 !important;
+}
+.v-application .success--text.text--darken-3 {
+  color: #006000 !important;
+  caret-color: #006000 !important;
+}
+.v-application .success.darken-4 {
+  background-color: #004700 !important;
+  border-color: #004700 !important;
+}
+.v-application .success--text.text--darken-4 {
+  color: #004700 !important;
+  caret-color: #004700 !important;
+}
+.v-application .warning {
+  background-color: #fb8c00 !important;
+  border-color: #fb8c00 !important;
+}
+.v-application .warning--text {
+  color: #fb8c00 !important;
+  caret-color: #fb8c00 !important;
+}
+.v-application .warning.lighten-5 {
+  background-color: #ffff9e !important;
+  border-color: #ffff9e !important;
+}
+.v-application .warning--text.text--lighten-5 {
+  color: #ffff9e !important;
+  caret-color: #ffff9e !important;
+}
+.v-application .warning.lighten-4 {
+  background-color: #fffb82 !important;
+  border-color: #fffb82 !important;
+}
+.v-application .warning--text.text--lighten-4 {
+  color: #fffb82 !important;
+  caret-color: #fffb82 !important;
+}
+.v-application .warning.lighten-3 {
+  background-color: #ffdf67 !important;
+  border-color: #ffdf67 !important;
+}
+.v-application .warning--text.text--lighten-3 {
+  color: #ffdf67 !important;
+  caret-color: #ffdf67 !important;
+}
+.v-application .warning.lighten-2 {
+  background-color: #ffc24b !important;
+  border-color: #ffc24b !important;
+}
+.v-application .warning--text.text--lighten-2 {
+  color: #ffc24b !important;
+  caret-color: #ffc24b !important;
+}
+.v-application .warning.lighten-1 {
+  background-color: #ffa72d !important;
+  border-color: #ffa72d !important;
+}
+.v-application .warning--text.text--lighten-1 {
+  color: #ffa72d !important;
+  caret-color: #ffa72d !important;
+}
+.v-application .warning.darken-1 {
+  background-color: #db7200 !important;
+  border-color: #db7200 !important;
+}
+.v-application .warning--text.text--darken-1 {
+  color: #db7200 !important;
+  caret-color: #db7200 !important;
+}
+.v-application .warning.darken-2 {
+  background-color: #bb5900 !important;
+  border-color: #bb5900 !important;
+}
+.v-application .warning--text.text--darken-2 {
+  color: #bb5900 !important;
+  caret-color: #bb5900 !important;
+}
+.v-application .warning.darken-3 {
+  background-color: #9d4000 !important;
+  border-color: #9d4000 !important;
+}
+.v-application .warning--text.text--darken-3 {
+  color: #9d4000 !important;
+  caret-color: #9d4000 !important;
+}
+.v-application .warning.darken-4 {
+  background-color: #802700 !important;
+  border-color: #802700 !important;
+}
+.v-application .warning--text.text--darken-4 {
+  color: #802700 !important;
+  caret-color: #802700 !important;
+}</style><noscript data-vue-tag="ssr"><style>.g-image--loading{display:none;}</style></noscript>
+  </head>
+  <body >
+    <div data-app="true" data-server-rendered="true" id="app" id="inspire" class="v-application v-application--is-ltr theme--light"><div class="v-application--wrap"><header class="gb-toolbar v-sheet v-sheet--tile theme--dark v-toolbar v-toolbar--dense v-app-bar v-app-bar--fixed" style="height:48px;margin-top:0px;transform:translateY(0px);left:0px;right:0px;"><div class="v-toolbar__content" style="height:48px;"><button type="button" class="v-app-bar__nav-icon v-btn v-btn--flat v-btn--icon v-btn--round theme--dark v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-menu theme--dark"></i></span></button><div class="v-toolbar__title ml-0 pl-4" style="width:300px;"><span class="hidden-sm-and-down">skillhub</span></div><div class="spacer"></div><div class="v-input hidden-sm-and-down v-input--hide-details v-input--dense theme--dark v-text-field v-text-field--single-line v-text-field--solo v-text-field--solo-inverted v-text-field--solo-flat v-text-field--enclosed"><div class="v-input__control"><div class="v-input__slot"><div class="v-input__prepend-inner"><div class="v-input__icon v-input__icon--prepend-inner"><i aria-hidden="true" class="v-icon notranslate mdi mdi-magnify theme--dark"></i></div></div><div class="v-text-field__slot"><label for="input-5504" class="v-label theme--dark" style="left:0px;right:auto;position:absolute;">Search</label><input id="input-5504" type="text"></div></div></div></div><button type="button" class="v-btn v-btn--flat v-btn--icon v-btn--round theme--dark v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-apps theme--dark"></i></span></button><button type="button" class="v-btn v-btn--flat v-btn--icon v-btn--round theme--dark v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-bell theme--dark"></i></span></button></div></header><main class="v-content" style="padding-top:14928px;padding-right:0px;padding-bottom:0px;padding-left:0px;"><div class="v-content__wrap"><div class="container container--fluid pa-0"><div class="row no-gutters"><div class="col col-12"><div class="row no-gutters row--dense"><div class="height-30 bg-dark white--text jarallax col"><img src="https://i.udemycdn.com/course/750x422/2749474_065d.jpg" class="jarallax-img opacity-20 g-image"><div class="container mt-8 pa-0"><div class="row mb-12 justify-center"><div dense="" class="col"><p class="display-2 mb-0">Use Video and Google Apps in your Classroom like a Pro!</p><p class="headline mb-0">The Screencastify Genius! course</p><div><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">0 (0)</span></div><a href="https://www.udemy.com/course/use-video-and-google-apps-in-your-classroom-like-a-pro/" class="v-btn v-btn--contained theme--light v-size--default warning"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-share-outline theme--light"></i> Take me there!
+          </span></a></div></div></div></div></div></div></div><div class="row no-gutters"><div class="col col-12"><div class="container mt-4 pl-5"><div class="row mb-12 justify-center"><div dense="" class="col">
+            In this course, you'll learn how to combine video with Google Apps (Google Docs, Sheets, Forms, Keep, and Sites) to supercharge your lessons. We'll start by discussing how video can help make the lesson planning process more collaborative and end with the reflective capability of video for you and your students. In between, we'll talk about creating unique learning experiences that get your students involved as content creators.
+          </div></div></div></div></div><div class="row no-gutters"><div class="col"><div class="container"><div class="headline pa-1 mb-0">#Related</div><div aria-label="Slideshow" class="vueperslides no-shadow vueperslides--fixed-height vueperslides--slide-multiple vueperslides--bullets-outside" style="height:300px;"><!----><div class="vueperslides__inner"><div aria-live="polite" class="vueperslides__parallax-wrapper" style="padding-bottom:25%;"><div class="vueperslides__track"><div class="vueperslides__track-inner" style="transition-duration:0ms;transform:translate3d(0%, 0, 0);will-change:auto;"><!----><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/you-tube-live-for-beginners-fast-track-training-2020" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>YouTube (Live) For Beginners: Fast Track Training 2020</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Learn how to use YouTube (Live) quickly and easily for yourself or business">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">0 (0)</span></div></div></div><!----></div><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/time-management-training-with-outlook" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Time Management Training with Outlook</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Outlook can do WAY more than you use it for. Learn tons of efficient workflow tips, tricks, and tools available.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.3 (326)</span></div></div></div><!----></div><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/adobe-encore-c-s6-tutorial-a-course-for-video-professionals" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Adobe Encore CS6 Tutorial . A Course For Video Professionals</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Learn to create professional DVDs with Interactive Menus, Buttons and Intelligent Navigation.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.6 (39)</span></div></div></div><!----></div><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/access-your-genius-with-richard-wilkins" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Access Your Genius with Richard Wilkins</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Learn how to easily access your Inner Greatness and how to become a genius.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4 (217)</span></div></div></div><!----></div><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/excel-essentials" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Excel Essentials</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Learn Excel the FUN way! By working through exercises along with the video tutorial.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.5 (15)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/create-an-energetic-house-track-with-logic-pro" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Create an energetic House Track with Logic Pro</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Learn how to use Logic Pro to create, mix and master your own house track with this Logic Pro tutorial.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">3.8 (25)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/classroom-management-essentials" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Classroom Management Essentials</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Learn how to manage your classroom and spend more time teaching rather than disciplining">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.4 (68)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/learn-how-to-get-your-first-million-users" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Learn How to Get Your First Million Users</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="This course will teach you how to find all viral elements in your product and then use them to gain millions of users">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">3.2 (14)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/apps-for-librarians-and-educators" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Apps for Librarians &amp; Educators</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Become an expert in the best mobile apps for education and content creation.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4 (15)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/how-to-create-an-awesome-demo-video-for-your-business" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>How to Create an Awesome Demo Video for Your Business</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="You don't need to spend $10K in order to have a professional video produced. Learn to make one yourself the easy way!">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.4 (306)</span></div></div></div><!----></div><!----></div></div></div><!----><!----><!----><!----><!----></div><!----><!----></div></div></div></div></div></div></main></div></div>
+    <script>window.__INITIAL_STATE__={"data":null,"context":{"course":{"id":"37777ec1-3ef1-11ea-9791-1b580a556b4a","vendorId":"2749474","created":"2020-01-24T21:35:08.041Z","updated":"2020-01-01T08:00:00.000Z","title":"Use Video and Google Apps in your Classroom like a Pro!","headline":"The Screencastify Genius! course","description":"In this course, you'll learn how to combine video with Google Apps (Google Docs, Sheets, Forms, Keep, and Sites) to supercharge your lessons. We'll start by discussing how video can help make the lesson planning process more collaborative and end with the reflective capability of video for you and your students. In between, we'll talk about creating unique learning experiences that get your students involved as content creators.","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F2749474_065d.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fuse-video-and-google-apps-in-your-classroom-like-a-pro\u002F","language":"en","tags":["Teaching & Academics","Teacher Training","Video Creation"],"rating":0,"reviews":0,"isFree":true,"matches":["37711626-3ef1-11ea-9791-1b580a556b4a","3779c8b6-3ef1-11ea-9791-1b580a556b4a","37749892-3ef1-11ea-9791-1b580a556b4a","37733901-3ef1-11ea-9791-1b580a556b4a","376a5f61-3ef1-11ea-9791-1b580a556b4a","37733908-3ef1-11ea-9791-1b580a556b4a","376c0d13-3ef1-11ea-9791-1b580a556b4a","3773ae38-3ef1-11ea-9791-1b580a556b4a","376afba0-3ef1-11ea-9791-1b580a556b4a","377582f9-3ef1-11ea-9791-1b580a556b4a"],"slug":"use-video-and-google-apps-in-your-classroom-like-a-pro"},"related":[{"id":"3779c8b6-3ef1-11ea-9791-1b580a556b4a","vendorId":"2742128","created":"2020-01-24T21:35:08.096Z","updated":"2020-01-01T08:00:00.000Z","title":"YouTube (Live) For Beginners: Fast Track Training 2020","headline":"Learn how to use YouTube (Live) quickly and easily for yourself or business","description":"YouTube (Live) For Beginners is a straight to the point, step by step training course to get you started immediately.See the course subjects below:YouTube (Live) For Beginners: Fast Track Training 2020Section 1: Course Welcome & Overview1 - Overview2 - Minimum Equipment Needed for Desktop StreamingSection 2: Account Set Up3 - Equipment Not Required But Good to Have4 - More Equipment Not Required But Good To Have5 - Creating An Account6 - Channel Status and FeaturesSection 3: Setting Up Defaults7 - Setting The Upload Defaults8 - Setting Up the Branding9 - Creating an Associated WebsiteSection 4: Private Vs Unlisted Vs Public10 - Private Vs Unlisted Vs Public11 - Going Live From Your Desktop12 - Using the Events Tab13 - Advanced Info and Settings for Live Streaming14 - Google Hangout Settings15 - Google Hangout Left Margin ToolsSection 5: Start Live Streaming16 - Starting the Hangout for Live17 - Google Slides-Alternative to Using Chat18 - Re-stream For Facebook Live and YouTube Live Simultaneous Streaming19 - Streaming Through MobileSection 6: Conclusion20 - Conclusion","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F2742128_c3ef_3.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fyoutube-live-for-beginners-fast-track-training-2020\u002F","language":"en","tags":["Marketing","Social Media Marketing","YouTube Audience Growth"],"rating":0,"reviews":0,"isFree":false,"matches":["377a64f8-3ef1-11ea-9791-1b580a556b4a","376ea524-3ef1-11ea-9791-1b580a556b4a","37789031-3ef1-11ea-9791-1b580a556b4a","376a5f61-3ef1-11ea-9791-1b580a556b4a","37729cc6-3ef1-11ea-9791-1b580a556b4a","37702bc2-3ef1-11ea-9791-1b580a556b4a","376b97e0-3ef1-11ea-9791-1b580a556b4a","377a64f9-3ef1-11ea-9791-1b580a556b4a","3776e285-3ef1-11ea-9791-1b580a556b4a","376c0d11-3ef1-11ea-9791-1b580a556b4a"],"slug":"you-tube-live-for-beginners-fast-track-training-2020"},{"id":"377582f9-3ef1-11ea-9791-1b580a556b4a","vendorId":"26089","created":"2020-01-24T21:35:07.936Z","updated":"2012-10-01T07:00:00.000Z","title":"Time Management Training with Outlook","headline":"Outlook can do WAY more than you use it for. Learn tons of efficient workflow tips, tricks, and tools available.","description":"Organizing with Outlook will identify key organizational concepts inherent in all time management approaches, and show what Outlook can do to meet your particular needs. From automating the sorting process, to prioritizing your tasks, to using the outlook calendar on a mobile device or your day planner of choice, this course will reveal the most effective tools to incorporate into your current organizational system.","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F26089_7e99_5.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Foutlook-time-management\u002F","language":"en","tags":["Office Productivity","Microsoft","Microsoft Outlook"],"rating":4.3,"reviews":326,"isFree":false,"matches":["3770a0f8-3ef1-11ea-9791-1b580a556b4a","377582f8-3ef1-11ea-9791-1b580a556b4a","3773fc59-3ef1-11ea-9791-1b580a556b4a","377730aa-3ef1-11ea-9791-1b580a556b4a","376be603-3ef1-11ea-9791-1b580a556b4a","3770a0f6-3ef1-11ea-9791-1b580a556b4a","3776e281-3ef1-11ea-9791-1b580a556b4a","37766d51-3ef1-11ea-9791-1b580a556b4a","376bbef1-3ef1-11ea-9791-1b580a556b4a","3770a0f4-3ef1-11ea-9791-1b580a556b4a"],"slug":"time-management-training-with-outlook"},{"id":"37749892-3ef1-11ea-9791-1b580a556b4a","vendorId":"24035","created":"2020-01-24T21:35:07.883Z","updated":"2017-01-01T08:00:00.000Z","title":"Adobe Encore CS6 Tutorial . A Course For Video Professionals","headline":"Learn to create professional DVDs with Interactive Menus, Buttons and Intelligent Navigation.","description":"This Adobe Encore CS6 Tutorial training course teaches you how to create a top quality DVD and Blue-ray discs using this popular software from Adobe. This tutorial is designed for the beginner, and no prior experience is assumed; you will start your learning right from the very beginning! Starting with the basics, the course explains exactly what Encore CS6 is, and what it can do for you. You will explore the workflow of Encore, how to import assets, make menus, and export your finished product. Each step in the workflow is covered in-depth. You will learn how to create and work with timelines, build and edit slideshows, make playlists, add and edit menus as well as creating custom menus and specialized menus. This software tutorial also covers topics such as setting up menu navigation, linking your assets to the menus, and finally, testing and exporting your project to DVD, Blue-ray disc or even a Flash project to play in a web browser. By the completion of this Adobe Encore CS6 tutorial video training course, you will be able to complete your video projects by creating high-quality DVD and Blue-ray discs using Adobe Encore CS6. Working files are included to allow you to learn using the same project files that the author uses in this tutorial.\u003C\u002Fp\u003E","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F24035_19e1_10.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fadobe-encore-cs6\u002F","language":"en","tags":["Design","Design Tools","Adobe Encore"],"rating":4.6,"reviews":39,"isFree":false,"matches":["3773fc50-3ef1-11ea-9791-1b580a556b4a","37733900-3ef1-11ea-9791-1b580a556b4a","3774bfa2-3ef1-11ea-9791-1b580a556b4a","3773fc54-3ef1-11ea-9791-1b580a556b4a","376c5b32-3ef1-11ea-9791-1b580a556b4a","3773d540-3ef1-11ea-9791-1b580a556b4a","376dbac1-3ef1-11ea-9791-1b580a556b4a","376dbac0-3ef1-11ea-9791-1b580a556b4a","376c5b33-3ef1-11ea-9791-1b580a556b4a","376ad491-3ef1-11ea-9791-1b580a556b4a"],"slug":"adobe-encore-c-s6-tutorial-a-course-for-video-professionals"},{"id":"3773ae38-3ef1-11ea-9791-1b580a556b4a","vendorId":"22990","created":"2020-01-24T21:35:07.815Z","updated":"2014-09-01T07:00:00.000Z","title":"Access Your Genius with Richard Wilkins","headline":"Learn how to easily access your Inner Greatness and how to become a genius.","description":" Over 5,600 students currently enrolled. Course updated September 10 2014. WARNING - This course POLARIZES people: You'll either LOVE it or HATE it as the reviews will show you! 5-Star: 'Insightful, Helpful, Practical, Optimistic and Holistic' As for the words I used above, I like the fact that it is easy to understand yet maintains great depth. If you are someone who is suffering from depression or anxiety - whatever it may be, you will likely find this incredibly helpful. If you feel your fine, you'll still find this interesting and hopefully worthwhile. Better yet, not only for you, but for others you may know. All in all, I find the message here, uniquely, and heavily related to the messages to many of the figures I admire. There is much that can be said, but it is for you to experience and come up with a conclusion. I'm sure it will be worth your while. Honestly, I found this message to be a fantastic and important gift. I'm glad it's here free. - Brian 5-Star: Great program to make you think Its a great program that makes you think and see what it is that is really holding you back. No the question is what are you going to do about it after you've completed the course. - Mirko 1-Star: rubbish this guy sounds like a total looney freak with an IQ level of a biscuite... you sure you should be teaching about genius? couldnt handle listening to more than half of the first lecture. - Pouya Interesting huh? So what's in the course? And why does it divide opinion so much? Tom Cassidy asks Richard Wilkins, the founder of the UK's Ministry of Inspiration , to sum up his thoughts on 'Being a Genius v. Accessing Genius'. Richard explains his system that allows ordinary people to access the genius that is available to us all. It explains what it really means to 'be' a genius, and why most people who are thought of as geniuses end up being somewhat disappointing as we find out more about them. It also enables us to deal with all the 'yeah but...' beliefs that our own internal programmings throw up at us, and it allows us to be comfortable doing great things, without having to then live with the epithet 'genius'. In our experience of delivering this message to people, we've found that a lot of people won't like the simplicity of the message, they won't dare to believe that they have the power to access genius themselves and they will resent the ease with which its methods appear to work. You see, if it really IS this simple then it takes away people's excuses for not doing it. And people might not like that very much. Anyway, Take this free “Access Your Genius” course, see what all the fuss is about and learn how to become a genius yourself. the world is waiting... ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F22990_eb4d_4.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Faccess-your-genius\u002F","language":"en","tags":["Personal Development","Personal Transformation","Personal Development"],"rating":4,"reviews":217,"isFree":true,"matches":["37769466-3ef1-11ea-9791-1b580a556b4a","3770ef14-3ef1-11ea-9791-1b580a556b4a","37786929-3ef1-11ea-9791-1b580a556b4a","3770ef16-3ef1-11ea-9791-1b580a556b4a","37747187-3ef1-11ea-9791-1b580a556b4a","377a3de8-3ef1-11ea-9791-1b580a556b4a","377534d0-3ef1-11ea-9791-1b580a556b4a","3770a0f1-3ef1-11ea-9791-1b580a556b4a","37724ea2-3ef1-11ea-9791-1b580a556b4a","37720082-3ef1-11ea-9791-1b580a556b4a"],"slug":"access-your-genius-with-richard-wilkins"},{"id":"37733901-3ef1-11ea-9791-1b580a556b4a","vendorId":"21459","created":"2020-01-24T21:35:07.813Z","updated":"2012-08-01T07:00:00.000Z","title":"Excel Essentials","headline":"Learn Excel the FUN way! By working through exercises along with the video tutorial.","description":"This course was designed to make people better in Excel by talking about things that confuse people every day (VLOOKUPs, PivotTables, printing things on one page). Not only do we teach you how to do all of theses wonderful features in Excel, we'll teach you why. With exercise workbooks that let you work EVERY single example we demonstrate so that you can actually learn how features work, we guarantee that you will feel more at ease with Excel when you're done with this course..Happy Spreadsheeting!","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F21459_14c3_10.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fmicrosoft-excel-2010-for-pc\u002F","language":"en","tags":["Office Productivity","Microsoft","Excel"],"rating":4.5,"reviews":15,"isFree":false,"matches":["376fdda1-3ef1-11ea-9791-1b580a556b4a","37713d32-3ef1-11ea-9791-1b580a556b4a","376bbef1-3ef1-11ea-9791-1b580a556b4a","376be603-3ef1-11ea-9791-1b580a556b4a","37724ea9-3ef1-11ea-9791-1b580a556b4a","37713d30-3ef1-11ea-9791-1b580a556b4a","3776bb7a-3ef1-11ea-9791-1b580a556b4a","3770a0f7-3ef1-11ea-9791-1b580a556b4a","3775d114-3ef1-11ea-9791-1b580a556b4a","3770a0f6-3ef1-11ea-9791-1b580a556b4a"],"slug":"excel-essentials"},{"id":"37733908-3ef1-11ea-9791-1b580a556b4a","vendorId":"22365","created":"2020-01-24T21:35:07.813Z","updated":"2012-08-01T07:00:00.000Z","title":"Create an energetic House Track with Logic Pro","headline":"Learn how to use Logic Pro to create, mix and master your own house track with this Logic Pro tutorial.","description":" The MethodologyThis Logic Pro tutorial course takes a hands-on approach to how to use Logic Pro  in house music production, so you’ll be working through the project files and videos. It’s divided into 3 chapters that methodically introduce the steps I use to create dance floor ready house track. Each video is designed to support the concepts learned in the preceding lesson, and newcomers to audio production should go through start to finish. This Logic Pro tutorial is perfect for Logic Pro beginners, but even if you have been making music for some time, you will benefit from learning professional techniques from an experienced producer. Course Structure The course is designed to guide you through how to use Logic Pro to create a  house music track from scratch in 16 videos. Each video you will be introduced to a new concept and workflow in Logic. System requirements Before using Logic 9, you should have a working knowledge of your Macintosh and the Mac OS X operating system. Make sure that you know how to use the mouse and standard menus and commands, and also how to open, save, and close files. Installing Logic This Logic Pro tutorial require that you install Logic Studio 9 along with the default content pre-selected in the installer. You can buy and download Logic Pro for $199 from the App store. Other requirements 1  USB musical keyboard (or suitable MIDI keyboard and interface) to play software instruments. 2  Low-latency multi-I\u002FO audio interface highly recommended for audio recording ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F22365_b95f_6.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Faudyolab-logic-pro-and-house-music-101\u002F","language":"en","tags":["Music","Production","Logic Pro X"],"rating":3.8,"reviews":25,"isFree":false,"matches":["3776e280-3ef1-11ea-9791-1b580a556b4a","377730a5-3ef1-11ea-9791-1b580a556b4a","377a64f5-3ef1-11ea-9791-1b580a556b4a","3771d972-3ef1-11ea-9791-1b580a556b4a","377275b9-3ef1-11ea-9791-1b580a556b4a","3773fc50-3ef1-11ea-9791-1b580a556b4a","37792c77-3ef1-11ea-9791-1b580a556b4a","3771d971-3ef1-11ea-9791-1b580a556b4a","376c5b33-3ef1-11ea-9791-1b580a556b4a","3771d978-3ef1-11ea-9791-1b580a556b4a"],"slug":"create-an-energetic-house-track-with-logic-pro"},{"id":"37711626-3ef1-11ea-9791-1b580a556b4a","vendorId":"18181","created":"2020-01-24T21:35:07.688Z","updated":"2018-04-01T07:00:00.000Z","title":"Classroom Management Essentials","headline":"Learn how to manage your classroom and spend more time teaching rather than disciplining","description":"Classroom management is consistently identified as a major concern for teachers. Yet, it is absolutely an essential component of effective teaching. This course helps teachers learn how to effectively manage a classroom.  The primary goal of the course is to introduce a practical model for understanding and deconstructing the tasks involved in the process of classroom management and on learning practical, easy to implement strategies that enable teachers to spend more time teaching rather than disciplining! Specifically, participants in this course will learn:   Common misconceptions about classroom management How to develop effective rules and routines The role relationships play in one’s classroom management plan Techniques for preventing misbehavior Strategies for dealing with minor and more serious misbehavior Plus much, much more!   The course is divided into seven chapters.  Each chapter begins with a lecture presented by Dr. Tracey Garrett, a specialist in the field of classroom management.  Then, each chapter has a self-guided component where participants can review and expand on the material presented in the first lecture at their own pace.  Finally, the remaining lectures in each chapter are interviews of teachers at different grade levels offering insight into their practice. ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F18181_f6ad_9.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fclassroom-management-essentials\u002F","language":"en","tags":["Teaching & Academics","Teacher Training","Classroom Management"],"rating":4.4,"reviews":68,"isFree":false,"matches":["377a3de4-3ef1-11ea-9791-1b580a556b4a","37770998-3ef1-11ea-9791-1b580a556b4a","3775aa06-3ef1-11ea-9791-1b580a556b4a","37755be3-3ef1-11ea-9791-1b580a556b4a","377582f9-3ef1-11ea-9791-1b580a556b4a","37777ec1-3ef1-11ea-9791-1b580a556b4a","37716449-3ef1-11ea-9791-1b580a556b4a","37770997-3ef1-11ea-9791-1b580a556b4a","3775f820-3ef1-11ea-9791-1b580a556b4a","37744a79-3ef1-11ea-9791-1b580a556b4a"],"slug":"classroom-management-essentials"},{"id":"376c0d13-3ef1-11ea-9791-1b580a556b4a","vendorId":"9224","created":"2020-01-24T21:35:07.172Z","updated":"2013-02-01T08:00:00.000Z","title":"Learn How to Get Your First Million Users","headline":"This course will teach you how to find all viral elements in your product and then use them to gain millions of users","description":"\"One of the best classes I've ever attended on Skillshare.\" - Founder of Skillshare Michael Karnjanaprakorn\"Highly actionable and thought provoking class. Recommend to any startup looking to quickly build their user base.\" - Jan Renner“Michael's class was easily the best skillshare class I've taken and I've taken a number of them. This class is an absolute must for anyone involved with a startup. Michael knows user\u002Fcustomer acquisition inside and out and you will too if you sign up for this class.” - Carlo CiscoLearn how to get the first million users and how to increase sales of your business, or speed up your already decent growth. You will learn from my experience and lessons learned while building some of the largest social sites and apps in the global market today.Areas covered will include:mapping out your viral system andhow to use that to start virally expanding your userbaseThis class is best suited to those with a startup\u002Fonline project already, or at least a formed idea of one. However, projects can also be completed using Udemy.com as a substitute for having a personal project already. All concepts are completely applicable to B2C (business to consumer) projects, and mostly applicable to B2B projects.You will finish this class understanding:the exact building blocks of virality within your own project andhow to put them into motion to start gaining large amounts of users (for free)This class is all taught online. The class is composed of videos of me explaining key viral concepts, slides to go along with those videos, a viral mapping project, and online live sessions from time to time where all questions can be answered. Take this How To Get First Million Customers course now and learn how to increase sales. ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F9224_2240_6.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Flearn-how-to-get-your-first-million-users2\u002F","language":"en","tags":["Marketing","Digital Marketing","Growth Hacking"],"rating":3.2,"reviews":14,"isFree":false,"matches":["3774bfa8-3ef1-11ea-9791-1b580a556b4a","377052d1-3ef1-11ea-9791-1b580a556b4a","3775d119-3ef1-11ea-9791-1b580a556b4a","376c0d11-3ef1-11ea-9791-1b580a556b4a","376a5f61-3ef1-11ea-9791-1b580a556b4a","37789031-3ef1-11ea-9791-1b580a556b4a","377a64f9-3ef1-11ea-9791-1b580a556b4a","376b97e0-3ef1-11ea-9791-1b580a556b4a","376ea520-3ef1-11ea-9791-1b580a556b4a","376bbef0-3ef1-11ea-9791-1b580a556b4a"],"slug":"learn-how-to-get-your-first-million-users"},{"id":"376afba0-3ef1-11ea-9791-1b580a556b4a","vendorId":"8621","created":"2020-01-24T21:35:07.170Z","updated":"2017-06-01T07:00:00.000Z","title":"Apps for Librarians & Educators","headline":"Become an expert in the best mobile apps for education and content creation.","description":"Mobile apps are empowering for people of all ages and abilities As librarians and educators, we are passionate about learning and access to information for all. Contrary to the popular idea that apps are only useful for “consumption,” the best mobile apps are being used effectively as tools to enable learning and knowledge creation. Got iPads, but no time to discover the best apps? If you’ve ever felt overwhelmed by the number of apps available and not sure where to start with finding the best ones, you’re not alone! Many librarians have told me that they feel excited about having new iPads, but not sure of the best apps to recommend and use. overwhelmed by the sheer number of apps available. unsure where to start with finding and evaluating the best educational apps. worried about the digital divide and the loss of access to information for all. You might have new iPads in your library or school, but what are the best learning experiences you can create with them? You know that just throwing technology at a problem is NOT the way to go. When you become “app-literate,” you serve your community by becoming their go-to expert on mobile apps. When you become an app expert, you become the go-to person for your community—evaluating, reviewing and recommending the very best apps for knowledge creation and active learning. You gain influence in your community by designing innovative programs and services that use mobile apps for learning. ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F8621_1136_5.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fapps4librarians\u002F","language":"en","tags":["Teaching & Academics","Teacher Training","Productivity Apps"],"rating":4,"reviews":15,"isFree":false,"matches":["37766d52-3ef1-11ea-9791-1b580a556b4a","377534d3-3ef1-11ea-9791-1b580a556b4a","3771d977-3ef1-11ea-9791-1b580a556b4a","37749896-3ef1-11ea-9791-1b580a556b4a","376afba1-3ef1-11ea-9791-1b580a556b4a","377275b4-3ef1-11ea-9791-1b580a556b4a","377757b0-3ef1-11ea-9791-1b580a556b4a","3773ae31-3ef1-11ea-9791-1b580a556b4a","3773d548-3ef1-11ea-9791-1b580a556b4a","37724ea6-3ef1-11ea-9791-1b580a556b4a"],"slug":"apps-for-librarians-and-educators"},{"id":"376a5f61-3ef1-11ea-9791-1b580a556b4a","vendorId":"8075","created":"2020-01-24T21:35:07.168Z","updated":"2016-10-01T07:00:00.000Z","title":"How to Create an Awesome Demo Video for Your Business","headline":"You don't need to spend $10K in order to have a professional video produced. Learn to make one yourself the easy way!","description":" Videos Rule. If your company's website doesn't have them, you are missing out on an awesome way of communicating with your customers. Explainer videos are an easy and dynamic way of letting folks know about your products or services and they can mean the difference between a lookie-loo and actual sales. Unfortunately, many companies let the high costs of professional videos turn them off to the real power of this marketing medium. Some folks even create low quality videos in-house. As dynamic and powerful as videos can be, bad videos can be just as persuasive... in a totally negative way - giving potential customers a bad impressive of your company. Rather than adding poor quality videos to your site, you're probably better off not adding videos at all. Now your company can stand out from the crowd and you don't need to spend $10K in order to have a professional video produced for your site. Are you ready for this? You can start enjoying the benefits of learning how to make your own, professional quality videos now with the help of an awesome video series that teaches you everything you need to know. ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F8075_b2b5_10.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fhow-to-create-awesome-demo-videos\u002F","language":"en","tags":["Business","Media","Demo Video"],"rating":4.4,"reviews":306,"isFree":false,"matches":["3774bfa6-3ef1-11ea-9791-1b580a556b4a","37718b50-3ef1-11ea-9791-1b580a556b4a","3776e285-3ef1-11ea-9791-1b580a556b4a","377004b4-3ef1-11ea-9791-1b580a556b4a","377a64f0-3ef1-11ea-9791-1b580a556b4a","376de1d5-3ef1-11ea-9791-1b580a556b4a","37750dc2-3ef1-11ea-9791-1b580a556b4a","3771d974-3ef1-11ea-9791-1b580a556b4a","377a3de9-3ef1-11ea-9791-1b580a556b4a","37720087-3ef1-11ea-9791-1b580a556b4a"],"slug":"how-to-create-an-awesome-demo-video-for-your-business"}]}};(function(){var s;(s=document.currentScript||document.scripts[document.scripts.length-1]).parentNode.removeChild(s);}());</script><script src="/site/assets/js/app.e5c95575.js" defer></script><script src="/site/assets/js/page--src--templates--course-template-vue.a9c4e657.js" defer></script>
+  </body>
+</html>

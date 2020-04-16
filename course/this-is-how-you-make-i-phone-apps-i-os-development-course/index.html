@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html data-html-server-rendered="true" lang="en" data-vue-tag="%7B%22lang%22:%7B%22ssr%22:%22en%22%7D%7D">
+  <head>
+    <title>This Is How You Make iPhone Apps - iOS Development Course - Gridsome</title><meta name="gridsome:hash" content="6d1e7dd52e8c17cf4930f349c6afc1a78b2e1c5e"><meta data-vue-tag="ssr" charset="utf-8"><meta data-vue-tag="ssr" name="generator" content="Gridsome v0.7.12"><meta data-vue-tag="ssr" data-key="viewport" name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta data-vue-tag="ssr" data-key="format-detection" name="format-detection" content="telephone=no"><link data-vue-tag="ssr" rel="icon" href="data:,"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="16x16" href="/site/assets/static/favicon.ce0531f.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="32x32" href="/site/assets/static/favicon.ac8d93a.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="96x96" href="/site/assets/static/favicon.b9532cc.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="76x76" href="/site/assets/static/favicon.f22e9f3.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="152x152" href="/site/assets/static/favicon.62d22cb.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="120x120" href="/site/assets/static/favicon.1539b60.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="167x167" href="/site/assets/static/favicon.dc0cdc5.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="180x180" href="/site/assets/static/favicon.7b22250.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"><link data-vue-tag="ssr" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css"><link rel="preload" href="/site/assets/css/0.styles.dded6410.css" as="style"><link rel="preload" href="/site/assets/js/app.e5c95575.js" as="script"><link rel="preload" href="/site/assets/js/page--src--templates--course-template-vue.a9c4e657.js" as="script"><link rel="prefetch" href="/site/assets/js/page--node-modules--gridsome--app--pages--404-vue.8ed2c588.js"><link rel="prefetch" href="/site/assets/js/page--src--pages--about-vue.d8fdab17.js"><link rel="prefetch" href="/site/assets/js/page--src--templates--index-template-vue.6cecc577.js"><link rel="prefetch" href="/site/assets/js/page--src--templates--tag-vue.c6b527ba.js"><link rel="prefetch" href="/site/assets/js/vendors~page--src--templates--course-template-vue~page--src--templates--index-template-vue.4ec5035c.js"><link rel="stylesheet" href="/site/assets/css/0.styles.dded6410.css"><style data-vue-tag="vuetify" type="text/css" id="vuetify-theme-stylesheet" nonce="undefined">.v-application a { color: #1976d2; }
+.v-application .primary {
+  background-color: #1976d2 !important;
+  border-color: #1976d2 !important;
+}
+.v-application .primary--text {
+  color: #1976d2 !important;
+  caret-color: #1976d2 !important;
+}
+.v-application .primary.lighten-5 {
+  background-color: #c7fdff !important;
+  border-color: #c7fdff !important;
+}
+.v-application .primary--text.text--lighten-5 {
+  color: #c7fdff !important;
+  caret-color: #c7fdff !important;
+}
+.v-application .primary.lighten-4 {
+  background-color: #a8e0ff !important;
+  border-color: #a8e0ff !important;
+}
+.v-application .primary--text.text--lighten-4 {
+  color: #a8e0ff !important;
+  caret-color: #a8e0ff !important;
+}
+.v-application .primary.lighten-3 {
+  background-color: #8ac5ff !important;
+  border-color: #8ac5ff !important;
+}
+.v-application .primary--text.text--lighten-3 {
+  color: #8ac5ff !important;
+  caret-color: #8ac5ff !important;
+}
+.v-application .primary.lighten-2 {
+  background-color: #6aaaff !important;
+  border-color: #6aaaff !important;
+}
+.v-application .primary--text.text--lighten-2 {
+  color: #6aaaff !important;
+  caret-color: #6aaaff !important;
+}
+.v-application .primary.lighten-1 {
+  background-color: #488fef !important;
+  border-color: #488fef !important;
+}
+.v-application .primary--text.text--lighten-1 {
+  color: #488fef !important;
+  caret-color: #488fef !important;
+}
+.v-application .primary.darken-1 {
+  background-color: #005eb6 !important;
+  border-color: #005eb6 !important;
+}
+.v-application .primary--text.text--darken-1 {
+  color: #005eb6 !important;
+  caret-color: #005eb6 !important;
+}
+.v-application .primary.darken-2 {
+  background-color: #00479b !important;
+  border-color: #00479b !important;
+}
+.v-application .primary--text.text--darken-2 {
+  color: #00479b !important;
+  caret-color: #00479b !important;
+}
+.v-application .primary.darken-3 {
+  background-color: #003180 !important;
+  border-color: #003180 !important;
+}
+.v-application .primary--text.text--darken-3 {
+  color: #003180 !important;
+  caret-color: #003180 !important;
+}
+.v-application .primary.darken-4 {
+  background-color: #001e67 !important;
+  border-color: #001e67 !important;
+}
+.v-application .primary--text.text--darken-4 {
+  color: #001e67 !important;
+  caret-color: #001e67 !important;
+}
+.v-application .secondary {
+  background-color: #424242 !important;
+  border-color: #424242 !important;
+}
+.v-application .secondary--text {
+  color: #424242 !important;
+  caret-color: #424242 !important;
+}
+.v-application .secondary.lighten-5 {
+  background-color: #c1c1c1 !important;
+  border-color: #c1c1c1 !important;
+}
+.v-application .secondary--text.text--lighten-5 {
+  color: #c1c1c1 !important;
+  caret-color: #c1c1c1 !important;
+}
+.v-application .secondary.lighten-4 {
+  background-color: #a6a6a6 !important;
+  border-color: #a6a6a6 !important;
+}
+.v-application .secondary--text.text--lighten-4 {
+  color: #a6a6a6 !important;
+  caret-color: #a6a6a6 !important;
+}
+.v-application .secondary.lighten-3 {
+  background-color: #8b8b8b !important;
+  border-color: #8b8b8b !important;
+}
+.v-application .secondary--text.text--lighten-3 {
+  color: #8b8b8b !important;
+  caret-color: #8b8b8b !important;
+}
+.v-application .secondary.lighten-2 {
+  background-color: #727272 !important;
+  border-color: #727272 !important;
+}
+.v-application .secondary--text.text--lighten-2 {
+  color: #727272 !important;
+  caret-color: #727272 !important;
+}
+.v-application .secondary.lighten-1 {
+  background-color: #595959 !important;
+  border-color: #595959 !important;
+}
+.v-application .secondary--text.text--lighten-1 {
+  color: #595959 !important;
+  caret-color: #595959 !important;
+}
+.v-application .secondary.darken-1 {
+  background-color: #2c2c2c !important;
+  border-color: #2c2c2c !important;
+}
+.v-application .secondary--text.text--darken-1 {
+  color: #2c2c2c !important;
+  caret-color: #2c2c2c !important;
+}
+.v-application .secondary.darken-2 {
+  background-color: #171717 !important;
+  border-color: #171717 !important;
+}
+.v-application .secondary--text.text--darken-2 {
+  color: #171717 !important;
+  caret-color: #171717 !important;
+}
+.v-application .secondary.darken-3 {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+.v-application .secondary--text.text--darken-3 {
+  color: #000000 !important;
+  caret-color: #000000 !important;
+}
+.v-application .secondary.darken-4 {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+.v-application .secondary--text.text--darken-4 {
+  color: #000000 !important;
+  caret-color: #000000 !important;
+}
+.v-application .accent {
+  background-color: #82b1ff !important;
+  border-color: #82b1ff !important;
+}
+.v-application .accent--text {
+  color: #82b1ff !important;
+  caret-color: #82b1ff !important;
+}
+.v-application .accent.lighten-5 {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+.v-application .accent--text.text--lighten-5 {
+  color: #ffffff !important;
+  caret-color: #ffffff !important;
+}
+.v-application .accent.lighten-4 {
+  background-color: #f8ffff !important;
+  border-color: #f8ffff !important;
+}
+.v-application .accent--text.text--lighten-4 {
+  color: #f8ffff !important;
+  caret-color: #f8ffff !important;
+}
+.v-application .accent.lighten-3 {
+  background-color: #daffff !important;
+  border-color: #daffff !important;
+}
+.v-application .accent--text.text--lighten-3 {
+  color: #daffff !important;
+  caret-color: #daffff !important;
+}
+.v-application .accent.lighten-2 {
+  background-color: #bce8ff !important;
+  border-color: #bce8ff !important;
+}
+.v-application .accent--text.text--lighten-2 {
+  color: #bce8ff !important;
+  caret-color: #bce8ff !important;
+}
+.v-application .accent.lighten-1 {
+  background-color: #9fccff !important;
+  border-color: #9fccff !important;
+}
+.v-application .accent--text.text--lighten-1 {
+  color: #9fccff !important;
+  caret-color: #9fccff !important;
+}
+.v-application .accent.darken-1 {
+  background-color: #6596e2 !important;
+  border-color: #6596e2 !important;
+}
+.v-application .accent--text.text--darken-1 {
+  color: #6596e2 !important;
+  caret-color: #6596e2 !important;
+}
+.v-application .accent.darken-2 {
+  background-color: #467dc6 !important;
+  border-color: #467dc6 !important;
+}
+.v-application .accent--text.text--darken-2 {
+  color: #467dc6 !important;
+  caret-color: #467dc6 !important;
+}
+.v-application .accent.darken-3 {
+  background-color: #2364aa !important;
+  border-color: #2364aa !important;
+}
+.v-application .accent--text.text--darken-3 {
+  color: #2364aa !important;
+  caret-color: #2364aa !important;
+}
+.v-application .accent.darken-4 {
+  background-color: #004c90 !important;
+  border-color: #004c90 !important;
+}
+.v-application .accent--text.text--darken-4 {
+  color: #004c90 !important;
+  caret-color: #004c90 !important;
+}
+.v-application .error {
+  background-color: #ff5252 !important;
+  border-color: #ff5252 !important;
+}
+.v-application .error--text {
+  color: #ff5252 !important;
+  caret-color: #ff5252 !important;
+}
+.v-application .error.lighten-5 {
+  background-color: #ffe4d5 !important;
+  border-color: #ffe4d5 !important;
+}
+.v-application .error--text.text--lighten-5 {
+  color: #ffe4d5 !important;
+  caret-color: #ffe4d5 !important;
+}
+.v-application .error.lighten-4 {
+  background-color: #ffc6b9 !important;
+  border-color: #ffc6b9 !important;
+}
+.v-application .error--text.text--lighten-4 {
+  color: #ffc6b9 !important;
+  caret-color: #ffc6b9 !important;
+}
+.v-application .error.lighten-3 {
+  background-color: #ffa99e !important;
+  border-color: #ffa99e !important;
+}
+.v-application .error--text.text--lighten-3 {
+  color: #ffa99e !important;
+  caret-color: #ffa99e !important;
+}
+.v-application .error.lighten-2 {
+  background-color: #ff8c84 !important;
+  border-color: #ff8c84 !important;
+}
+.v-application .error--text.text--lighten-2 {
+  color: #ff8c84 !important;
+  caret-color: #ff8c84 !important;
+}
+.v-application .error.lighten-1 {
+  background-color: #ff6f6a !important;
+  border-color: #ff6f6a !important;
+}
+.v-application .error--text.text--lighten-1 {
+  color: #ff6f6a !important;
+  caret-color: #ff6f6a !important;
+}
+.v-application .error.darken-1 {
+  background-color: #df323b !important;
+  border-color: #df323b !important;
+}
+.v-application .error--text.text--darken-1 {
+  color: #df323b !important;
+  caret-color: #df323b !important;
+}
+.v-application .error.darken-2 {
+  background-color: #bf0025 !important;
+  border-color: #bf0025 !important;
+}
+.v-application .error--text.text--darken-2 {
+  color: #bf0025 !important;
+  caret-color: #bf0025 !important;
+}
+.v-application .error.darken-3 {
+  background-color: #9f0010 !important;
+  border-color: #9f0010 !important;
+}
+.v-application .error--text.text--darken-3 {
+  color: #9f0010 !important;
+  caret-color: #9f0010 !important;
+}
+.v-application .error.darken-4 {
+  background-color: #800000 !important;
+  border-color: #800000 !important;
+}
+.v-application .error--text.text--darken-4 {
+  color: #800000 !important;
+  caret-color: #800000 !important;
+}
+.v-application .info {
+  background-color: #2196f3 !important;
+  border-color: #2196f3 !important;
+}
+.v-application .info--text {
+  color: #2196f3 !important;
+  caret-color: #2196f3 !important;
+}
+.v-application .info.lighten-5 {
+  background-color: #d4ffff !important;
+  border-color: #d4ffff !important;
+}
+.v-application .info--text.text--lighten-5 {
+  color: #d4ffff !important;
+  caret-color: #d4ffff !important;
+}
+.v-application .info.lighten-4 {
+  background-color: #b5ffff !important;
+  border-color: #b5ffff !important;
+}
+.v-application .info--text.text--lighten-4 {
+  color: #b5ffff !important;
+  caret-color: #b5ffff !important;
+}
+.v-application .info.lighten-3 {
+  background-color: #95e8ff !important;
+  border-color: #95e8ff !important;
+}
+.v-application .info--text.text--lighten-3 {
+  color: #95e8ff !important;
+  caret-color: #95e8ff !important;
+}
+.v-application .info.lighten-2 {
+  background-color: #75ccff !important;
+  border-color: #75ccff !important;
+}
+.v-application .info--text.text--lighten-2 {
+  color: #75ccff !important;
+  caret-color: #75ccff !important;
+}
+.v-application .info.lighten-1 {
+  background-color: #51b0ff !important;
+  border-color: #51b0ff !important;
+}
+.v-application .info--text.text--lighten-1 {
+  color: #51b0ff !important;
+  caret-color: #51b0ff !important;
+}
+.v-application .info.darken-1 {
+  background-color: #007cd6 !important;
+  border-color: #007cd6 !important;
+}
+.v-application .info--text.text--darken-1 {
+  color: #007cd6 !important;
+  caret-color: #007cd6 !important;
+}
+.v-application .info.darken-2 {
+  background-color: #0064ba !important;
+  border-color: #0064ba !important;
+}
+.v-application .info--text.text--darken-2 {
+  color: #0064ba !important;
+  caret-color: #0064ba !important;
+}
+.v-application .info.darken-3 {
+  background-color: #004d9f !important;
+  border-color: #004d9f !important;
+}
+.v-application .info--text.text--darken-3 {
+  color: #004d9f !important;
+  caret-color: #004d9f !important;
+}
+.v-application .info.darken-4 {
+  background-color: #003784 !important;
+  border-color: #003784 !important;
+}
+.v-application .info--text.text--darken-4 {
+  color: #003784 !important;
+  caret-color: #003784 !important;
+}
+.v-application .success {
+  background-color: #4caf50 !important;
+  border-color: #4caf50 !important;
+}
+.v-application .success--text {
+  color: #4caf50 !important;
+  caret-color: #4caf50 !important;
+}
+.v-application .success.lighten-5 {
+  background-color: #dcffd6 !important;
+  border-color: #dcffd6 !important;
+}
+.v-application .success--text.text--lighten-5 {
+  color: #dcffd6 !important;
+  caret-color: #dcffd6 !important;
+}
+.v-application .success.lighten-4 {
+  background-color: #beffba !important;
+  border-color: #beffba !important;
+}
+.v-application .success--text.text--lighten-4 {
+  color: #beffba !important;
+  caret-color: #beffba !important;
+}
+.v-application .success.lighten-3 {
+  background-color: #a2ff9e !important;
+  border-color: #a2ff9e !important;
+}
+.v-application .success--text.text--lighten-3 {
+  color: #a2ff9e !important;
+  caret-color: #a2ff9e !important;
+}
+.v-application .success.lighten-2 {
+  background-color: #85e783 !important;
+  border-color: #85e783 !important;
+}
+.v-application .success--text.text--lighten-2 {
+  color: #85e783 !important;
+  caret-color: #85e783 !important;
+}
+.v-application .success.lighten-1 {
+  background-color: #69cb69 !important;
+  border-color: #69cb69 !important;
+}
+.v-application .success--text.text--lighten-1 {
+  color: #69cb69 !important;
+  caret-color: #69cb69 !important;
+}
+.v-application .success.darken-1 {
+  background-color: #2d9437 !important;
+  border-color: #2d9437 !important;
+}
+.v-application .success--text.text--darken-1 {
+  color: #2d9437 !important;
+  caret-color: #2d9437 !important;
+}
+.v-application .success.darken-2 {
+  background-color: #00791e !important;
+  border-color: #00791e !important;
+}
+.v-application .success--text.text--darken-2 {
+  color: #00791e !important;
+  caret-color: #00791e !important;
+}
+.v-application .success.darken-3 {
+  background-color: #006000 !important;
+  border-color: #006000 !important;
+}
+.v-application .success--text.text--darken-3 {
+  color: #006000 !important;
+  caret-color: #006000 !important;
+}
+.v-application .success.darken-4 {
+  background-color: #004700 !important;
+  border-color: #004700 !important;
+}
+.v-application .success--text.text--darken-4 {
+  color: #004700 !important;
+  caret-color: #004700 !important;
+}
+.v-application .warning {
+  background-color: #fb8c00 !important;
+  border-color: #fb8c00 !important;
+}
+.v-application .warning--text {
+  color: #fb8c00 !important;
+  caret-color: #fb8c00 !important;
+}
+.v-application .warning.lighten-5 {
+  background-color: #ffff9e !important;
+  border-color: #ffff9e !important;
+}
+.v-application .warning--text.text--lighten-5 {
+  color: #ffff9e !important;
+  caret-color: #ffff9e !important;
+}
+.v-application .warning.lighten-4 {
+  background-color: #fffb82 !important;
+  border-color: #fffb82 !important;
+}
+.v-application .warning--text.text--lighten-4 {
+  color: #fffb82 !important;
+  caret-color: #fffb82 !important;
+}
+.v-application .warning.lighten-3 {
+  background-color: #ffdf67 !important;
+  border-color: #ffdf67 !important;
+}
+.v-application .warning--text.text--lighten-3 {
+  color: #ffdf67 !important;
+  caret-color: #ffdf67 !important;
+}
+.v-application .warning.lighten-2 {
+  background-color: #ffc24b !important;
+  border-color: #ffc24b !important;
+}
+.v-application .warning--text.text--lighten-2 {
+  color: #ffc24b !important;
+  caret-color: #ffc24b !important;
+}
+.v-application .warning.lighten-1 {
+  background-color: #ffa72d !important;
+  border-color: #ffa72d !important;
+}
+.v-application .warning--text.text--lighten-1 {
+  color: #ffa72d !important;
+  caret-color: #ffa72d !important;
+}
+.v-application .warning.darken-1 {
+  background-color: #db7200 !important;
+  border-color: #db7200 !important;
+}
+.v-application .warning--text.text--darken-1 {
+  color: #db7200 !important;
+  caret-color: #db7200 !important;
+}
+.v-application .warning.darken-2 {
+  background-color: #bb5900 !important;
+  border-color: #bb5900 !important;
+}
+.v-application .warning--text.text--darken-2 {
+  color: #bb5900 !important;
+  caret-color: #bb5900 !important;
+}
+.v-application .warning.darken-3 {
+  background-color: #9d4000 !important;
+  border-color: #9d4000 !important;
+}
+.v-application .warning--text.text--darken-3 {
+  color: #9d4000 !important;
+  caret-color: #9d4000 !important;
+}
+.v-application .warning.darken-4 {
+  background-color: #802700 !important;
+  border-color: #802700 !important;
+}
+.v-application .warning--text.text--darken-4 {
+  color: #802700 !important;
+  caret-color: #802700 !important;
+}</style><noscript data-vue-tag="ssr"><style>.g-image--loading{display:none;}</style></noscript>
+  </head>
+  <body >
+    <div data-app="true" data-server-rendered="true" id="app" id="inspire" class="v-application v-application--is-ltr theme--light"><div class="v-application--wrap"><header class="gb-toolbar v-sheet v-sheet--tile theme--dark v-toolbar v-toolbar--dense v-app-bar v-app-bar--fixed" style="height:48px;margin-top:0px;transform:translateY(0px);left:0px;right:0px;"><div class="v-toolbar__content" style="height:48px;"><button type="button" class="v-app-bar__nav-icon v-btn v-btn--flat v-btn--icon v-btn--round theme--dark v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-menu theme--dark"></i></span></button><div class="v-toolbar__title ml-0 pl-4" style="width:300px;"><span class="hidden-sm-and-down">skillhub</span></div><div class="spacer"></div><div class="v-input hidden-sm-and-down v-input--hide-details v-input--dense theme--dark v-text-field v-text-field--single-line v-text-field--solo v-text-field--solo-inverted v-text-field--solo-flat v-text-field--enclosed"><div class="v-input__control"><div class="v-input__slot"><div class="v-input__prepend-inner"><div class="v-input__icon v-input__icon--prepend-inner"><i aria-hidden="true" class="v-icon notranslate mdi mdi-magnify theme--dark"></i></div></div><div class="v-text-field__slot"><label for="input-5972" class="v-label theme--dark" style="left:0px;right:auto;position:absolute;">Search</label><input id="input-5972" type="text"></div></div></div></div><button type="button" class="v-btn v-btn--flat v-btn--icon v-btn--round theme--dark v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-apps theme--dark"></i></span></button><button type="button" class="v-btn v-btn--flat v-btn--icon v-btn--round theme--dark v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-bell theme--dark"></i></span></button></div></header><main class="v-content" style="padding-top:15072px;padding-right:0px;padding-bottom:0px;padding-left:0px;"><div class="v-content__wrap"><div class="container container--fluid pa-0"><div class="row no-gutters"><div class="col col-12"><div class="row no-gutters row--dense"><div class="height-30 bg-dark white--text jarallax col"><img src="https://i.udemycdn.com/course/750x422/20366_6760_9.jpg" class="jarallax-img opacity-20 g-image"><div class="container mt-8 pa-0"><div class="row mb-12 justify-center"><div dense="" class="col"><p class="display-2 mb-0">This Is How You Make iPhone Apps - iOS Development Course</p><p class="headline mb-0">Learn every step in iOS App Development with iOS app development tutorial, from creating to submitting to app store.</p><div><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.5 (2487)</span></div><a href="https://www.udemy.com/course/iosdevelopment/" class="v-btn v-btn--contained theme--light v-size--default warning"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-share-outline theme--light"></i> Take me there!
+          </span></a></div></div></div></div></div></div></div><div class="row no-gutters"><div class="col col-12"><div class="container mt-4 pl-5"><div class="row mb-12 justify-center"><div dense="" class="col">
+            I'll teach you how to make iPhone apps with this complete iOS development tutorial. You'll learn how to create apps using the same tools and techniques used to make the top apps in The App Store. No coding experience? No problem. We'll create our first app in Lesson 2 without writing a single line of code. Then in Lesson 3 of this iOS app development tutorial, we'll learn how to write code in Apple's Objective-C programming language. Once we've gotten the hang of programming, we'll create three more apps as we explore Apple's iOS software development kit. I'll walk you through every detail of developing the apps from project creation, through every line of code, and on to testing the app. Finally, in the last lesson I'll let you watch over my shoulder as I submit an app to The App Store. Take the course now, learn iOS development now and have your first fully functional iPhone app before the end of the day.
+          </div></div></div></div></div><div class="row no-gutters"><div class="col"><div class="container"><div class="headline pa-1 mb-0">#Related</div><div aria-label="Slideshow" class="vueperslides no-shadow vueperslides--fixed-height vueperslides--slide-multiple vueperslides--bullets-outside" style="height:300px;"><!----><div class="vueperslides__inner"><div aria-live="polite" class="vueperslides__parallax-wrapper" style="padding-bottom:25%;"><div class="vueperslides__track"><div class="vueperslides__track-inner" style="transition-duration:0ms;transform:translate3d(0%, 0, 0);will-change:auto;"><!----><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/swift-5" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Swift 5</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="The Language of iOS Development">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.1 (2)</span></div></div></div><!----></div><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/mastering-core-data-with-cloud-kit-in-swift-5-for-i-os" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Mastering CoreData with CloudKit in Swift 5 for iOS</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Master the Core Data and CloudKit in Swift 5 for iOS 13, and take your iOS development skills to the next level">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">0 (0)</span></div></div></div><!----></div><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/how-to-add-in-app-purchases-to-your-i-phone-app-the-easy-way" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>How to add In App Purchases to your iPhone app the easy way</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="The fastest and easiest way to implement MKStoreKit and boost your sales! Learn how to monetize your app now!">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.3 (6)</span></div></div></div><!----></div><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/become-an-i-os-developer-from-scratch" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Become an iOS Developer from Scratch</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="A step-by-step iOS development tutorial for aspiring developers with no coding or Objective-C experience.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.2 (2347)</span></div></div></div><!----></div><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/beginner-mobile-app-development-with-appcelerator-titanium" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Beginner Mobile App Development with Appcelerator Titanium</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Learn to develop native iPhone, Android, Blackberry, and Mobile Web apps with Open Source tools.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">3.2 (17)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/mastering-i-phone-programming-lite" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Mastering iPhone programming - Lite</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Quick introduction to iPhone programming with Objective C, Controls in iOS with MVC, Advance Features in iOS with Cocoa">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4 (35)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/learn-to-make-i-phone-apps-with-objective-c-for-i-o-s7" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Learn to Make iPhone Apps with Objective C for iOS7</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Create apps for iOS7 without any programming experience. Learn how to write Objective C code, design UI, and use Xcode.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.6 (136)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/objective-c-for-i-phone-i-pad-app-programming" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Objective C for iPhone-iPad App Programming</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Learn how to write apps for iPhone and iPad apps with Objective-C.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">3.4 (23)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/mastering-i-phone-programming" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Mastering iPhone Programming</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Complete guide to learn iOS7 iphone Programming with Objective C and Xcode, Cocoa and MVC, Sqlite, OpenGL ES and more.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.4 (25)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/beginners-how-to-create-i-phone-and-i-pad-apps-zero-coding" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Beginners - How To Create iPhone And iPad Apps - Zero Coding</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Learn How To Create IOS Apps And Never Do A Hard Days Work Again - Zero Coding Needed">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4 (22)</span></div></div></div><!----></div><!----></div></div></div><!----><!----><!----><!----><!----></div><!----><!----></div></div></div></div></div></div></main></div></div>
+    <script>window.__INITIAL_STATE__={"data":null,"context":{"course":{"id":"37724ea6-3ef1-11ea-9791-1b580a556b4a","vendorId":"20366","created":"2020-01-24T21:35:07.699Z","updated":"2012-07-01T07:00:00.000Z","title":"This Is How You Make iPhone Apps - iOS Development Course","headline":"Learn every step in iOS App Development with iOS app development tutorial, from creating to submitting to app store.","description":"I'll teach you how to make iPhone apps with this complete iOS development tutorial. You'll learn how to create apps using the same tools and techniques used to make the top apps in The App Store. No coding experience? No problem. We'll create our first app in Lesson 2 without writing a single line of code. Then in Lesson 3 of this iOS app development tutorial, we'll learn how to write code in Apple's Objective-C programming language. Once we've gotten the hang of programming, we'll create three more apps as we explore Apple's iOS software development kit. I'll walk you through every detail of developing the apps from project creation, through every line of code, and on to testing the app. Finally, in the last lesson I'll let you watch over my shoulder as I submit an app to The App Store. Take the course now, learn iOS development now and have your first fully functional iPhone app before the end of the day.","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F20366_6760_9.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fiosdevelopment\u002F","language":"en","tags":["Development","Mobile Apps","iOS Development"],"rating":4.5,"reviews":2487,"isFree":true,"matches":["3773d548-3ef1-11ea-9791-1b580a556b4a","3771d977-3ef1-11ea-9791-1b580a556b4a","3771d975-3ef1-11ea-9791-1b580a556b4a","376afba1-3ef1-11ea-9791-1b580a556b4a","3773ae31-3ef1-11ea-9791-1b580a556b4a","37722792-3ef1-11ea-9791-1b580a556b4a","37716447-3ef1-11ea-9791-1b580a556b4a","3778b749-3ef1-11ea-9791-1b580a556b4a","3779c8b0-3ef1-11ea-9791-1b580a556b4a","37749896-3ef1-11ea-9791-1b580a556b4a"],"slug":"this-is-how-you-make-i-phone-apps-i-os-development-course"},"related":[{"id":"3779c8b0-3ef1-11ea-9791-1b580a556b4a","vendorId":"2742016","created":"2020-01-24T21:35:08.095Z","updated":"2020-01-01T08:00:00.000Z","title":"Swift 5","headline":"The Language of iOS Development","description":"Quickly master Swift 5, the language of iPhone and iPad development as you complete engaging activities and build your technical skillset.Do you want to develop apps for iPhone and iPad, but don't know where to start? Perhaps you've never coded before and need to learn the language fundamentals. Maybe you've got some development experience but are coming to the world of iOS for the first time and need to get up to speed? Swift is the language of iOS development, and this is the course that teaches you the fundamentals of the language.You'll be prepared to move on to iPhone and iPad Development with Swift 5: The Language of iOS Development. This course, specifically designed for the most current version of Swift, teaches you the Swift language syntax and structure and prepares you to go on to learning to build full apps with a strong foundation. The goal of this course is to avoid elaborate technical explanations and transform you into a competent, confident Swift programmer.In this course, you'll join master instructor Mark Lassoff as you learn the Swift Programming language from top to bottom. You won't just passively sit by and watch videos, but, instead, you'll work on engaging code activities. In no time at all, you'll be programming in Swift with Swift 5: The Language of iOS development.","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F2742016_dc37.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fswift-5-ios\u002F","language":"en","tags":["Development","Mobile Apps","Swift"],"rating":4.1,"reviews":2,"isFree":false,"matches":["3778b749-3ef1-11ea-9791-1b580a556b4a","37724ea6-3ef1-11ea-9791-1b580a556b4a","3771d975-3ef1-11ea-9791-1b580a556b4a","3773d548-3ef1-11ea-9791-1b580a556b4a","37716447-3ef1-11ea-9791-1b580a556b4a","37722792-3ef1-11ea-9791-1b580a556b4a","3771d977-3ef1-11ea-9791-1b580a556b4a","376afba1-3ef1-11ea-9791-1b580a556b4a","377275b4-3ef1-11ea-9791-1b580a556b4a","3773ae31-3ef1-11ea-9791-1b580a556b4a"],"slug":"swift-5"},{"id":"3778b749-3ef1-11ea-9791-1b580a556b4a","vendorId":"2746684","created":"2020-01-24T21:35:08.091Z","updated":"2020-01-01T08:00:00.000Z","title":"Mastering CoreData with CloudKit in Swift 5 for iOS","headline":"Master the Core Data and CloudKit in Swift 5 for iOS 13, and take your iOS development skills to the next level","description":"Welcome to the Complete Mastering CloudKit with CoreData in Swift 5This course was created to gain the knowledge of Core Data with the latest Swift 5 targeted for iOS 13. We will be using the latest Xcode 11. In this course you are going to learn how to implement CoreData with CloudKit in iOS Application.What is Core Data? Why should I know about Core Data?Core Data is one of the most powerful framework that Apple has provided for developer. \"Core Data is a framework that you use to manage the model layer objects in your application. It provides generalized and automated solutions to common tasks associated with object life cycle and object graph management, including persistence.\" - Source from Apple.If you are passionate about learning mobile development for iOS and looking to take your iOS development skills to the next level, Core Data framework should be at the top of your list. By the time you are done with Mastering CloudKit with CoreData in Swift 5 course, you will be ready and very confident to take any Core Data project.What is CloudKit?CloudKit is one of the most powerful framework that Apple has provided for developer. \"The CloudKit framework provides interfaces for moving data between your app and your iCloud containers. You use CloudKit to take your app’s existing data and store it in the cloud so that the user can access it on multiple devices. You can also store data in a public area where all users can access it.\" - Source from Apple.What you are going to learnEntityAttribute TypeManagedObjectContextManagedObjectPersistentContainerFetchingObject DeletionBackground processCloudKit DashboardContext MenuPass DataDark ModeAnimations and InteractionsCoreData RelationshipWhat are the requirements?A Mac laptop or iMacXcodeSome knowledge of Swift developmentYou'll get all the required source code and friendly support in the Q&A area, although basic understanding of Xcode and Swift.Take this course and start learning!","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F2746684_93b3_9.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fmastering-coredata-with-cloudkit-in-swift-5-for-ios\u002F","language":"en","tags":["Development","Programming Languages"],"rating":0,"reviews":0,"isFree":false,"matches":["3779c8b0-3ef1-11ea-9791-1b580a556b4a","37724ea6-3ef1-11ea-9791-1b580a556b4a","37722792-3ef1-11ea-9791-1b580a556b4a","37716447-3ef1-11ea-9791-1b580a556b4a","3773d548-3ef1-11ea-9791-1b580a556b4a","3771d975-3ef1-11ea-9791-1b580a556b4a","3771d977-3ef1-11ea-9791-1b580a556b4a","376afba1-3ef1-11ea-9791-1b580a556b4a","3773ae31-3ef1-11ea-9791-1b580a556b4a","37749896-3ef1-11ea-9791-1b580a556b4a"],"slug":"mastering-core-data-with-cloud-kit-in-swift-5-for-i-os"},{"id":"37749896-3ef1-11ea-9791-1b580a556b4a","vendorId":"24251","created":"2020-01-24T21:35:07.883Z","updated":"2013-06-01T07:00:00.000Z","title":"How to add In App Purchases to your iPhone app the easy way","headline":"The fastest and easiest way to implement MKStoreKit and boost your sales! Learn how to monetize your app now!","description":" IMPORTANT NOTICE: This course was originally sold for $97 but now I am selling it at $19. If you want to learn about MKStoreKit than this is your course. It's the only course on the market covering MKStoreKit so feel free and tai it for only $19. If you won't like what you see, don't worry: there is a 30 day money back guaranty on all Udemy courses :) In App Purchases are the Holy Grail of app monetization. But for years it has been a real hassle for newbie developers to add In App Purchases to their apps. One had to be a coding genius to understand all the aspects of implementing IAP. Just take a look at Apple's documentation. This was just overly complicated for me! I wanted something simple and fast! Than I found MKStoreKit by Mugunth Kumar. MKStoreKit does all the magic of dealing with all that complicated stuff. Hurray!!! But, wait. I found no comprehensive MKStoreKit tutorial explaining how to use MKStoreKit. There isn't any documentation at all on how to implement it into your Xcode project!(besides Kumar's brief description which just isn't enough) I have dug myself into the code and after countless sleepless nights I have made this MKStoreKit tutorial course for you. It documents every step you have to make to learn in order to take advantage of in app monetization. Note: for now MKStoreKit is not advised for auto-renewable subscriptions, but if you want to add consumabels or non-consumables, take this course now:) This course covers all you will ever need to know about adding In App Purchases to your app using MKStoreKit. ☛ Take a look at the FREE lecture inside ☛ iOS6 ready ☛ simple, fast, easy What are you waiting for? Take this course now and boost your sales with In App Purchases! ⬇⬇⬇ TAKE A LOOK AT THE FREE LECTURES ⬇⬇⬇ ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F24251_085b_12.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fhow-to-add-in-app-purchases-to-your-iphone-app-the-easy-way\u002F","language":"en","tags":["Development","Mobile Apps","iOS Development"],"rating":4.3,"reviews":6,"isFree":false,"matches":["37724ea6-3ef1-11ea-9791-1b580a556b4a","376afba1-3ef1-11ea-9791-1b580a556b4a","3773d548-3ef1-11ea-9791-1b580a556b4a","3773ae31-3ef1-11ea-9791-1b580a556b4a","37736018-3ef1-11ea-9791-1b580a556b4a","3777cce4-3ef1-11ea-9791-1b580a556b4a","37770990-3ef1-11ea-9791-1b580a556b4a","37769468-3ef1-11ea-9791-1b580a556b4a","3771d977-3ef1-11ea-9791-1b580a556b4a","377a64f6-3ef1-11ea-9791-1b580a556b4a"],"slug":"how-to-add-in-app-purchases-to-your-i-phone-app-the-easy-way"},{"id":"3773d548-3ef1-11ea-9791-1b580a556b4a","vendorId":"22878","created":"2020-01-24T21:35:07.816Z","updated":"2017-01-01T08:00:00.000Z","title":"Become an iOS Developer from Scratch","headline":"A step-by-step iOS development tutorial for aspiring developers with no coding or Objective-C experience.","description":" A step-by-step guide to building an iPhone or iPad app for Beginners.This is a course designed for beginners who have never coded in Objective-C or build an iOS app. In this iOS development video-based training course, expert developer and trainer Bob McCune teaches you how to build iOS apps using the iOS SDK from Apple. iOS is the standard SDK (software development kit) for iPad, iPhone and iPad devices. Using the SDK, Bob walks you through creating a fully functional app, and applying the tools and techniques available to you. In this iOS development tutorial, you start by accessing, downloading and setting up the SDK from Apple. Next, you will explore and setup Xcode to build your App. You will cover essential Objective-C topics, such as classes, methods, building objects, and coding conventions. Jumping right into development, you will work with strings, controllers, manage application data, create views and other UI elements, and work with iCloud. You will learn how to create a universal project, and create specific interfaces for each device. By the completion of this iOS development tutorial course you will be able to create a fully functioning iPhone or iPad app. ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F22878_2e5f_7.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fthe-art-of-real-ios-programming\u002F","language":"en","tags":["Development","Mobile Apps","iOS Development"],"rating":4.2,"reviews":2347,"isFree":true,"matches":["37724ea6-3ef1-11ea-9791-1b580a556b4a","376afba1-3ef1-11ea-9791-1b580a556b4a","3771d975-3ef1-11ea-9791-1b580a556b4a","37716447-3ef1-11ea-9791-1b580a556b4a","3771d977-3ef1-11ea-9791-1b580a556b4a","377534d3-3ef1-11ea-9791-1b580a556b4a","377275b4-3ef1-11ea-9791-1b580a556b4a","37722792-3ef1-11ea-9791-1b580a556b4a","3773ae31-3ef1-11ea-9791-1b580a556b4a","37720084-3ef1-11ea-9791-1b580a556b4a"],"slug":"become-an-i-os-developer-from-scratch"},{"id":"3773ae31-3ef1-11ea-9791-1b580a556b4a","vendorId":"22584","created":"2020-01-24T21:35:07.815Z","updated":"2015-05-01T07:00:00.000Z","title":"Beginner Mobile App Development with Appcelerator Titanium","headline":"Learn to develop native iPhone, Android, Blackberry, and Mobile Web apps with Open Source tools.","description":"The key learning objectives of this Appcelerator Titanium Tutorial is the use of Titanium Studio and programming iPhone and Android apps. The course consists of video lectures and hands-on exercises. The student will be learning Titanium App Development by installing the open source software on their computer (PC or Mac) and build apps.  The course can be completed in 10 weeks. Mobile technology is a growing technology field.  Building apps for various platforms in a single code line helps small and medium businesses to maintain their own mobile apps.  The Appcelerator Titanium Tutorial instructor is available to answer questions through email. You can get started with this content at udemy.com and then take the course online for college credit at http:\u002F\u002Fgrcc.edu\u002FMobileApps\u003C\u002Fp\u003E ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F22584_22f3_4.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fmobile-phone-development\u002F","language":"en","tags":["Development","Mobile Apps","Appcelerator Titanium"],"rating":3.2,"reviews":17,"isFree":false,"matches":["37724ea6-3ef1-11ea-9791-1b580a556b4a","37744a70-3ef1-11ea-9791-1b580a556b4a","37797a90-3ef1-11ea-9791-1b580a556b4a","37770990-3ef1-11ea-9791-1b580a556b4a","3771d977-3ef1-11ea-9791-1b580a556b4a","3773d548-3ef1-11ea-9791-1b580a556b4a","3772c3d8-3ef1-11ea-9791-1b580a556b4a","376afba1-3ef1-11ea-9791-1b580a556b4a","377534d3-3ef1-11ea-9791-1b580a556b4a","3774e6b2-3ef1-11ea-9791-1b580a556b4a"],"slug":"beginner-mobile-app-development-with-appcelerator-titanium"},{"id":"37722792-3ef1-11ea-9791-1b580a556b4a","vendorId":"20225","created":"2020-01-24T21:35:07.697Z","updated":"2012-07-01T07:00:00.000Z","title":"Mastering iPhone programming - Lite","headline":"Quick introduction to iPhone programming with Objective C, Controls in iOS with MVC, Advance Features in iOS with Cocoa","description":"","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F20225_2e46_6.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fmastering-iphone-programming-lite\u002F","language":"en","tags":["Development","Mobile Apps","iOS Development"],"rating":4,"reviews":35,"isFree":false,"matches":["37716447-3ef1-11ea-9791-1b580a556b4a","3771d975-3ef1-11ea-9791-1b580a556b4a","3771d977-3ef1-11ea-9791-1b580a556b4a","37724ea6-3ef1-11ea-9791-1b580a556b4a","3778b749-3ef1-11ea-9791-1b580a556b4a","3773d548-3ef1-11ea-9791-1b580a556b4a","3772c3d8-3ef1-11ea-9791-1b580a556b4a","3773ae31-3ef1-11ea-9791-1b580a556b4a","376afba1-3ef1-11ea-9791-1b580a556b4a","3779c8b0-3ef1-11ea-9791-1b580a556b4a"],"slug":"mastering-i-phone-programming-lite"},{"id":"3771d975-3ef1-11ea-9791-1b580a556b4a","vendorId":"19788","created":"2020-01-24T21:35:07.695Z","updated":"2013-11-01T07:00:00.000Z","title":"Learn to Make iPhone Apps with Objective C for iOS7","headline":"Create apps for iOS7 without any programming experience. Learn how to write Objective C code, design UI, and use Xcode.","description":" Learn to create iPhone apps with Objective C programming. Follow along in Xcode 5 to turn your ideas into iPhone apps. Create iPhone apps with easy to follow, step-by-step instructions, in this in-depth course taught by an expert instructor. This course features HD lectures and programming screencasts with large, clear text. Listen to crisp audio and follow Paul Solt’s instruction with demonstrations and on-screen pointer and highlighting. If you’ve tried to learn how to program iPhone apps from other online resources, you know it can be very frustrating. In this course, Paul Solt shows you how to get started You will learn the programming topics that computer science students learn, and in far less time All of the Objective C code works with iOS 7 apps Paul provides explanations and examples on how existing apps use different features Jump in and start learning to write code today! ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F19788_0a8b_11.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fhow-to-program-ios7-iphone-apps-from-scratch-in-objective-c\u002F","language":"en","tags":["Development","Mobile Apps","iOS Development"],"rating":4.6,"reviews":136,"isFree":false,"matches":["3771d977-3ef1-11ea-9791-1b580a556b4a","37716447-3ef1-11ea-9791-1b580a556b4a","37722792-3ef1-11ea-9791-1b580a556b4a","3773d548-3ef1-11ea-9791-1b580a556b4a","37724ea6-3ef1-11ea-9791-1b580a556b4a","376afba1-3ef1-11ea-9791-1b580a556b4a","377534d3-3ef1-11ea-9791-1b580a556b4a","3773ae31-3ef1-11ea-9791-1b580a556b4a","3778b749-3ef1-11ea-9791-1b580a556b4a","3772c3d8-3ef1-11ea-9791-1b580a556b4a"],"slug":"learn-to-make-i-phone-apps-with-objective-c-for-i-o-s7"},{"id":"3771d977-3ef1-11ea-9791-1b580a556b4a","vendorId":"19636","created":"2020-01-24T21:35:07.695Z","updated":"2012-06-01T07:00:00.000Z","title":"Objective C for iPhone-iPad App Programming","headline":"Learn how to write apps for iPhone and iPad apps with Objective-C.","description":"In this course you will Learn Objective C and its basic programming understanding. As you may or may not know, Objective-C is the main programming language for iOS (iPhone\u002FiPad) apps development which you will learn in thisiphone\u002Fipad App Development Tutorial. ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F19636_84f1_5.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Flearn-objective-c-for-iphone-ipad-app-programming\u002F","language":"en","tags":["Development","Mobile Apps","Objective-C"],"rating":3.4,"reviews":23,"isFree":false,"matches":["3771d975-3ef1-11ea-9791-1b580a556b4a","37724ea6-3ef1-11ea-9791-1b580a556b4a","37716447-3ef1-11ea-9791-1b580a556b4a","37722792-3ef1-11ea-9791-1b580a556b4a","376afba1-3ef1-11ea-9791-1b580a556b4a","3773d548-3ef1-11ea-9791-1b580a556b4a","3773ae31-3ef1-11ea-9791-1b580a556b4a","377275b4-3ef1-11ea-9791-1b580a556b4a","377534d3-3ef1-11ea-9791-1b580a556b4a","3772c3d8-3ef1-11ea-9791-1b580a556b4a"],"slug":"objective-c-for-i-phone-i-pad-app-programming"},{"id":"37716447-3ef1-11ea-9791-1b580a556b4a","vendorId":"18652","created":"2020-01-24T21:35:07.691Z","updated":"2012-06-01T07:00:00.000Z","title":"Mastering iPhone Programming","headline":"Complete guide to learn iOS7 iphone Programming with Objective C and Xcode, Cocoa and MVC, Sqlite, OpenGL ES and more.","description":"You can now avoid all the frustration and disappointment that comes when trying to learn iPhone programming . The interactive learning pedagogy is based on the \"concept and problem mechanism\" which provides a systematic approach for all candidates. Our experienced team of developers and tutors have created and refined the course based on a proven system that works and is recognized in the industry.  On completion of the course you will be able to Understand the entire iPhone Apps Development Cycle from start to finish. Develop and Publish your own iPhone Apps and Games on the App Store! See which type of Apps are making money and why and how you can do the same. Bid for the mushrooming number of iPhone App Projects on sites such as Elance, oDesk, WorkExchange etc. If you work at a job - you can expect a pay raise with your newly acquired cutting edge skill set Setup your own Independant iPhone Development Studio, and join the other studios that are successfully making money in this hot niche. Visit our website www.edumobile.org to know more in detail ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F18652_d9c5_13.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fmastering-iphone-programming\u002F","language":"en","tags":["Development","Mobile Apps","iOS Development"],"rating":4.4,"reviews":25,"isFree":false,"matches":["37722792-3ef1-11ea-9791-1b580a556b4a","3771d975-3ef1-11ea-9791-1b580a556b4a","3771d977-3ef1-11ea-9791-1b580a556b4a","3772c3d8-3ef1-11ea-9791-1b580a556b4a","3773d548-3ef1-11ea-9791-1b580a556b4a","37724ea6-3ef1-11ea-9791-1b580a556b4a","376afba1-3ef1-11ea-9791-1b580a556b4a","377534d3-3ef1-11ea-9791-1b580a556b4a","3778b749-3ef1-11ea-9791-1b580a556b4a","377275b4-3ef1-11ea-9791-1b580a556b4a"],"slug":"mastering-i-phone-programming"},{"id":"376afba1-3ef1-11ea-9791-1b580a556b4a","vendorId":"8416","created":"2020-01-24T21:35:07.170Z","updated":"2017-01-01T08:00:00.000Z","title":"Beginners - How To Create iPhone And iPad Apps - Zero Coding","headline":"Learn How To Create IOS Apps And Never Do A Hard Days Work Again - Zero Coding Needed","description":"A Verifiable Certificate of Completion is presented to all students who undertake this course.   In this course, you will learn how to create apps for iPhone and iPad devices. Expert trainer and published author Tony Bove introduces you to using the iOS Software Development Kit (SDK) and Xcode to build apps for the iPhone, iPad and Universal apps. Even if you have never programmed before or built apps before, by the end of this course you will be fully capable of building apps and submitting them to the App Store. Before you even start building an app, Tony takes you through what makes a good app, and the limitations you will face on the iPhone and iPad platforms. You will learn how to design a good user interface, how to use the iOS simulator, how to program in Xcode, and how an app runs. From there, you will jump right into building apps: designing the interface, including iAds in your app, animating, timing, and much more. You will also learn how to build iPad specific apps to take advantage of a larger screen and additional features. Finally, you will learn how to package your apps, and prepare them for submission to the app store. By the conclusion of this course you will be fully capable of designing, creating and submitting an app to the Apple App Store, using the iOS SDK and Xcode. The author has included working files, to allow you to work alongside him as he builds an app throughout this video tutorial.","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F8416_140f_11.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fbeginners-guide-to-iphone-ipad-app-creation\u002F","language":"en","tags":["Development","Mobile Apps","iOS Development"],"rating":4,"reviews":22,"isFree":false,"matches":["3773d548-3ef1-11ea-9791-1b580a556b4a","3771d977-3ef1-11ea-9791-1b580a556b4a","37724ea6-3ef1-11ea-9791-1b580a556b4a","3771d975-3ef1-11ea-9791-1b580a556b4a","377275b4-3ef1-11ea-9791-1b580a556b4a","37716447-3ef1-11ea-9791-1b580a556b4a","377534d3-3ef1-11ea-9791-1b580a556b4a","3773ae31-3ef1-11ea-9791-1b580a556b4a","3775d112-3ef1-11ea-9791-1b580a556b4a","37770990-3ef1-11ea-9791-1b580a556b4a"],"slug":"beginners-how-to-create-i-phone-and-i-pad-apps-zero-coding"}]}};(function(){var s;(s=document.currentScript||document.scripts[document.scripts.length-1]).parentNode.removeChild(s);}());</script><script src="/site/assets/js/app.e5c95575.js" defer></script><script src="/site/assets/js/page--src--templates--course-template-vue.a9c4e657.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html data-html-server-rendered="true" lang="en" data-vue-tag="%7B%22lang%22:%7B%22ssr%22:%22en%22%7D%7D">
+  <head>
+    <title>Flutter Bottom Navigation Bar - Gridsome</title><meta name="gridsome:hash" content="6d1e7dd52e8c17cf4930f349c6afc1a78b2e1c5e"><meta data-vue-tag="ssr" charset="utf-8"><meta data-vue-tag="ssr" name="generator" content="Gridsome v0.7.12"><meta data-vue-tag="ssr" data-key="viewport" name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta data-vue-tag="ssr" data-key="format-detection" name="format-detection" content="telephone=no"><link data-vue-tag="ssr" rel="icon" href="data:,"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="16x16" href="/site/assets/static/favicon.ce0531f.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="32x32" href="/site/assets/static/favicon.ac8d93a.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="96x96" href="/site/assets/static/favicon.b9532cc.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="76x76" href="/site/assets/static/favicon.f22e9f3.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="152x152" href="/site/assets/static/favicon.62d22cb.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="120x120" href="/site/assets/static/favicon.1539b60.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="167x167" href="/site/assets/static/favicon.dc0cdc5.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="180x180" href="/site/assets/static/favicon.7b22250.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"><link data-vue-tag="ssr" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css"><link rel="preload" href="/site/assets/css/0.styles.dded6410.css" as="style"><link rel="preload" href="/site/assets/js/app.e5c95575.js" as="script"><link rel="preload" href="/site/assets/js/page--src--templates--course-template-vue.a9c4e657.js" as="script"><link rel="prefetch" href="/site/assets/js/page--node-modules--gridsome--app--pages--404-vue.8ed2c588.js"><link rel="prefetch" href="/site/assets/js/page--src--pages--about-vue.d8fdab17.js"><link rel="prefetch" href="/site/assets/js/page--src--templates--index-template-vue.6cecc577.js"><link rel="prefetch" href="/site/assets/js/page--src--templates--tag-vue.c6b527ba.js"><link rel="prefetch" href="/site/assets/js/vendors~page--src--templates--course-template-vue~page--src--templates--index-template-vue.4ec5035c.js"><link rel="stylesheet" href="/site/assets/css/0.styles.dded6410.css"><style data-vue-tag="vuetify" type="text/css" id="vuetify-theme-stylesheet" nonce="undefined">.v-application a { color: #1976d2; }
+.v-application .primary {
+  background-color: #1976d2 !important;
+  border-color: #1976d2 !important;
+}
+.v-application .primary--text {
+  color: #1976d2 !important;
+  caret-color: #1976d2 !important;
+}
+.v-application .primary.lighten-5 {
+  background-color: #c7fdff !important;
+  border-color: #c7fdff !important;
+}
+.v-application .primary--text.text--lighten-5 {
+  color: #c7fdff !important;
+  caret-color: #c7fdff !important;
+}
+.v-application .primary.lighten-4 {
+  background-color: #a8e0ff !important;
+  border-color: #a8e0ff !important;
+}
+.v-application .primary--text.text--lighten-4 {
+  color: #a8e0ff !important;
+  caret-color: #a8e0ff !important;
+}
+.v-application .primary.lighten-3 {
+  background-color: #8ac5ff !important;
+  border-color: #8ac5ff !important;
+}
+.v-application .primary--text.text--lighten-3 {
+  color: #8ac5ff !important;
+  caret-color: #8ac5ff !important;
+}
+.v-application .primary.lighten-2 {
+  background-color: #6aaaff !important;
+  border-color: #6aaaff !important;
+}
+.v-application .primary--text.text--lighten-2 {
+  color: #6aaaff !important;
+  caret-color: #6aaaff !important;
+}
+.v-application .primary.lighten-1 {
+  background-color: #488fef !important;
+  border-color: #488fef !important;
+}
+.v-application .primary--text.text--lighten-1 {
+  color: #488fef !important;
+  caret-color: #488fef !important;
+}
+.v-application .primary.darken-1 {
+  background-color: #005eb6 !important;
+  border-color: #005eb6 !important;
+}
+.v-application .primary--text.text--darken-1 {
+  color: #005eb6 !important;
+  caret-color: #005eb6 !important;
+}
+.v-application .primary.darken-2 {
+  background-color: #00479b !important;
+  border-color: #00479b !important;
+}
+.v-application .primary--text.text--darken-2 {
+  color: #00479b !important;
+  caret-color: #00479b !important;
+}
+.v-application .primary.darken-3 {
+  background-color: #003180 !important;
+  border-color: #003180 !important;
+}
+.v-application .primary--text.text--darken-3 {
+  color: #003180 !important;
+  caret-color: #003180 !important;
+}
+.v-application .primary.darken-4 {
+  background-color: #001e67 !important;
+  border-color: #001e67 !important;
+}
+.v-application .primary--text.text--darken-4 {
+  color: #001e67 !important;
+  caret-color: #001e67 !important;
+}
+.v-application .secondary {
+  background-color: #424242 !important;
+  border-color: #424242 !important;
+}
+.v-application .secondary--text {
+  color: #424242 !important;
+  caret-color: #424242 !important;
+}
+.v-application .secondary.lighten-5 {
+  background-color: #c1c1c1 !important;
+  border-color: #c1c1c1 !important;
+}
+.v-application .secondary--text.text--lighten-5 {
+  color: #c1c1c1 !important;
+  caret-color: #c1c1c1 !important;
+}
+.v-application .secondary.lighten-4 {
+  background-color: #a6a6a6 !important;
+  border-color: #a6a6a6 !important;
+}
+.v-application .secondary--text.text--lighten-4 {
+  color: #a6a6a6 !important;
+  caret-color: #a6a6a6 !important;
+}
+.v-application .secondary.lighten-3 {
+  background-color: #8b8b8b !important;
+  border-color: #8b8b8b !important;
+}
+.v-application .secondary--text.text--lighten-3 {
+  color: #8b8b8b !important;
+  caret-color: #8b8b8b !important;
+}
+.v-application .secondary.lighten-2 {
+  background-color: #727272 !important;
+  border-color: #727272 !important;
+}
+.v-application .secondary--text.text--lighten-2 {
+  color: #727272 !important;
+  caret-color: #727272 !important;
+}
+.v-application .secondary.lighten-1 {
+  background-color: #595959 !important;
+  border-color: #595959 !important;
+}
+.v-application .secondary--text.text--lighten-1 {
+  color: #595959 !important;
+  caret-color: #595959 !important;
+}
+.v-application .secondary.darken-1 {
+  background-color: #2c2c2c !important;
+  border-color: #2c2c2c !important;
+}
+.v-application .secondary--text.text--darken-1 {
+  color: #2c2c2c !important;
+  caret-color: #2c2c2c !important;
+}
+.v-application .secondary.darken-2 {
+  background-color: #171717 !important;
+  border-color: #171717 !important;
+}
+.v-application .secondary--text.text--darken-2 {
+  color: #171717 !important;
+  caret-color: #171717 !important;
+}
+.v-application .secondary.darken-3 {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+.v-application .secondary--text.text--darken-3 {
+  color: #000000 !important;
+  caret-color: #000000 !important;
+}
+.v-application .secondary.darken-4 {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+.v-application .secondary--text.text--darken-4 {
+  color: #000000 !important;
+  caret-color: #000000 !important;
+}
+.v-application .accent {
+  background-color: #82b1ff !important;
+  border-color: #82b1ff !important;
+}
+.v-application .accent--text {
+  color: #82b1ff !important;
+  caret-color: #82b1ff !important;
+}
+.v-application .accent.lighten-5 {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+.v-application .accent--text.text--lighten-5 {
+  color: #ffffff !important;
+  caret-color: #ffffff !important;
+}
+.v-application .accent.lighten-4 {
+  background-color: #f8ffff !important;
+  border-color: #f8ffff !important;
+}
+.v-application .accent--text.text--lighten-4 {
+  color: #f8ffff !important;
+  caret-color: #f8ffff !important;
+}
+.v-application .accent.lighten-3 {
+  background-color: #daffff !important;
+  border-color: #daffff !important;
+}
+.v-application .accent--text.text--lighten-3 {
+  color: #daffff !important;
+  caret-color: #daffff !important;
+}
+.v-application .accent.lighten-2 {
+  background-color: #bce8ff !important;
+  border-color: #bce8ff !important;
+}
+.v-application .accent--text.text--lighten-2 {
+  color: #bce8ff !important;
+  caret-color: #bce8ff !important;
+}
+.v-application .accent.lighten-1 {
+  background-color: #9fccff !important;
+  border-color: #9fccff !important;
+}
+.v-application .accent--text.text--lighten-1 {
+  color: #9fccff !important;
+  caret-color: #9fccff !important;
+}
+.v-application .accent.darken-1 {
+  background-color: #6596e2 !important;
+  border-color: #6596e2 !important;
+}
+.v-application .accent--text.text--darken-1 {
+  color: #6596e2 !important;
+  caret-color: #6596e2 !important;
+}
+.v-application .accent.darken-2 {
+  background-color: #467dc6 !important;
+  border-color: #467dc6 !important;
+}
+.v-application .accent--text.text--darken-2 {
+  color: #467dc6 !important;
+  caret-color: #467dc6 !important;
+}
+.v-application .accent.darken-3 {
+  background-color: #2364aa !important;
+  border-color: #2364aa !important;
+}
+.v-application .accent--text.text--darken-3 {
+  color: #2364aa !important;
+  caret-color: #2364aa !important;
+}
+.v-application .accent.darken-4 {
+  background-color: #004c90 !important;
+  border-color: #004c90 !important;
+}
+.v-application .accent--text.text--darken-4 {
+  color: #004c90 !important;
+  caret-color: #004c90 !important;
+}
+.v-application .error {
+  background-color: #ff5252 !important;
+  border-color: #ff5252 !important;
+}
+.v-application .error--text {
+  color: #ff5252 !important;
+  caret-color: #ff5252 !important;
+}
+.v-application .error.lighten-5 {
+  background-color: #ffe4d5 !important;
+  border-color: #ffe4d5 !important;
+}
+.v-application .error--text.text--lighten-5 {
+  color: #ffe4d5 !important;
+  caret-color: #ffe4d5 !important;
+}
+.v-application .error.lighten-4 {
+  background-color: #ffc6b9 !important;
+  border-color: #ffc6b9 !important;
+}
+.v-application .error--text.text--lighten-4 {
+  color: #ffc6b9 !important;
+  caret-color: #ffc6b9 !important;
+}
+.v-application .error.lighten-3 {
+  background-color: #ffa99e !important;
+  border-color: #ffa99e !important;
+}
+.v-application .error--text.text--lighten-3 {
+  color: #ffa99e !important;
+  caret-color: #ffa99e !important;
+}
+.v-application .error.lighten-2 {
+  background-color: #ff8c84 !important;
+  border-color: #ff8c84 !important;
+}
+.v-application .error--text.text--lighten-2 {
+  color: #ff8c84 !important;
+  caret-color: #ff8c84 !important;
+}
+.v-application .error.lighten-1 {
+  background-color: #ff6f6a !important;
+  border-color: #ff6f6a !important;
+}
+.v-application .error--text.text--lighten-1 {
+  color: #ff6f6a !important;
+  caret-color: #ff6f6a !important;
+}
+.v-application .error.darken-1 {
+  background-color: #df323b !important;
+  border-color: #df323b !important;
+}
+.v-application .error--text.text--darken-1 {
+  color: #df323b !important;
+  caret-color: #df323b !important;
+}
+.v-application .error.darken-2 {
+  background-color: #bf0025 !important;
+  border-color: #bf0025 !important;
+}
+.v-application .error--text.text--darken-2 {
+  color: #bf0025 !important;
+  caret-color: #bf0025 !important;
+}
+.v-application .error.darken-3 {
+  background-color: #9f0010 !important;
+  border-color: #9f0010 !important;
+}
+.v-application .error--text.text--darken-3 {
+  color: #9f0010 !important;
+  caret-color: #9f0010 !important;
+}
+.v-application .error.darken-4 {
+  background-color: #800000 !important;
+  border-color: #800000 !important;
+}
+.v-application .error--text.text--darken-4 {
+  color: #800000 !important;
+  caret-color: #800000 !important;
+}
+.v-application .info {
+  background-color: #2196f3 !important;
+  border-color: #2196f3 !important;
+}
+.v-application .info--text {
+  color: #2196f3 !important;
+  caret-color: #2196f3 !important;
+}
+.v-application .info.lighten-5 {
+  background-color: #d4ffff !important;
+  border-color: #d4ffff !important;
+}
+.v-application .info--text.text--lighten-5 {
+  color: #d4ffff !important;
+  caret-color: #d4ffff !important;
+}
+.v-application .info.lighten-4 {
+  background-color: #b5ffff !important;
+  border-color: #b5ffff !important;
+}
+.v-application .info--text.text--lighten-4 {
+  color: #b5ffff !important;
+  caret-color: #b5ffff !important;
+}
+.v-application .info.lighten-3 {
+  background-color: #95e8ff !important;
+  border-color: #95e8ff !important;
+}
+.v-application .info--text.text--lighten-3 {
+  color: #95e8ff !important;
+  caret-color: #95e8ff !important;
+}
+.v-application .info.lighten-2 {
+  background-color: #75ccff !important;
+  border-color: #75ccff !important;
+}
+.v-application .info--text.text--lighten-2 {
+  color: #75ccff !important;
+  caret-color: #75ccff !important;
+}
+.v-application .info.lighten-1 {
+  background-color: #51b0ff !important;
+  border-color: #51b0ff !important;
+}
+.v-application .info--text.text--lighten-1 {
+  color: #51b0ff !important;
+  caret-color: #51b0ff !important;
+}
+.v-application .info.darken-1 {
+  background-color: #007cd6 !important;
+  border-color: #007cd6 !important;
+}
+.v-application .info--text.text--darken-1 {
+  color: #007cd6 !important;
+  caret-color: #007cd6 !important;
+}
+.v-application .info.darken-2 {
+  background-color: #0064ba !important;
+  border-color: #0064ba !important;
+}
+.v-application .info--text.text--darken-2 {
+  color: #0064ba !important;
+  caret-color: #0064ba !important;
+}
+.v-application .info.darken-3 {
+  background-color: #004d9f !important;
+  border-color: #004d9f !important;
+}
+.v-application .info--text.text--darken-3 {
+  color: #004d9f !important;
+  caret-color: #004d9f !important;
+}
+.v-application .info.darken-4 {
+  background-color: #003784 !important;
+  border-color: #003784 !important;
+}
+.v-application .info--text.text--darken-4 {
+  color: #003784 !important;
+  caret-color: #003784 !important;
+}
+.v-application .success {
+  background-color: #4caf50 !important;
+  border-color: #4caf50 !important;
+}
+.v-application .success--text {
+  color: #4caf50 !important;
+  caret-color: #4caf50 !important;
+}
+.v-application .success.lighten-5 {
+  background-color: #dcffd6 !important;
+  border-color: #dcffd6 !important;
+}
+.v-application .success--text.text--lighten-5 {
+  color: #dcffd6 !important;
+  caret-color: #dcffd6 !important;
+}
+.v-application .success.lighten-4 {
+  background-color: #beffba !important;
+  border-color: #beffba !important;
+}
+.v-application .success--text.text--lighten-4 {
+  color: #beffba !important;
+  caret-color: #beffba !important;
+}
+.v-application .success.lighten-3 {
+  background-color: #a2ff9e !important;
+  border-color: #a2ff9e !important;
+}
+.v-application .success--text.text--lighten-3 {
+  color: #a2ff9e !important;
+  caret-color: #a2ff9e !important;
+}
+.v-application .success.lighten-2 {
+  background-color: #85e783 !important;
+  border-color: #85e783 !important;
+}
+.v-application .success--text.text--lighten-2 {
+  color: #85e783 !important;
+  caret-color: #85e783 !important;
+}
+.v-application .success.lighten-1 {
+  background-color: #69cb69 !important;
+  border-color: #69cb69 !important;
+}
+.v-application .success--text.text--lighten-1 {
+  color: #69cb69 !important;
+  caret-color: #69cb69 !important;
+}
+.v-application .success.darken-1 {
+  background-color: #2d9437 !important;
+  border-color: #2d9437 !important;
+}
+.v-application .success--text.text--darken-1 {
+  color: #2d9437 !important;
+  caret-color: #2d9437 !important;
+}
+.v-application .success.darken-2 {
+  background-color: #00791e !important;
+  border-color: #00791e !important;
+}
+.v-application .success--text.text--darken-2 {
+  color: #00791e !important;
+  caret-color: #00791e !important;
+}
+.v-application .success.darken-3 {
+  background-color: #006000 !important;
+  border-color: #006000 !important;
+}
+.v-application .success--text.text--darken-3 {
+  color: #006000 !important;
+  caret-color: #006000 !important;
+}
+.v-application .success.darken-4 {
+  background-color: #004700 !important;
+  border-color: #004700 !important;
+}
+.v-application .success--text.text--darken-4 {
+  color: #004700 !important;
+  caret-color: #004700 !important;
+}
+.v-application .warning {
+  background-color: #fb8c00 !important;
+  border-color: #fb8c00 !important;
+}
+.v-application .warning--text {
+  color: #fb8c00 !important;
+  caret-color: #fb8c00 !important;
+}
+.v-application .warning.lighten-5 {
+  background-color: #ffff9e !important;
+  border-color: #ffff9e !important;
+}
+.v-application .warning--text.text--lighten-5 {
+  color: #ffff9e !important;
+  caret-color: #ffff9e !important;
+}
+.v-application .warning.lighten-4 {
+  background-color: #fffb82 !important;
+  border-color: #fffb82 !important;
+}
+.v-application .warning--text.text--lighten-4 {
+  color: #fffb82 !important;
+  caret-color: #fffb82 !important;
+}
+.v-application .warning.lighten-3 {
+  background-color: #ffdf67 !important;
+  border-color: #ffdf67 !important;
+}
+.v-application .warning--text.text--lighten-3 {
+  color: #ffdf67 !important;
+  caret-color: #ffdf67 !important;
+}
+.v-application .warning.lighten-2 {
+  background-color: #ffc24b !important;
+  border-color: #ffc24b !important;
+}
+.v-application .warning--text.text--lighten-2 {
+  color: #ffc24b !important;
+  caret-color: #ffc24b !important;
+}
+.v-application .warning.lighten-1 {
+  background-color: #ffa72d !important;
+  border-color: #ffa72d !important;
+}
+.v-application .warning--text.text--lighten-1 {
+  color: #ffa72d !important;
+  caret-color: #ffa72d !important;
+}
+.v-application .warning.darken-1 {
+  background-color: #db7200 !important;
+  border-color: #db7200 !important;
+}
+.v-application .warning--text.text--darken-1 {
+  color: #db7200 !important;
+  caret-color: #db7200 !important;
+}
+.v-application .warning.darken-2 {
+  background-color: #bb5900 !important;
+  border-color: #bb5900 !important;
+}
+.v-application .warning--text.text--darken-2 {
+  color: #bb5900 !important;
+  caret-color: #bb5900 !important;
+}
+.v-application .warning.darken-3 {
+  background-color: #9d4000 !important;
+  border-color: #9d4000 !important;
+}
+.v-application .warning--text.text--darken-3 {
+  color: #9d4000 !important;
+  caret-color: #9d4000 !important;
+}
+.v-application .warning.darken-4 {
+  background-color: #802700 !important;
+  border-color: #802700 !important;
+}
+.v-application .warning--text.text--darken-4 {
+  color: #802700 !important;
+  caret-color: #802700 !important;
+}</style><noscript data-vue-tag="ssr"><style>.g-image--loading{display:none;}</style></noscript>
+  </head>
+  <body >
+    <div data-app="true" data-server-rendered="true" id="app" id="inspire" class="v-application v-application--is-ltr theme--light"><div class="v-application--wrap"><header class="gb-toolbar v-sheet v-sheet--tile theme--dark v-toolbar v-toolbar--dense v-app-bar v-app-bar--fixed" style="height:48px;margin-top:0px;transform:translateY(0px);left:0px;right:0px;"><div class="v-toolbar__content" style="height:48px;"><button type="button" class="v-app-bar__nav-icon v-btn v-btn--flat v-btn--icon v-btn--round theme--dark v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-menu theme--dark"></i></span></button><div class="v-toolbar__title ml-0 pl-4" style="width:300px;"><span class="hidden-sm-and-down">skillhub</span></div><div class="spacer"></div><div class="v-input hidden-sm-and-down v-input--hide-details v-input--dense theme--dark v-text-field v-text-field--single-line v-text-field--solo v-text-field--solo-inverted v-text-field--solo-flat v-text-field--enclosed"><div class="v-input__control"><div class="v-input__slot"><div class="v-input__prepend-inner"><div class="v-input__icon v-input__icon--prepend-inner"><i aria-hidden="true" class="v-icon notranslate mdi mdi-magnify theme--dark"></i></div></div><div class="v-text-field__slot"><label for="input-37136" class="v-label theme--dark" style="left:0px;right:auto;position:absolute;">Search</label><input id="input-37136" type="text"></div></div></div></div><button type="button" class="v-btn v-btn--flat v-btn--icon v-btn--round theme--dark v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-apps theme--dark"></i></span></button><button type="button" class="v-btn v-btn--flat v-btn--icon v-btn--round theme--dark v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-bell theme--dark"></i></span></button></div></header><main class="v-content" style="padding-top:11472px;padding-right:0px;padding-bottom:0px;padding-left:0px;"><div class="v-content__wrap"><div class="container container--fluid pa-0"><div class="row no-gutters"><div class="col col-12"><div class="row no-gutters row--dense"><div class="height-30 bg-dark white--text jarallax col"><img src="https://i.udemycdn.com/course/750x422/2747534_a2f2.jpg" class="jarallax-img opacity-20 g-image"><div class="container mt-8 pa-0"><div class="row mb-12 justify-center"><div dense="" class="col"><p class="display-2 mb-0">Flutter Bottom Navigation Bar</p><p class="headline mb-0">make bottom navigation bar and many screens</p><div><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">0 (0)</span></div><a href="https://www.udemy.com/course/flutter-bottom-navigation-bar/" class="v-btn v-btn--contained theme--light v-size--default warning"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-share-outline theme--light"></i> Take me there!
+          </span></a></div></div></div></div></div></div></div><div class="row no-gutters"><div class="col col-12"><div class="container mt-4 pl-5"><div class="row mb-12 justify-center"><div dense="" class="col">
+            Flutter Bottom Navigation Bar:In this tutorial, we are going to learn about Flutter Bottom Navigation Bar. In any app, Bottom navigation bars make it easy for users to explore and switch between top-level views or top-level pages in a single tap with a more convenient way. The Bottom navigation bars display three to five destinations at the bottom of an app screen. Each destination is represented by a unique icon and an optional text label.Creating Flutter Bottom Navigation Bar:Follow the below procedure to create Flutter Bottom Navigation Bar.Add the dependency package:adding the dependency package to pubspec.yaml file. use the below code to add dependency package. After adding the dependency package run the get package method to import all the required files to the app.dependencies:bmnav: ^0.3.4Install the package:You can install the package from the command line using the below code with Flutter as shown.$ flutter packages getImporting the Package:We all know that, After Adding the dependency package to the pubspec.yaml file, you can now import the package into the dart code by using the below code. without adding the dependency package to the pubspec.yaml file if you import it will show package not found an error.import 'package:bmnav/bmnav.dart';Creating the Flutter Bottom Navigation Bar.In Scaffold widget, we are implementing the Bottom navigation bar code
+          </div></div></div></div></div><div class="row no-gutters"><div class="col"><div class="container"><div class="headline pa-1 mb-0">#Related</div><div aria-label="Slideshow" class="vueperslides no-shadow vueperslides--fixed-height vueperslides--slide-multiple vueperslides--bullets-outside" style="height:300px;"><!----><div class="vueperslides__inner"><div aria-live="polite" class="vueperslides__parallax-wrapper" style="padding-bottom:25%;"><div class="vueperslides__track"><div class="vueperslides__track-inner" style="transition-duration:0ms;transform:translate3d(0%, 0, 0);will-change:auto;"><!----><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/microsoft-project-the-five-keys-key-1-navigation" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Microsoft Project: The Five Keys - Key 1 Navigation</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="To be able to use MS Project you have to know the essentials on how to navigate the user interface.That is covered here">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.7 (3)</span></div></div></div><!----></div><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/css-development-with-cs-s3" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>CSS Development (with CSS3!)</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Create Flexible, Interesting, and Usable Designs for Desktop &amp;Mobile Websites with CSS tutorial for beginners using CSS3">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.4 (227)</span></div></div></div><!----></div><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/learning-css" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Learning CSS</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Learn how to use Cascading Style Sheets to create beautiful webpages.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.6 (9)</span></div></div></div><!----></div><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/advanced-css-training" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Advanced CSS Training</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Get Trained in CSS and take a deep dive into Advanced CSS">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">2.8 (5)</span></div></div></div><!----></div><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/i-phone-icons-gone-awesome" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>iPhone icons gone awesome</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Learn the fastest, easiest and funnest way of making your iPhone, iPad icons stand out from the crowd">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">3.5 (18)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/mastering-i-phone-programming-lite" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Mastering iPhone programming - Lite</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Quick introduction to iPhone programming with Objective C, Controls in iOS with MVC, Advance Features in iOS with Cocoa">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4 (35)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/learn-to-make-i-phone-apps-with-objective-c-for-i-o-s7" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Learn to Make iPhone Apps with Objective C for iOS7</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Create apps for iOS7 without any programming experience. Learn how to write Objective C code, design UI, and use Xcode.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.6 (136)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/create-an-engaging-website-with-twitter-bootstrap-2-x" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Create an Engaging Website with Twitter Bootstrap 2.x</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Learn to create your website with this free and open-source web design framework.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4 (58)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/mastering-i-phone-programming" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Mastering iPhone Programming</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Complete guide to learn iOS7 iphone Programming with Objective C and Xcode, Cocoa and MVC, Sqlite, OpenGL ES and more.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.4 (25)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/creating-responsive-web-design" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Creating Responsive Web Design</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Learn how to optimize your webpages for different screen sizes and platforms.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.1 (394)</span></div></div></div><!----></div><!----></div></div></div><!----><!----><!----><!----><!----></div><!----><!----></div></div></div></div></div></div></main></div></div>
+    <script>window.__INITIAL_STATE__={"data":null,"context":{"course":{"id":"37790561-3ef1-11ea-9791-1b580a556b4a","vendorId":"2747534","created":"2020-01-24T21:35:08.092Z","updated":"2020-01-01T08:00:00.000Z","title":"Flutter Bottom Navigation Bar","headline":"make bottom navigation bar and many screens","description":"Flutter Bottom Navigation Bar:In this tutorial, we are going to learn about Flutter Bottom Navigation Bar. In any app, Bottom navigation bars make it easy for users to explore and switch between top-level views or top-level pages in a single tap with a more convenient way. The Bottom navigation bars display three to five destinations at the bottom of an app screen. Each destination is represented by a unique icon and an optional text label.Creating Flutter Bottom Navigation Bar:Follow the below procedure to create Flutter Bottom Navigation Bar.Add the dependency package:adding the dependency package to pubspec.yaml file. use the below code to add dependency package. After adding the dependency package run the get package method to import all the required files to the app.dependencies:bmnav: ^0.3.4Install the package:You can install the package from the command line using the below code with Flutter as shown.$ flutter packages getImporting the Package:We all know that, After Adding the dependency package to the pubspec.yaml file, you can now import the package into the dart code by using the below code. without adding the dependency package to the pubspec.yaml file if you import it will show package not found an error.import 'package:bmnav\u002Fbmnav.dart';Creating the Flutter Bottom Navigation Bar.In Scaffold widget, we are implementing the Bottom navigation bar code","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F2747534_a2f2.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fflutter-bottom-navigation-bar\u002F","language":"en","tags":["Development","Mobile Apps","Google Flutter"],"rating":0,"reviews":0,"isFree":false,"matches":["3771d975-3ef1-11ea-9791-1b580a556b4a","37761f38-3ef1-11ea-9791-1b580a556b4a","37722792-3ef1-11ea-9791-1b580a556b4a","37724ea0-3ef1-11ea-9791-1b580a556b4a","37716447-3ef1-11ea-9791-1b580a556b4a","376be602-3ef1-11ea-9791-1b580a556b4a","3774e6b2-3ef1-11ea-9791-1b580a556b4a","37722791-3ef1-11ea-9791-1b580a556b4a","37718b57-3ef1-11ea-9791-1b580a556b4a","3772c3d6-3ef1-11ea-9791-1b580a556b4a"],"slug":"flutter-bottom-navigation-bar"},"related":[{"id":"37761f38-3ef1-11ea-9791-1b580a556b4a","vendorId":"27361","created":"2020-01-24T21:35:07.941Z","updated":"2017-10-01T07:00:00.000Z","title":"Microsoft Project: The Five Keys - Key 1 Navigation","headline":"To be able to use MS Project you have to know the essentials on how to navigate the user interface.That is covered here","description":" This is Key 1 Navigation Microsoft Project Tutorial of the Five Keys to MS Project. Key 1 covers Navigation. Key 2 covers Tasks and Task Linking essentials. Key 3 covers Task Constraints---one of the most misunderstood components of MS Project. Key 4 covers Project Calendars. Key 5 cover Tracking Actual Progress. In total the Five Keys gives you the essential skills needed to create project schedules in a way that keeps the tool lean but powerful, and thus usable as a tool for actually helping your projects to be successful. Take this first key in my Microsoft Project Training course and learn essential navigation skills needed to be able to use Microsoft Project effectively.","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F27361_6643_10.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fgazamethod_fivekeys_key1\u002F","language":"en","tags":["Office Productivity","Microsoft","Microsoft Project"],"rating":4.7,"reviews":3,"isFree":false,"matches":["3775d11b-3ef1-11ea-9791-1b580a556b4a","3770a0f1-3ef1-11ea-9791-1b580a556b4a","37733903-3ef1-11ea-9791-1b580a556b4a","3770c802-3ef1-11ea-9791-1b580a556b4a","3770a0f6-3ef1-11ea-9791-1b580a556b4a","3770a0f4-3ef1-11ea-9791-1b580a556b4a","3770c803-3ef1-11ea-9791-1b580a556b4a","3770c801-3ef1-11ea-9791-1b580a556b4a","3770a0f8-3ef1-11ea-9791-1b580a556b4a","37733902-3ef1-11ea-9791-1b580a556b4a"],"slug":"microsoft-project-the-five-keys-key-1-navigation"},{"id":"3774e6b2-3ef1-11ea-9791-1b580a556b4a","vendorId":"24334","created":"2020-01-24T21:35:07.885Z","updated":"2019-07-01T07:00:00.000Z","title":"CSS Development (with CSS3!)","headline":"Create Flexible, Interesting, and Usable Designs for Desktop &Mobile Websites with CSS tutorial for beginners using CSS3","description":"Anyone who has worked in web development for more than five minutes can tell you: the difference between an outstanding site and a terrible site is the quality of the CSS. With our CSS Tutorial for Beginners course, you can learn to make high-quality, graphically amazing and thoroughly impressive web sites.All it takes is a little creativity and a strong understanding of CSS design and code and your website will look exactly the way you want it to.LearnToProgram’s Zachary Kingston brings you this dynamic and comprehensive CSS course. This CSS Tutorial for Beginners is perfect for both beginners who don’t understand how to use CSS and experts who don’t understand why they cannot get their website to look exactly the way they want it to. Watch over 4 hours of engaging video lectures, sharpen your skills with fun and creative lab exercises, and study the dozens of style sheet examples provided.  With this CSS course, you will become fully competent in CSS and master of your website! Take this ultimate CSS Development Course (With CSS3!) course now and start learning CSS.","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F24334_ee67_13.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fcss-development-with-css3\u002F","language":"en","tags":["Development","Web Development","CSS"],"rating":4.4,"reviews":227,"isFree":false,"matches":["37716446-3ef1-11ea-9791-1b580a556b4a","3776bb75-3ef1-11ea-9791-1b580a556b4a","37744a70-3ef1-11ea-9791-1b580a556b4a","37733906-3ef1-11ea-9791-1b580a556b4a","3772c3d6-3ef1-11ea-9791-1b580a556b4a","37724ea0-3ef1-11ea-9791-1b580a556b4a","377311f4-3ef1-11ea-9791-1b580a556b4a","376aad81-3ef1-11ea-9791-1b580a556b4a","37750dc4-3ef1-11ea-9791-1b580a556b4a","37718b57-3ef1-11ea-9791-1b580a556b4a"],"slug":"css-development-with-cs-s3"},{"id":"3772c3d6-3ef1-11ea-9791-1b580a556b4a","vendorId":"21056","created":"2020-01-24T21:35:07.812Z","updated":"2012-08-01T07:00:00.000Z","title":"Learning CSS","headline":"Learn how to use Cascading Style Sheets to create beautiful webpages.","description":"Note: This CSS Course covers CSS 2.0\u002F2.1 and requires a working knowledge of HTML\u002FXHTML. You can learn HTML\u002FXHTML free by subscribing to my course HTML Workshop. Cascading Style Sheets (CSS) is a language used for describing the look and feel of an HTML\u002FXHTML document. CSS is designed primarily to separate the document structure [HTML\u002FXTHML markup] from the document presentation such as layout, colors, and fonts. Advantages of using CSS can be: Improving content accessibility. Providing a high level of flexibility to control the presentation of the WebPages. Enabling to share formatting information among multiple pages easily. Reducing the complexity to develop and maintain large websites and web applications. Helping markup to be rendered on multiple devices like a computer screen, smart phones and tablets. Understanding CSS can be your \"Second Step\" in the roadmap of learning the overall web design or development process. The CSS Training has been crafted to make you understand:  What is CSS?  Different CSS properties  How to apply CSS on different HTML elements? \u003C\u002Fp\u003E","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F21056_fec1_6.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Flearning-css\u002F","language":"en","tags":["Development","Web Development","CSS"],"rating":4.6,"reviews":9,"isFree":false,"matches":["3774e6b2-3ef1-11ea-9791-1b580a556b4a","376ea527-3ef1-11ea-9791-1b580a556b4a","3776bb75-3ef1-11ea-9791-1b580a556b4a","37724ea0-3ef1-11ea-9791-1b580a556b4a","377004b0-3ef1-11ea-9791-1b580a556b4a","37733906-3ef1-11ea-9791-1b580a556b4a","376aad81-3ef1-11ea-9791-1b580a556b4a","37744a70-3ef1-11ea-9791-1b580a556b4a","37716446-3ef1-11ea-9791-1b580a556b4a","37702bc2-3ef1-11ea-9791-1b580a556b4a"],"slug":"learning-css"},{"id":"37724ea0-3ef1-11ea-9791-1b580a556b4a","vendorId":"20542","created":"2020-01-24T21:35:07.698Z","updated":"2012-07-01T07:00:00.000Z","title":"Advanced CSS Training","headline":"Get Trained in CSS and take a deep dive into Advanced CSS","description":"In this Advanced CSS Tutorial, you will learn to use CSS to format forms, create list-based navigation, do advanced page layouts, and create stunning background effects. You will also get CSS Training in coding conventions and shorthand properties. ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F20542_2fd2_3.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fadvanced-css-training\u002F","language":"en","tags":["Development","Web Development","CSS"],"rating":2.8,"reviews":5,"isFree":false,"matches":["376ea527-3ef1-11ea-9791-1b580a556b4a","3774e6b2-3ef1-11ea-9791-1b580a556b4a","3772c3d6-3ef1-11ea-9791-1b580a556b4a","37716446-3ef1-11ea-9791-1b580a556b4a","376dbac6-3ef1-11ea-9791-1b580a556b4a","3776bb75-3ef1-11ea-9791-1b580a556b4a","37733906-3ef1-11ea-9791-1b580a556b4a","376aad81-3ef1-11ea-9791-1b580a556b4a","376cf770-3ef1-11ea-9791-1b580a556b4a","377311f4-3ef1-11ea-9791-1b580a556b4a"],"slug":"advanced-css-training"},{"id":"37722791-3ef1-11ea-9791-1b580a556b4a","vendorId":"20150","created":"2020-01-24T21:35:07.697Z","updated":"2013-05-01T07:00:00.000Z","title":"iPhone icons gone awesome","headline":"Learn the fastest, easiest and funnest way of making your iPhone, iPad icons stand out from the crowd","description":" IMPORTANT NOTICE: This course is for those who really dig the iOS6 icons. This course was originally $247, but because of the changes of time I am gifting it to you for ONLY $29 if you are interested in iOS6 and prior icon design :) Take a look inside. You will love what you see. -------------------------------------------------------- --- Are you a student or a non-profit organization? Just message me for a considerable discount. --- \u003C\u002Fp\u003E Here's an advice you have to take seriously in order to succeed on the App Store! Your app icon is the single most important asset of your app that can make that killer first impression! In this course I will help you make stunning icons for your iOS apps that will stand out in the App Store. Inspired by Top Grossing app icons this course covers everything you need to know about successful app icon design, creation and much more. I will give you a PSD file \"cleverly\" named: My Awesome Icons 2.0 (MAI 2.0). And much more... Here are some features: ready to use PSD template (MAI 2.0) export with a click of a button 1024 patterns successful app icon characteristics unveiled anybody can use it regardless of experience everything you need to know about Photoshop Layer Styles more than 12 successful app icons replicated\u002Frebuilt from scratch (just take a look at all the FREE lessons!) All of these in High Quality Video lessons and a ton of downloadable resources. The course is structured in a way that you can make your first icon in a matter of minutes. For a quick start just take lessons 5 and 6 and you're good to go. But why stop there? The best part of the course is still waiting for you in the lessons afterward. Deepen your knowledge, download all the handy resources, take a look at the examples and start making icons like a pro. Great icons require great design. In Section 6 (Awesome Examples) I cover the most common design elements that are hot right now. Even more, the course is built upon these crucial elements so you may create icons that have the characteristics of Top Grossing app icons in no time. Learn from the design of these app icons: Dragon Story™ Ruzzle Angry Birds Pandora Radio Real Racing™ Clash of Clans Fresh Deck Poker Sleep Cycle alarm Clock Campus Life™ Candy Crush Saga® Infinity Blade II Bad Piggies Your app icon can make or break your success. Let me help you create an awesome one. Inside the course I answer to all questions and messages; if you have a problem I'll help you solve it. So why do 2300+ people love MAI 2.0? Because it's FAST, it's EASY and it's AWESOME! It's a must have for every developer. And most importantly: it makes icon creation FUN! So, what are you waiting for? Take this course today and make your app noticed! *********************************************************** ⬇⬇⬇ TAKE A LOOK AT THE FREE LECTURES ⬇⬇⬇ ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F20150_4620_13.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fhow-to-make-awesome-icons-for-your-iphone-app-in-60-seconds\u002F","language":"en","tags":["Design","Graphic Design","iOS Development"],"rating":3.5,"reviews":18,"isFree":false,"matches":["37742368-3ef1-11ea-9791-1b580a556b4a","376afba1-3ef1-11ea-9791-1b580a556b4a","3771d975-3ef1-11ea-9791-1b580a556b4a","37722792-3ef1-11ea-9791-1b580a556b4a","37716447-3ef1-11ea-9791-1b580a556b4a","3771d977-3ef1-11ea-9791-1b580a556b4a","37749896-3ef1-11ea-9791-1b580a556b4a","3773d548-3ef1-11ea-9791-1b580a556b4a","3773ae31-3ef1-11ea-9791-1b580a556b4a","37720084-3ef1-11ea-9791-1b580a556b4a"],"slug":"i-phone-icons-gone-awesome"},{"id":"37722792-3ef1-11ea-9791-1b580a556b4a","vendorId":"20225","created":"2020-01-24T21:35:07.697Z","updated":"2012-07-01T07:00:00.000Z","title":"Mastering iPhone programming - Lite","headline":"Quick introduction to iPhone programming with Objective C, Controls in iOS with MVC, Advance Features in iOS with Cocoa","description":"","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F20225_2e46_6.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fmastering-iphone-programming-lite\u002F","language":"en","tags":["Development","Mobile Apps","iOS Development"],"rating":4,"reviews":35,"isFree":false,"matches":["37716447-3ef1-11ea-9791-1b580a556b4a","3771d975-3ef1-11ea-9791-1b580a556b4a","3771d977-3ef1-11ea-9791-1b580a556b4a","37724ea6-3ef1-11ea-9791-1b580a556b4a","3778b749-3ef1-11ea-9791-1b580a556b4a","3773d548-3ef1-11ea-9791-1b580a556b4a","3772c3d8-3ef1-11ea-9791-1b580a556b4a","3773ae31-3ef1-11ea-9791-1b580a556b4a","376afba1-3ef1-11ea-9791-1b580a556b4a","3779c8b0-3ef1-11ea-9791-1b580a556b4a"],"slug":"mastering-i-phone-programming-lite"},{"id":"3771d975-3ef1-11ea-9791-1b580a556b4a","vendorId":"19788","created":"2020-01-24T21:35:07.695Z","updated":"2013-11-01T07:00:00.000Z","title":"Learn to Make iPhone Apps with Objective C for iOS7","headline":"Create apps for iOS7 without any programming experience. Learn how to write Objective C code, design UI, and use Xcode.","description":" Learn to create iPhone apps with Objective C programming. Follow along in Xcode 5 to turn your ideas into iPhone apps. Create iPhone apps with easy to follow, step-by-step instructions, in this in-depth course taught by an expert instructor. This course features HD lectures and programming screencasts with large, clear text. Listen to crisp audio and follow Paul Solt’s instruction with demonstrations and on-screen pointer and highlighting. If you’ve tried to learn how to program iPhone apps from other online resources, you know it can be very frustrating. In this course, Paul Solt shows you how to get started You will learn the programming topics that computer science students learn, and in far less time All of the Objective C code works with iOS 7 apps Paul provides explanations and examples on how existing apps use different features Jump in and start learning to write code today! ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F19788_0a8b_11.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fhow-to-program-ios7-iphone-apps-from-scratch-in-objective-c\u002F","language":"en","tags":["Development","Mobile Apps","iOS Development"],"rating":4.6,"reviews":136,"isFree":false,"matches":["3771d977-3ef1-11ea-9791-1b580a556b4a","37716447-3ef1-11ea-9791-1b580a556b4a","37722792-3ef1-11ea-9791-1b580a556b4a","3773d548-3ef1-11ea-9791-1b580a556b4a","37724ea6-3ef1-11ea-9791-1b580a556b4a","376afba1-3ef1-11ea-9791-1b580a556b4a","377534d3-3ef1-11ea-9791-1b580a556b4a","3773ae31-3ef1-11ea-9791-1b580a556b4a","3778b749-3ef1-11ea-9791-1b580a556b4a","3772c3d8-3ef1-11ea-9791-1b580a556b4a"],"slug":"learn-to-make-i-phone-apps-with-objective-c-for-i-o-s7"},{"id":"37718b57-3ef1-11ea-9791-1b580a556b4a","vendorId":"19260","created":"2020-01-24T21:35:07.693Z","updated":"2012-06-01T07:00:00.000Z","title":"Create an Engaging Website with Twitter Bootstrap 2.x","headline":"Learn to create your website with this free and open-source web design framework.","description":" A total of 23 lectures with a total running time of 74 minutes. This step-by-step approach will show you how to build a responsive, interactive, and visually engaging web page with simple and flexible HTML, CSS and JavaScript -- all built on the free, open-source framework called Twitter Bootstrap. Learn to take advantage of the many aspects of Twitter Bootsrtap, including creating your own layouts, customizing components, device-sensitive elements, auto-suggest form fields, and extend the icon sprite sheet to incorporate your own icons! This course includes HTML, CSS, JavaScript, and Photoshop templates that you can customize for use in your own projects. ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F19260_3680_18.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fcreate-an-engaging-website-with-twitter-bootstrap\u002F","language":"en","tags":["Development","Web Development","Bootstrap"],"rating":4,"reviews":58,"isFree":false,"matches":["376aad81-3ef1-11ea-9791-1b580a556b4a","3776bb75-3ef1-11ea-9791-1b580a556b4a","37702bc2-3ef1-11ea-9791-1b580a556b4a","377004b0-3ef1-11ea-9791-1b580a556b4a","377757b1-3ef1-11ea-9791-1b580a556b4a","3774e6b2-3ef1-11ea-9791-1b580a556b4a","37744a70-3ef1-11ea-9791-1b580a556b4a","376be602-3ef1-11ea-9791-1b580a556b4a","37716446-3ef1-11ea-9791-1b580a556b4a","37733906-3ef1-11ea-9791-1b580a556b4a"],"slug":"create-an-engaging-website-with-twitter-bootstrap-2-x"},{"id":"37716447-3ef1-11ea-9791-1b580a556b4a","vendorId":"18652","created":"2020-01-24T21:35:07.691Z","updated":"2012-06-01T07:00:00.000Z","title":"Mastering iPhone Programming","headline":"Complete guide to learn iOS7 iphone Programming with Objective C and Xcode, Cocoa and MVC, Sqlite, OpenGL ES and more.","description":"You can now avoid all the frustration and disappointment that comes when trying to learn iPhone programming . The interactive learning pedagogy is based on the \"concept and problem mechanism\" which provides a systematic approach for all candidates. Our experienced team of developers and tutors have created and refined the course based on a proven system that works and is recognized in the industry.  On completion of the course you will be able to Understand the entire iPhone Apps Development Cycle from start to finish. Develop and Publish your own iPhone Apps and Games on the App Store! See which type of Apps are making money and why and how you can do the same. Bid for the mushrooming number of iPhone App Projects on sites such as Elance, oDesk, WorkExchange etc. If you work at a job - you can expect a pay raise with your newly acquired cutting edge skill set Setup your own Independant iPhone Development Studio, and join the other studios that are successfully making money in this hot niche. Visit our website www.edumobile.org to know more in detail ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F18652_d9c5_13.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fmastering-iphone-programming\u002F","language":"en","tags":["Development","Mobile Apps","iOS Development"],"rating":4.4,"reviews":25,"isFree":false,"matches":["37722792-3ef1-11ea-9791-1b580a556b4a","3771d975-3ef1-11ea-9791-1b580a556b4a","3771d977-3ef1-11ea-9791-1b580a556b4a","3772c3d8-3ef1-11ea-9791-1b580a556b4a","3773d548-3ef1-11ea-9791-1b580a556b4a","37724ea6-3ef1-11ea-9791-1b580a556b4a","376afba1-3ef1-11ea-9791-1b580a556b4a","377534d3-3ef1-11ea-9791-1b580a556b4a","3778b749-3ef1-11ea-9791-1b580a556b4a","377275b4-3ef1-11ea-9791-1b580a556b4a"],"slug":"mastering-i-phone-programming"},{"id":"376be602-3ef1-11ea-9791-1b580a556b4a","vendorId":"8814","created":"2020-01-24T21:35:07.172Z","updated":"2014-10-01T07:00:00.000Z","title":"Creating Responsive Web Design","headline":"Learn how to optimize your webpages for different screen sizes and platforms.","description":" Learn how to create websites that adjust to any screen size while optimizing download speeds. HTML5, CSS3, and Media Queries HTML5Shiv for Internet Explorer Photoshop Image Optimization and Slicing Design Adaptations for Various Screens Create Websites that are Optimized for All Screens Because people use a variety of devices to access the Internet, it's important that, as a website designer, you know how to create a site that will conform to any screen size. Today's websites should be able to resize and rearrange elements and content automatically so that any user on any device from anywhere in the world can access your site and browse it with ease. And building a website that's compatible with the many browsers available from both the past and the present is also an integral part of launching a strong site. Not every website designer knows how to create these \"intelligent\" websites. With the right training, you can differentiate yourself from the competition and potentially expand your client base. Contents and Overview In just 1.5 hours and through 11 lectures, you'll learn all that you need to know to create a dazzling website using CSS3 and HTML5. You'll understand how to make your site backwards compatible with old browsers, and how to set it up using CSS rules so that it will adjust itself to any screen size while optimizing download speeds. This course, which is ideal for web developers, graphic designers, usability experts, and interaction designers, will even provide you with CSS, HTML, and Photoshop templates that you can use to design your own sites. Upon successful completion of this course, you'll be confident in your abilities to design a customized website that's optimized to work on any computer or mobile device. From the creation of CSS files to the design of a site's layout, text, and graphics, you'll be fully versed in launching a site that's going to appear just as you intended, regardless of what screen your visitors will be using. ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F8814_0329_5.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fcreating-responsive-web-design\u002F","language":"en","tags":["Design","Web Design","Responsive Design"],"rating":4.1,"reviews":394,"isFree":false,"matches":["376aad81-3ef1-11ea-9791-1b580a556b4a","37744a70-3ef1-11ea-9791-1b580a556b4a","37718b57-3ef1-11ea-9791-1b580a556b4a","37716446-3ef1-11ea-9791-1b580a556b4a","3774e6b2-3ef1-11ea-9791-1b580a556b4a","377757b1-3ef1-11ea-9791-1b580a556b4a","3776bb75-3ef1-11ea-9791-1b580a556b4a","377004b0-3ef1-11ea-9791-1b580a556b4a","376ea528-3ef1-11ea-9791-1b580a556b4a","3772c3d6-3ef1-11ea-9791-1b580a556b4a"],"slug":"creating-responsive-web-design"}]}};(function(){var s;(s=document.currentScript||document.scripts[document.scripts.length-1]).parentNode.removeChild(s);}());</script><script src="/site/assets/js/app.e5c95575.js" defer></script><script src="/site/assets/js/page--src--templates--course-template-vue.a9c4e657.js" defer></script>
+  </body>
+</html>

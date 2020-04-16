@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html data-html-server-rendered="true" lang="en" data-vue-tag="%7B%22lang%22:%7B%22ssr%22:%22en%22%7D%7D">
+  <head>
+    <title>A mathematical way to think about biology - Gridsome</title><meta name="gridsome:hash" content="6d1e7dd52e8c17cf4930f349c6afc1a78b2e1c5e"><meta data-vue-tag="ssr" charset="utf-8"><meta data-vue-tag="ssr" name="generator" content="Gridsome v0.7.12"><meta data-vue-tag="ssr" data-key="viewport" name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta data-vue-tag="ssr" data-key="format-detection" name="format-detection" content="telephone=no"><link data-vue-tag="ssr" rel="icon" href="data:,"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="16x16" href="/site/assets/static/favicon.ce0531f.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="32x32" href="/site/assets/static/favicon.ac8d93a.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="96x96" href="/site/assets/static/favicon.b9532cc.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="76x76" href="/site/assets/static/favicon.f22e9f3.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="152x152" href="/site/assets/static/favicon.62d22cb.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="120x120" href="/site/assets/static/favicon.1539b60.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="167x167" href="/site/assets/static/favicon.dc0cdc5.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="180x180" href="/site/assets/static/favicon.7b22250.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"><link data-vue-tag="ssr" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css"><link rel="preload" href="/site/assets/css/0.styles.dded6410.css" as="style"><link rel="preload" href="/site/assets/js/app.e5c95575.js" as="script"><link rel="preload" href="/site/assets/js/page--src--templates--course-template-vue.a9c4e657.js" as="script"><link rel="prefetch" href="/site/assets/js/page--node-modules--gridsome--app--pages--404-vue.8ed2c588.js"><link rel="prefetch" href="/site/assets/js/page--src--pages--about-vue.d8fdab17.js"><link rel="prefetch" href="/site/assets/js/page--src--templates--index-template-vue.6cecc577.js"><link rel="prefetch" href="/site/assets/js/page--src--templates--tag-vue.c6b527ba.js"><link rel="prefetch" href="/site/assets/js/vendors~page--src--templates--course-template-vue~page--src--templates--index-template-vue.4ec5035c.js"><link rel="stylesheet" href="/site/assets/css/0.styles.dded6410.css"><style data-vue-tag="vuetify" type="text/css" id="vuetify-theme-stylesheet" nonce="undefined">.v-application a { color: #1976d2; }
+.v-application .primary {
+  background-color: #1976d2 !important;
+  border-color: #1976d2 !important;
+}
+.v-application .primary--text {
+  color: #1976d2 !important;
+  caret-color: #1976d2 !important;
+}
+.v-application .primary.lighten-5 {
+  background-color: #c7fdff !important;
+  border-color: #c7fdff !important;
+}
+.v-application .primary--text.text--lighten-5 {
+  color: #c7fdff !important;
+  caret-color: #c7fdff !important;
+}
+.v-application .primary.lighten-4 {
+  background-color: #a8e0ff !important;
+  border-color: #a8e0ff !important;
+}
+.v-application .primary--text.text--lighten-4 {
+  color: #a8e0ff !important;
+  caret-color: #a8e0ff !important;
+}
+.v-application .primary.lighten-3 {
+  background-color: #8ac5ff !important;
+  border-color: #8ac5ff !important;
+}
+.v-application .primary--text.text--lighten-3 {
+  color: #8ac5ff !important;
+  caret-color: #8ac5ff !important;
+}
+.v-application .primary.lighten-2 {
+  background-color: #6aaaff !important;
+  border-color: #6aaaff !important;
+}
+.v-application .primary--text.text--lighten-2 {
+  color: #6aaaff !important;
+  caret-color: #6aaaff !important;
+}
+.v-application .primary.lighten-1 {
+  background-color: #488fef !important;
+  border-color: #488fef !important;
+}
+.v-application .primary--text.text--lighten-1 {
+  color: #488fef !important;
+  caret-color: #488fef !important;
+}
+.v-application .primary.darken-1 {
+  background-color: #005eb6 !important;
+  border-color: #005eb6 !important;
+}
+.v-application .primary--text.text--darken-1 {
+  color: #005eb6 !important;
+  caret-color: #005eb6 !important;
+}
+.v-application .primary.darken-2 {
+  background-color: #00479b !important;
+  border-color: #00479b !important;
+}
+.v-application .primary--text.text--darken-2 {
+  color: #00479b !important;
+  caret-color: #00479b !important;
+}
+.v-application .primary.darken-3 {
+  background-color: #003180 !important;
+  border-color: #003180 !important;
+}
+.v-application .primary--text.text--darken-3 {
+  color: #003180 !important;
+  caret-color: #003180 !important;
+}
+.v-application .primary.darken-4 {
+  background-color: #001e67 !important;
+  border-color: #001e67 !important;
+}
+.v-application .primary--text.text--darken-4 {
+  color: #001e67 !important;
+  caret-color: #001e67 !important;
+}
+.v-application .secondary {
+  background-color: #424242 !important;
+  border-color: #424242 !important;
+}
+.v-application .secondary--text {
+  color: #424242 !important;
+  caret-color: #424242 !important;
+}
+.v-application .secondary.lighten-5 {
+  background-color: #c1c1c1 !important;
+  border-color: #c1c1c1 !important;
+}
+.v-application .secondary--text.text--lighten-5 {
+  color: #c1c1c1 !important;
+  caret-color: #c1c1c1 !important;
+}
+.v-application .secondary.lighten-4 {
+  background-color: #a6a6a6 !important;
+  border-color: #a6a6a6 !important;
+}
+.v-application .secondary--text.text--lighten-4 {
+  color: #a6a6a6 !important;
+  caret-color: #a6a6a6 !important;
+}
+.v-application .secondary.lighten-3 {
+  background-color: #8b8b8b !important;
+  border-color: #8b8b8b !important;
+}
+.v-application .secondary--text.text--lighten-3 {
+  color: #8b8b8b !important;
+  caret-color: #8b8b8b !important;
+}
+.v-application .secondary.lighten-2 {
+  background-color: #727272 !important;
+  border-color: #727272 !important;
+}
+.v-application .secondary--text.text--lighten-2 {
+  color: #727272 !important;
+  caret-color: #727272 !important;
+}
+.v-application .secondary.lighten-1 {
+  background-color: #595959 !important;
+  border-color: #595959 !important;
+}
+.v-application .secondary--text.text--lighten-1 {
+  color: #595959 !important;
+  caret-color: #595959 !important;
+}
+.v-application .secondary.darken-1 {
+  background-color: #2c2c2c !important;
+  border-color: #2c2c2c !important;
+}
+.v-application .secondary--text.text--darken-1 {
+  color: #2c2c2c !important;
+  caret-color: #2c2c2c !important;
+}
+.v-application .secondary.darken-2 {
+  background-color: #171717 !important;
+  border-color: #171717 !important;
+}
+.v-application .secondary--text.text--darken-2 {
+  color: #171717 !important;
+  caret-color: #171717 !important;
+}
+.v-application .secondary.darken-3 {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+.v-application .secondary--text.text--darken-3 {
+  color: #000000 !important;
+  caret-color: #000000 !important;
+}
+.v-application .secondary.darken-4 {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+.v-application .secondary--text.text--darken-4 {
+  color: #000000 !important;
+  caret-color: #000000 !important;
+}
+.v-application .accent {
+  background-color: #82b1ff !important;
+  border-color: #82b1ff !important;
+}
+.v-application .accent--text {
+  color: #82b1ff !important;
+  caret-color: #82b1ff !important;
+}
+.v-application .accent.lighten-5 {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+.v-application .accent--text.text--lighten-5 {
+  color: #ffffff !important;
+  caret-color: #ffffff !important;
+}
+.v-application .accent.lighten-4 {
+  background-color: #f8ffff !important;
+  border-color: #f8ffff !important;
+}
+.v-application .accent--text.text--lighten-4 {
+  color: #f8ffff !important;
+  caret-color: #f8ffff !important;
+}
+.v-application .accent.lighten-3 {
+  background-color: #daffff !important;
+  border-color: #daffff !important;
+}
+.v-application .accent--text.text--lighten-3 {
+  color: #daffff !important;
+  caret-color: #daffff !important;
+}
+.v-application .accent.lighten-2 {
+  background-color: #bce8ff !important;
+  border-color: #bce8ff !important;
+}
+.v-application .accent--text.text--lighten-2 {
+  color: #bce8ff !important;
+  caret-color: #bce8ff !important;
+}
+.v-application .accent.lighten-1 {
+  background-color: #9fccff !important;
+  border-color: #9fccff !important;
+}
+.v-application .accent--text.text--lighten-1 {
+  color: #9fccff !important;
+  caret-color: #9fccff !important;
+}
+.v-application .accent.darken-1 {
+  background-color: #6596e2 !important;
+  border-color: #6596e2 !important;
+}
+.v-application .accent--text.text--darken-1 {
+  color: #6596e2 !important;
+  caret-color: #6596e2 !important;
+}
+.v-application .accent.darken-2 {
+  background-color: #467dc6 !important;
+  border-color: #467dc6 !important;
+}
+.v-application .accent--text.text--darken-2 {
+  color: #467dc6 !important;
+  caret-color: #467dc6 !important;
+}
+.v-application .accent.darken-3 {
+  background-color: #2364aa !important;
+  border-color: #2364aa !important;
+}
+.v-application .accent--text.text--darken-3 {
+  color: #2364aa !important;
+  caret-color: #2364aa !important;
+}
+.v-application .accent.darken-4 {
+  background-color: #004c90 !important;
+  border-color: #004c90 !important;
+}
+.v-application .accent--text.text--darken-4 {
+  color: #004c90 !important;
+  caret-color: #004c90 !important;
+}
+.v-application .error {
+  background-color: #ff5252 !important;
+  border-color: #ff5252 !important;
+}
+.v-application .error--text {
+  color: #ff5252 !important;
+  caret-color: #ff5252 !important;
+}
+.v-application .error.lighten-5 {
+  background-color: #ffe4d5 !important;
+  border-color: #ffe4d5 !important;
+}
+.v-application .error--text.text--lighten-5 {
+  color: #ffe4d5 !important;
+  caret-color: #ffe4d5 !important;
+}
+.v-application .error.lighten-4 {
+  background-color: #ffc6b9 !important;
+  border-color: #ffc6b9 !important;
+}
+.v-application .error--text.text--lighten-4 {
+  color: #ffc6b9 !important;
+  caret-color: #ffc6b9 !important;
+}
+.v-application .error.lighten-3 {
+  background-color: #ffa99e !important;
+  border-color: #ffa99e !important;
+}
+.v-application .error--text.text--lighten-3 {
+  color: #ffa99e !important;
+  caret-color: #ffa99e !important;
+}
+.v-application .error.lighten-2 {
+  background-color: #ff8c84 !important;
+  border-color: #ff8c84 !important;
+}
+.v-application .error--text.text--lighten-2 {
+  color: #ff8c84 !important;
+  caret-color: #ff8c84 !important;
+}
+.v-application .error.lighten-1 {
+  background-color: #ff6f6a !important;
+  border-color: #ff6f6a !important;
+}
+.v-application .error--text.text--lighten-1 {
+  color: #ff6f6a !important;
+  caret-color: #ff6f6a !important;
+}
+.v-application .error.darken-1 {
+  background-color: #df323b !important;
+  border-color: #df323b !important;
+}
+.v-application .error--text.text--darken-1 {
+  color: #df323b !important;
+  caret-color: #df323b !important;
+}
+.v-application .error.darken-2 {
+  background-color: #bf0025 !important;
+  border-color: #bf0025 !important;
+}
+.v-application .error--text.text--darken-2 {
+  color: #bf0025 !important;
+  caret-color: #bf0025 !important;
+}
+.v-application .error.darken-3 {
+  background-color: #9f0010 !important;
+  border-color: #9f0010 !important;
+}
+.v-application .error--text.text--darken-3 {
+  color: #9f0010 !important;
+  caret-color: #9f0010 !important;
+}
+.v-application .error.darken-4 {
+  background-color: #800000 !important;
+  border-color: #800000 !important;
+}
+.v-application .error--text.text--darken-4 {
+  color: #800000 !important;
+  caret-color: #800000 !important;
+}
+.v-application .info {
+  background-color: #2196f3 !important;
+  border-color: #2196f3 !important;
+}
+.v-application .info--text {
+  color: #2196f3 !important;
+  caret-color: #2196f3 !important;
+}
+.v-application .info.lighten-5 {
+  background-color: #d4ffff !important;
+  border-color: #d4ffff !important;
+}
+.v-application .info--text.text--lighten-5 {
+  color: #d4ffff !important;
+  caret-color: #d4ffff !important;
+}
+.v-application .info.lighten-4 {
+  background-color: #b5ffff !important;
+  border-color: #b5ffff !important;
+}
+.v-application .info--text.text--lighten-4 {
+  color: #b5ffff !important;
+  caret-color: #b5ffff !important;
+}
+.v-application .info.lighten-3 {
+  background-color: #95e8ff !important;
+  border-color: #95e8ff !important;
+}
+.v-application .info--text.text--lighten-3 {
+  color: #95e8ff !important;
+  caret-color: #95e8ff !important;
+}
+.v-application .info.lighten-2 {
+  background-color: #75ccff !important;
+  border-color: #75ccff !important;
+}
+.v-application .info--text.text--lighten-2 {
+  color: #75ccff !important;
+  caret-color: #75ccff !important;
+}
+.v-application .info.lighten-1 {
+  background-color: #51b0ff !important;
+  border-color: #51b0ff !important;
+}
+.v-application .info--text.text--lighten-1 {
+  color: #51b0ff !important;
+  caret-color: #51b0ff !important;
+}
+.v-application .info.darken-1 {
+  background-color: #007cd6 !important;
+  border-color: #007cd6 !important;
+}
+.v-application .info--text.text--darken-1 {
+  color: #007cd6 !important;
+  caret-color: #007cd6 !important;
+}
+.v-application .info.darken-2 {
+  background-color: #0064ba !important;
+  border-color: #0064ba !important;
+}
+.v-application .info--text.text--darken-2 {
+  color: #0064ba !important;
+  caret-color: #0064ba !important;
+}
+.v-application .info.darken-3 {
+  background-color: #004d9f !important;
+  border-color: #004d9f !important;
+}
+.v-application .info--text.text--darken-3 {
+  color: #004d9f !important;
+  caret-color: #004d9f !important;
+}
+.v-application .info.darken-4 {
+  background-color: #003784 !important;
+  border-color: #003784 !important;
+}
+.v-application .info--text.text--darken-4 {
+  color: #003784 !important;
+  caret-color: #003784 !important;
+}
+.v-application .success {
+  background-color: #4caf50 !important;
+  border-color: #4caf50 !important;
+}
+.v-application .success--text {
+  color: #4caf50 !important;
+  caret-color: #4caf50 !important;
+}
+.v-application .success.lighten-5 {
+  background-color: #dcffd6 !important;
+  border-color: #dcffd6 !important;
+}
+.v-application .success--text.text--lighten-5 {
+  color: #dcffd6 !important;
+  caret-color: #dcffd6 !important;
+}
+.v-application .success.lighten-4 {
+  background-color: #beffba !important;
+  border-color: #beffba !important;
+}
+.v-application .success--text.text--lighten-4 {
+  color: #beffba !important;
+  caret-color: #beffba !important;
+}
+.v-application .success.lighten-3 {
+  background-color: #a2ff9e !important;
+  border-color: #a2ff9e !important;
+}
+.v-application .success--text.text--lighten-3 {
+  color: #a2ff9e !important;
+  caret-color: #a2ff9e !important;
+}
+.v-application .success.lighten-2 {
+  background-color: #85e783 !important;
+  border-color: #85e783 !important;
+}
+.v-application .success--text.text--lighten-2 {
+  color: #85e783 !important;
+  caret-color: #85e783 !important;
+}
+.v-application .success.lighten-1 {
+  background-color: #69cb69 !important;
+  border-color: #69cb69 !important;
+}
+.v-application .success--text.text--lighten-1 {
+  color: #69cb69 !important;
+  caret-color: #69cb69 !important;
+}
+.v-application .success.darken-1 {
+  background-color: #2d9437 !important;
+  border-color: #2d9437 !important;
+}
+.v-application .success--text.text--darken-1 {
+  color: #2d9437 !important;
+  caret-color: #2d9437 !important;
+}
+.v-application .success.darken-2 {
+  background-color: #00791e !important;
+  border-color: #00791e !important;
+}
+.v-application .success--text.text--darken-2 {
+  color: #00791e !important;
+  caret-color: #00791e !important;
+}
+.v-application .success.darken-3 {
+  background-color: #006000 !important;
+  border-color: #006000 !important;
+}
+.v-application .success--text.text--darken-3 {
+  color: #006000 !important;
+  caret-color: #006000 !important;
+}
+.v-application .success.darken-4 {
+  background-color: #004700 !important;
+  border-color: #004700 !important;
+}
+.v-application .success--text.text--darken-4 {
+  color: #004700 !important;
+  caret-color: #004700 !important;
+}
+.v-application .warning {
+  background-color: #fb8c00 !important;
+  border-color: #fb8c00 !important;
+}
+.v-application .warning--text {
+  color: #fb8c00 !important;
+  caret-color: #fb8c00 !important;
+}
+.v-application .warning.lighten-5 {
+  background-color: #ffff9e !important;
+  border-color: #ffff9e !important;
+}
+.v-application .warning--text.text--lighten-5 {
+  color: #ffff9e !important;
+  caret-color: #ffff9e !important;
+}
+.v-application .warning.lighten-4 {
+  background-color: #fffb82 !important;
+  border-color: #fffb82 !important;
+}
+.v-application .warning--text.text--lighten-4 {
+  color: #fffb82 !important;
+  caret-color: #fffb82 !important;
+}
+.v-application .warning.lighten-3 {
+  background-color: #ffdf67 !important;
+  border-color: #ffdf67 !important;
+}
+.v-application .warning--text.text--lighten-3 {
+  color: #ffdf67 !important;
+  caret-color: #ffdf67 !important;
+}
+.v-application .warning.lighten-2 {
+  background-color: #ffc24b !important;
+  border-color: #ffc24b !important;
+}
+.v-application .warning--text.text--lighten-2 {
+  color: #ffc24b !important;
+  caret-color: #ffc24b !important;
+}
+.v-application .warning.lighten-1 {
+  background-color: #ffa72d !important;
+  border-color: #ffa72d !important;
+}
+.v-application .warning--text.text--lighten-1 {
+  color: #ffa72d !important;
+  caret-color: #ffa72d !important;
+}
+.v-application .warning.darken-1 {
+  background-color: #db7200 !important;
+  border-color: #db7200 !important;
+}
+.v-application .warning--text.text--darken-1 {
+  color: #db7200 !important;
+  caret-color: #db7200 !important;
+}
+.v-application .warning.darken-2 {
+  background-color: #bb5900 !important;
+  border-color: #bb5900 !important;
+}
+.v-application .warning--text.text--darken-2 {
+  color: #bb5900 !important;
+  caret-color: #bb5900 !important;
+}
+.v-application .warning.darken-3 {
+  background-color: #9d4000 !important;
+  border-color: #9d4000 !important;
+}
+.v-application .warning--text.text--darken-3 {
+  color: #9d4000 !important;
+  caret-color: #9d4000 !important;
+}
+.v-application .warning.darken-4 {
+  background-color: #802700 !important;
+  border-color: #802700 !important;
+}
+.v-application .warning--text.text--darken-4 {
+  color: #802700 !important;
+  caret-color: #802700 !important;
+}</style><noscript data-vue-tag="ssr"><style>.g-image--loading{display:none;}</style></noscript>
+  </head>
+  <body >
+    <div data-app="true" data-server-rendered="true" id="app" id="inspire" class="v-application v-application--is-ltr theme--light"><div class="v-application--wrap"><header class="gb-toolbar v-sheet v-sheet--tile theme--dark v-toolbar v-toolbar--dense v-app-bar v-app-bar--fixed" style="height:48px;margin-top:0px;transform:translateY(0px);left:0px;right:0px;"><div class="v-toolbar__content" style="height:48px;"><button type="button" class="v-app-bar__nav-icon v-btn v-btn--flat v-btn--icon v-btn--round theme--dark v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-menu theme--dark"></i></span></button><div class="v-toolbar__title ml-0 pl-4" style="width:300px;"><span class="hidden-sm-and-down">skillhub</span></div><div class="spacer"></div><div class="v-input hidden-sm-and-down v-input--hide-details v-input--dense theme--dark v-text-field v-text-field--single-line v-text-field--solo v-text-field--solo-inverted v-text-field--solo-flat v-text-field--enclosed"><div class="v-input__control"><div class="v-input__slot"><div class="v-input__prepend-inner"><div class="v-input__icon v-input__icon--prepend-inner"><i aria-hidden="true" class="v-icon notranslate mdi mdi-magnify theme--dark"></i></div></div><div class="v-text-field__slot"><label for="input-50864" class="v-label theme--dark" style="left:0px;right:auto;position:absolute;">Search</label><input id="input-50864" type="text"></div></div></div></div><button type="button" class="v-btn v-btn--flat v-btn--icon v-btn--round theme--dark v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-apps theme--dark"></i></span></button><button type="button" class="v-btn v-btn--flat v-btn--icon v-btn--round theme--dark v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-bell theme--dark"></i></span></button></div></header><main class="v-content" style="padding-top:15696px;padding-right:0px;padding-bottom:0px;padding-left:0px;"><div class="v-content__wrap"><div class="container container--fluid pa-0"><div class="row no-gutters"><div class="col col-12"><div class="row no-gutters row--dense"><div class="height-30 bg-dark white--text jarallax col"><img src="https://i.udemycdn.com/course/750x422/19613_d15c_6.jpg" class="jarallax-img opacity-20 g-image"><div class="container mt-8 pa-0"><div class="row mb-12 justify-center"><div dense="" class="col"><p class="display-2 mb-0">A mathematical way to think about biology</p><p class="headline mb-0">Why &quot;is&quot; biology log-normal? Why do some circuits oscillate? See biology from a physical sciences perspective.</p><div><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.1 (468)</span></div><a href="https://www.udemy.com/course/lookatphysics/" class="v-btn v-btn--contained theme--light v-size--default warning"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-share-outline theme--light"></i> Take me there!
+          </span></a></div></div></div></div></div></div></div><div class="row no-gutters"><div class="col col-12"><div class="container mt-4 pl-5"><div class="row mb-12 justify-center"><div dense="" class="col">
+            A mathematical way to think about biology comes to life in this lavishly illustrated video book. After completing these videos, students will be better prepared to collaborate in physical sciences-biology research. These lessons demonstrate a physical sciences perspective: training intuition by deriving equations from graphical illustrations. &quot;Excellent site for both basic and advanced lessons on applying mathematics to biology.&quot; -Tweeted by the U.S. National Cancer Institute's Office of Physical Sciences Oncology
+          </div></div></div></div></div><div class="row no-gutters"><div class="col"><div class="container"><div class="headline pa-1 mb-0">#Related</div><div aria-label="Slideshow" class="vueperslides no-shadow vueperslides--fixed-height vueperslides--slide-multiple vueperslides--bullets-outside" style="height:300px;"><!----><div class="vueperslides__inner"><div aria-live="polite" class="vueperslides__parallax-wrapper" style="padding-bottom:25%;"><div class="vueperslides__track"><div class="vueperslides__track-inner" style="transition-duration:0ms;transform:translate3d(0%, 0, 0);will-change:auto;"><!----><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/forensic-science" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Forensic Science</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Forensic science practice test">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">0 (0)</span></div></div></div><!----></div><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/help-with-gcse-maths" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Help With GCSE Maths</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="A bunch of video tutorials to make GCSE Maths a whole lot easier. This course is pitched at the D/C borderline.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.5 (148)</span></div></div></div><!----></div><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/an-introduction-to-psychology" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>An Introduction to Psychology</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Finding yourself in the concepts and theories of psychology.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.2 (118)</span></div></div></div><!----></div><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/learn-about-eastern-medicine-and-energy-psychology" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Learn about Eastern Medicine and Energy Psychology</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Learn about the principles of Eastern Medicine and the definition of Energy Psychology and its basic schools.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.4 (41)</span></div></div></div><!----></div><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/the-psychology-of-learning" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>The Psychology of Learning</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="It's a world full of &quot;stimuli&quot; and &quot;responses&quot;. How do we make connections among them? How do we...learn?">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">3.5 (11)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/understanding-yourself" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Understanding Yourself</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Using major theories of personality to create a happy and satisfying life">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">3.5 (12)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/introduction-to-medical-terminology" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Introduction to Medical Terminology</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="You will be able to identify the word components, i.e. prefixes, suffixes, and word roots used in medical terms.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">3.4 (8)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/math-is-everywhere-applications-of-finite-math" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Math is Everywhere: Applications of Finite Math</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Computer fonts, Angry Birds, March Madness, and Google - sound like fun? Indeed, math influences the world around us.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.1 (1154)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/the-neuroscience-of-reframing-and-how-to-do-it" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>The Neuroscience of Reframing &amp; How to Do It</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Reframing should be in the water we drink, scientists say. But how does reframing work - and what happens in the brain?">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.5 (2247)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/a-journey-through-medicine-how-to-get-into-medical-school" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>A Journey through Medicine: How to Get into Medical School</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="A tested and proven blueprint to approach the daunting admissions process to get into medical school">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.7 (40)</span></div></div></div><!----></div><!----></div></div></div><!----><!----><!----><!----><!----></div><!----><!----></div></div></div></div></div></div></main></div></div>
+    <script>window.__INITIAL_STATE__={"data":null,"context":{"course":{"id":"37720080-3ef1-11ea-9791-1b580a556b4a","vendorId":"19613","created":"2020-01-24T21:35:07.696Z","updated":"2015-09-01T07:00:00.000Z","title":"A mathematical way to think about biology","headline":"Why \"is\" biology log-normal? Why do some circuits oscillate? See biology from a physical sciences perspective.","description":"A mathematical way to think about biology comes to life in this lavishly illustrated video book. After completing these videos, students will be better prepared to collaborate in physical sciences-biology research. These lessons demonstrate a physical sciences perspective: training intuition by deriving equations from graphical illustrations. \"Excellent site for both basic and advanced lessons on applying mathematics to biology.\" -Tweeted by the U.S. National Cancer Institute's Office of Physical Sciences Oncology","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F19613_d15c_6.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Flookatphysics\u002F","language":"en","tags":["Teaching & Academics","Math","Biology"],"rating":4.1,"reviews":468,"isFree":true,"matches":["376e5704-3ef1-11ea-9791-1b580a556b4a","37769463-3ef1-11ea-9791-1b580a556b4a","3779c8ba-3ef1-11ea-9791-1b580a556b4a","3775aa08-3ef1-11ea-9791-1b580a556b4a","3776bb78-3ef1-11ea-9791-1b580a556b4a","37750dcb-3ef1-11ea-9791-1b580a556b4a","37702bc6-3ef1-11ea-9791-1b580a556b4a","376e2ff7-3ef1-11ea-9791-1b580a556b4a","377534d1-3ef1-11ea-9791-1b580a556b4a","37738729-3ef1-11ea-9791-1b580a556b4a"],"slug":"a-mathematical-way-to-think-about-biology"},"related":[{"id":"3779c8ba-3ef1-11ea-9791-1b580a556b4a","vendorId":"2742246","created":"2020-01-24T21:35:08.096Z","updated":"2020-01-01T08:00:00.000Z","title":"Forensic Science","headline":"Forensic science practice test","description":"The practice test will help students prepare for OBJECTIVE type questions related to forensic science. The test covers the subjects such as biology, chemistry, physics, questioned documents, fingerprints, medicine and instrumentation. Over 100+ questions to practice.Forensic science is the application of scientific knowledge to legal problems or proceedings. In law enforcement, forensic science is largely concerned with testing physical and biological evidence to determine objective facts about what happened, when it happened, and who was involved.TYPES OF EVIDENCE found in forensic case work are:Controlled substances, latent prints, toxicology and blood alcohol, forensic biology screening, digital evidence, firearms, footprints, fingerprints, tool marks, tire prints, trace evidence, fire debris, explosive evidence, questioned documents etc..","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F2742246_77ec.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fforensic-science-practicetest\u002F","language":"en","tags":["Teaching & Academics","Test Prep"],"rating":0,"reviews":0,"isFree":false,"matches":["377a3de2-3ef1-11ea-9791-1b580a556b4a","37789036-3ef1-11ea-9791-1b580a556b4a","37720080-3ef1-11ea-9791-1b580a556b4a","37786923-3ef1-11ea-9791-1b580a556b4a","377a8c0b-3ef1-11ea-9791-1b580a556b4a","37789037-3ef1-11ea-9791-1b580a556b4a","3779a1a8-3ef1-11ea-9791-1b580a556b4a","3777a5d7-3ef1-11ea-9791-1b580a556b4a","37781b04-3ef1-11ea-9791-1b580a556b4a","37795384-3ef1-11ea-9791-1b580a556b4a"],"slug":"forensic-science"},{"id":"3776bb78-3ef1-11ea-9791-1b580a556b4a","vendorId":"28228","created":"2020-01-24T21:35:07.944Z","updated":"2013-07-01T07:00:00.000Z","title":"Help With GCSE Maths","headline":"A bunch of video tutorials to make GCSE Maths a whole lot easier. This course is pitched at the D\u002FC borderline.","description":"A series of tips and tricks to make the basics of GCSE Maths easier, followed by a whole bunch of past paper questions, with step by step video solutions. This course is designed for anyone looking for GCSE Maths Help and to consolidate at the GCSE C grade, or perhaps looking to improve from a high E or solid D to a grade C within a few weeks with GCSE Maths Online.  ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F28228_c1e9_4.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fhelp-with-gcse-maths\u002F","language":"en","tags":["Teaching & Academics","Test Prep","Math"],"rating":4.5,"reviews":148,"isFree":true,"matches":["3777a5d7-3ef1-11ea-9791-1b580a556b4a","37702bc5-3ef1-11ea-9791-1b580a556b4a","377730a9-3ef1-11ea-9791-1b580a556b4a","376b97e0-3ef1-11ea-9791-1b580a556b4a","37749892-3ef1-11ea-9791-1b580a556b4a","37733901-3ef1-11ea-9791-1b580a556b4a","377052d7-3ef1-11ea-9791-1b580a556b4a","3772eae4-3ef1-11ea-9791-1b580a556b4a","37720083-3ef1-11ea-9791-1b580a556b4a","376ca954-3ef1-11ea-9791-1b580a556b4a"],"slug":"help-with-gcse-maths"},{"id":"37769463-3ef1-11ea-9791-1b580a556b4a","vendorId":"27696","created":"2020-01-24T21:35:07.943Z","updated":"2014-08-01T07:00:00.000Z","title":"An Introduction to Psychology","headline":"Finding yourself in the concepts and theories of psychology.","description":"The videos for this “Introduction to Psychology\" course are the ideal study tool for AP courses, CLEP:Introductory Psychology test preparation, and any college-level Introductory Psychology course. They cover some of the key issues in the study of psychology, and describe major theoretical frameworks for understanding what it is inside you that makes you do the things you do. Culled from the videos I use in my own courses, they're intended to supplement materials you might have available from your own college (or high school) psychology courses. Additional videos are available at the Social Psychology, Learning, and Personality courses here on Udemy. Sign up for this Introduction to Psychology course and learn Psychology basics.\u003C\u002Fp\u003E","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F27696_2145_4.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fintroductory-psychology\u002F","language":"en","tags":["Teaching & Academics","Social Science","Psychology"],"rating":4.2,"reviews":118,"isFree":false,"matches":["3775aa08-3ef1-11ea-9791-1b580a556b4a","377534d1-3ef1-11ea-9791-1b580a556b4a","37750dca-3ef1-11ea-9791-1b580a556b4a","37750dcb-3ef1-11ea-9791-1b580a556b4a","377079e0-3ef1-11ea-9791-1b580a556b4a","37720080-3ef1-11ea-9791-1b580a556b4a","37769464-3ef1-11ea-9791-1b580a556b4a","377004b8-3ef1-11ea-9791-1b580a556b4a","37747187-3ef1-11ea-9791-1b580a556b4a","3779a1a3-3ef1-11ea-9791-1b580a556b4a"],"slug":"an-introduction-to-psychology"},{"id":"3775aa08-3ef1-11ea-9791-1b580a556b4a","vendorId":"26454","created":"2020-01-24T21:35:07.937Z","updated":"2013-04-01T07:00:00.000Z","title":"Learn about Eastern Medicine and Energy Psychology","headline":"Learn about the principles of Eastern Medicine and the definition of Energy Psychology and its basic schools.","description":"The Principles of Eastern Medicine and The Definition of Energy Psychology course gives a general overview of Energy Psychology and the main schools of this discipline: Emotional Freedom Technique (EFT), Thought Field Therapy (TFT), and Neuro Emotional Technique or NET, and describes in detail and with illustrations the particulars of energy psychology, especially the principles of Eastern Medicine and Applied Kinesiology, the foundation of this discipline. The Principles of Eastern Medicine and The Definition of Energy Psychology gives a general overview of the fundamentals of Eastern Medicine. This includes all levels of energy in and around the body with special emphasis on the meridian and chakra systems. Several polarity balancing techniques are discussed and shown with detailed illustrations. Eastern medicine and applied kinesiology (muscle testing) form the basis of energy psychology. This course is useful for both the lay person who wishes to learn the basics of energy psychology and is essential for professionals. The exciting field of energy psychology is only 30 years old. Although not well known, it is one of the fastest growing techniques in psychology. This is due to the amazingly quick and painless results that people experience with energy therapists. These techniques have proven more effective than traditional cognitive, talk therapy for addictions, phobias, obsessions, depression, anxiety, and especially Post-Traumatic Stress Disorder (PTSD). ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F26454_c5ad_3.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Feastern-medicine-principles-and-energy-psychology\u002F","language":"en","tags":["Business","Industry","Energy Psychology"],"rating":4.4,"reviews":41,"isFree":false,"matches":["37769463-3ef1-11ea-9791-1b580a556b4a","37769464-3ef1-11ea-9791-1b580a556b4a","37761f3a-3ef1-11ea-9791-1b580a556b4a","3772c3d4-3ef1-11ea-9791-1b580a556b4a","37713d34-3ef1-11ea-9791-1b580a556b4a","37750dcb-3ef1-11ea-9791-1b580a556b4a","37720080-3ef1-11ea-9791-1b580a556b4a","3774e6ba-3ef1-11ea-9791-1b580a556b4a","37750dca-3ef1-11ea-9791-1b580a556b4a","3773ae35-3ef1-11ea-9791-1b580a556b4a"],"slug":"learn-about-eastern-medicine-and-energy-psychology"},{"id":"37750dcb-3ef1-11ea-9791-1b580a556b4a","vendorId":"24902","created":"2020-01-24T21:35:07.887Z","updated":"2016-08-01T07:00:00.000Z","title":"The Psychology of Learning","headline":"It's a world full of \"stimuli\" and \"responses\". How do we make connections among them? How do we...learn?","description":" You could see the world as nothing but randomly appearing stimuli (i.e., events you experience) and responses (i.e., your own behaviors), but you don't. How do you learn that one stimulus is associated with another (classical conditioning)? How do you learn that your own behavior can make something in your environment change (operant conditioning)? And how do classical and operant conditioning change the way you behave? As it turns out, these two forms of learning--and what they tell you about the predictability of your world--can change your behavior in surprising ways. These videos are the ideal study tool for AP Psychology courses, CLEP Psychology test preparation, and any college-level Psychology of Learning course. Take this Psychology of Learning course and discover how we learn. \u003C\u002Fp\u003E","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F24902_e83d_4.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Funderstanding-theories-of-learning\u002F","language":"en","tags":["Teaching & Academics","Social Science","Psychology"],"rating":3.5,"reviews":11,"isFree":false,"matches":["376e5704-3ef1-11ea-9791-1b580a556b4a","37769463-3ef1-11ea-9791-1b580a556b4a","37747187-3ef1-11ea-9791-1b580a556b4a","377534d1-3ef1-11ea-9791-1b580a556b4a","3775aa08-3ef1-11ea-9791-1b580a556b4a","37750dca-3ef1-11ea-9791-1b580a556b4a","37769466-3ef1-11ea-9791-1b580a556b4a","3775aa00-3ef1-11ea-9791-1b580a556b4a","3773ae35-3ef1-11ea-9791-1b580a556b4a","37720080-3ef1-11ea-9791-1b580a556b4a"],"slug":"the-psychology-of-learning"},{"id":"377534d1-3ef1-11ea-9791-1b580a556b4a","vendorId":"25140","created":"2020-01-24T21:35:07.887Z","updated":"2013-01-01T08:00:00.000Z","title":"Understanding Yourself","headline":"Using major theories of personality to create a happy and satisfying life","description":"Simply put, your personality is the choices you make. All major theories of personality identify what it takes to make choices that will create a happy and satisfying life, but each does it from a different perspective. These videos have been culled from ones used in a Personality course that I taught for nearly 30 years, and describe those theoretical approaches to understanding the choices you make. Find the one that grabs you, and put it to use improving your life, your work, and your relationships.For those who'd like to take a more rigorous look at the science of personality, the first few sections of the course explain how research in personality is done and some of the issues that come up when doing that research.","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F25140_3c3a_5.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fyour-personality-approaches-to-understanding-who-you-are\u002F","language":"en","tags":["Personal Development","Personal Transformation","Psychology"],"rating":3.5,"reviews":12,"isFree":false,"matches":["37769463-3ef1-11ea-9791-1b580a556b4a","37750dcb-3ef1-11ea-9791-1b580a556b4a","377a3de8-3ef1-11ea-9791-1b580a556b4a","3776e287-3ef1-11ea-9791-1b580a556b4a","37769466-3ef1-11ea-9791-1b580a556b4a","377079e3-3ef1-11ea-9791-1b580a556b4a","3773d544-3ef1-11ea-9791-1b580a556b4a","3770ef16-3ef1-11ea-9791-1b580a556b4a","37718b53-3ef1-11ea-9791-1b580a556b4a","37750dca-3ef1-11ea-9791-1b580a556b4a"],"slug":"understanding-yourself"},{"id":"37738729-3ef1-11ea-9791-1b580a556b4a","vendorId":"22784","created":"2020-01-24T21:35:07.814Z","updated":"2015-10-01T07:00:00.000Z","title":"Introduction to Medical Terminology","headline":"You will be able to identify the word components, i.e. prefixes, suffixes, and word roots used in medical terms.","description":" This is a self-paced class. Medical terms generally are comprised of a family of prefixes, suffixes, and root words that combine in multiple ways to form the language of medical terminology. A student who understands the meanings of these terms can typically “translate” any basic medical term to derive its meaning. This is a basic course covering the fundamentals of medical terminology used in the science and health science fields. It is ideal for any student who has little or no background in medical terminology, but who requires a basic grasp of the subject in order to communicate with nurses, physician’s assistants, physicians, and other medical professionals. It is also ideal as a review course for persons returning to school or the workplace after a prolonged absence. The terminology covered relates to bodily systems, anatomical structures, medical diagnoses and procedures. ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F22784_5c4a_3.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fintroduction-to-medical-terminology\u002F","language":"en","tags":["Health & Fitness","General Health","Medical Terminology"],"rating":3.4,"reviews":8,"isFree":false,"matches":["3778de51-3ef1-11ea-9791-1b580a556b4a","376e2ff7-3ef1-11ea-9791-1b580a556b4a","377004b8-3ef1-11ea-9791-1b580a556b4a","3773fc57-3ef1-11ea-9791-1b580a556b4a","37761f34-3ef1-11ea-9791-1b580a556b4a","3775aa08-3ef1-11ea-9791-1b580a556b4a","377079e0-3ef1-11ea-9791-1b580a556b4a","3776e280-3ef1-11ea-9791-1b580a556b4a","37702bc5-3ef1-11ea-9791-1b580a556b4a","37718b51-3ef1-11ea-9791-1b580a556b4a"],"slug":"introduction-to-medical-terminology"},{"id":"37702bc6-3ef1-11ea-9791-1b580a556b4a","vendorId":"16170","created":"2020-01-24T21:35:07.596Z","updated":"2012-06-01T07:00:00.000Z","title":"Math is Everywhere: Applications of Finite Math","headline":"Computer fonts, Angry Birds, March Madness, and Google - sound like fun? Indeed, math influences the world around us.","description":"A Faculty Project Course - Best Professors Teaching the World Computer fonts, Angry Birds, March Madness, and Google — sound like fun?  Indeed, finite math is engaging and influences the world around us.   Equations of lines can allow computers to create fonts, store them quite compactly, and render them at essentially any desired resolution.  Plotting the graph of a polynomial can affect how you play Angry Birds as you strive to dislodge the pesky pigs.  Linear systems model the performance of sports teams and influence which college football teams play in the new year bowl games.  You can create your own linear equations to help you create a bracket for March Madness.  Finally, probability and simulation lies at the core of the mathematical algorithm that catapulted Google as a leader in search engines.   You benefit from applications of finite math every day.  Through this course, you can better understand how you benefit from applications of finite math in your every day life.  Along the way, you will likely learn new mathematical ideas, too. ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F16170_89eb_6.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fmath-is-everywhere-applications-of-finite-math\u002F","language":"en","tags":["Teaching & Academics","Math"],"rating":4.1,"reviews":1154,"isFree":true,"matches":["37720080-3ef1-11ea-9791-1b580a556b4a","376dbac2-3ef1-11ea-9791-1b580a556b4a","3776bb78-3ef1-11ea-9791-1b580a556b4a","377079e3-3ef1-11ea-9791-1b580a556b4a","376afba0-3ef1-11ea-9791-1b580a556b4a","3777a5d7-3ef1-11ea-9791-1b580a556b4a","3771b261-3ef1-11ea-9791-1b580a556b4a","377534d3-3ef1-11ea-9791-1b580a556b4a","377730a9-3ef1-11ea-9791-1b580a556b4a","37769466-3ef1-11ea-9791-1b580a556b4a"],"slug":"math-is-everywhere-applications-of-finite-math"},{"id":"376e5704-3ef1-11ea-9791-1b580a556b4a","vendorId":"13391","created":"2020-01-24T21:35:07.179Z","updated":"2017-01-01T08:00:00.000Z","title":"The Neuroscience of Reframing & How to Do It","headline":"Reframing should be in the water we drink, scientists say. But how does reframing work - and what happens in the brain?","description":"“One of the best courses on Udemy.” “A gift beyond measure.” \"If you are looking for inspiration with a science-based foundation this is for you.\" \"I've long been interested in neuroscience and found this course to be one of the most practical ones to date.\" \"An incredibly stimulating, enlightening and well-presented course. Anette Prehn's non-technical approach, together with her clear explanations, made this course a joy to follow.\" \"Truly helpful\" \"This woman must be a saint. She gives away so much here that I'm left in utter gratitude.\" \"This should have been taught in school at a young age\" \"WOW!\" More than 800 course participants have reviewed this course over the years. More than 60% give it a straight 5 out of 5 stars, ensuring it an impressive 4.5 out of 5 in total. Will you be the next one to benefit from this free course? Reframing should be in the water we drink, scientists say. Reframing is the ability to change your perspective deliberately. But why is it praised like that? What happens in the brain when you reframe? What are the inner and outer effects? And how do you do it? You are invited to share your most powerful reframings - either as a comment to the group or by contacting Anette Prehn at anette@anetteprehn.com This course is targeted for professionals, managers and executives which will show in the examples given and the questions asked. However, anyone is free to join so that as many as possible may harvest the benefits of reframing. Recommended reading: \"Play Your Brain\" by Anette Prehn and Kjeld Fredens (Marshall Cavendish, 2011 - translated into both Complex Chinese and Russian). ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F13391_6067_2.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fthe-neuroscience-of-reframing-and-how-to-do-it\u002F","language":"en","tags":["Teaching & Academics","Social Science","Neuroscience"],"rating":4.5,"reviews":2247,"isFree":true,"matches":["37720080-3ef1-11ea-9791-1b580a556b4a","37750dcb-3ef1-11ea-9791-1b580a556b4a","3773ae35-3ef1-11ea-9791-1b580a556b4a","3775aa08-3ef1-11ea-9791-1b580a556b4a","3770ef16-3ef1-11ea-9791-1b580a556b4a","37769466-3ef1-11ea-9791-1b580a556b4a","376e2ff3-3ef1-11ea-9791-1b580a556b4a","3779c8ba-3ef1-11ea-9791-1b580a556b4a","37755be1-3ef1-11ea-9791-1b580a556b4a","37769463-3ef1-11ea-9791-1b580a556b4a"],"slug":"the-neuroscience-of-reframing-and-how-to-do-it"},{"id":"376e2ff7-3ef1-11ea-9791-1b580a556b4a","vendorId":"13662","created":"2020-01-24T21:35:07.178Z","updated":"2012-04-01T07:00:00.000Z","title":"A Journey through Medicine: How to Get into Medical School","headline":"A tested and proven blueprint to approach the daunting admissions process to get into medical school","description":"Wondering how to get into medical school? This course is for you.This course is a comprehensive overview of the process of becoming an American physician starting from the very beginning all the way through residency. Its goal is to provide the student with a complete framework giving him both a roadmap and the ability to navigate pitfalls such as poor academic performance as well as considering foreign medical schools such as SGU.Some of the highlights this course covers are:What extracurricular activity maximizes your chances of getting into med schoolIf you should pursue research while moving through your undergraduate career and where to find itWhat types of life and vocational experience make you unique and strengthen your chancesHow to navigate the difficult process of pursuing a foreign medical school and all the associated potential issuesThe upcoming changes to the 2015 MCATHow to get into medical school overcoming a low GPAA vast peer reviewed bank of recommended websites and resources to help you along the journeyAnd much more!At the end of this course, you'll have a remarkably good idea of what it takes and how to become a doctor. The results are up to you! If you are one to the future Doctor of America then don’t delay to join the Journey Through Medicine and learn how to get into medical school. ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F13662_c1bd_11.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fhow-to-get-into-medical-school\u002F","language":"en","tags":["Personal Development","Career Development","College Admissions"],"rating":4.7,"reviews":40,"isFree":false,"matches":["376b22b1-3ef1-11ea-9791-1b580a556b4a","377079e3-3ef1-11ea-9791-1b580a556b4a","3773d544-3ef1-11ea-9791-1b580a556b4a","37718b53-3ef1-11ea-9791-1b580a556b4a","3773fc57-3ef1-11ea-9791-1b580a556b4a","3778de51-3ef1-11ea-9791-1b580a556b4a","376cf772-3ef1-11ea-9791-1b580a556b4a","37738729-3ef1-11ea-9791-1b580a556b4a","3779c8ba-3ef1-11ea-9791-1b580a556b4a","3775aa08-3ef1-11ea-9791-1b580a556b4a"],"slug":"a-journey-through-medicine-how-to-get-into-medical-school"}]}};(function(){var s;(s=document.currentScript||document.scripts[document.scripts.length-1]).parentNode.removeChild(s);}());</script><script src="/site/assets/js/app.e5c95575.js" defer></script><script src="/site/assets/js/page--src--templates--course-template-vue.a9c4e657.js" defer></script>
+  </body>
+</html>

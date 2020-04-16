@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html data-html-server-rendered="true" lang="en" data-vue-tag="%7B%22lang%22:%7B%22ssr%22:%22en%22%7D%7D">
+  <head>
+    <title>Criando um Servidor no Amazon EC2 - Gridsome</title><meta name="gridsome:hash" content="6d1e7dd52e8c17cf4930f349c6afc1a78b2e1c5e"><meta data-vue-tag="ssr" charset="utf-8"><meta data-vue-tag="ssr" name="generator" content="Gridsome v0.7.12"><meta data-vue-tag="ssr" data-key="viewport" name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta data-vue-tag="ssr" data-key="format-detection" name="format-detection" content="telephone=no"><link data-vue-tag="ssr" rel="icon" href="data:,"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="16x16" href="/site/assets/static/favicon.ce0531f.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="32x32" href="/site/assets/static/favicon.ac8d93a.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="96x96" href="/site/assets/static/favicon.b9532cc.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="76x76" href="/site/assets/static/favicon.f22e9f3.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="152x152" href="/site/assets/static/favicon.62d22cb.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="120x120" href="/site/assets/static/favicon.1539b60.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="167x167" href="/site/assets/static/favicon.dc0cdc5.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="180x180" href="/site/assets/static/favicon.7b22250.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"><link data-vue-tag="ssr" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css"><link rel="preload" href="/site/assets/css/0.styles.dded6410.css" as="style"><link rel="preload" href="/site/assets/js/app.e5c95575.js" as="script"><link rel="preload" href="/site/assets/js/page--src--templates--course-template-vue.a9c4e657.js" as="script"><link rel="prefetch" href="/site/assets/js/page--node-modules--gridsome--app--pages--404-vue.8ed2c588.js"><link rel="prefetch" href="/site/assets/js/page--src--pages--about-vue.d8fdab17.js"><link rel="prefetch" href="/site/assets/js/page--src--templates--index-template-vue.6cecc577.js"><link rel="prefetch" href="/site/assets/js/page--src--templates--tag-vue.c6b527ba.js"><link rel="prefetch" href="/site/assets/js/vendors~page--src--templates--course-template-vue~page--src--templates--index-template-vue.4ec5035c.js"><link rel="stylesheet" href="/site/assets/css/0.styles.dded6410.css"><style data-vue-tag="vuetify" type="text/css" id="vuetify-theme-stylesheet" nonce="undefined">.v-application a { color: #1976d2; }
+.v-application .primary {
+  background-color: #1976d2 !important;
+  border-color: #1976d2 !important;
+}
+.v-application .primary--text {
+  color: #1976d2 !important;
+  caret-color: #1976d2 !important;
+}
+.v-application .primary.lighten-5 {
+  background-color: #c7fdff !important;
+  border-color: #c7fdff !important;
+}
+.v-application .primary--text.text--lighten-5 {
+  color: #c7fdff !important;
+  caret-color: #c7fdff !important;
+}
+.v-application .primary.lighten-4 {
+  background-color: #a8e0ff !important;
+  border-color: #a8e0ff !important;
+}
+.v-application .primary--text.text--lighten-4 {
+  color: #a8e0ff !important;
+  caret-color: #a8e0ff !important;
+}
+.v-application .primary.lighten-3 {
+  background-color: #8ac5ff !important;
+  border-color: #8ac5ff !important;
+}
+.v-application .primary--text.text--lighten-3 {
+  color: #8ac5ff !important;
+  caret-color: #8ac5ff !important;
+}
+.v-application .primary.lighten-2 {
+  background-color: #6aaaff !important;
+  border-color: #6aaaff !important;
+}
+.v-application .primary--text.text--lighten-2 {
+  color: #6aaaff !important;
+  caret-color: #6aaaff !important;
+}
+.v-application .primary.lighten-1 {
+  background-color: #488fef !important;
+  border-color: #488fef !important;
+}
+.v-application .primary--text.text--lighten-1 {
+  color: #488fef !important;
+  caret-color: #488fef !important;
+}
+.v-application .primary.darken-1 {
+  background-color: #005eb6 !important;
+  border-color: #005eb6 !important;
+}
+.v-application .primary--text.text--darken-1 {
+  color: #005eb6 !important;
+  caret-color: #005eb6 !important;
+}
+.v-application .primary.darken-2 {
+  background-color: #00479b !important;
+  border-color: #00479b !important;
+}
+.v-application .primary--text.text--darken-2 {
+  color: #00479b !important;
+  caret-color: #00479b !important;
+}
+.v-application .primary.darken-3 {
+  background-color: #003180 !important;
+  border-color: #003180 !important;
+}
+.v-application .primary--text.text--darken-3 {
+  color: #003180 !important;
+  caret-color: #003180 !important;
+}
+.v-application .primary.darken-4 {
+  background-color: #001e67 !important;
+  border-color: #001e67 !important;
+}
+.v-application .primary--text.text--darken-4 {
+  color: #001e67 !important;
+  caret-color: #001e67 !important;
+}
+.v-application .secondary {
+  background-color: #424242 !important;
+  border-color: #424242 !important;
+}
+.v-application .secondary--text {
+  color: #424242 !important;
+  caret-color: #424242 !important;
+}
+.v-application .secondary.lighten-5 {
+  background-color: #c1c1c1 !important;
+  border-color: #c1c1c1 !important;
+}
+.v-application .secondary--text.text--lighten-5 {
+  color: #c1c1c1 !important;
+  caret-color: #c1c1c1 !important;
+}
+.v-application .secondary.lighten-4 {
+  background-color: #a6a6a6 !important;
+  border-color: #a6a6a6 !important;
+}
+.v-application .secondary--text.text--lighten-4 {
+  color: #a6a6a6 !important;
+  caret-color: #a6a6a6 !important;
+}
+.v-application .secondary.lighten-3 {
+  background-color: #8b8b8b !important;
+  border-color: #8b8b8b !important;
+}
+.v-application .secondary--text.text--lighten-3 {
+  color: #8b8b8b !important;
+  caret-color: #8b8b8b !important;
+}
+.v-application .secondary.lighten-2 {
+  background-color: #727272 !important;
+  border-color: #727272 !important;
+}
+.v-application .secondary--text.text--lighten-2 {
+  color: #727272 !important;
+  caret-color: #727272 !important;
+}
+.v-application .secondary.lighten-1 {
+  background-color: #595959 !important;
+  border-color: #595959 !important;
+}
+.v-application .secondary--text.text--lighten-1 {
+  color: #595959 !important;
+  caret-color: #595959 !important;
+}
+.v-application .secondary.darken-1 {
+  background-color: #2c2c2c !important;
+  border-color: #2c2c2c !important;
+}
+.v-application .secondary--text.text--darken-1 {
+  color: #2c2c2c !important;
+  caret-color: #2c2c2c !important;
+}
+.v-application .secondary.darken-2 {
+  background-color: #171717 !important;
+  border-color: #171717 !important;
+}
+.v-application .secondary--text.text--darken-2 {
+  color: #171717 !important;
+  caret-color: #171717 !important;
+}
+.v-application .secondary.darken-3 {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+.v-application .secondary--text.text--darken-3 {
+  color: #000000 !important;
+  caret-color: #000000 !important;
+}
+.v-application .secondary.darken-4 {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+.v-application .secondary--text.text--darken-4 {
+  color: #000000 !important;
+  caret-color: #000000 !important;
+}
+.v-application .accent {
+  background-color: #82b1ff !important;
+  border-color: #82b1ff !important;
+}
+.v-application .accent--text {
+  color: #82b1ff !important;
+  caret-color: #82b1ff !important;
+}
+.v-application .accent.lighten-5 {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+.v-application .accent--text.text--lighten-5 {
+  color: #ffffff !important;
+  caret-color: #ffffff !important;
+}
+.v-application .accent.lighten-4 {
+  background-color: #f8ffff !important;
+  border-color: #f8ffff !important;
+}
+.v-application .accent--text.text--lighten-4 {
+  color: #f8ffff !important;
+  caret-color: #f8ffff !important;
+}
+.v-application .accent.lighten-3 {
+  background-color: #daffff !important;
+  border-color: #daffff !important;
+}
+.v-application .accent--text.text--lighten-3 {
+  color: #daffff !important;
+  caret-color: #daffff !important;
+}
+.v-application .accent.lighten-2 {
+  background-color: #bce8ff !important;
+  border-color: #bce8ff !important;
+}
+.v-application .accent--text.text--lighten-2 {
+  color: #bce8ff !important;
+  caret-color: #bce8ff !important;
+}
+.v-application .accent.lighten-1 {
+  background-color: #9fccff !important;
+  border-color: #9fccff !important;
+}
+.v-application .accent--text.text--lighten-1 {
+  color: #9fccff !important;
+  caret-color: #9fccff !important;
+}
+.v-application .accent.darken-1 {
+  background-color: #6596e2 !important;
+  border-color: #6596e2 !important;
+}
+.v-application .accent--text.text--darken-1 {
+  color: #6596e2 !important;
+  caret-color: #6596e2 !important;
+}
+.v-application .accent.darken-2 {
+  background-color: #467dc6 !important;
+  border-color: #467dc6 !important;
+}
+.v-application .accent--text.text--darken-2 {
+  color: #467dc6 !important;
+  caret-color: #467dc6 !important;
+}
+.v-application .accent.darken-3 {
+  background-color: #2364aa !important;
+  border-color: #2364aa !important;
+}
+.v-application .accent--text.text--darken-3 {
+  color: #2364aa !important;
+  caret-color: #2364aa !important;
+}
+.v-application .accent.darken-4 {
+  background-color: #004c90 !important;
+  border-color: #004c90 !important;
+}
+.v-application .accent--text.text--darken-4 {
+  color: #004c90 !important;
+  caret-color: #004c90 !important;
+}
+.v-application .error {
+  background-color: #ff5252 !important;
+  border-color: #ff5252 !important;
+}
+.v-application .error--text {
+  color: #ff5252 !important;
+  caret-color: #ff5252 !important;
+}
+.v-application .error.lighten-5 {
+  background-color: #ffe4d5 !important;
+  border-color: #ffe4d5 !important;
+}
+.v-application .error--text.text--lighten-5 {
+  color: #ffe4d5 !important;
+  caret-color: #ffe4d5 !important;
+}
+.v-application .error.lighten-4 {
+  background-color: #ffc6b9 !important;
+  border-color: #ffc6b9 !important;
+}
+.v-application .error--text.text--lighten-4 {
+  color: #ffc6b9 !important;
+  caret-color: #ffc6b9 !important;
+}
+.v-application .error.lighten-3 {
+  background-color: #ffa99e !important;
+  border-color: #ffa99e !important;
+}
+.v-application .error--text.text--lighten-3 {
+  color: #ffa99e !important;
+  caret-color: #ffa99e !important;
+}
+.v-application .error.lighten-2 {
+  background-color: #ff8c84 !important;
+  border-color: #ff8c84 !important;
+}
+.v-application .error--text.text--lighten-2 {
+  color: #ff8c84 !important;
+  caret-color: #ff8c84 !important;
+}
+.v-application .error.lighten-1 {
+  background-color: #ff6f6a !important;
+  border-color: #ff6f6a !important;
+}
+.v-application .error--text.text--lighten-1 {
+  color: #ff6f6a !important;
+  caret-color: #ff6f6a !important;
+}
+.v-application .error.darken-1 {
+  background-color: #df323b !important;
+  border-color: #df323b !important;
+}
+.v-application .error--text.text--darken-1 {
+  color: #df323b !important;
+  caret-color: #df323b !important;
+}
+.v-application .error.darken-2 {
+  background-color: #bf0025 !important;
+  border-color: #bf0025 !important;
+}
+.v-application .error--text.text--darken-2 {
+  color: #bf0025 !important;
+  caret-color: #bf0025 !important;
+}
+.v-application .error.darken-3 {
+  background-color: #9f0010 !important;
+  border-color: #9f0010 !important;
+}
+.v-application .error--text.text--darken-3 {
+  color: #9f0010 !important;
+  caret-color: #9f0010 !important;
+}
+.v-application .error.darken-4 {
+  background-color: #800000 !important;
+  border-color: #800000 !important;
+}
+.v-application .error--text.text--darken-4 {
+  color: #800000 !important;
+  caret-color: #800000 !important;
+}
+.v-application .info {
+  background-color: #2196f3 !important;
+  border-color: #2196f3 !important;
+}
+.v-application .info--text {
+  color: #2196f3 !important;
+  caret-color: #2196f3 !important;
+}
+.v-application .info.lighten-5 {
+  background-color: #d4ffff !important;
+  border-color: #d4ffff !important;
+}
+.v-application .info--text.text--lighten-5 {
+  color: #d4ffff !important;
+  caret-color: #d4ffff !important;
+}
+.v-application .info.lighten-4 {
+  background-color: #b5ffff !important;
+  border-color: #b5ffff !important;
+}
+.v-application .info--text.text--lighten-4 {
+  color: #b5ffff !important;
+  caret-color: #b5ffff !important;
+}
+.v-application .info.lighten-3 {
+  background-color: #95e8ff !important;
+  border-color: #95e8ff !important;
+}
+.v-application .info--text.text--lighten-3 {
+  color: #95e8ff !important;
+  caret-color: #95e8ff !important;
+}
+.v-application .info.lighten-2 {
+  background-color: #75ccff !important;
+  border-color: #75ccff !important;
+}
+.v-application .info--text.text--lighten-2 {
+  color: #75ccff !important;
+  caret-color: #75ccff !important;
+}
+.v-application .info.lighten-1 {
+  background-color: #51b0ff !important;
+  border-color: #51b0ff !important;
+}
+.v-application .info--text.text--lighten-1 {
+  color: #51b0ff !important;
+  caret-color: #51b0ff !important;
+}
+.v-application .info.darken-1 {
+  background-color: #007cd6 !important;
+  border-color: #007cd6 !important;
+}
+.v-application .info--text.text--darken-1 {
+  color: #007cd6 !important;
+  caret-color: #007cd6 !important;
+}
+.v-application .info.darken-2 {
+  background-color: #0064ba !important;
+  border-color: #0064ba !important;
+}
+.v-application .info--text.text--darken-2 {
+  color: #0064ba !important;
+  caret-color: #0064ba !important;
+}
+.v-application .info.darken-3 {
+  background-color: #004d9f !important;
+  border-color: #004d9f !important;
+}
+.v-application .info--text.text--darken-3 {
+  color: #004d9f !important;
+  caret-color: #004d9f !important;
+}
+.v-application .info.darken-4 {
+  background-color: #003784 !important;
+  border-color: #003784 !important;
+}
+.v-application .info--text.text--darken-4 {
+  color: #003784 !important;
+  caret-color: #003784 !important;
+}
+.v-application .success {
+  background-color: #4caf50 !important;
+  border-color: #4caf50 !important;
+}
+.v-application .success--text {
+  color: #4caf50 !important;
+  caret-color: #4caf50 !important;
+}
+.v-application .success.lighten-5 {
+  background-color: #dcffd6 !important;
+  border-color: #dcffd6 !important;
+}
+.v-application .success--text.text--lighten-5 {
+  color: #dcffd6 !important;
+  caret-color: #dcffd6 !important;
+}
+.v-application .success.lighten-4 {
+  background-color: #beffba !important;
+  border-color: #beffba !important;
+}
+.v-application .success--text.text--lighten-4 {
+  color: #beffba !important;
+  caret-color: #beffba !important;
+}
+.v-application .success.lighten-3 {
+  background-color: #a2ff9e !important;
+  border-color: #a2ff9e !important;
+}
+.v-application .success--text.text--lighten-3 {
+  color: #a2ff9e !important;
+  caret-color: #a2ff9e !important;
+}
+.v-application .success.lighten-2 {
+  background-color: #85e783 !important;
+  border-color: #85e783 !important;
+}
+.v-application .success--text.text--lighten-2 {
+  color: #85e783 !important;
+  caret-color: #85e783 !important;
+}
+.v-application .success.lighten-1 {
+  background-color: #69cb69 !important;
+  border-color: #69cb69 !important;
+}
+.v-application .success--text.text--lighten-1 {
+  color: #69cb69 !important;
+  caret-color: #69cb69 !important;
+}
+.v-application .success.darken-1 {
+  background-color: #2d9437 !important;
+  border-color: #2d9437 !important;
+}
+.v-application .success--text.text--darken-1 {
+  color: #2d9437 !important;
+  caret-color: #2d9437 !important;
+}
+.v-application .success.darken-2 {
+  background-color: #00791e !important;
+  border-color: #00791e !important;
+}
+.v-application .success--text.text--darken-2 {
+  color: #00791e !important;
+  caret-color: #00791e !important;
+}
+.v-application .success.darken-3 {
+  background-color: #006000 !important;
+  border-color: #006000 !important;
+}
+.v-application .success--text.text--darken-3 {
+  color: #006000 !important;
+  caret-color: #006000 !important;
+}
+.v-application .success.darken-4 {
+  background-color: #004700 !important;
+  border-color: #004700 !important;
+}
+.v-application .success--text.text--darken-4 {
+  color: #004700 !important;
+  caret-color: #004700 !important;
+}
+.v-application .warning {
+  background-color: #fb8c00 !important;
+  border-color: #fb8c00 !important;
+}
+.v-application .warning--text {
+  color: #fb8c00 !important;
+  caret-color: #fb8c00 !important;
+}
+.v-application .warning.lighten-5 {
+  background-color: #ffff9e !important;
+  border-color: #ffff9e !important;
+}
+.v-application .warning--text.text--lighten-5 {
+  color: #ffff9e !important;
+  caret-color: #ffff9e !important;
+}
+.v-application .warning.lighten-4 {
+  background-color: #fffb82 !important;
+  border-color: #fffb82 !important;
+}
+.v-application .warning--text.text--lighten-4 {
+  color: #fffb82 !important;
+  caret-color: #fffb82 !important;
+}
+.v-application .warning.lighten-3 {
+  background-color: #ffdf67 !important;
+  border-color: #ffdf67 !important;
+}
+.v-application .warning--text.text--lighten-3 {
+  color: #ffdf67 !important;
+  caret-color: #ffdf67 !important;
+}
+.v-application .warning.lighten-2 {
+  background-color: #ffc24b !important;
+  border-color: #ffc24b !important;
+}
+.v-application .warning--text.text--lighten-2 {
+  color: #ffc24b !important;
+  caret-color: #ffc24b !important;
+}
+.v-application .warning.lighten-1 {
+  background-color: #ffa72d !important;
+  border-color: #ffa72d !important;
+}
+.v-application .warning--text.text--lighten-1 {
+  color: #ffa72d !important;
+  caret-color: #ffa72d !important;
+}
+.v-application .warning.darken-1 {
+  background-color: #db7200 !important;
+  border-color: #db7200 !important;
+}
+.v-application .warning--text.text--darken-1 {
+  color: #db7200 !important;
+  caret-color: #db7200 !important;
+}
+.v-application .warning.darken-2 {
+  background-color: #bb5900 !important;
+  border-color: #bb5900 !important;
+}
+.v-application .warning--text.text--darken-2 {
+  color: #bb5900 !important;
+  caret-color: #bb5900 !important;
+}
+.v-application .warning.darken-3 {
+  background-color: #9d4000 !important;
+  border-color: #9d4000 !important;
+}
+.v-application .warning--text.text--darken-3 {
+  color: #9d4000 !important;
+  caret-color: #9d4000 !important;
+}
+.v-application .warning.darken-4 {
+  background-color: #802700 !important;
+  border-color: #802700 !important;
+}
+.v-application .warning--text.text--darken-4 {
+  color: #802700 !important;
+  caret-color: #802700 !important;
+}</style><noscript data-vue-tag="ssr"><style>.g-image--loading{display:none;}</style></noscript>
+  </head>
+  <body >
+    <div data-app="true" data-server-rendered="true" id="app" id="inspire" class="v-application v-application--is-ltr theme--light"><div class="v-application--wrap"><header class="gb-toolbar v-sheet v-sheet--tile theme--dark v-toolbar v-toolbar--dense v-app-bar v-app-bar--fixed" style="height:48px;margin-top:0px;transform:translateY(0px);left:0px;right:0px;"><div class="v-toolbar__content" style="height:48px;"><button type="button" class="v-app-bar__nav-icon v-btn v-btn--flat v-btn--icon v-btn--round theme--dark v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-menu theme--dark"></i></span></button><div class="v-toolbar__title ml-0 pl-4" style="width:300px;"><span class="hidden-sm-and-down">skillhub</span></div><div class="spacer"></div><div class="v-input hidden-sm-and-down v-input--hide-details v-input--dense theme--dark v-text-field v-text-field--single-line v-text-field--solo v-text-field--solo-inverted v-text-field--solo-flat v-text-field--enclosed"><div class="v-input__control"><div class="v-input__slot"><div class="v-input__prepend-inner"><div class="v-input__icon v-input__icon--prepend-inner"><i aria-hidden="true" class="v-icon notranslate mdi mdi-magnify theme--dark"></i></div></div><div class="v-text-field__slot"><label for="input-36980" class="v-label theme--dark" style="left:0px;right:auto;position:absolute;">Search</label><input id="input-36980" type="text"></div></div></div></div><button type="button" class="v-btn v-btn--flat v-btn--icon v-btn--round theme--dark v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-apps theme--dark"></i></span></button><button type="button" class="v-btn v-btn--flat v-btn--icon v-btn--round theme--dark v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-bell theme--dark"></i></span></button></div></header><main class="v-content" style="padding-top:11424px;padding-right:0px;padding-bottom:0px;padding-left:0px;"><div class="v-content__wrap"><div class="container container--fluid pa-0"><div class="row no-gutters"><div class="col col-12"><div class="row no-gutters row--dense"><div class="height-30 bg-dark white--text jarallax col"><img src="https://i.udemycdn.com/course/750x422/2747322_ed2d.jpg" class="jarallax-img opacity-20 g-image"><div class="container mt-8 pa-0"><div class="row mb-12 justify-center"><div dense="" class="col"><p class="display-2 mb-0">Criando um Servidor no Amazon EC2</p><p class="headline mb-0">As instâncias T2 são um tipo de instância do Amazon EC2</p><div><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">0 (0)</span></div><a href="https://www.udemy.com/course/criando-um-servidor-no-amazon-ec2/" class="v-btn v-btn--contained theme--light v-size--default warning"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-share-outline theme--light"></i> Take me there!
+          </span></a></div></div></div></div></div></div></div><div class="row no-gutters"><div class="col col-12"><div class="container mt-4 pl-5"><div class="row mb-12 justify-center"><div dense="" class="col">
+            DISPONÍVEL NO NÍVEL GRATUITO DA AWS*As instâncias T2 são um tipo de instância do Amazon EC2 projetado para reduzir consideravelmente os custos de aplicativos que se beneficiam da capacidade de usar toda a performance do núcleo de forma intermitente, sempre que necessário. As instâncias T2 estão disponíveis para uso no nível gratuito da AWS, que inclui 750 horas de instâncias t2.micro para Linux e Windows por mês durante um ano para novos clientes da AWS.PERFORMANCE DA CPU COM CAPACIDADE DE INTERMITÊNCIAAs instâncias T2 são instâncias de performance com capacidade de intermitência que oferecem uma linha de base de performance de CPU com capacidade de intermitência acima dessa linha. A performance da linha de base e a capacidade de intermitência são controladas pelos créditos de CPU. As instâncias T2 acumulam créditos de CPU quando estão ociosas e usam esses créditos quando estão ativas.T2 ILIMITADAAs instâncias T2 ilimitadas podem manter a alta performance de CPU pelo tempo necessário para a carga de trabalho. Para a maioria das cargas de trabalho de uso geral, as instâncias T2 ilimitadas oferecerão performance ampla, sem cobranças adicionais. Se a instância precisar ser executada com uma utilização maior de CPU por um período prolongado, ela também poderá fazer isso mediante uma tarifa fixa adicional de 5 centavos por hora de vCPU.PERFORMANCE DE EBS COM CAPACIDADE DE INTERMITÊNCIAAs instâncias T2 funcionam bem com volumes de uso geral (SSD) do Amazon EBS para armazenamento de blocos de instâncias. Os volumes de uso geral (SSD) são o tipo de volume padrão do EBS para instâncias do Amazon EC2. Oferecem capacidade de intermitência de 3.000 IOPS por volume, independentemente do tamanho do volume, para atender às necessidades de performance da maioria dos aplicativos. Além disso, também fornecem uma linha de base consistente de 3 IOPS por GB.
+          </div></div></div></div></div><div class="row no-gutters"><div class="col"><div class="container"><div class="headline pa-1 mb-0">#Related</div><div aria-label="Slideshow" class="vueperslides no-shadow vueperslides--fixed-height vueperslides--slide-multiple vueperslides--bullets-outside" style="height:300px;"><!----><div class="vueperslides__inner"><div aria-live="polite" class="vueperslides__parallax-wrapper" style="padding-bottom:25%;"><div class="vueperslides__track"><div class="vueperslides__track-inner" style="transition-duration:0ms;transform:translate3d(0%, 0, 0);will-change:auto;"><!----><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/aws-ci-cd-code-pipeline-code-commit-code-build-code-deploy" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>AWS CI/CD CodePipeline,CodeCommit,CodeBuild,CodeDeploy</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="CI/CD AWS, Automatizaremos Servicio Rest Spring y NodeJS, Aprenderás en corto tiempo, Para Principiantes e intermedio.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">5 (2)</span></div></div></div><!----></div><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/curso-basico-de-linux-debian-10" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Curso Básico de Linux - Debian 10</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Interface de linha de comando do linux de uma forma descomplicada">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">0 (0)</span></div></div></div><!----></div><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/curso-de-maquiagem-com-nanny-faria" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Curso de Maquiagem com Nanny Faria</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Do Iniciante ao Profissional">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">0 (0)</span></div></div></div><!----></div><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/curso-linkedin-para-empresas-y-profesionales" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Curso Linkedin para empresas y profesionales.</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Curso online de experto en Linkedin para empresas y profesionales.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">3.5 (65)</span></div></div></div><!----></div><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/operador-debian-gnu-linux" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Operador Debian GNU/Linux</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Aprenda como usar Debian GNU/Linux a nivel básico, explicado paso a paso.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4 (18)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/aprende-a-crear-sitios-web-con-php-y-my-sql" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Aprende a crear SITIOS WEB con PHP y MySql</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="curso desarrollado especialmente para NO-PROGRAMADORES, usuarios de MAC y PC!">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.7 (18)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/introduccion-al-cloud-computing-iaa-s" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Introducción al cloud computing (IaaS)</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Entiende que es &quot;cloud computing&quot; y aprende a utilizar servicios de Amazon AWS...">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">2.5 (4)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/todo-ph-p7-y-my-sql-de-basico-a-experto" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Todo PHP7 y MySQL, de básico a experto</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Aprende a programar de forma sencilla y amena en el lenguaje de servidor más extendido y poderoso del mundo: PHP y MySQL">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.1 (436)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/como-tener-una-web-efectiva-en-tu-empresa-y-posicionarla" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Cómo tener una Web Efectiva en tu Empresa y Posicionarla</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Curso de 1 hora para aprender a tener una web efectivapara tu negocio">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">1 (1)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/atendimento-2-0-a-arte-de-encantar-clientes" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Atendimento 2.0 - A Arte de Encantar Clientes</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Como Capturar a Mente e o Coração dos Clientes Presenciais e Online">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.7 (62)</span></div></div></div><!----></div><!----></div></div></div><!----><!----><!----><!----><!----></div><!----><!----></div></div></div></div></div></div></main></div></div>
+    <script>window.__INITIAL_STATE__={"data":null,"context":{"course":{"id":"3778de59-3ef1-11ea-9791-1b580a556b4a","vendorId":"2747322","created":"2020-01-24T21:35:08.092Z","updated":"2020-01-01T08:00:00.000Z","title":"Criando um Servidor no Amazon EC2","headline":"As instâncias T2 são um tipo de instância do Amazon EC2","description":"DISPONÍVEL NO NÍVEL GRATUITO DA AWS*As instâncias T2 são um tipo de instância do Amazon EC2 projetado para reduzir consideravelmente os custos de aplicativos que se beneficiam da capacidade de usar toda a performance do núcleo de forma intermitente, sempre que necessário. As instâncias T2 estão disponíveis para uso no nível gratuito da AWS, que inclui 750 horas de instâncias t2.micro para Linux e Windows por mês durante um ano para novos clientes da AWS.PERFORMANCE DA CPU COM CAPACIDADE DE INTERMITÊNCIAAs instâncias T2 são instâncias de performance com capacidade de intermitência que oferecem uma linha de base de performance de CPU com capacidade de intermitência acima dessa linha. A performance da linha de base e a capacidade de intermitência são controladas pelos créditos de CPU. As instâncias T2 acumulam créditos de CPU quando estão ociosas e usam esses créditos quando estão ativas.T2 ILIMITADAAs instâncias T2 ilimitadas podem manter a alta performance de CPU pelo tempo necessário para a carga de trabalho. Para a maioria das cargas de trabalho de uso geral, as instâncias T2 ilimitadas oferecerão performance ampla, sem cobranças adicionais. Se a instância precisar ser executada com uma utilização maior de CPU por um período prolongado, ela também poderá fazer isso mediante uma tarifa fixa adicional de 5 centavos por hora de vCPU.PERFORMANCE DE EBS COM CAPACIDADE DE INTERMITÊNCIAAs instâncias T2 funcionam bem com volumes de uso geral (SSD) do Amazon EBS para armazenamento de blocos de instâncias. Os volumes de uso geral (SSD) são o tipo de volume padrão do EBS para instâncias do Amazon EC2. Oferecem capacidade de intermitência de 3.000 IOPS por volume, independentemente do tamanho do volume, para atender às necessidades de performance da maioria dos aplicativos. Além disso, também fornecem uma linha de base consistente de 3 IOPS por GB.","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F2747322_ed2d.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fcriando-um-servidor-no-amazon-ec2\u002F","language":"pt","tags":["Development","Web Development","Amazon AWS"],"rating":0,"reviews":0,"isFree":true,"matches":["377582f4-3ef1-11ea-9791-1b580a556b4a","3779c8b7-3ef1-11ea-9791-1b580a556b4a","3779a1aa-3ef1-11ea-9791-1b580a556b4a","37764644-3ef1-11ea-9791-1b580a556b4a","37792c76-3ef1-11ea-9791-1b580a556b4a","377311f1-3ef1-11ea-9791-1b580a556b4a","37750dc3-3ef1-11ea-9791-1b580a556b4a","377582f0-3ef1-11ea-9791-1b580a556b4a","37770993-3ef1-11ea-9791-1b580a556b4a","3773d541-3ef1-11ea-9791-1b580a556b4a"],"slug":"criando-um-servidor-no-amazon-e-c2"},"related":[{"id":"3779c8b7-3ef1-11ea-9791-1b580a556b4a","vendorId":"2742238","created":"2020-01-24T21:35:08.096Z","updated":"2020-01-01T08:00:00.000Z","title":"AWS CI\u002FCD CodePipeline,CodeCommit,CodeBuild,CodeDeploy","headline":"CI\u002FCD AWS, Automatizaremos Servicio Rest Spring y NodeJS, Aprenderás en corto tiempo, Para Principiantes e intermedio.","description":"Automatizar las tareas de lanzamiento, compilación, pruebas y despliegue es una tarea no tan compleja en AWS, CI\u002FCD las siglas de Integración continua y Despliegue Continuo es lo que aplicamos en los tres proyectos del presente curso, utilizamos servicios de AWS como CodeCommit para los repositorios, CodeCuild para la compilación, CodeDeploy para el despliegue y CodePIpeline para generar el flujo y las etapas(source,build,deploy) en toda integraciòn y despliegue continuo de nuestros proyectos. En el presente curso aplicamos CI\u002FCD en Proyectos con NodeJS, MochaJS y SpringBoot.","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F2742238_94df.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Faws-cicd-codepipelinecodecommitcodebuildcodedeploy\u002F","language":"es","tags":["Development","Programming Languages"],"rating":5,"reviews":2,"isFree":false,"matches":["3778de59-3ef1-11ea-9791-1b580a556b4a","377582f4-3ef1-11ea-9791-1b580a556b4a","377a8c04-3ef1-11ea-9791-1b580a556b4a","3777a5d9-3ef1-11ea-9791-1b580a556b4a","37784210-3ef1-11ea-9791-1b580a556b4a","3778b74a-3ef1-11ea-9791-1b580a556b4a","37792c7b-3ef1-11ea-9791-1b580a556b4a","377ab311-3ef1-11ea-9791-1b580a556b4a","377a16d0-3ef1-11ea-9791-1b580a556b4a","377311f1-3ef1-11ea-9791-1b580a556b4a"],"slug":"aws-ci-cd-code-pipeline-code-commit-code-build-code-deploy"},{"id":"3779a1aa-3ef1-11ea-9791-1b580a556b4a","vendorId":"2741998","created":"2020-01-24T21:35:08.095Z","updated":"2020-01-01T08:00:00.000Z","title":"Curso Básico de Linux - Debian 10","headline":"Interface de linha de comando do linux de uma forma descomplicada","description":"Nesse curso você aprenderá conceitos básicos essenciais para o bom uso do Linux, esse curso é indicado para pessoas iniciantes. Aqui você aprenderá a diferença entre as distribuições, aprenderá conceitos básicos de virtualizadores, fazer o download do Debian 10 e sua instalação, configurações de serviços e muito mais.Tudo com uma linguagem simples e direta. Seja bem vindo!","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F2741998_4ba9.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fcurso-basico-de-linux-debian-10\u002F","language":"pt","tags":["IT & Software","Operating Systems","Linux"],"rating":0,"reviews":0,"isFree":true,"matches":["37764644-3ef1-11ea-9791-1b580a556b4a","3779a1ab-3ef1-11ea-9791-1b580a556b4a","3779efc1-3ef1-11ea-9791-1b580a556b4a","37792c76-3ef1-11ea-9791-1b580a556b4a","3779c8b9-3ef1-11ea-9791-1b580a556b4a","377a16d0-3ef1-11ea-9791-1b580a556b4a","377a3de5-3ef1-11ea-9791-1b580a556b4a","377311f1-3ef1-11ea-9791-1b580a556b4a","3778de59-3ef1-11ea-9791-1b580a556b4a","37790560-3ef1-11ea-9791-1b580a556b4a"],"slug":"curso-basico-de-linux-debian-10"},{"id":"37792c76-3ef1-11ea-9791-1b580a556b4a","vendorId":"2748004","created":"2020-01-24T21:35:08.093Z","updated":"2020-01-01T08:00:00.000Z","title":"Curso de Maquiagem com Nanny Faria","headline":"Do Iniciante ao Profissional","description":"Curso de maquiagem com 20 aulas completas com as mais modernas técnicas e uma aula bônus super especial.Esse curso é suficientemente detalhado para você que está iniciando no mundo da maquiagem, possui uma escala crescente de grau de dificuldade de forma a atender a você que já tem alguma experiência e traz as novidades, dicas e truques para você que já é um(a) profissional do ramo.Enfim! É um curso perfeito para todos os níveis.","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F2748004_352b_3.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fcursodemaquiagemnannyfaria\u002F","language":"pt","tags":["Lifestyle","Beauty & Makeup"],"rating":0,"reviews":0,"isFree":false,"matches":["377311f1-3ef1-11ea-9791-1b580a556b4a","377a16d0-3ef1-11ea-9791-1b580a556b4a","3779a1ab-3ef1-11ea-9791-1b580a556b4a","3778de5d-3ef1-11ea-9791-1b580a556b4a","3779efc1-3ef1-11ea-9791-1b580a556b4a","37792c75-3ef1-11ea-9791-1b580a556b4a","377a3de5-3ef1-11ea-9791-1b580a556b4a","37770993-3ef1-11ea-9791-1b580a556b4a","3779a1aa-3ef1-11ea-9791-1b580a556b4a","3779c8b9-3ef1-11ea-9791-1b580a556b4a"],"slug":"curso-de-maquiagem-com-nanny-faria"},{"id":"37770993-3ef1-11ea-9791-1b580a556b4a","vendorId":"28716","created":"2020-01-24T21:35:07.946Z","updated":"2018-12-01T08:00:00.000Z","title":"Curso Linkedin para empresas y profesionales.","headline":"Curso online de experto en Linkedin para empresas y profesionales.","description":"Sin lugar a dudas, Linkedin es la red social más infrautilizada de Internet. Sin embargo, su potencial para las empresas y marcas es inmenso. En Linkedin no sólo es posible crear un perfil empresarial; -una página equivalente a la página de fans de Facebook  , sino que podemos promocionar de forma totalmente gratuita, todos nuestros productos y servicios.  Con una página de empresa en Linkedin podemos destacar entre nuestros competidores, podemos conectar con nuestros clientes y crear nuevas relaciones profesionales de alto nivel, entre otros muchos beneficios. Linkedin te permite posicionarte como expertos en tu sector, ofertar tus servicios, promocionar tus contenidos y generar marca personal.Al igual que tú, estoy harto de realizar cursos de decenas de horas con contenido de relleno y poco útil. Por ello, he diseñado este curso, para que aprendas lo máximo en el menor tiempo posible. Con este curso práctico en vídeo de Linkedin vas a aprender cómo crear perfiles perfectos para potenciar su marca y también páginas optimizadas para tu empresa en la red social profesional número uno en el mundo.¡Curso único en su género!  Contenidos del curso:- Optimización de perfiles de Linkedin- Cómo crear páginas de empresa optimizadas en Linkedin- Cómo añadir productos y servicios en Linkedin de forma gratuita.- Cómo recomendar nuestros productos y servicios en Linkedin- Cómo crear un grupo en Linkedin- Cómo conseguir más seguidores para nuestra página de empresa- Curación de contenidos con Linkedin- Cómo anunciarse en Linkedin- Cómo promocionar nuestros contenidos en Linkedin- Cómo publicar de forma automatizada en Linkedin- Plugins sociales de Linkedin- SEO para Linkedin- Recursos educativos gratuitos adicionales.El acceso a todos los contenidos es inmediato e ilimitado desde cualquier dispositivo.","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F28716_b29b_3.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fcurso-marketing-en-linkedin\u002F","language":"es","tags":["Marketing","Social Media Marketing","LinkedIn"],"rating":3.5,"reviews":65,"isFree":false,"matches":["377a16d0-3ef1-11ea-9791-1b580a556b4a","3775aa0a-3ef1-11ea-9791-1b580a556b4a","37786928-3ef1-11ea-9791-1b580a556b4a","37742365-3ef1-11ea-9791-1b580a556b4a","3779efc1-3ef1-11ea-9791-1b580a556b4a","3779a1ab-3ef1-11ea-9791-1b580a556b4a","37792c76-3ef1-11ea-9791-1b580a556b4a","3773d541-3ef1-11ea-9791-1b580a556b4a","3775aa02-3ef1-11ea-9791-1b580a556b4a","377582f0-3ef1-11ea-9791-1b580a556b4a"],"slug":"curso-linkedin-para-empresas-y-profesionales"},{"id":"37764644-3ef1-11ea-9791-1b580a556b4a","vendorId":"27041","created":"2020-01-24T21:35:07.942Z","updated":"2013-12-01T08:00:00.000Z","title":"Operador Debian GNU\u002FLinux","headline":"Aprenda como usar Debian GNU\u002FLinux a nivel básico, explicado paso a paso.","description":" El curso básico y necesario para todo aquel que nunca ha instalado y trabajado en un sistema operativo GNU\u002FLinux. Este curso es simplemente la introducción perfecta a este nuevo mundo. En esta serie de videos veremos desde cómo descargar e instalar Debian GNU\u002FLinux desde cero, porque ¿cómo vas a aprender Linux sin saber instalarlo al menos? Aquí aprenderás los fundamentos de instalación y podrás hacerlo paso a paso viendo los videos que el curso ofrece. Luego en esta misma instalación harás el resto del curso con los videos paso a paso. Aprenderás los principios necesarios para iniciarte como usuario de Debian y cualquier otro GNU\u002FLinux. Verás comandos básicos y algunas de las herramientas que este sistema operativo ofrece. Pasarás de ser un usuario sin conocimientos de Linux a un usuario Operador de un sistema operativo GNU\u002FLinux. El mundo de la informática evoluciona a pasos enormes y la demanda de usuarios con conocimientos en estos sistemas operativos es enorme. Muchas empresas están optando por implementar sus servicios en estos sistemas operativos así que anímate que no hay mejor inversión que la educación. Para motivar tu aprendizaje estaré disponible las primeras 48 horas para guiarte paso a paso y responder a cualquier interrogante que tengas. ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F27041_af80_7.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Foperador-debian-gnu-linux\u002F","language":"es","tags":["IT & Software","Network & Security","GNU"],"rating":4,"reviews":18,"isFree":false,"matches":["3779a1aa-3ef1-11ea-9791-1b580a556b4a","3779a1ab-3ef1-11ea-9791-1b580a556b4a","377a16d0-3ef1-11ea-9791-1b580a556b4a","37790560-3ef1-11ea-9791-1b580a556b4a","377582f0-3ef1-11ea-9791-1b580a556b4a","37786928-3ef1-11ea-9791-1b580a556b4a","3775aa0a-3ef1-11ea-9791-1b580a556b4a","37792c76-3ef1-11ea-9791-1b580a556b4a","377a3de5-3ef1-11ea-9791-1b580a556b4a","3773d545-3ef1-11ea-9791-1b580a556b4a"],"slug":"operador-debian-gnu-linux"},{"id":"377582f0-3ef1-11ea-9791-1b580a556b4a","vendorId":"26006","created":"2020-01-24T21:35:07.888Z","updated":"2012-10-01T07:00:00.000Z","title":"Aprende a crear SITIOS WEB con PHP y MySql","headline":"curso desarrollado especialmente para NO-PROGRAMADORES, usuarios de MAC y PC!","description":"Al finalizar de este curso, tendrás todos los conocimientos necesarios para crear FÁCILMENTE sitios web dinámicos con Dreamweaver, Fireworks, hojas de estilo CSS, PHP y base de datos MySql.Entenderás el cómo funcionan famosos sitios web como Facebook, Youtube, Wikipedia, Yahoo, etc., y serás capaz de emprender tu propio proyecto.Aprenderás a utilizar las poderosas herramientas que Adobe Dreamweaver nos ofrece para hacer webs fácil y rápidamente.Aprenderás desde cómo instalar un servidor de pruebas en tu computador, configurar un nuevo sitio, nociones de HTML y CSS, hasta el uso y la puesta en marcha de sistemas web que interactúan con bases de datos. ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F26006_c86d_22.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Faprende-a-crear-sitios-web-con-php-y-mysql\u002F","language":"es","tags":["Development","Web Development","PHP"],"rating":4.7,"reviews":18,"isFree":false,"matches":["37750dc3-3ef1-11ea-9791-1b580a556b4a","377582f1-3ef1-11ea-9791-1b580a556b4a","3773d541-3ef1-11ea-9791-1b580a556b4a","37786928-3ef1-11ea-9791-1b580a556b4a","37744a74-3ef1-11ea-9791-1b580a556b4a","37742365-3ef1-11ea-9791-1b580a556b4a","37764644-3ef1-11ea-9791-1b580a556b4a","37770993-3ef1-11ea-9791-1b580a556b4a","3775aa0a-3ef1-11ea-9791-1b580a556b4a","376dbac5-3ef1-11ea-9791-1b580a556b4a"],"slug":"aprende-a-crear-sitios-web-con-php-y-my-sql"},{"id":"377582f4-3ef1-11ea-9791-1b580a556b4a","vendorId":"25906","created":"2020-01-24T21:35:07.888Z","updated":"2012-10-01T07:00:00.000Z","title":"Introducción al cloud computing (IaaS)","headline":"Entiende que es \"cloud computing\" y aprende a utilizar servicios de Amazon AWS...","description":"En este curso aprenderás de forma rápida  que se entiende por \"cloud\" y que servicios puede ofrecer, identificando claramente sus beneficios en reducción de costes y eficiencia.A través de los ejemplos prácticos aprenderás  a trabajar con distintos proveedores, a  utilizar plantillas para gestión de los servicios  como Amazon AWS y Arsys CB.Este cursos esta especialmente indicado para técnicos o managers que quieran aprender de forma rápidas los beneficios de esta tecnología.","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F25906_552a_3.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fintroduccion-al-cloud-computing-iaas-o\u002F","language":"es","tags":["IT & Software","Other","Cloud Computing"],"rating":2.5,"reviews":4,"isFree":false,"matches":["3778de59-3ef1-11ea-9791-1b580a556b4a","3779c8b7-3ef1-11ea-9791-1b580a556b4a","3777a5d9-3ef1-11ea-9791-1b580a556b4a","37784210-3ef1-11ea-9791-1b580a556b4a","37786928-3ef1-11ea-9791-1b580a556b4a","377582f0-3ef1-11ea-9791-1b580a556b4a","3775aa02-3ef1-11ea-9791-1b580a556b4a","377a8c04-3ef1-11ea-9791-1b580a556b4a","3773d541-3ef1-11ea-9791-1b580a556b4a","376a5f60-3ef1-11ea-9791-1b580a556b4a"],"slug":"introduccion-al-cloud-computing-iaa-s"},{"id":"37750dc3-3ef1-11ea-9791-1b580a556b4a","vendorId":"25118","created":"2020-01-24T21:35:07.886Z","updated":"2019-12-01T08:00:00.000Z","title":"Todo PHP7 y MySQL, de básico a experto","headline":"Aprende a programar de forma sencilla y amena en el lenguaje de servidor más extendido y poderoso del mundo: PHP y MySQL","description":"  Incluye GRATIS el libro del curso:  Con PHP se han hecho poderosos imperios, como Yahoo y Facebook (también Udemy). Comenzaremos desde lo básico, conociendo la historia del lenguaje y su estado actual. Revisaremos la formación de variables, los ciclos, las sentencias condiconales, los arreglos (o vectores), asi como la forma de validar formas de HTML.  Analizaremos las poderosas funciones para manejar fechas y cadenas. Todo de forma fácil y amena.        Dentro de los ejemplos encontraremos los siguientes:  Una sencilla galeria de fotos tomadas directamente de una carpetaSubir archivos de imágenes de la computadora al servidorCrear archivos de estado Enviar un mail con PHPHacer páginas privadas con sesionesConocer la IP, browser y s\u002Fo del usuario que nos visitaManejo de expresiones regularesAplicar filtros a las imágenes como negativo, contraste, blanco y negro, etc.Reducir el tamaño y el peso de una imagen jpg, png o gif en forma automática      Contenido del libro Introducción a PHP:        1. Sintaxis general de PHP  Estructura de archivos PHPMezclar HTML y PHPComentariosEl caracter punto y coma \";\"VariablesTipos de datosOperadores y expresionesOperadores AritméticosOperador de concatenaciónOperadores de comparaciónOperadores boleadosCambio de tipoPrecedenciaComandos \"print\" y \"echo\"Uso de etiquetas HTML      2. Control de flujo  Comando \"if\"Comando \"switch\"Comando \"do ... while\"Comando \"for\"Comandos \"break\" y \"continue\"      3- Arreglos  Creación de arreglosRecorriendo todo un arreglo con \"foreach\"Operaciones con arreglosAgregar varios elementos al principio del arreglo, con el comando \"array_push\"Quitar el primer elemento de un arreglo, con el comando \"array_shift\"Quitar cualquier elemento de un arreglo, con el comando \"unset\"Buscar por un valor exacto en todo el arreglo, con el comando \"in_array\"Ordenando arreglosArreglos asociativos      4- Funciones  Creación de funcionesParámetrosVariables locales y globalesRegreso de valores      5- Formas de HTML  Ejemplos de DreamweaverCampos ocultosValidacionesRedirección a otras paginasHipervínculos a rutinas phpPaso de parámetros en hipervínculos      6- Fechas y strings  Comando \"time\"Comando \"date\"Comando \"getdate\"Comando \"mktime\"Validando fechas con \"checkdate\"Comando \"printf\"Comando \"sprintf\"Comando \"number_format\"Operaciones básicas de stringsConvertir caracteres especiales de texto a HTML      7- Manejo de archivos  Verificar si existe un archivoVerificar si es archivo o directorioPropiedades de archivosCreando y borrando un archivoAbrir y cerrar un archivoLeer un archivoProtegiendo archivos contra escrituras múltiplesOperaciones con directorios      8 - Galletas  Creación de galletasLectura de galletasBorrar una galleta      9- Acceso a base de datos  Conexión al servidorConexión a la base de datosOperaciones básicas","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F25118_f17a_8.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Ffundamentos-de-programacion-con-php\u002F","language":"es","tags":["Development","Programming Languages","MySQL"],"rating":4.1,"reviews":436,"isFree":false,"matches":["377582f0-3ef1-11ea-9791-1b580a556b4a","377582f1-3ef1-11ea-9791-1b580a556b4a","3773d541-3ef1-11ea-9791-1b580a556b4a","37742365-3ef1-11ea-9791-1b580a556b4a","37786928-3ef1-11ea-9791-1b580a556b4a","3775aa02-3ef1-11ea-9791-1b580a556b4a","3773d545-3ef1-11ea-9791-1b580a556b4a","37744a74-3ef1-11ea-9791-1b580a556b4a","3775aa0a-3ef1-11ea-9791-1b580a556b4a","377052d7-3ef1-11ea-9791-1b580a556b4a"],"slug":"todo-ph-p7-y-my-sql-de-basico-a-experto"},{"id":"3773d541-3ef1-11ea-9791-1b580a556b4a","vendorId":"23275","created":"2020-01-24T21:35:07.815Z","updated":"2012-11-01T07:00:00.000Z","title":"Cómo tener una Web Efectiva en tu Empresa y Posicionarla","headline":"Curso de 1 hora para aprender a tener una web efectivapara tu negocio","description":"Este es el objetivo del curso de 1 hora que hoy quiero poner a vuestra disposición para hacer crecer vuestro negocio en Internet. Ahora puedes hacer que todo cambie y comenzar a usar Internet de manera que consigas más tráfico, más potenciales clientes y más ventas ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F23275_b952_5.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fcomo-tener-una-web-efectiva-en-tu-empresa-y-posicionarla\u002F","language":"es","tags":["Marketing","Digital Marketing","Web Design"],"rating":1,"reviews":1,"isFree":false,"matches":["37786928-3ef1-11ea-9791-1b580a556b4a","37742365-3ef1-11ea-9791-1b580a556b4a","377582f1-3ef1-11ea-9791-1b580a556b4a","3775aa0a-3ef1-11ea-9791-1b580a556b4a","3778de57-3ef1-11ea-9791-1b580a556b4a","3775aa02-3ef1-11ea-9791-1b580a556b4a","37749894-3ef1-11ea-9791-1b580a556b4a","377582f0-3ef1-11ea-9791-1b580a556b4a","37792c79-3ef1-11ea-9791-1b580a556b4a","3774bfa9-3ef1-11ea-9791-1b580a556b4a"],"slug":"como-tener-una-web-efectiva-en-tu-empresa-y-posicionarla"},{"id":"377311f1-3ef1-11ea-9791-1b580a556b4a","vendorId":"21583","created":"2020-01-24T21:35:07.812Z","updated":"2018-02-01T08:00:00.000Z","title":"Atendimento 2.0 - A Arte de Encantar Clientes","headline":"Como Capturar a Mente e o Coração dos Clientes Presenciais e Online","description":" Aprenda a aplicar no seu dia-a-dia as estratégias utilizadas pelas mais bem-sucedidas empresas que desenvolveram uma Cultura de Atendimento que deixam qualquer um de \"queixo caído\". É de suma importância que você possa aprender e colocar em prática, imediatamente, lições de empresas de alta performance, que fazem o impossível para aprimorar o relacionamento com clientes. Regra dos 3 metros, Lei do Pôr do Sol, Dia “D” e Encantômetro, Construir uma experiência grandiosa para os clientes: cases como os das Lojas Renner, Starbucks, Uber, Apple, Disney, Nordstrom, Stew Leonard´s, Zappos (com sua política delivering Happiness), Magazine Luiza, etc, etc e etc, são ótimas fontes de inovações no relacionamento com o Clientes tão necessárias para transformar sua paixão por servir em resultados fantásticos. =\u003E Você poderá aplicar técnicas sensacionais para transformar o Atendimento aos seus Clientes em momentos mágicos ao invés de momentos trágicos! O conteúdo foi desenvolvido pensando principalmente no cliente, aquela pessoa que tanto sofre por nossa causa e ao mesmo tempo é nossa razão de existirmos. Pensamos também no pessoal “linha de frente”, nós que estamos todos os dias com a\"barriga no balcão de atendimento\" (físico e virtual) tentando mudar as coisas. =\u003E O conteúdo programático é composto de dezenas de aulas divididas em: . Módulos Básicos . Módulos de Referência . Módulos Avançados . Estudos de casos O preço atual do curso é PROMOCIONAL e por tempo limitado, e foi estipulado para ajudar pessoas que realmente querem atingir um nível de atendimento elevado. =\u003E Bons estudos e sucesso no treinamento! “Temos especialistas em marketing, finanças e em sistemas, só que TODOS precisam entender de clientes”.\nLuiza Helena – Diretora Superintendente do Magazine Luiza","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F21583_7cfc_12.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fexcelencia-no-atendimento\u002F","language":"pt","tags":["Personal Development","Career Development","Customer Service"],"rating":4.7,"reviews":62,"isFree":false,"matches":["3779a1ab-3ef1-11ea-9791-1b580a556b4a","3779efc1-3ef1-11ea-9791-1b580a556b4a","377a16d0-3ef1-11ea-9791-1b580a556b4a","37792c76-3ef1-11ea-9791-1b580a556b4a","377a3de5-3ef1-11ea-9791-1b580a556b4a","3779c8b9-3ef1-11ea-9791-1b580a556b4a","37792c75-3ef1-11ea-9791-1b580a556b4a","37718b58-3ef1-11ea-9791-1b580a556b4a","37770993-3ef1-11ea-9791-1b580a556b4a","3775aa0a-3ef1-11ea-9791-1b580a556b4a"],"slug":"atendimento-2-0-a-arte-de-encantar-clientes"}]}};(function(){var s;(s=document.currentScript||document.scripts[document.scripts.length-1]).parentNode.removeChild(s);}());</script><script src="/site/assets/js/app.e5c95575.js" defer></script><script src="/site/assets/js/page--src--templates--course-template-vue.a9c4e657.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html data-html-server-rendered="true" lang="en" data-vue-tag="%7B%22lang%22:%7B%22ssr%22:%22en%22%7D%7D">
+  <head>
+    <title>Cum sa Generezi Cantități din AutoCAD - Gridsome</title><meta name="gridsome:hash" content="6d1e7dd52e8c17cf4930f349c6afc1a78b2e1c5e"><meta data-vue-tag="ssr" charset="utf-8"><meta data-vue-tag="ssr" name="generator" content="Gridsome v0.7.12"><meta data-vue-tag="ssr" data-key="viewport" name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta data-vue-tag="ssr" data-key="format-detection" name="format-detection" content="telephone=no"><link data-vue-tag="ssr" rel="icon" href="data:,"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="16x16" href="/site/assets/static/favicon.ce0531f.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="32x32" href="/site/assets/static/favicon.ac8d93a.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="96x96" href="/site/assets/static/favicon.b9532cc.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="76x76" href="/site/assets/static/favicon.f22e9f3.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="152x152" href="/site/assets/static/favicon.62d22cb.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="120x120" href="/site/assets/static/favicon.1539b60.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="167x167" href="/site/assets/static/favicon.dc0cdc5.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="180x180" href="/site/assets/static/favicon.7b22250.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"><link data-vue-tag="ssr" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css"><link rel="preload" href="/site/assets/css/0.styles.dded6410.css" as="style"><link rel="preload" href="/site/assets/js/app.e5c95575.js" as="script"><link rel="preload" href="/site/assets/js/page--src--templates--course-template-vue.a9c4e657.js" as="script"><link rel="prefetch" href="/site/assets/js/page--node-modules--gridsome--app--pages--404-vue.8ed2c588.js"><link rel="prefetch" href="/site/assets/js/page--src--pages--about-vue.d8fdab17.js"><link rel="prefetch" href="/site/assets/js/page--src--templates--index-template-vue.6cecc577.js"><link rel="prefetch" href="/site/assets/js/page--src--templates--tag-vue.c6b527ba.js"><link rel="prefetch" href="/site/assets/js/vendors~page--src--templates--course-template-vue~page--src--templates--index-template-vue.4ec5035c.js"><link rel="stylesheet" href="/site/assets/css/0.styles.dded6410.css"><style data-vue-tag="vuetify" type="text/css" id="vuetify-theme-stylesheet" nonce="undefined">.v-application a { color: #1976d2; }
+.v-application .primary {
+  background-color: #1976d2 !important;
+  border-color: #1976d2 !important;
+}
+.v-application .primary--text {
+  color: #1976d2 !important;
+  caret-color: #1976d2 !important;
+}
+.v-application .primary.lighten-5 {
+  background-color: #c7fdff !important;
+  border-color: #c7fdff !important;
+}
+.v-application .primary--text.text--lighten-5 {
+  color: #c7fdff !important;
+  caret-color: #c7fdff !important;
+}
+.v-application .primary.lighten-4 {
+  background-color: #a8e0ff !important;
+  border-color: #a8e0ff !important;
+}
+.v-application .primary--text.text--lighten-4 {
+  color: #a8e0ff !important;
+  caret-color: #a8e0ff !important;
+}
+.v-application .primary.lighten-3 {
+  background-color: #8ac5ff !important;
+  border-color: #8ac5ff !important;
+}
+.v-application .primary--text.text--lighten-3 {
+  color: #8ac5ff !important;
+  caret-color: #8ac5ff !important;
+}
+.v-application .primary.lighten-2 {
+  background-color: #6aaaff !important;
+  border-color: #6aaaff !important;
+}
+.v-application .primary--text.text--lighten-2 {
+  color: #6aaaff !important;
+  caret-color: #6aaaff !important;
+}
+.v-application .primary.lighten-1 {
+  background-color: #488fef !important;
+  border-color: #488fef !important;
+}
+.v-application .primary--text.text--lighten-1 {
+  color: #488fef !important;
+  caret-color: #488fef !important;
+}
+.v-application .primary.darken-1 {
+  background-color: #005eb6 !important;
+  border-color: #005eb6 !important;
+}
+.v-application .primary--text.text--darken-1 {
+  color: #005eb6 !important;
+  caret-color: #005eb6 !important;
+}
+.v-application .primary.darken-2 {
+  background-color: #00479b !important;
+  border-color: #00479b !important;
+}
+.v-application .primary--text.text--darken-2 {
+  color: #00479b !important;
+  caret-color: #00479b !important;
+}
+.v-application .primary.darken-3 {
+  background-color: #003180 !important;
+  border-color: #003180 !important;
+}
+.v-application .primary--text.text--darken-3 {
+  color: #003180 !important;
+  caret-color: #003180 !important;
+}
+.v-application .primary.darken-4 {
+  background-color: #001e67 !important;
+  border-color: #001e67 !important;
+}
+.v-application .primary--text.text--darken-4 {
+  color: #001e67 !important;
+  caret-color: #001e67 !important;
+}
+.v-application .secondary {
+  background-color: #424242 !important;
+  border-color: #424242 !important;
+}
+.v-application .secondary--text {
+  color: #424242 !important;
+  caret-color: #424242 !important;
+}
+.v-application .secondary.lighten-5 {
+  background-color: #c1c1c1 !important;
+  border-color: #c1c1c1 !important;
+}
+.v-application .secondary--text.text--lighten-5 {
+  color: #c1c1c1 !important;
+  caret-color: #c1c1c1 !important;
+}
+.v-application .secondary.lighten-4 {
+  background-color: #a6a6a6 !important;
+  border-color: #a6a6a6 !important;
+}
+.v-application .secondary--text.text--lighten-4 {
+  color: #a6a6a6 !important;
+  caret-color: #a6a6a6 !important;
+}
+.v-application .secondary.lighten-3 {
+  background-color: #8b8b8b !important;
+  border-color: #8b8b8b !important;
+}
+.v-application .secondary--text.text--lighten-3 {
+  color: #8b8b8b !important;
+  caret-color: #8b8b8b !important;
+}
+.v-application .secondary.lighten-2 {
+  background-color: #727272 !important;
+  border-color: #727272 !important;
+}
+.v-application .secondary--text.text--lighten-2 {
+  color: #727272 !important;
+  caret-color: #727272 !important;
+}
+.v-application .secondary.lighten-1 {
+  background-color: #595959 !important;
+  border-color: #595959 !important;
+}
+.v-application .secondary--text.text--lighten-1 {
+  color: #595959 !important;
+  caret-color: #595959 !important;
+}
+.v-application .secondary.darken-1 {
+  background-color: #2c2c2c !important;
+  border-color: #2c2c2c !important;
+}
+.v-application .secondary--text.text--darken-1 {
+  color: #2c2c2c !important;
+  caret-color: #2c2c2c !important;
+}
+.v-application .secondary.darken-2 {
+  background-color: #171717 !important;
+  border-color: #171717 !important;
+}
+.v-application .secondary--text.text--darken-2 {
+  color: #171717 !important;
+  caret-color: #171717 !important;
+}
+.v-application .secondary.darken-3 {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+.v-application .secondary--text.text--darken-3 {
+  color: #000000 !important;
+  caret-color: #000000 !important;
+}
+.v-application .secondary.darken-4 {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+.v-application .secondary--text.text--darken-4 {
+  color: #000000 !important;
+  caret-color: #000000 !important;
+}
+.v-application .accent {
+  background-color: #82b1ff !important;
+  border-color: #82b1ff !important;
+}
+.v-application .accent--text {
+  color: #82b1ff !important;
+  caret-color: #82b1ff !important;
+}
+.v-application .accent.lighten-5 {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+.v-application .accent--text.text--lighten-5 {
+  color: #ffffff !important;
+  caret-color: #ffffff !important;
+}
+.v-application .accent.lighten-4 {
+  background-color: #f8ffff !important;
+  border-color: #f8ffff !important;
+}
+.v-application .accent--text.text--lighten-4 {
+  color: #f8ffff !important;
+  caret-color: #f8ffff !important;
+}
+.v-application .accent.lighten-3 {
+  background-color: #daffff !important;
+  border-color: #daffff !important;
+}
+.v-application .accent--text.text--lighten-3 {
+  color: #daffff !important;
+  caret-color: #daffff !important;
+}
+.v-application .accent.lighten-2 {
+  background-color: #bce8ff !important;
+  border-color: #bce8ff !important;
+}
+.v-application .accent--text.text--lighten-2 {
+  color: #bce8ff !important;
+  caret-color: #bce8ff !important;
+}
+.v-application .accent.lighten-1 {
+  background-color: #9fccff !important;
+  border-color: #9fccff !important;
+}
+.v-application .accent--text.text--lighten-1 {
+  color: #9fccff !important;
+  caret-color: #9fccff !important;
+}
+.v-application .accent.darken-1 {
+  background-color: #6596e2 !important;
+  border-color: #6596e2 !important;
+}
+.v-application .accent--text.text--darken-1 {
+  color: #6596e2 !important;
+  caret-color: #6596e2 !important;
+}
+.v-application .accent.darken-2 {
+  background-color: #467dc6 !important;
+  border-color: #467dc6 !important;
+}
+.v-application .accent--text.text--darken-2 {
+  color: #467dc6 !important;
+  caret-color: #467dc6 !important;
+}
+.v-application .accent.darken-3 {
+  background-color: #2364aa !important;
+  border-color: #2364aa !important;
+}
+.v-application .accent--text.text--darken-3 {
+  color: #2364aa !important;
+  caret-color: #2364aa !important;
+}
+.v-application .accent.darken-4 {
+  background-color: #004c90 !important;
+  border-color: #004c90 !important;
+}
+.v-application .accent--text.text--darken-4 {
+  color: #004c90 !important;
+  caret-color: #004c90 !important;
+}
+.v-application .error {
+  background-color: #ff5252 !important;
+  border-color: #ff5252 !important;
+}
+.v-application .error--text {
+  color: #ff5252 !important;
+  caret-color: #ff5252 !important;
+}
+.v-application .error.lighten-5 {
+  background-color: #ffe4d5 !important;
+  border-color: #ffe4d5 !important;
+}
+.v-application .error--text.text--lighten-5 {
+  color: #ffe4d5 !important;
+  caret-color: #ffe4d5 !important;
+}
+.v-application .error.lighten-4 {
+  background-color: #ffc6b9 !important;
+  border-color: #ffc6b9 !important;
+}
+.v-application .error--text.text--lighten-4 {
+  color: #ffc6b9 !important;
+  caret-color: #ffc6b9 !important;
+}
+.v-application .error.lighten-3 {
+  background-color: #ffa99e !important;
+  border-color: #ffa99e !important;
+}
+.v-application .error--text.text--lighten-3 {
+  color: #ffa99e !important;
+  caret-color: #ffa99e !important;
+}
+.v-application .error.lighten-2 {
+  background-color: #ff8c84 !important;
+  border-color: #ff8c84 !important;
+}
+.v-application .error--text.text--lighten-2 {
+  color: #ff8c84 !important;
+  caret-color: #ff8c84 !important;
+}
+.v-application .error.lighten-1 {
+  background-color: #ff6f6a !important;
+  border-color: #ff6f6a !important;
+}
+.v-application .error--text.text--lighten-1 {
+  color: #ff6f6a !important;
+  caret-color: #ff6f6a !important;
+}
+.v-application .error.darken-1 {
+  background-color: #df323b !important;
+  border-color: #df323b !important;
+}
+.v-application .error--text.text--darken-1 {
+  color: #df323b !important;
+  caret-color: #df323b !important;
+}
+.v-application .error.darken-2 {
+  background-color: #bf0025 !important;
+  border-color: #bf0025 !important;
+}
+.v-application .error--text.text--darken-2 {
+  color: #bf0025 !important;
+  caret-color: #bf0025 !important;
+}
+.v-application .error.darken-3 {
+  background-color: #9f0010 !important;
+  border-color: #9f0010 !important;
+}
+.v-application .error--text.text--darken-3 {
+  color: #9f0010 !important;
+  caret-color: #9f0010 !important;
+}
+.v-application .error.darken-4 {
+  background-color: #800000 !important;
+  border-color: #800000 !important;
+}
+.v-application .error--text.text--darken-4 {
+  color: #800000 !important;
+  caret-color: #800000 !important;
+}
+.v-application .info {
+  background-color: #2196f3 !important;
+  border-color: #2196f3 !important;
+}
+.v-application .info--text {
+  color: #2196f3 !important;
+  caret-color: #2196f3 !important;
+}
+.v-application .info.lighten-5 {
+  background-color: #d4ffff !important;
+  border-color: #d4ffff !important;
+}
+.v-application .info--text.text--lighten-5 {
+  color: #d4ffff !important;
+  caret-color: #d4ffff !important;
+}
+.v-application .info.lighten-4 {
+  background-color: #b5ffff !important;
+  border-color: #b5ffff !important;
+}
+.v-application .info--text.text--lighten-4 {
+  color: #b5ffff !important;
+  caret-color: #b5ffff !important;
+}
+.v-application .info.lighten-3 {
+  background-color: #95e8ff !important;
+  border-color: #95e8ff !important;
+}
+.v-application .info--text.text--lighten-3 {
+  color: #95e8ff !important;
+  caret-color: #95e8ff !important;
+}
+.v-application .info.lighten-2 {
+  background-color: #75ccff !important;
+  border-color: #75ccff !important;
+}
+.v-application .info--text.text--lighten-2 {
+  color: #75ccff !important;
+  caret-color: #75ccff !important;
+}
+.v-application .info.lighten-1 {
+  background-color: #51b0ff !important;
+  border-color: #51b0ff !important;
+}
+.v-application .info--text.text--lighten-1 {
+  color: #51b0ff !important;
+  caret-color: #51b0ff !important;
+}
+.v-application .info.darken-1 {
+  background-color: #007cd6 !important;
+  border-color: #007cd6 !important;
+}
+.v-application .info--text.text--darken-1 {
+  color: #007cd6 !important;
+  caret-color: #007cd6 !important;
+}
+.v-application .info.darken-2 {
+  background-color: #0064ba !important;
+  border-color: #0064ba !important;
+}
+.v-application .info--text.text--darken-2 {
+  color: #0064ba !important;
+  caret-color: #0064ba !important;
+}
+.v-application .info.darken-3 {
+  background-color: #004d9f !important;
+  border-color: #004d9f !important;
+}
+.v-application .info--text.text--darken-3 {
+  color: #004d9f !important;
+  caret-color: #004d9f !important;
+}
+.v-application .info.darken-4 {
+  background-color: #003784 !important;
+  border-color: #003784 !important;
+}
+.v-application .info--text.text--darken-4 {
+  color: #003784 !important;
+  caret-color: #003784 !important;
+}
+.v-application .success {
+  background-color: #4caf50 !important;
+  border-color: #4caf50 !important;
+}
+.v-application .success--text {
+  color: #4caf50 !important;
+  caret-color: #4caf50 !important;
+}
+.v-application .success.lighten-5 {
+  background-color: #dcffd6 !important;
+  border-color: #dcffd6 !important;
+}
+.v-application .success--text.text--lighten-5 {
+  color: #dcffd6 !important;
+  caret-color: #dcffd6 !important;
+}
+.v-application .success.lighten-4 {
+  background-color: #beffba !important;
+  border-color: #beffba !important;
+}
+.v-application .success--text.text--lighten-4 {
+  color: #beffba !important;
+  caret-color: #beffba !important;
+}
+.v-application .success.lighten-3 {
+  background-color: #a2ff9e !important;
+  border-color: #a2ff9e !important;
+}
+.v-application .success--text.text--lighten-3 {
+  color: #a2ff9e !important;
+  caret-color: #a2ff9e !important;
+}
+.v-application .success.lighten-2 {
+  background-color: #85e783 !important;
+  border-color: #85e783 !important;
+}
+.v-application .success--text.text--lighten-2 {
+  color: #85e783 !important;
+  caret-color: #85e783 !important;
+}
+.v-application .success.lighten-1 {
+  background-color: #69cb69 !important;
+  border-color: #69cb69 !important;
+}
+.v-application .success--text.text--lighten-1 {
+  color: #69cb69 !important;
+  caret-color: #69cb69 !important;
+}
+.v-application .success.darken-1 {
+  background-color: #2d9437 !important;
+  border-color: #2d9437 !important;
+}
+.v-application .success--text.text--darken-1 {
+  color: #2d9437 !important;
+  caret-color: #2d9437 !important;
+}
+.v-application .success.darken-2 {
+  background-color: #00791e !important;
+  border-color: #00791e !important;
+}
+.v-application .success--text.text--darken-2 {
+  color: #00791e !important;
+  caret-color: #00791e !important;
+}
+.v-application .success.darken-3 {
+  background-color: #006000 !important;
+  border-color: #006000 !important;
+}
+.v-application .success--text.text--darken-3 {
+  color: #006000 !important;
+  caret-color: #006000 !important;
+}
+.v-application .success.darken-4 {
+  background-color: #004700 !important;
+  border-color: #004700 !important;
+}
+.v-application .success--text.text--darken-4 {
+  color: #004700 !important;
+  caret-color: #004700 !important;
+}
+.v-application .warning {
+  background-color: #fb8c00 !important;
+  border-color: #fb8c00 !important;
+}
+.v-application .warning--text {
+  color: #fb8c00 !important;
+  caret-color: #fb8c00 !important;
+}
+.v-application .warning.lighten-5 {
+  background-color: #ffff9e !important;
+  border-color: #ffff9e !important;
+}
+.v-application .warning--text.text--lighten-5 {
+  color: #ffff9e !important;
+  caret-color: #ffff9e !important;
+}
+.v-application .warning.lighten-4 {
+  background-color: #fffb82 !important;
+  border-color: #fffb82 !important;
+}
+.v-application .warning--text.text--lighten-4 {
+  color: #fffb82 !important;
+  caret-color: #fffb82 !important;
+}
+.v-application .warning.lighten-3 {
+  background-color: #ffdf67 !important;
+  border-color: #ffdf67 !important;
+}
+.v-application .warning--text.text--lighten-3 {
+  color: #ffdf67 !important;
+  caret-color: #ffdf67 !important;
+}
+.v-application .warning.lighten-2 {
+  background-color: #ffc24b !important;
+  border-color: #ffc24b !important;
+}
+.v-application .warning--text.text--lighten-2 {
+  color: #ffc24b !important;
+  caret-color: #ffc24b !important;
+}
+.v-application .warning.lighten-1 {
+  background-color: #ffa72d !important;
+  border-color: #ffa72d !important;
+}
+.v-application .warning--text.text--lighten-1 {
+  color: #ffa72d !important;
+  caret-color: #ffa72d !important;
+}
+.v-application .warning.darken-1 {
+  background-color: #db7200 !important;
+  border-color: #db7200 !important;
+}
+.v-application .warning--text.text--darken-1 {
+  color: #db7200 !important;
+  caret-color: #db7200 !important;
+}
+.v-application .warning.darken-2 {
+  background-color: #bb5900 !important;
+  border-color: #bb5900 !important;
+}
+.v-application .warning--text.text--darken-2 {
+  color: #bb5900 !important;
+  caret-color: #bb5900 !important;
+}
+.v-application .warning.darken-3 {
+  background-color: #9d4000 !important;
+  border-color: #9d4000 !important;
+}
+.v-application .warning--text.text--darken-3 {
+  color: #9d4000 !important;
+  caret-color: #9d4000 !important;
+}
+.v-application .warning.darken-4 {
+  background-color: #802700 !important;
+  border-color: #802700 !important;
+}
+.v-application .warning--text.text--darken-4 {
+  color: #802700 !important;
+  caret-color: #802700 !important;
+}</style><noscript data-vue-tag="ssr"><style>.g-image--loading{display:none;}</style></noscript>
+  </head>
+  <body >
+    <div data-app="true" data-server-rendered="true" id="app" id="inspire" class="v-application v-application--is-ltr theme--light"><div class="v-application--wrap"><header class="gb-toolbar v-sheet v-sheet--tile theme--dark v-toolbar v-toolbar--dense v-app-bar v-app-bar--fixed" style="height:48px;margin-top:0px;transform:translateY(0px);left:0px;right:0px;"><div class="v-toolbar__content" style="height:48px;"><button type="button" class="v-app-bar__nav-icon v-btn v-btn--flat v-btn--icon v-btn--round theme--dark v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-menu theme--dark"></i></span></button><div class="v-toolbar__title ml-0 pl-4" style="width:300px;"><span class="hidden-sm-and-down">skillhub</span></div><div class="spacer"></div><div class="v-input hidden-sm-and-down v-input--hide-details v-input--dense theme--dark v-text-field v-text-field--single-line v-text-field--solo v-text-field--solo-inverted v-text-field--solo-flat v-text-field--enclosed"><div class="v-input__control"><div class="v-input__slot"><div class="v-input__prepend-inner"><div class="v-input__icon v-input__icon--prepend-inner"><i aria-hidden="true" class="v-icon notranslate mdi mdi-magnify theme--dark"></i></div></div><div class="v-text-field__slot"><label for="input-36512" class="v-label theme--dark" style="left:0px;right:auto;position:absolute;">Search</label><input id="input-36512" type="text"></div></div></div></div><button type="button" class="v-btn v-btn--flat v-btn--icon v-btn--round theme--dark v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-apps theme--dark"></i></span></button><button type="button" class="v-btn v-btn--flat v-btn--icon v-btn--round theme--dark v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-bell theme--dark"></i></span></button></div></header><main class="v-content" style="padding-top:11280px;padding-right:0px;padding-bottom:0px;padding-left:0px;"><div class="v-content__wrap"><div class="container container--fluid pa-0"><div class="row no-gutters"><div class="col col-12"><div class="row no-gutters row--dense"><div class="height-30 bg-dark white--text jarallax col"><img src="https://i.udemycdn.com/course/750x422/2749032_1871.jpg" class="jarallax-img opacity-20 g-image"><div class="container mt-8 pa-0"><div class="row mb-12 justify-center"><div dense="" class="col"><p class="display-2 mb-0">Cum sa Generezi Cantități din AutoCAD</p><p class="headline mb-0">Automatizează procesul de lucru in AutoCAD</p><div><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">0 (0)</span></div><a href="https://www.udemy.com/course/cum-sa-generezi-cantitati-din-autocad/" class="v-btn v-btn--contained theme--light v-size--default warning"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-share-outline theme--light"></i> Take me there!
+          </span></a></div></div></div></div></div></div></div><div class="row no-gutters"><div class="col col-12"><div class="container mt-4 pl-5"><div class="row mb-12 justify-center"><div dense="" class="col">
+            La servici am avut o solicitare. Pe fiecare planșa in autocad sa adaug lista cu cantitățile pe planșa respectiva. Si planșe peste 100 :). Imaginați-va cat timp iți ia sa masori toate obiectele de pe planșa in cazul in care la unele obiecte trebuie sa numeri lungimea la altele suprafața și numărul de bucăți. Toate astea înmulțit cu 100 :). In plus la asta dacă mai făceai modificări, iarăși reia numărătoarea. Cel putin câteva zile iți ia sa renumeri toate cantitățile din AutoCAD.Norocul meu este ca la timpul respectiv mă împăcam bine și cu Excel-ul și cu Autocad-ul.Dupa câteva ore de analiza, am creat un proces de lucru care genera aproape automat cantități in Excel direct din AutoCAD.
+          </div></div></div></div></div><div class="row no-gutters"><div class="col"><div class="container"><div class="headline pa-1 mb-0">#Related</div><div aria-label="Slideshow" class="vueperslides no-shadow vueperslides--fixed-height vueperslides--slide-multiple vueperslides--bullets-outside" style="height:300px;"><!----><div class="vueperslides__inner"><div aria-live="polite" class="vueperslides__parallax-wrapper" style="padding-bottom:25%;"><div class="vueperslides__track"><div class="vueperslides__track-inner" style="transition-duration:0ms;transform:translate3d(0%, 0, 0);will-change:auto;"><!----><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/impara-ad-usare-i-fogli-google-da-base-ad-avanzato" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Impara ad usare i Fogli Google: da Base ad Avanzato</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Padroneggia i fogli di calcolo per risolvere problemi semplici e complessi">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">0 (0)</span></div></div></div><!----></div><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/osnovy-postroeniya-i-nachertatelnoj-geometrii-vaza-borgeze" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Основы построения и начертательной геометрии. Ваза Боргезе</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Супер-объем 3D в рисунке. Императивный метод.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">0 (0)</span></div></div></div><!----></div><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/tu-tin-trong-cong-viec-voi-excel-2019-excel-365" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Tự tin trong công việc với Excel 2019 / Excel 365</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Những kiến thức bạn cần biết để làm việc hiệu quả với Excel 2019 / Excel 365">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">0 (0)</span></div></div></div><!----></div><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/podbor-personala-ot-linejnogo-do-it" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Подбор персонала от линейного до IT.</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Важные моменты и инструментарий в подборе персонала.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">0 (0)</span></div></div></div><!----></div><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/parlare-in-pubblico-come-fare-presentazioni-di-successo" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Parlare in pubblico: come fare presentazioni di successo</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Impara a preparare e fare presentazioni convincenti, tutto quello che serve sapere dalle slide a gestire il pubblico">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.2 (54)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/software-simulations-with-adobe-captivate-5-5" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Software Simulations with Adobe Captivate 5.5</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Skip the traditional class, learn Adobe Captivate at your own pace with RJ Jacquez, former Adobe Captivate Evangelist">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4 (3)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/sketch-up-to-lay-out" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>SketchUp to LayOut</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="The essential guide to creating construction documents with SketchUp Pro &amp; LayOut">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.4 (220)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/learning-autodesk-auto-cad-crash-course" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Learning Autodesk AutoCAD - Crash Course</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Autocad - Crash Course is for people looking to get a handle on this powerful software in a short amount of time.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">3.9 (154)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/intro-to-adobe-in-design" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Intro to Adobe InDesign</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Learn Adobe InDesign with design expert Joseph Caserto">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.3 (165)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/auto-cad-tutorial" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>AutoCAD Tutorial</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="An innovative AutoCAD course that will help you learn AutoCAD quickly and effectively.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.1 (16)</span></div></div></div><!----></div><!----></div></div></div><!----><!----><!----><!----><!----></div><!----><!----></div></div></div></div></div></div></main></div></div>
+    <script>window.__INITIAL_STATE__={"data":null,"context":{"course":{"id":"37797a93-3ef1-11ea-9791-1b580a556b4a","vendorId":"2749032","created":"2020-01-24T21:35:08.094Z","updated":"2020-01-01T08:00:00.000Z","title":"Cum sa Generezi Cantități din AutoCAD","headline":"Automatizează procesul de lucru in AutoCAD","description":"La servici am avut o solicitare. Pe fiecare planșa in autocad sa adaug lista cu cantitățile pe planșa respectiva. Si planșe peste 100 :). Imaginați-va cat timp iți ia sa masori toate obiectele de pe planșa in cazul in care la unele obiecte trebuie sa numeri lungimea la altele suprafața și numărul de bucăți. Toate astea înmulțit cu 100 :). In plus la asta dacă mai făceai modificări, iarăși reia numărătoarea. Cel putin câteva zile iți ia sa renumeri toate cantitățile din AutoCAD.Norocul meu este ca la timpul respectiv mă împăcam bine și cu Excel-ul și cu Autocad-ul.Dupa câteva ore de analiza, am creat un proces de lucru care genera aproape automat cantități in Excel direct din AutoCAD.","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F2749032_1871.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fcum-sa-generezi-cantitati-din-autocad\u002F","language":"ro","tags":["Design","Architectural Design"],"rating":0,"reviews":0,"isFree":false,"matches":["376bbef2-3ef1-11ea-9791-1b580a556b4a","376c5b31-3ef1-11ea-9791-1b580a556b4a","3773d546-3ef1-11ea-9791-1b580a556b4a","3778b740-3ef1-11ea-9791-1b580a556b4a","3775f826-3ef1-11ea-9791-1b580a556b4a","3778de5b-3ef1-11ea-9791-1b580a556b4a","37790563-3ef1-11ea-9791-1b580a556b4a","376b70d2-3ef1-11ea-9791-1b580a556b4a","377534d2-3ef1-11ea-9791-1b580a556b4a","377757b4-3ef1-11ea-9791-1b580a556b4a"],"slug":"cum-sa-generezi-cantitati-din-auto-cad"},"related":[{"id":"3778de5b-3ef1-11ea-9791-1b580a556b4a","vendorId":"2747212","created":"2020-01-24T21:35:08.092Z","updated":"2020-01-01T08:00:00.000Z","title":"Impara ad usare i Fogli Google: da Base ad Avanzato","headline":"Padroneggia i fogli di calcolo per risolvere problemi semplici e complessi","description":"Conoscere il funzionamento dei fogli di calcolo è una competenza fondamentale non solo per trovare lavoro, ma anche per pianificare i propri progetti, gestire le finanze personali e tanto altro.Questo corso nasce da un'esperienza decennale nell'insegnamento dei fogli di calcolo (Excel e Fogli Google) all'università, nei master e nelle aziende. Partendo dalle basi ti insegnerò concetti e trucchi per lavorare in modo efficiente (e furbo) con i tuoi dati.I concetti del corso valgono sia per chi usa i Fogli Google sia per chi usa Excel.Non sono richieste competenze specifiche, ma consiglio di svolgere gli esercizi insieme alle lezioni (o subito dopo): come tutti i software non c'è modo migliore per imparare che fare pratica!","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F2747212_0aeb.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Ffogli-google-da-base-ad-avanzato\u002F","language":"it","tags":["Office Productivity","Google"],"rating":0,"reviews":0,"isFree":false,"matches":["3775f826-3ef1-11ea-9791-1b580a556b4a","377a3de5-3ef1-11ea-9791-1b580a556b4a","37797a93-3ef1-11ea-9791-1b580a556b4a","3775aa0a-3ef1-11ea-9791-1b580a556b4a","3779a1ac-3ef1-11ea-9791-1b580a556b4a","3775aa02-3ef1-11ea-9791-1b580a556b4a","3779a1ab-3ef1-11ea-9791-1b580a556b4a","377311f1-3ef1-11ea-9791-1b580a556b4a","377a16d0-3ef1-11ea-9791-1b580a556b4a","377757b4-3ef1-11ea-9791-1b580a556b4a"],"slug":"impara-ad-usare-i-fogli-google-da-base-ad-avanzato"},{"id":"37790563-3ef1-11ea-9791-1b580a556b4a","vendorId":"2747640","created":"2020-01-24T21:35:08.092Z","updated":"2020-01-01T08:00:00.000Z","title":"Основы построения и начертательной геометрии. Ваза Боргезе","headline":"Супер-объем 3D в рисунке. Императивный метод.","description":"Привет! Это задание с первого курса с классической вазой Боргезе.Вообще это начертательная геометрия, но получили мы это задание на предмете \"Основы графики\", тк оно незаменимо для тех, у кого пока  \"лапки\"Вы научитесь:- видеть, когда ваш рисунок объемный, а когда нет- понимать что сделать, чтобы он стал объемным - в полной мере чувствовать и использовать тональную перспективу, чтобы делать ваши рисунки \"выходящими\" с листа- прочувствовать полную, максимальную  амплитуду обьема, который можно слепить карандашом на плоском листе- действовать в построении и в лепке обьема в рисунке и от \"бухгалтерского\" расчета и от интуиции - считать алгебраические формулы для пропорций и ориентироваться на коэффициенты  при лепке обьема! Да, наш объём можно измерить! Когда-то на 1 курсе именно это упражнение поставило дало мне понять суть лепки обьема! за действенность этого упражнения могу ручаться!{ но и за то, что вспотеете тоже }В этом упражнении мы действительно можем замерить объёмность рисунка линейкой!!! И скорректировать его еще в плюс))Эмоциональная начерталка;)Только линиями, как сеткой в \"Матрице\", мы выявим-вытянем объём римской вазы Боргезе и она \"закрутится\" у вас на листе благодаря нескольким приемам!Наша цель: перевести наши рисунки из 2D в максимальный 3D!+ основы начертательной геометрии!","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F2747640_14c3.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fjeergnrh\u002F","language":"ru","tags":["Teaching & Academics","Online Education","Graphics"],"rating":0,"reviews":0,"isFree":false,"matches":["377757b4-3ef1-11ea-9791-1b580a556b4a","3779a1ac-3ef1-11ea-9791-1b580a556b4a","3779c8b4-3ef1-11ea-9791-1b580a556b4a","377a3de5-3ef1-11ea-9791-1b580a556b4a","3778b74a-3ef1-11ea-9791-1b580a556b4a","37718b58-3ef1-11ea-9791-1b580a556b4a","377a16d0-3ef1-11ea-9791-1b580a556b4a","3779c8b7-3ef1-11ea-9791-1b580a556b4a","3779a1ab-3ef1-11ea-9791-1b580a556b4a","3779c8b8-3ef1-11ea-9791-1b580a556b4a"],"slug":"osnovy-postroeniya-i-nachertatelnoj-geometrii-vaza-borgeze"},{"id":"3778b740-3ef1-11ea-9791-1b580a556b4a","vendorId":"2746306","created":"2020-01-24T21:35:08.048Z","updated":"2020-01-01T08:00:00.000Z","title":"Tự tin trong công việc với Excel 2019 \u002F Excel 365","headline":"Những kiến thức bạn cần biết để làm việc hiệu quả với Excel 2019 \u002F Excel 365","description":"Đa số các bạn khi còn đang đi học không chú ý và dành nhiều thời gian cho việc học môn Excel trong trường vì các bạn chưa biết được chúng ta có thể áp dụng Excel vào việc xử lý công việc hàng ngày của chúng ta thế nào. Đến khi đi làm, bạn cảm thấy không sử dụng thành thạo Excel làm bạn tốn rất nhiều thời gian để xử lý công việc và không chắc chắn về những gì mình đang làm có đúng hay không.100% các doanh nghiệp từ nhỏ nhất đến lớn nhất đều cần đến kỹ năng Excel ở các ứng viên vào các vị trí kế toán, bán hàng, xử lý dữ liệu, nhân viên ngân hàng, quản lý. Ở mỗi cấp độ thì yêu cầu phải thành thạo Excel để xử lý công việc khác nhau. Sử dụng Excel hiệu quả sẽ giúp công việc được xử lý nhanh chóng, chính xác, đạt hiệu quả cao.Chính vì những lý do đó, khoá học này được tạo ra để giải quyết nhu cầu trau dồi kiến thức Excel cho các bạn mới bắt đầu và các bạn đã học qua Excel nhưng chưa thành thạo. Khoá học là nền tảng vững chắc để các bạn có thể tự nâng cao khả năng tự học và nghiên cứu các kiến thức nâng cao dưới sự hướng dẫn của giảng viên giàu kinh nghiệm trong lĩnh vực đào tạo và tư vấn cho cấp quản lý trong các doanh nghiệp trong và ngoài nước - anh Nguyễn Đức Thanh.Khoá học mang lại những kiến thức cập nhật mới nhất của Excel 2019 \u002F Excel 365 và sẽ được cập nhật trong suốt thời gian Microsoft có những update, thay đổi và nâng cấp. Bạn sẽ không bao giờ sợ lỗi thời trong kỹ năng tin học văn phòng của mình, đặc biệt là trong Microsoft Excel.","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F2746306_b23d.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Ftu-tin-trong-cong-viec-voi-excel-2019-excel-365\u002F","language":"vi","tags":["Office Productivity","Microsoft","Excel"],"rating":0,"reviews":0,"isFree":false,"matches":["376fdda1-3ef1-11ea-9791-1b580a556b4a","3776bb7a-3ef1-11ea-9791-1b580a556b4a","376bbef1-3ef1-11ea-9791-1b580a556b4a","37724ea9-3ef1-11ea-9791-1b580a556b4a","37733901-3ef1-11ea-9791-1b580a556b4a","377582f3-3ef1-11ea-9791-1b580a556b4a","37713d30-3ef1-11ea-9791-1b580a556b4a","3779efc1-3ef1-11ea-9791-1b580a556b4a","3779efc2-3ef1-11ea-9791-1b580a556b4a","37713d32-3ef1-11ea-9791-1b580a556b4a"],"slug":"tu-tin-trong-cong-viec-voi-excel-2019-excel-365"},{"id":"377757b4-3ef1-11ea-9791-1b580a556b4a","vendorId":"2749226","created":"2020-01-24T21:35:08.041Z","updated":"2020-01-01T08:00:00.000Z","title":"Подбор персонала от линейного до IT.","headline":"Важные моменты и инструментарий в подборе персонала.","description":"В курсе пойдёт речь о подборе персонала различного уровня сложности и направлений. Мы детально обсудим каждую из ниш и места\u002Fинструментарий, которые можно применить к ним. Как и во всех моих курсах, материал подаётся максимально доступно и непринуждённо. Также, мы рассмотрим нишу IT специалистов. Развеем все мифы вокруг неё и я дам дельные советы в поиске ITшников.","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F2749226_5544.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fit-egzof\u002F","language":"ru","tags":["Personal Development","Career Development","Recruiting"],"rating":0,"reviews":0,"isFree":false,"matches":["37790563-3ef1-11ea-9791-1b580a556b4a","3779c8b4-3ef1-11ea-9791-1b580a556b4a","3779a1ac-3ef1-11ea-9791-1b580a556b4a","37718b58-3ef1-11ea-9791-1b580a556b4a","377a3de5-3ef1-11ea-9791-1b580a556b4a","37792c75-3ef1-11ea-9791-1b580a556b4a","3778b74a-3ef1-11ea-9791-1b580a556b4a","3777a5d5-3ef1-11ea-9791-1b580a556b4a","3779c8b7-3ef1-11ea-9791-1b580a556b4a","377a16d0-3ef1-11ea-9791-1b580a556b4a"],"slug":"podbor-personala-ot-linejnogo-do-it"},{"id":"3775f826-3ef1-11ea-9791-1b580a556b4a","vendorId":"26559","created":"2020-01-24T21:35:07.940Z","updated":"2019-09-01T07:00:00.000Z","title":"Parlare in pubblico: come fare presentazioni di successo","headline":"Impara a preparare e fare presentazioni convincenti, tutto quello che serve sapere dalle slide a gestire il pubblico","description":"ULTIMA REVISIONE: AGOSTO 2019UNISCITI A OLTRE 3000 STUDENTI DEI MIEI CORSI!------------------------------------------------------------------------------------------------------------  Presentare efficacemente è una capacità che può creare o distruggere le carriere ed è fondamentale per comunicare idee e messaggi (anche se non compri questo corso ricordalo).    Parlare in pubblico: come fare presentazioni di successo ti aiuta a comunicare meglio ponendo l'accento su cosa davvero rende una persona efficace e come evitare gli errori comuni. Non esiste un modello prefissato a cui conformarsi, possiamo però imparare dai grandi cosa funziona.    Segui questi principi e parlare in pubblico diventerà una delle tue capacità più redditizie!      Oltre 30 lezioni ed extra per migliorare nel public speaking in maniera coinvolgente e con consigli pratici ed applicabili subito. Il corso include tutto quello che devi sapere compresi punti chiave come:  La preparazione: usa il metodo del quadrato ruotato per non dimenticare nulla ed essere pronto sotto tutti gli aspetti.Delivery: migliora la tua comunicazione ed evita le trappole più comuni che possono farti perdere in efficacia o credibilità.Supporti visivi: La maggior parte dei presentatori si danneggia usando slide o altri supporti mal realizzati. Impara i principi di design fondamentali e come usarli a tuo vantaggio.Coinvolgimento: creare un'interazione con il pubblico, anche su più livelli, è una capacità fondamentale per motivarli ad un'azione.Feedback: quanto è importante e come gestirlo per migliorare continuamente.Otterrai:Accesso completo per tutta la vitaTutti gli aggiornamenti futuri inclusiGaranzia soddisfatti o pienamente rimborsato per 30 giorni - la mia promessa personale per il tuo successo!    Se vuoi persuadere la tua audience quando presenti e rendere la comunicazione una tua capacità di spicco questo è il tuo corso!  ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F26559_ce85_4.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fsuccessful-presentation-italiano\u002F","language":"it","tags":["Business","Communications","Presentation Skills"],"rating":4.2,"reviews":54,"isFree":false,"matches":["3778de5b-3ef1-11ea-9791-1b580a556b4a","3775aa0a-3ef1-11ea-9791-1b580a556b4a","377a3de5-3ef1-11ea-9791-1b580a556b4a","37797a93-3ef1-11ea-9791-1b580a556b4a","37749894-3ef1-11ea-9791-1b580a556b4a","3775f823-3ef1-11ea-9791-1b580a556b4a","37784217-3ef1-11ea-9791-1b580a556b4a","37742365-3ef1-11ea-9791-1b580a556b4a","3778b743-3ef1-11ea-9791-1b580a556b4a","3779c8b1-3ef1-11ea-9791-1b580a556b4a"],"slug":"parlare-in-pubblico-come-fare-presentazioni-di-successo"},{"id":"377534d2-3ef1-11ea-9791-1b580a556b4a","vendorId":"25620","created":"2020-01-24T21:35:07.887Z","updated":"2012-12-01T08:00:00.000Z","title":"Software Simulations with Adobe Captivate 5.5","headline":"Skip the traditional class, learn Adobe Captivate at your own pace with RJ Jacquez, former Adobe Captivate Evangelist","description":"Description: In this self-paced, video-based course you will learn best practices for getting started using Adobe Captivate 5.5, as well as how to get the most out of recording and editing software simulations.Content: The course includes at least 12 videos and roughly 2 hours of content.Why take this course? These videos will help you master your skills in developing software simulations in Adobe Captivate.","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F25620_4b19_3.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fadobecaptivatebyrjjacquez\u002F","language":"en","tags":["Design","Design Tools","Adobe Captivate"],"rating":4,"reviews":3,"isFree":false,"matches":["376e2ff2-3ef1-11ea-9791-1b580a556b4a","376c5b32-3ef1-11ea-9791-1b580a556b4a","376b70d2-3ef1-11ea-9791-1b580a556b4a","376dbac0-3ef1-11ea-9791-1b580a556b4a","376c5b33-3ef1-11ea-9791-1b580a556b4a","3773d540-3ef1-11ea-9791-1b580a556b4a","376e5706-3ef1-11ea-9791-1b580a556b4a","37747180-3ef1-11ea-9791-1b580a556b4a","3773fc50-3ef1-11ea-9791-1b580a556b4a","3771d978-3ef1-11ea-9791-1b580a556b4a"],"slug":"software-simulations-with-adobe-captivate-5-5"},{"id":"3773d546-3ef1-11ea-9791-1b580a556b4a","vendorId":"22985","created":"2020-01-24T21:35:07.815Z","updated":"2015-05-01T07:00:00.000Z","title":"SketchUp to LayOut","headline":"The essential guide to creating construction documents with SketchUp Pro & LayOut","description":" You know how to use SketchUp to create 3D models of your projects, but you need to create a 2D presentation of your model in order to communicate your design to other people. With SketchUp Pro, you have the ultimate tool for creating just that; LayOut. LayOut is the companion program that comes with SketchUp Pro. It takes your 3D model and creates 2D snapshots of your model and places them onto \"pages\" so you can add dimensions, annotations, and other information in order to create a complete set of construction documents. This course gives you a complete introduction to LayOut, teaching you all the basics you need to know in order to create a presentation of your model. In addition, you'll learn how to prepare your SketchUp model for LayOut. Have complete control over the look of you LayOut viewports by properly organizing your SketchUp model and creating scenes. After learning how to create a LayOut document, you'll also learn advanced techniques in SketchUp for creating section cuts, hatch patterns, and poche effects. This video course includes the SketchUp to LayOut PDF ebook which has all of the lessons from this video course, and other valuable tutorials which you can follow. You'll also get the CAD hatch material library and style library so you can apply traditional hatch patterns to your model. By the end of this course, you'll have a complete understanding of how to create a SketchUp model specifically for LayOut, as well as how to create a full set of construction documents inside LayOut. ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F22985_10a6_7.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fsketchuptolayout\u002F","language":"en","tags":["Design","3D & Animation","SketchUp"],"rating":4.4,"reviews":220,"isFree":false,"matches":["376bbef2-3ef1-11ea-9791-1b580a556b4a","376c5b31-3ef1-11ea-9791-1b580a556b4a","37749899-3ef1-11ea-9791-1b580a556b4a","37733900-3ef1-11ea-9791-1b580a556b4a","376b70d2-3ef1-11ea-9791-1b580a556b4a","3773d540-3ef1-11ea-9791-1b580a556b4a","37711625-3ef1-11ea-9791-1b580a556b4a","377004b0-3ef1-11ea-9791-1b580a556b4a","376dbac1-3ef1-11ea-9791-1b580a556b4a","3773fc58-3ef1-11ea-9791-1b580a556b4a"],"slug":"sketch-up-to-lay-out"},{"id":"376c5b31-3ef1-11ea-9791-1b580a556b4a","vendorId":"9513","created":"2020-01-24T21:35:07.173Z","updated":"2011-09-01T07:00:00.000Z","title":"Learning Autodesk AutoCAD - Crash Course","headline":"Autocad - Crash Course is for people looking to get a handle on this powerful software in a short amount of time.","description":"Learning AutoCAD is a course I wrote for people looking to get a handle on this powerful software in a short amount of time.  By the end of the course, you'll be comfortable with how to work with drawing files, controlling the views, creating basic geometry, editing, and creating text to accompany your work. *Over 3 hours of video lectures. A great benefit of this course is the pause button; you're able to stop the video and try out the commands, continuing when you're ready.  Let your curiosity lead you through the course, and try to apply it to the type of work you're expecting to use the software for. ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F9513_5c6d_5.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fthis-is-learning-autocad-crash-course\u002F","language":"en","tags":["Design","Design Tools","AutoCAD"],"rating":3.9,"reviews":154,"isFree":false,"matches":["376bbef2-3ef1-11ea-9791-1b580a556b4a","3773d546-3ef1-11ea-9791-1b580a556b4a","376c5b32-3ef1-11ea-9791-1b580a556b4a","37733900-3ef1-11ea-9791-1b580a556b4a","3773fc54-3ef1-11ea-9791-1b580a556b4a","3773fc50-3ef1-11ea-9791-1b580a556b4a","376ad491-3ef1-11ea-9791-1b580a556b4a","37718b54-3ef1-11ea-9791-1b580a556b4a","3774bfa1-3ef1-11ea-9791-1b580a556b4a","3773d540-3ef1-11ea-9791-1b580a556b4a"],"slug":"learning-autodesk-auto-cad-crash-course"},{"id":"376b70d2-3ef1-11ea-9791-1b580a556b4a","vendorId":"8410","created":"2020-01-24T21:35:07.171Z","updated":"2013-02-01T08:00:00.000Z","title":"Intro to Adobe InDesign","headline":"Learn Adobe InDesign with design expert Joseph Caserto","description":" Adobe revolutionized the publishing world when it introduced InDesign over a decade ago, and InDesign is now the publishing industry standard. However, its power isn't limited to producing print and digital magazines. It can be used to create virtually any type of material, such as collateral and packaging. With the release of Creative Suite 5.5, InDesign gained digital publishing capabilities built right in, for easier publication on tablets like the Apple iPad, and the Samsung Galaxy and other Android-based devices. Learning InDesign is not optional. For the past several years, every working print designer has been expected to learn InDesign. With the explosion of digital publishing, mastering InDesign is even more critical. This InDesign course for beginners will get you up and running, and give you a solid foundation upon which to build your skills. Once you're done, you'll be able to build layouts that contain graphics and large amounts of text that flows between multiple pages. Lectures are shown in CS 5.5, but everything covered works in even the most current version of the software, which is InDesign CC (Creative Cloud). ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F8410_5e09_12.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fintro-to-adobe-indesign\u002F","language":"en","tags":["Design","Design Tools","InDesign"],"rating":4.3,"reviews":165,"isFree":false,"matches":["3773d540-3ef1-11ea-9791-1b580a556b4a","376c5b32-3ef1-11ea-9791-1b580a556b4a","37718b54-3ef1-11ea-9791-1b580a556b4a","37733900-3ef1-11ea-9791-1b580a556b4a","376dbac1-3ef1-11ea-9791-1b580a556b4a","376c5b33-3ef1-11ea-9791-1b580a556b4a","377534d2-3ef1-11ea-9791-1b580a556b4a","376ad491-3ef1-11ea-9791-1b580a556b4a","3773fc50-3ef1-11ea-9791-1b580a556b4a","376e2ff2-3ef1-11ea-9791-1b580a556b4a"],"slug":"intro-to-adobe-in-design"},{"id":"376bbef2-3ef1-11ea-9791-1b580a556b4a","vendorId":"8874","created":"2020-01-24T21:35:07.171Z","updated":"2011-09-01T07:00:00.000Z","title":"AutoCAD Tutorial","headline":"An innovative AutoCAD course that will help you learn AutoCAD quickly and effectively.","description":"An Innovative AutoCAD Tutorial This is a tutorial that will help you learn the AutoCAD program quickly and effectively. All the lessons are video recorded and they will guide you step by step, demonstrating how to work with the program. Into your hands, we give you 6,5 hour video teaching material created by a design engineer! What is AutoCAD? AutoCAD 2D software is a common CAD design tool used by professionals around the world. The program is used in different industrial and business areas, such as nterior design, architecture, mapping, surveying, manufacturing, electronics, landscaping, and electrical, mechanical, or environmental engineering. It enables 2D design, drafting and documantation. The AutoCAD 2D course prepares to work in the environment of 2D Computer-Aided Design\u002FDrafting Learn AutoCAD with No Secrets The course is constructed to satisfy the needs of beginners as well as more advanced users. For this course you need to have one of the 2006-2010 AutoCAD versions. If you have never worked with AutoCAD, a logical sequence of lessons will enable you to quickly remember all its features. Since the layout of 2009 AutoCAD version is different, the tutorial takes this difference into account and both a new and old AutoCAD layouts are discussed. More advanced AutoCAD users will surely appreciate examples that demonstrate how to organize the work with many drawings by, for example, organizing layers, grouping items, creating styles, moving items form one drawing to the other, printing and creating your own libraries. Is This Course for Me? This course is designed both for the beginners and more advanced AutoCAD users. The instructor starts with the basics, such us moving, copying, scaling, grouping items, and working on layers. He demonstrates how to make a floor plan and print it. Next, he teaches you to make an engineering drawing and to effectively use other essential AutoCAD features like attributes and tables. The course ends with a short introduction to 3D designing. Clear instructions and video illustration of all the steps help you acquire all necessary skills in no time. ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F8874_ea34_3.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fautocad-tutorialbay\u002F","language":"en","tags":["Design","Design Tools","AutoCAD"],"rating":4.1,"reviews":16,"isFree":false,"matches":["376c5b31-3ef1-11ea-9791-1b580a556b4a","3773d546-3ef1-11ea-9791-1b580a556b4a","37733900-3ef1-11ea-9791-1b580a556b4a","376c5b32-3ef1-11ea-9791-1b580a556b4a","37797a93-3ef1-11ea-9791-1b580a556b4a","376ad491-3ef1-11ea-9791-1b580a556b4a","37749892-3ef1-11ea-9791-1b580a556b4a","3773d540-3ef1-11ea-9791-1b580a556b4a","3770a0f6-3ef1-11ea-9791-1b580a556b4a","37716445-3ef1-11ea-9791-1b580a556b4a"],"slug":"auto-cad-tutorial"}]}};(function(){var s;(s=document.currentScript||document.scripts[document.scripts.length-1]).parentNode.removeChild(s);}());</script><script src="/site/assets/js/app.e5c95575.js" defer></script><script src="/site/assets/js/page--src--templates--course-template-vue.a9c4e657.js" defer></script>
+  </body>
+</html>

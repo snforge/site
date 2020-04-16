@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html data-html-server-rendered="true" lang="en" data-vue-tag="%7B%22lang%22:%7B%22ssr%22:%22en%22%7D%7D">
+  <head>
+    <title>Service Management Fundamentals (also USMBOK™ Foundation) - Gridsome</title><meta name="gridsome:hash" content="6d1e7dd52e8c17cf4930f349c6afc1a78b2e1c5e"><meta data-vue-tag="ssr" charset="utf-8"><meta data-vue-tag="ssr" name="generator" content="Gridsome v0.7.12"><meta data-vue-tag="ssr" data-key="viewport" name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta data-vue-tag="ssr" data-key="format-detection" name="format-detection" content="telephone=no"><link data-vue-tag="ssr" rel="icon" href="data:,"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="16x16" href="/site/assets/static/favicon.ce0531f.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="32x32" href="/site/assets/static/favicon.ac8d93a.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="96x96" href="/site/assets/static/favicon.b9532cc.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="76x76" href="/site/assets/static/favicon.f22e9f3.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="152x152" href="/site/assets/static/favicon.62d22cb.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="120x120" href="/site/assets/static/favicon.1539b60.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="167x167" href="/site/assets/static/favicon.dc0cdc5.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="180x180" href="/site/assets/static/favicon.7b22250.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"><link data-vue-tag="ssr" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css"><link rel="preload" href="/site/assets/css/0.styles.dded6410.css" as="style"><link rel="preload" href="/site/assets/js/app.e5c95575.js" as="script"><link rel="preload" href="/site/assets/js/page--src--templates--course-template-vue.a9c4e657.js" as="script"><link rel="prefetch" href="/site/assets/js/page--node-modules--gridsome--app--pages--404-vue.8ed2c588.js"><link rel="prefetch" href="/site/assets/js/page--src--pages--about-vue.d8fdab17.js"><link rel="prefetch" href="/site/assets/js/page--src--templates--index-template-vue.6cecc577.js"><link rel="prefetch" href="/site/assets/js/page--src--templates--tag-vue.c6b527ba.js"><link rel="prefetch" href="/site/assets/js/vendors~page--src--templates--course-template-vue~page--src--templates--index-template-vue.4ec5035c.js"><link rel="stylesheet" href="/site/assets/css/0.styles.dded6410.css"><style data-vue-tag="vuetify" type="text/css" id="vuetify-theme-stylesheet" nonce="undefined">.v-application a { color: #1976d2; }
+.v-application .primary {
+  background-color: #1976d2 !important;
+  border-color: #1976d2 !important;
+}
+.v-application .primary--text {
+  color: #1976d2 !important;
+  caret-color: #1976d2 !important;
+}
+.v-application .primary.lighten-5 {
+  background-color: #c7fdff !important;
+  border-color: #c7fdff !important;
+}
+.v-application .primary--text.text--lighten-5 {
+  color: #c7fdff !important;
+  caret-color: #c7fdff !important;
+}
+.v-application .primary.lighten-4 {
+  background-color: #a8e0ff !important;
+  border-color: #a8e0ff !important;
+}
+.v-application .primary--text.text--lighten-4 {
+  color: #a8e0ff !important;
+  caret-color: #a8e0ff !important;
+}
+.v-application .primary.lighten-3 {
+  background-color: #8ac5ff !important;
+  border-color: #8ac5ff !important;
+}
+.v-application .primary--text.text--lighten-3 {
+  color: #8ac5ff !important;
+  caret-color: #8ac5ff !important;
+}
+.v-application .primary.lighten-2 {
+  background-color: #6aaaff !important;
+  border-color: #6aaaff !important;
+}
+.v-application .primary--text.text--lighten-2 {
+  color: #6aaaff !important;
+  caret-color: #6aaaff !important;
+}
+.v-application .primary.lighten-1 {
+  background-color: #488fef !important;
+  border-color: #488fef !important;
+}
+.v-application .primary--text.text--lighten-1 {
+  color: #488fef !important;
+  caret-color: #488fef !important;
+}
+.v-application .primary.darken-1 {
+  background-color: #005eb6 !important;
+  border-color: #005eb6 !important;
+}
+.v-application .primary--text.text--darken-1 {
+  color: #005eb6 !important;
+  caret-color: #005eb6 !important;
+}
+.v-application .primary.darken-2 {
+  background-color: #00479b !important;
+  border-color: #00479b !important;
+}
+.v-application .primary--text.text--darken-2 {
+  color: #00479b !important;
+  caret-color: #00479b !important;
+}
+.v-application .primary.darken-3 {
+  background-color: #003180 !important;
+  border-color: #003180 !important;
+}
+.v-application .primary--text.text--darken-3 {
+  color: #003180 !important;
+  caret-color: #003180 !important;
+}
+.v-application .primary.darken-4 {
+  background-color: #001e67 !important;
+  border-color: #001e67 !important;
+}
+.v-application .primary--text.text--darken-4 {
+  color: #001e67 !important;
+  caret-color: #001e67 !important;
+}
+.v-application .secondary {
+  background-color: #424242 !important;
+  border-color: #424242 !important;
+}
+.v-application .secondary--text {
+  color: #424242 !important;
+  caret-color: #424242 !important;
+}
+.v-application .secondary.lighten-5 {
+  background-color: #c1c1c1 !important;
+  border-color: #c1c1c1 !important;
+}
+.v-application .secondary--text.text--lighten-5 {
+  color: #c1c1c1 !important;
+  caret-color: #c1c1c1 !important;
+}
+.v-application .secondary.lighten-4 {
+  background-color: #a6a6a6 !important;
+  border-color: #a6a6a6 !important;
+}
+.v-application .secondary--text.text--lighten-4 {
+  color: #a6a6a6 !important;
+  caret-color: #a6a6a6 !important;
+}
+.v-application .secondary.lighten-3 {
+  background-color: #8b8b8b !important;
+  border-color: #8b8b8b !important;
+}
+.v-application .secondary--text.text--lighten-3 {
+  color: #8b8b8b !important;
+  caret-color: #8b8b8b !important;
+}
+.v-application .secondary.lighten-2 {
+  background-color: #727272 !important;
+  border-color: #727272 !important;
+}
+.v-application .secondary--text.text--lighten-2 {
+  color: #727272 !important;
+  caret-color: #727272 !important;
+}
+.v-application .secondary.lighten-1 {
+  background-color: #595959 !important;
+  border-color: #595959 !important;
+}
+.v-application .secondary--text.text--lighten-1 {
+  color: #595959 !important;
+  caret-color: #595959 !important;
+}
+.v-application .secondary.darken-1 {
+  background-color: #2c2c2c !important;
+  border-color: #2c2c2c !important;
+}
+.v-application .secondary--text.text--darken-1 {
+  color: #2c2c2c !important;
+  caret-color: #2c2c2c !important;
+}
+.v-application .secondary.darken-2 {
+  background-color: #171717 !important;
+  border-color: #171717 !important;
+}
+.v-application .secondary--text.text--darken-2 {
+  color: #171717 !important;
+  caret-color: #171717 !important;
+}
+.v-application .secondary.darken-3 {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+.v-application .secondary--text.text--darken-3 {
+  color: #000000 !important;
+  caret-color: #000000 !important;
+}
+.v-application .secondary.darken-4 {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+.v-application .secondary--text.text--darken-4 {
+  color: #000000 !important;
+  caret-color: #000000 !important;
+}
+.v-application .accent {
+  background-color: #82b1ff !important;
+  border-color: #82b1ff !important;
+}
+.v-application .accent--text {
+  color: #82b1ff !important;
+  caret-color: #82b1ff !important;
+}
+.v-application .accent.lighten-5 {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+.v-application .accent--text.text--lighten-5 {
+  color: #ffffff !important;
+  caret-color: #ffffff !important;
+}
+.v-application .accent.lighten-4 {
+  background-color: #f8ffff !important;
+  border-color: #f8ffff !important;
+}
+.v-application .accent--text.text--lighten-4 {
+  color: #f8ffff !important;
+  caret-color: #f8ffff !important;
+}
+.v-application .accent.lighten-3 {
+  background-color: #daffff !important;
+  border-color: #daffff !important;
+}
+.v-application .accent--text.text--lighten-3 {
+  color: #daffff !important;
+  caret-color: #daffff !important;
+}
+.v-application .accent.lighten-2 {
+  background-color: #bce8ff !important;
+  border-color: #bce8ff !important;
+}
+.v-application .accent--text.text--lighten-2 {
+  color: #bce8ff !important;
+  caret-color: #bce8ff !important;
+}
+.v-application .accent.lighten-1 {
+  background-color: #9fccff !important;
+  border-color: #9fccff !important;
+}
+.v-application .accent--text.text--lighten-1 {
+  color: #9fccff !important;
+  caret-color: #9fccff !important;
+}
+.v-application .accent.darken-1 {
+  background-color: #6596e2 !important;
+  border-color: #6596e2 !important;
+}
+.v-application .accent--text.text--darken-1 {
+  color: #6596e2 !important;
+  caret-color: #6596e2 !important;
+}
+.v-application .accent.darken-2 {
+  background-color: #467dc6 !important;
+  border-color: #467dc6 !important;
+}
+.v-application .accent--text.text--darken-2 {
+  color: #467dc6 !important;
+  caret-color: #467dc6 !important;
+}
+.v-application .accent.darken-3 {
+  background-color: #2364aa !important;
+  border-color: #2364aa !important;
+}
+.v-application .accent--text.text--darken-3 {
+  color: #2364aa !important;
+  caret-color: #2364aa !important;
+}
+.v-application .accent.darken-4 {
+  background-color: #004c90 !important;
+  border-color: #004c90 !important;
+}
+.v-application .accent--text.text--darken-4 {
+  color: #004c90 !important;
+  caret-color: #004c90 !important;
+}
+.v-application .error {
+  background-color: #ff5252 !important;
+  border-color: #ff5252 !important;
+}
+.v-application .error--text {
+  color: #ff5252 !important;
+  caret-color: #ff5252 !important;
+}
+.v-application .error.lighten-5 {
+  background-color: #ffe4d5 !important;
+  border-color: #ffe4d5 !important;
+}
+.v-application .error--text.text--lighten-5 {
+  color: #ffe4d5 !important;
+  caret-color: #ffe4d5 !important;
+}
+.v-application .error.lighten-4 {
+  background-color: #ffc6b9 !important;
+  border-color: #ffc6b9 !important;
+}
+.v-application .error--text.text--lighten-4 {
+  color: #ffc6b9 !important;
+  caret-color: #ffc6b9 !important;
+}
+.v-application .error.lighten-3 {
+  background-color: #ffa99e !important;
+  border-color: #ffa99e !important;
+}
+.v-application .error--text.text--lighten-3 {
+  color: #ffa99e !important;
+  caret-color: #ffa99e !important;
+}
+.v-application .error.lighten-2 {
+  background-color: #ff8c84 !important;
+  border-color: #ff8c84 !important;
+}
+.v-application .error--text.text--lighten-2 {
+  color: #ff8c84 !important;
+  caret-color: #ff8c84 !important;
+}
+.v-application .error.lighten-1 {
+  background-color: #ff6f6a !important;
+  border-color: #ff6f6a !important;
+}
+.v-application .error--text.text--lighten-1 {
+  color: #ff6f6a !important;
+  caret-color: #ff6f6a !important;
+}
+.v-application .error.darken-1 {
+  background-color: #df323b !important;
+  border-color: #df323b !important;
+}
+.v-application .error--text.text--darken-1 {
+  color: #df323b !important;
+  caret-color: #df323b !important;
+}
+.v-application .error.darken-2 {
+  background-color: #bf0025 !important;
+  border-color: #bf0025 !important;
+}
+.v-application .error--text.text--darken-2 {
+  color: #bf0025 !important;
+  caret-color: #bf0025 !important;
+}
+.v-application .error.darken-3 {
+  background-color: #9f0010 !important;
+  border-color: #9f0010 !important;
+}
+.v-application .error--text.text--darken-3 {
+  color: #9f0010 !important;
+  caret-color: #9f0010 !important;
+}
+.v-application .error.darken-4 {
+  background-color: #800000 !important;
+  border-color: #800000 !important;
+}
+.v-application .error--text.text--darken-4 {
+  color: #800000 !important;
+  caret-color: #800000 !important;
+}
+.v-application .info {
+  background-color: #2196f3 !important;
+  border-color: #2196f3 !important;
+}
+.v-application .info--text {
+  color: #2196f3 !important;
+  caret-color: #2196f3 !important;
+}
+.v-application .info.lighten-5 {
+  background-color: #d4ffff !important;
+  border-color: #d4ffff !important;
+}
+.v-application .info--text.text--lighten-5 {
+  color: #d4ffff !important;
+  caret-color: #d4ffff !important;
+}
+.v-application .info.lighten-4 {
+  background-color: #b5ffff !important;
+  border-color: #b5ffff !important;
+}
+.v-application .info--text.text--lighten-4 {
+  color: #b5ffff !important;
+  caret-color: #b5ffff !important;
+}
+.v-application .info.lighten-3 {
+  background-color: #95e8ff !important;
+  border-color: #95e8ff !important;
+}
+.v-application .info--text.text--lighten-3 {
+  color: #95e8ff !important;
+  caret-color: #95e8ff !important;
+}
+.v-application .info.lighten-2 {
+  background-color: #75ccff !important;
+  border-color: #75ccff !important;
+}
+.v-application .info--text.text--lighten-2 {
+  color: #75ccff !important;
+  caret-color: #75ccff !important;
+}
+.v-application .info.lighten-1 {
+  background-color: #51b0ff !important;
+  border-color: #51b0ff !important;
+}
+.v-application .info--text.text--lighten-1 {
+  color: #51b0ff !important;
+  caret-color: #51b0ff !important;
+}
+.v-application .info.darken-1 {
+  background-color: #007cd6 !important;
+  border-color: #007cd6 !important;
+}
+.v-application .info--text.text--darken-1 {
+  color: #007cd6 !important;
+  caret-color: #007cd6 !important;
+}
+.v-application .info.darken-2 {
+  background-color: #0064ba !important;
+  border-color: #0064ba !important;
+}
+.v-application .info--text.text--darken-2 {
+  color: #0064ba !important;
+  caret-color: #0064ba !important;
+}
+.v-application .info.darken-3 {
+  background-color: #004d9f !important;
+  border-color: #004d9f !important;
+}
+.v-application .info--text.text--darken-3 {
+  color: #004d9f !important;
+  caret-color: #004d9f !important;
+}
+.v-application .info.darken-4 {
+  background-color: #003784 !important;
+  border-color: #003784 !important;
+}
+.v-application .info--text.text--darken-4 {
+  color: #003784 !important;
+  caret-color: #003784 !important;
+}
+.v-application .success {
+  background-color: #4caf50 !important;
+  border-color: #4caf50 !important;
+}
+.v-application .success--text {
+  color: #4caf50 !important;
+  caret-color: #4caf50 !important;
+}
+.v-application .success.lighten-5 {
+  background-color: #dcffd6 !important;
+  border-color: #dcffd6 !important;
+}
+.v-application .success--text.text--lighten-5 {
+  color: #dcffd6 !important;
+  caret-color: #dcffd6 !important;
+}
+.v-application .success.lighten-4 {
+  background-color: #beffba !important;
+  border-color: #beffba !important;
+}
+.v-application .success--text.text--lighten-4 {
+  color: #beffba !important;
+  caret-color: #beffba !important;
+}
+.v-application .success.lighten-3 {
+  background-color: #a2ff9e !important;
+  border-color: #a2ff9e !important;
+}
+.v-application .success--text.text--lighten-3 {
+  color: #a2ff9e !important;
+  caret-color: #a2ff9e !important;
+}
+.v-application .success.lighten-2 {
+  background-color: #85e783 !important;
+  border-color: #85e783 !important;
+}
+.v-application .success--text.text--lighten-2 {
+  color: #85e783 !important;
+  caret-color: #85e783 !important;
+}
+.v-application .success.lighten-1 {
+  background-color: #69cb69 !important;
+  border-color: #69cb69 !important;
+}
+.v-application .success--text.text--lighten-1 {
+  color: #69cb69 !important;
+  caret-color: #69cb69 !important;
+}
+.v-application .success.darken-1 {
+  background-color: #2d9437 !important;
+  border-color: #2d9437 !important;
+}
+.v-application .success--text.text--darken-1 {
+  color: #2d9437 !important;
+  caret-color: #2d9437 !important;
+}
+.v-application .success.darken-2 {
+  background-color: #00791e !important;
+  border-color: #00791e !important;
+}
+.v-application .success--text.text--darken-2 {
+  color: #00791e !important;
+  caret-color: #00791e !important;
+}
+.v-application .success.darken-3 {
+  background-color: #006000 !important;
+  border-color: #006000 !important;
+}
+.v-application .success--text.text--darken-3 {
+  color: #006000 !important;
+  caret-color: #006000 !important;
+}
+.v-application .success.darken-4 {
+  background-color: #004700 !important;
+  border-color: #004700 !important;
+}
+.v-application .success--text.text--darken-4 {
+  color: #004700 !important;
+  caret-color: #004700 !important;
+}
+.v-application .warning {
+  background-color: #fb8c00 !important;
+  border-color: #fb8c00 !important;
+}
+.v-application .warning--text {
+  color: #fb8c00 !important;
+  caret-color: #fb8c00 !important;
+}
+.v-application .warning.lighten-5 {
+  background-color: #ffff9e !important;
+  border-color: #ffff9e !important;
+}
+.v-application .warning--text.text--lighten-5 {
+  color: #ffff9e !important;
+  caret-color: #ffff9e !important;
+}
+.v-application .warning.lighten-4 {
+  background-color: #fffb82 !important;
+  border-color: #fffb82 !important;
+}
+.v-application .warning--text.text--lighten-4 {
+  color: #fffb82 !important;
+  caret-color: #fffb82 !important;
+}
+.v-application .warning.lighten-3 {
+  background-color: #ffdf67 !important;
+  border-color: #ffdf67 !important;
+}
+.v-application .warning--text.text--lighten-3 {
+  color: #ffdf67 !important;
+  caret-color: #ffdf67 !important;
+}
+.v-application .warning.lighten-2 {
+  background-color: #ffc24b !important;
+  border-color: #ffc24b !important;
+}
+.v-application .warning--text.text--lighten-2 {
+  color: #ffc24b !important;
+  caret-color: #ffc24b !important;
+}
+.v-application .warning.lighten-1 {
+  background-color: #ffa72d !important;
+  border-color: #ffa72d !important;
+}
+.v-application .warning--text.text--lighten-1 {
+  color: #ffa72d !important;
+  caret-color: #ffa72d !important;
+}
+.v-application .warning.darken-1 {
+  background-color: #db7200 !important;
+  border-color: #db7200 !important;
+}
+.v-application .warning--text.text--darken-1 {
+  color: #db7200 !important;
+  caret-color: #db7200 !important;
+}
+.v-application .warning.darken-2 {
+  background-color: #bb5900 !important;
+  border-color: #bb5900 !important;
+}
+.v-application .warning--text.text--darken-2 {
+  color: #bb5900 !important;
+  caret-color: #bb5900 !important;
+}
+.v-application .warning.darken-3 {
+  background-color: #9d4000 !important;
+  border-color: #9d4000 !important;
+}
+.v-application .warning--text.text--darken-3 {
+  color: #9d4000 !important;
+  caret-color: #9d4000 !important;
+}
+.v-application .warning.darken-4 {
+  background-color: #802700 !important;
+  border-color: #802700 !important;
+}
+.v-application .warning--text.text--darken-4 {
+  color: #802700 !important;
+  caret-color: #802700 !important;
+}</style><noscript data-vue-tag="ssr"><style>.g-image--loading{display:none;}</style></noscript>
+  </head>
+  <body >
+    <div data-app="true" data-server-rendered="true" id="app" id="inspire" class="v-application v-application--is-ltr theme--light"><div class="v-application--wrap"><header class="gb-toolbar v-sheet v-sheet--tile theme--dark v-toolbar v-toolbar--dense v-app-bar v-app-bar--fixed" style="height:48px;margin-top:0px;transform:translateY(0px);left:0px;right:0px;"><div class="v-toolbar__content" style="height:48px;"><button type="button" class="v-app-bar__nav-icon v-btn v-btn--flat v-btn--icon v-btn--round theme--dark v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-menu theme--dark"></i></span></button><div class="v-toolbar__title ml-0 pl-4" style="width:300px;"><span class="hidden-sm-and-down">skillhub</span></div><div class="spacer"></div><div class="v-input hidden-sm-and-down v-input--hide-details v-input--dense theme--dark v-text-field v-text-field--single-line v-text-field--solo v-text-field--solo-inverted v-text-field--solo-flat v-text-field--enclosed"><div class="v-input__control"><div class="v-input__slot"><div class="v-input__prepend-inner"><div class="v-input__icon v-input__icon--prepend-inner"><i aria-hidden="true" class="v-icon notranslate mdi mdi-magnify theme--dark"></i></div></div><div class="v-text-field__slot"><label for="input-11708" class="v-label theme--dark" style="left:0px;right:auto;position:absolute;">Search</label><input id="input-11708" type="text"></div></div></div></div><button type="button" class="v-btn v-btn--flat v-btn--icon v-btn--round theme--dark v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-apps theme--dark"></i></span></button><button type="button" class="v-btn v-btn--flat v-btn--icon v-btn--round theme--dark v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-bell theme--dark"></i></span></button></div></header><main class="v-content" style="padding-top:3648px;padding-right:0px;padding-bottom:0px;padding-left:0px;"><div class="v-content__wrap"><div class="container container--fluid pa-0"><div class="row no-gutters"><div class="col col-12"><div class="row no-gutters row--dense"><div class="height-30 bg-dark white--text jarallax col"><img src="https://i.udemycdn.com/course/750x422/28951_0d50_6.jpg" class="jarallax-img opacity-20 g-image"><div class="container mt-8 pa-0"><div class="row mb-12 justify-center"><div dense="" class="col"><p class="display-2 mb-0">Service Management Fundamentals (also USMBOK™ Foundation)</p><p class="headline mb-0">The definitive course on managing service in the experiential economy</p><div><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">2.4 (2)</span></div><a href="https://www.udemy.com/course/the-usmbok-foundation-accelerator/" class="v-btn v-btn--contained theme--light v-size--default warning"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-share-outline theme--light"></i> Take me there!
+          </span></a></div></div></div></div></div></div></div><div class="row no-gutters"><div class="col col-12"><div class="container mt-4 pl-5"><div class="row mb-12 justify-center"><div dense="" class="col">
+            The course combines the outside-in, customer centric best practices used by many of today's most successful service businesses to design and manage the customer experience, with service management concepts, and explains how these are used to ensure the customer relevancy and focus of a service management system and service provider organization. It also explores the latest customer engagement thinking and use of social media tools. This course provides an understanding of the origins of services and service management theory, the core terms, principles and concepts found in Universal Service Management, the elements of a service management framework, including the operational system, and key roles within a service provider organization, workforce management system, and consumer management system. The course includes an introduction to “Outside-In&quot; (customer-centric) thinking, and its relationship to decisions on what products and services to offer, the makeup of those services, and the service support designed to manage the customer interactions, touchpoints, and customer service experience based upon 'moments of truth'. The course also describes the relationship between service functionality and successful customer outcomes, the principles of measuring and managing the customer's level of satisfaction with the service experience, and how these form the basis for defining problems, and responding to these through a continuous improvement program embedded within the service excellence system component of the service management framework.The Universal Service Management Body of Knowledge (USMBOK) is a series of reference publication used by professionals within a service provider organization or service business to design a systematic method for managing services.The USMBOK is a proud member of the International Best Practice Library, alongside the PMBOK® (Project Management Body of Knowledge), and ITIL® (IT Infrastructure Library).
+          </div></div></div></div></div><div class="row no-gutters"><div class="col"><div class="container"><div class="headline pa-1 mb-0">#Related</div><div aria-label="Slideshow" class="vueperslides no-shadow vueperslides--fixed-height vueperslides--slide-multiple vueperslides--bullets-outside" style="height:300px;"><!----><div class="vueperslides__inner"><div aria-live="polite" class="vueperslides__parallax-wrapper" style="padding-bottom:25%;"><div class="vueperslides__track"><div class="vueperslides__track-inner" style="transition-duration:0ms;transform:translate3d(0%, 0, 0);will-change:auto;"><!----><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/effective-problem-solving-and-project-management-power-course" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Effective Problem Solving &amp; Project Management Power Course</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Solve business problems and become an effective project manager - Learn project management skills in this power course">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">3.5 (3)</span></div></div></div><!----></div><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/logistics-and-supply-chain-management-masterclass-gold" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Logistics and supply chain management (Masterclass Gold)</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Learn high level ways to structure an excellent logistics management system">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">0 (0)</span></div></div></div><!----></div><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/managing-your-personal-finances" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Managing Your Personal Finances</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="This is a short course on how to better manage your personal finances.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">3.7 (168)</span></div></div></div><!----></div><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/oracle-procurement-contracts-fundamentals-oracle-ebs-r12i" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Oracle Procurement Contracts Fundamentals (Oracle EBS R12i)</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Oracle Procurement Contracts Tutorial Training - Covers basics to advanced of Procurement Contracts module">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">3.8 (13)</span></div></div></div><!----></div><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/customer-service-training" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Customer Service Training</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Learn the basics of customer service its practical application by taking this customer service course.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.3 (23)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/accounting-skills-for-managers" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Accounting Skills for Managers</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="The essential accounting concepts that every business owner or manager needs to know.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4 (11)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/management-principles" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Management Principles</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="This course will introduce you to basic management theory: planning, organizing, leading and control.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">3.8 (87)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/introduction-to-business" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Introduction to Business</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Get a full introductory college business course taught by a former CEO.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.2 (37)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/foundations-of-business-strategy" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Foundations of Business Strategy</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Foundations of Business Strategy introduces strategic analysis frameworks and their underlying theory.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.4 (3542)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/operations-management" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Operations Management</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Gain fundamental insights to world of Operations Management from award winning Professor Gad Allon">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.3 (7279)</span></div></div></div><!----></div><!----></div></div></div><!----><!----><!----><!----><!----></div><!----><!----></div></div></div></div></div></div></main></div></div>
+    <script>window.__INITIAL_STATE__={"data":null,"context":{"course":{"id":"377757b2-3ef1-11ea-9791-1b580a556b4a","vendorId":"28951","created":"2020-01-24T21:35:08.041Z","updated":"2016-02-01T08:00:00.000Z","title":"Service Management Fundamentals (also USMBOK™ Foundation)","headline":"The definitive course on managing service in the experiential economy","description":"The course combines the outside-in, customer centric best practices used by many of today's most successful service businesses to design and manage the customer experience, with service management concepts, and explains how these are used to ensure the customer relevancy and focus of a service management system and service provider organization. It also explores the latest customer engagement thinking and use of social media tools. This course provides an understanding of the origins of services and service management theory, the core terms, principles and concepts found in Universal Service Management, the elements of a service management framework, including the operational system, and key roles within a service provider organization, workforce management system, and consumer management system. The course includes an introduction to “Outside-In\" (customer-centric) thinking, and its relationship to decisions on what products and services to offer, the makeup of those services, and the service support designed to manage the customer interactions, touchpoints, and customer service experience based upon 'moments of truth'. The course also describes the relationship between service functionality and successful customer outcomes, the principles of measuring and managing the customer's level of satisfaction with the service experience, and how these form the basis for defining problems, and responding to these through a continuous improvement program embedded within the service excellence system component of the service management framework.The Universal Service Management Body of Knowledge (USMBOK) is a series of reference publication used by professionals within a service provider organization or service business to design a systematic method for managing services.The USMBOK is a proud member of the International Best Practice Library, alongside the PMBOK® (Project Management Body of Knowledge), and ITIL® (IT Infrastructure Library).","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F28951_0d50_6.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fthe-usmbok-foundation-accelerator\u002F","language":"en","tags":["Business","Operations","Management Skills"],"rating":2.4,"reviews":2,"isFree":false,"matches":["37716449-3ef1-11ea-9791-1b580a556b4a","376e5701-3ef1-11ea-9791-1b580a556b4a","37720086-3ef1-11ea-9791-1b580a556b4a","37716443-3ef1-11ea-9791-1b580a556b4a","3778b745-3ef1-11ea-9791-1b580a556b4a","37770998-3ef1-11ea-9791-1b580a556b4a","376e2ff5-3ef1-11ea-9791-1b580a556b4a","377ab314-3ef1-11ea-9791-1b580a556b4a","37750dc8-3ef1-11ea-9791-1b580a556b4a","3771b266-3ef1-11ea-9791-1b580a556b4a"],"slug":"service-management-fundamentals-also-usmboktm-foundation"},"related":[{"id":"377ab314-3ef1-11ea-9791-1b580a556b4a","vendorId":"2737944","created":"2020-01-24T21:35:08.151Z","updated":"2020-01-01T08:00:00.000Z","title":"Effective Problem Solving & Project Management Power Course","headline":"Solve business problems and become an effective project manager - Learn project management skills in this power course","description":"Welcome! - Want to solve business problems that you face as a project manager or within your projects?Learn The Right Way to Solve Complex Business ProblemsProblem-solving is in demand. It’s considered the top skill for success. A report from the World Economic Forum predicts that more than one-third of all jobs across all industries will require complex problem-solving as one of their core skills. The problem is, we’re often really bad at problem-solving. Our guest today says even the most educated and experienced of senior leaders go about it the wrong way.See what our students say “It is such a robust course that I don’t need to take any other course but this one to learn all important concepts and hand-on application with this course, and I would without a doubt recommend it to everyone.” - Mariana Griffith“This is such an awesome course. Clear instruction, and I loved every bit of it – Wonderful learning experience!”  Jimmy WuJoin thousands of other students and share valuable experience!---------------------------------This course also comes with:✔ Lifetime access to all future updates✔ A responsive instructor in the Q&A Section✔ Udemy Certificate of Completion Ready for Download✔ A 30 Day \"No Questions Asked\" Money Back Guarantee!Why take this course?As  a senior Enterprise Architect & Project Manager managing and deploying enterprise level IT projects,  my experience with solving business problems within the projects has been phenomenally great! I am excited to share my knowledge and transfer skills to my students.  Enroll now in Effective Problem Solving & Project Management Power Course today and revolutionize your learning. Stay at the cutting edge of project management - and enjoy bigger, brighter opportunities.See you in class!Syed Team ClayDesk","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F2737944_b402_7.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Feffective-problem-solving-project-management-power-course\u002F","language":"en","tags":["Business","Management","Problem Solving"],"rating":3.5,"reviews":3,"isFree":false,"matches":["3778b745-3ef1-11ea-9791-1b580a556b4a","37755be3-3ef1-11ea-9791-1b580a556b4a","37716449-3ef1-11ea-9791-1b580a556b4a","3773fc59-3ef1-11ea-9791-1b580a556b4a","37770998-3ef1-11ea-9791-1b580a556b4a","377730aa-3ef1-11ea-9791-1b580a556b4a","37742366-3ef1-11ea-9791-1b580a556b4a","376b70d0-3ef1-11ea-9791-1b580a556b4a","37733902-3ef1-11ea-9791-1b580a556b4a","376e5701-3ef1-11ea-9791-1b580a556b4a"],"slug":"effective-problem-solving-and-project-management-power-course"},{"id":"3778b745-3ef1-11ea-9791-1b580a556b4a","vendorId":"2746494","created":"2020-01-24T21:35:08.048Z","updated":"2020-01-01T08:00:00.000Z","title":"Logistics and supply chain management (Masterclass Gold)","headline":"Learn high level ways to structure an excellent logistics management system","description":"Logistics and supply chain structures can be found in virtually any system. In this course you will learn methods that are used for supply chain, forecasting demand and also structuring your entire supply chain and logistics system. Many of the lecture will be taught using illustrations and real life data...by the end of this course, you will be able to better control and master your organisation's logistics aystem like and expert.","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F2746494_777c.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Flogistics-and-supply-chain-management-masterclass-gold\u002F","language":"en","tags":["Business","Operations","Logistics Management"],"rating":0,"reviews":0,"isFree":false,"matches":["377ab314-3ef1-11ea-9791-1b580a556b4a","376e5701-3ef1-11ea-9791-1b580a556b4a","37790569-3ef1-11ea-9791-1b580a556b4a","37781b06-3ef1-11ea-9791-1b580a556b4a","37716449-3ef1-11ea-9791-1b580a556b4a","37769462-3ef1-11ea-9791-1b580a556b4a","377757b2-3ef1-11ea-9791-1b580a556b4a","3779a1a7-3ef1-11ea-9791-1b580a556b4a","377534d9-3ef1-11ea-9791-1b580a556b4a","376b22b1-3ef1-11ea-9791-1b580a556b4a"],"slug":"logistics-and-supply-chain-management-masterclass-gold"},{"id":"37770998-3ef1-11ea-9791-1b580a556b4a","vendorId":"28646","created":"2020-01-24T21:35:07.946Z","updated":"2014-05-01T07:00:00.000Z","title":"Managing Your Personal Finances","headline":"This is a short course on how to better manage your personal finances.","description":" Learn about Basic Money Management through an interactive presentation of a free PDF E-Book available from the MoneySENSE website (http:\u002F\u002Fwww.moneysense.gov.sg) entitled My Money Book. You will find tips that people from all walks of life have found handy. These tips can help you meet your needs today and also plan ahead for the future. Examples: Tip: Live within your means, and do not take on too much debt. Always Make sure you can service your debt even if interest rates rise or your income falls. (Lee Hsien Loong, Prime Minister of Singapore) Tip: Invest simply. If you don't understand an investment, don't put money into it. And remember especially that promises of high investment returns mean a high risk of losing your money. Keep it simple and hold your investments for the long term. (Tharman Shanmugaratnam, Deputy Prime Minister of Singapore) ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F28646_923d_4.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fmanaging-your-personal-finances\u002F","language":"en","tags":["Personal Development","Personal Finance"],"rating":3.7,"reviews":168,"isFree":true,"matches":["3775aa06-3ef1-11ea-9791-1b580a556b4a","37755be3-3ef1-11ea-9791-1b580a556b4a","3773fc59-3ef1-11ea-9791-1b580a556b4a","377730aa-3ef1-11ea-9791-1b580a556b4a","37711626-3ef1-11ea-9791-1b580a556b4a","3771b266-3ef1-11ea-9791-1b580a556b4a","3775aa09-3ef1-11ea-9791-1b580a556b4a","37716449-3ef1-11ea-9791-1b580a556b4a","377a3de8-3ef1-11ea-9791-1b580a556b4a","377ab314-3ef1-11ea-9791-1b580a556b4a"],"slug":"managing-your-personal-finances"},{"id":"37750dc8-3ef1-11ea-9791-1b580a556b4a","vendorId":"24887","created":"2020-01-24T21:35:07.886Z","updated":"2012-11-01T07:00:00.000Z","title":"Oracle Procurement Contracts Fundamentals (Oracle EBS R12i)","headline":"Oracle Procurement Contracts Tutorial Training - Covers basics to advanced of Procurement Contracts module","description":"Oracle Procurement Contracts are a part of Oracle Advanced Procurement, which enables Standardizing Contract Processes with enterprise standards, policies that govern their use and tools to allow flexible contract administration. It allows you to take control of your contract Lifecycle, from authoring and negotiation through implementation, enforcement, evaluation and closeout. Participants will learn how to create and maintain online Contract standard term library, Authoring Contracts, Creating and using Contract Templates, how to leverage workflow driven process to maintain standards, Contract online review and approval, ensure proper approval and keep full history, Contract negotiation with Suppliers, integrate online changes and approvals. The “Oracle for Beginners: Oracle Tutorial for Procurement Contracts” course will also include Contract Signatures and Printing, and integration with Oracle Sourcing and Oracle Purchasing. Finally participants will learn how to set up and implement Oracle Procurement Contracts in this Oracle for beginner’s course. With Oracle E Business Suite procurement solutions, buyers, requests, and suppliers gain secure access to a single, centralized contract so they can view and use the most up-to-date pricing, terms, and conditions. “Oracle for Beginners: Oracle Tutorial for Procurement Contracts” Course Completion Certificate Now get a verifiable course completion Certificate from aclnz.com\u003C\u002Fp\u003E","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F24887_bc10_4.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Foracle-procurement-contracts\u002F","language":"en","tags":["Office Productivity","Oracle","Oracle Certification"],"rating":3.8,"reviews":13,"isFree":false,"matches":["3771b262-3ef1-11ea-9791-1b580a556b4a","377757b5-3ef1-11ea-9791-1b580a556b4a","37781b00-3ef1-11ea-9791-1b580a556b4a","3779a1a4-3ef1-11ea-9791-1b580a556b4a","37781b01-3ef1-11ea-9791-1b580a556b4a","37797a96-3ef1-11ea-9791-1b580a556b4a","3777f3f4-3ef1-11ea-9791-1b580a556b4a","37795380-3ef1-11ea-9791-1b580a556b4a","37784219-3ef1-11ea-9791-1b580a556b4a","37797a95-3ef1-11ea-9791-1b580a556b4a"],"slug":"oracle-procurement-contracts-fundamentals-oracle-ebs-r12i"},{"id":"37720086-3ef1-11ea-9791-1b580a556b4a","vendorId":"20241","created":"2020-01-24T21:35:07.696Z","updated":"2012-06-01T07:00:00.000Z","title":"Customer Service Training","headline":"Learn the basics of customer service its practical application by taking this customer service course.","description":"This Customer Service training course teaches the basics of customer service and translates that knowledge into practical application. Students will come away from this customer service course knowing how a positive attitude, going a step beyond basic customer service, and dealing effectively with complaints will enhance their work experience. Students will learn the difference between internal and external customers and will learn how the development and implementation of a comprehensive customer service policy promotes consistency in how customers are treated and keeps customers happy.Customer Service Training Course GoalsUnderstand customer service.Identify internal and external customers.Learn how to interact positively with customers.Develop a positive attitude.Learn to communicate effectively.Learn to create and implement service standards.Learn to evaluate and monitor service standards.Learn to create memorable customer service. ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F20241_f580_5.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fcustomer-service-training\u002F","language":"en","tags":["Business","Operations","Customer Service"],"rating":4.3,"reviews":23,"isFree":false,"matches":["377757b2-3ef1-11ea-9791-1b580a556b4a","37716443-3ef1-11ea-9791-1b580a556b4a","376e2ff9-3ef1-11ea-9791-1b580a556b4a","37738724-3ef1-11ea-9791-1b580a556b4a","37789035-3ef1-11ea-9791-1b580a556b4a","37724ea3-3ef1-11ea-9791-1b580a556b4a","376b97e0-3ef1-11ea-9791-1b580a556b4a","3777a5d2-3ef1-11ea-9791-1b580a556b4a","376e08e4-3ef1-11ea-9791-1b580a556b4a","37747185-3ef1-11ea-9791-1b580a556b4a"],"slug":"customer-service-training"},{"id":"3771b266-3ef1-11ea-9791-1b580a556b4a","vendorId":"19653","created":"2020-01-24T21:35:07.694Z","updated":"2012-06-01T07:00:00.000Z","title":"Accounting Skills for Managers","headline":"The essential accounting concepts that every business owner or manager needs to know.","description":"Welcome to Finance Train’s online course on Accounting Skills for Managers. You are about to learn one of the most important skills that you need to help you manage your business successfully. As a business owner or manager, you need to understand the basics of finance and accounting. Even though you will not be directly involved in day to day accounting and record keeping, this information will help you understand your business better and help achieve the financial goals you have set for it. You will know where the money is coming from, and where it is going, which will help you make more efficient decisions. It will also reduce your dependency on others to make sense of the crucial financial information that you always need to keep a track of. Finally, you will become more confident while dealing with your accounting personnel and reduce the chances of any wastage of money, lacunae in processes, or accounting fraud within your business. The objective of this course is to teach you how to speak the language of accounting. It will not train you to become an accountant, but it will provide you with enough knowledge in understanding how accounting is done within a business. This will complement your core business skills and other talents.","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F19653_6209_3.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Faccounting-skills-for-managers\u002F","language":"en","tags":["Business","Finance","Accounting"],"rating":4,"reviews":11,"isFree":false,"matches":["37750dc5-3ef1-11ea-9791-1b580a556b4a","377a3de3-3ef1-11ea-9791-1b580a556b4a","3773fc59-3ef1-11ea-9791-1b580a556b4a","377730aa-3ef1-11ea-9791-1b580a556b4a","37755be3-3ef1-11ea-9791-1b580a556b4a","37770998-3ef1-11ea-9791-1b580a556b4a","3775aa06-3ef1-11ea-9791-1b580a556b4a","37716449-3ef1-11ea-9791-1b580a556b4a","37790568-3ef1-11ea-9791-1b580a556b4a","376cf774-3ef1-11ea-9791-1b580a556b4a"],"slug":"accounting-skills-for-managers"},{"id":"37716449-3ef1-11ea-9791-1b580a556b4a","vendorId":"18488","created":"2020-01-24T21:35:07.692Z","updated":"2012-05-01T07:00:00.000Z","title":"Management Principles","headline":"This course will introduce you to basic management theory: planning, organizing, leading and control.","description":"This course is designed and presented by someone who worked his way from entry level to President\u002FCEO of billion dollar companies and divisions of companies.   No matter how future business evolves, automation will never replace good, solid management.  This course covers all the major management theories and such areas as leadership, motivation, team building and control.   Whether you plan to join a corporation or start your own business, management skills are important to success. This is the same course you would get at a major University.      ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F18488_83e4_9.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fprinciples-of-management\u002F","language":"en","tags":["Business","Management","Management Skills"],"rating":3.8,"reviews":87,"isFree":false,"matches":["377757b2-3ef1-11ea-9791-1b580a556b4a","3778b745-3ef1-11ea-9791-1b580a556b4a","376e5701-3ef1-11ea-9791-1b580a556b4a","37770998-3ef1-11ea-9791-1b580a556b4a","3771b266-3ef1-11ea-9791-1b580a556b4a","377ab314-3ef1-11ea-9791-1b580a556b4a","37711626-3ef1-11ea-9791-1b580a556b4a","37716443-3ef1-11ea-9791-1b580a556b4a","3775aa06-3ef1-11ea-9791-1b580a556b4a","377757b6-3ef1-11ea-9791-1b580a556b4a"],"slug":"management-principles"},{"id":"37716443-3ef1-11ea-9791-1b580a556b4a","vendorId":"18590","created":"2020-01-24T21:35:07.691Z","updated":"2012-05-01T07:00:00.000Z","title":"Introduction to Business","headline":"Get a full introductory college business course taught by a former CEO.","description":"This is a complete college course, the same one you would take in a University.  This course covers an introduction to the world of business and all its disciplines.  Dan McCarty is an MBA graduate from the prestigious Haas School of business at the University of California in Berkeley.  He worked is way from entry level to President\u002FCEO of billion dollar businesses, having run such well know brands as Del Monte, Hain Health Foods, Brawny, Quited Northern, Crystal Sugar, Dixie Cups and Plates, Underwood Meats and more.  Entering business can be confusing, as there are several sub-specialties.  To name a few:  marketing, management, accounting, operations, economics, entrepreneurship, finance, human resource, etc.   What this course does is give you an overview of all the important business functions.  It gives you a well-rounded perspective to approach your business goals and also helps you decide where you might want to specialize. ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F18590_c0d1_7.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fintroduction-to-business2\u002F","language":"en","tags":["Business","Other","Business Fundamentals"],"rating":4.2,"reviews":37,"isFree":false,"matches":["376cf774-3ef1-11ea-9791-1b580a556b4a","376c0d11-3ef1-11ea-9791-1b580a556b4a","376b22b1-3ef1-11ea-9791-1b580a556b4a","3770ef10-3ef1-11ea-9791-1b580a556b4a","377a64f9-3ef1-11ea-9791-1b580a556b4a","377ab310-3ef1-11ea-9791-1b580a556b4a","377004b4-3ef1-11ea-9791-1b580a556b4a","37720086-3ef1-11ea-9791-1b580a556b4a","376cf772-3ef1-11ea-9791-1b580a556b4a","376e2ff9-3ef1-11ea-9791-1b580a556b4a"],"slug":"introduction-to-business"},{"id":"376e2ff5-3ef1-11ea-9791-1b580a556b4a","vendorId":"13019","created":"2020-01-24T21:35:07.178Z","updated":"2012-01-01T08:00:00.000Z","title":"Foundations of Business Strategy","headline":"Foundations of Business Strategy introduces strategic analysis frameworks and their underlying theory.","description":"A Faculty Project Course - Best Professors Teaching the World Strategic analysis is critical for analyzing the competitive context in which an organization operates and for making reasoned and reasonable recommendations for how that organization should position itself and what actions it should take to maximize value creation. In this course, we will explore the underlying theory and frameworks that provide the foundations of a successful business strategy. Managers, entrepreneurs, social entrepreneurs, analysts, and consultants all may find value in mastering these fundamentals.","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F13019_7a02_4.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Ffoundations-of-business-strategy\u002F","language":"en","tags":["Business","Strategy","Business Strategy"],"rating":4.4,"reviews":3542,"isFree":true,"matches":["3776946a-3ef1-11ea-9791-1b580a556b4a","37722798-3ef1-11ea-9791-1b580a556b4a","37716449-3ef1-11ea-9791-1b580a556b4a","377757b2-3ef1-11ea-9791-1b580a556b4a","376a8672-3ef1-11ea-9791-1b580a556b4a","37733909-3ef1-11ea-9791-1b580a556b4a","3770c806-3ef1-11ea-9791-1b580a556b4a","37736014-3ef1-11ea-9791-1b580a556b4a","37736018-3ef1-11ea-9791-1b580a556b4a","377757b6-3ef1-11ea-9791-1b580a556b4a"],"slug":"foundations-of-business-strategy"},{"id":"376e5701-3ef1-11ea-9791-1b580a556b4a","vendorId":"13034","created":"2020-01-24T21:35:07.178Z","updated":"2013-03-01T08:00:00.000Z","title":"Operations Management","headline":"Gain fundamental insights to world of Operations Management from award winning Professor Gad Allon","description":"A Faculty Project Course - Best Professors Teaching the World This course provides a general introduction to operations management. This course aims to (1) familiarize you with the major operational problems and issues that confront managers, and (2) provide you with language, concepts, insights and tools to deal with these issues in order to gain competitive advantage through operations. This course should be of particular interest to people aspiring a career in designing and managing business processes, either directly (V.P. of Ops, COO) or indirectly (e.g. management consulting). The course should also be of interest to people who manage interfaces between operations and other business functions such as finance, marketing, managerial accounting and human resources. Finally, a working knowledge of operations, which typically employs the greatest number of employees and requires the largest investment in assets, is indispensable for general managers and entrepreneurs. We will see how different business strategies require different business processes, and vice versa, how different operational capabilities allow and support different strategies to gain competitive advantage. A process view of operations will be used to analyze different key operational dimensions such as capacity management, flow time management, supply chain management, and quality management. We will also discuss developments such as lean operations, just-in-time operations, and time-based competition. Class is now in session! Enroll now and join in on a discussion with Prof. Allon.","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F13034_33f5_6.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Foperations-management\u002F","language":"en","tags":["Business","Operations","Management Skills"],"rating":4.3,"reviews":7279,"isFree":true,"matches":["3778b745-3ef1-11ea-9791-1b580a556b4a","37716449-3ef1-11ea-9791-1b580a556b4a","377757b2-3ef1-11ea-9791-1b580a556b4a","3771b266-3ef1-11ea-9791-1b580a556b4a","377ab314-3ef1-11ea-9791-1b580a556b4a","37770998-3ef1-11ea-9791-1b580a556b4a","376ecc30-3ef1-11ea-9791-1b580a556b4a","37781b06-3ef1-11ea-9791-1b580a556b4a","37790569-3ef1-11ea-9791-1b580a556b4a","37729cc0-3ef1-11ea-9791-1b580a556b4a"],"slug":"operations-management"}]}};(function(){var s;(s=document.currentScript||document.scripts[document.scripts.length-1]).parentNode.removeChild(s);}());</script><script src="/site/assets/js/app.e5c95575.js" defer></script><script src="/site/assets/js/page--src--templates--course-template-vue.a9c4e657.js" defer></script>
+  </body>
+</html>

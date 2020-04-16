@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html data-html-server-rendered="true" lang="en" data-vue-tag="%7B%22lang%22:%7B%22ssr%22:%22en%22%7D%7D">
+  <head>
+    <title>Lambda with Functional Programming in Java8 - Gridsome</title><meta name="gridsome:hash" content="6d1e7dd52e8c17cf4930f349c6afc1a78b2e1c5e"><meta data-vue-tag="ssr" charset="utf-8"><meta data-vue-tag="ssr" name="generator" content="Gridsome v0.7.12"><meta data-vue-tag="ssr" data-key="viewport" name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta data-vue-tag="ssr" data-key="format-detection" name="format-detection" content="telephone=no"><link data-vue-tag="ssr" rel="icon" href="data:,"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="16x16" href="/site/assets/static/favicon.ce0531f.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="32x32" href="/site/assets/static/favicon.ac8d93a.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="96x96" href="/site/assets/static/favicon.b9532cc.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="76x76" href="/site/assets/static/favicon.f22e9f3.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="152x152" href="/site/assets/static/favicon.62d22cb.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="120x120" href="/site/assets/static/favicon.1539b60.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="167x167" href="/site/assets/static/favicon.dc0cdc5.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="180x180" href="/site/assets/static/favicon.7b22250.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"><link data-vue-tag="ssr" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css"><link rel="preload" href="/site/assets/css/0.styles.dded6410.css" as="style"><link rel="preload" href="/site/assets/js/app.e5c95575.js" as="script"><link rel="preload" href="/site/assets/js/page--src--templates--course-template-vue.a9c4e657.js" as="script"><link rel="prefetch" href="/site/assets/js/page--node-modules--gridsome--app--pages--404-vue.8ed2c588.js"><link rel="prefetch" href="/site/assets/js/page--src--pages--about-vue.d8fdab17.js"><link rel="prefetch" href="/site/assets/js/page--src--templates--index-template-vue.6cecc577.js"><link rel="prefetch" href="/site/assets/js/page--src--templates--tag-vue.c6b527ba.js"><link rel="prefetch" href="/site/assets/js/vendors~page--src--templates--course-template-vue~page--src--templates--index-template-vue.4ec5035c.js"><link rel="stylesheet" href="/site/assets/css/0.styles.dded6410.css"><style data-vue-tag="vuetify" type="text/css" id="vuetify-theme-stylesheet" nonce="undefined">.v-application a { color: #1976d2; }
+.v-application .primary {
+  background-color: #1976d2 !important;
+  border-color: #1976d2 !important;
+}
+.v-application .primary--text {
+  color: #1976d2 !important;
+  caret-color: #1976d2 !important;
+}
+.v-application .primary.lighten-5 {
+  background-color: #c7fdff !important;
+  border-color: #c7fdff !important;
+}
+.v-application .primary--text.text--lighten-5 {
+  color: #c7fdff !important;
+  caret-color: #c7fdff !important;
+}
+.v-application .primary.lighten-4 {
+  background-color: #a8e0ff !important;
+  border-color: #a8e0ff !important;
+}
+.v-application .primary--text.text--lighten-4 {
+  color: #a8e0ff !important;
+  caret-color: #a8e0ff !important;
+}
+.v-application .primary.lighten-3 {
+  background-color: #8ac5ff !important;
+  border-color: #8ac5ff !important;
+}
+.v-application .primary--text.text--lighten-3 {
+  color: #8ac5ff !important;
+  caret-color: #8ac5ff !important;
+}
+.v-application .primary.lighten-2 {
+  background-color: #6aaaff !important;
+  border-color: #6aaaff !important;
+}
+.v-application .primary--text.text--lighten-2 {
+  color: #6aaaff !important;
+  caret-color: #6aaaff !important;
+}
+.v-application .primary.lighten-1 {
+  background-color: #488fef !important;
+  border-color: #488fef !important;
+}
+.v-application .primary--text.text--lighten-1 {
+  color: #488fef !important;
+  caret-color: #488fef !important;
+}
+.v-application .primary.darken-1 {
+  background-color: #005eb6 !important;
+  border-color: #005eb6 !important;
+}
+.v-application .primary--text.text--darken-1 {
+  color: #005eb6 !important;
+  caret-color: #005eb6 !important;
+}
+.v-application .primary.darken-2 {
+  background-color: #00479b !important;
+  border-color: #00479b !important;
+}
+.v-application .primary--text.text--darken-2 {
+  color: #00479b !important;
+  caret-color: #00479b !important;
+}
+.v-application .primary.darken-3 {
+  background-color: #003180 !important;
+  border-color: #003180 !important;
+}
+.v-application .primary--text.text--darken-3 {
+  color: #003180 !important;
+  caret-color: #003180 !important;
+}
+.v-application .primary.darken-4 {
+  background-color: #001e67 !important;
+  border-color: #001e67 !important;
+}
+.v-application .primary--text.text--darken-4 {
+  color: #001e67 !important;
+  caret-color: #001e67 !important;
+}
+.v-application .secondary {
+  background-color: #424242 !important;
+  border-color: #424242 !important;
+}
+.v-application .secondary--text {
+  color: #424242 !important;
+  caret-color: #424242 !important;
+}
+.v-application .secondary.lighten-5 {
+  background-color: #c1c1c1 !important;
+  border-color: #c1c1c1 !important;
+}
+.v-application .secondary--text.text--lighten-5 {
+  color: #c1c1c1 !important;
+  caret-color: #c1c1c1 !important;
+}
+.v-application .secondary.lighten-4 {
+  background-color: #a6a6a6 !important;
+  border-color: #a6a6a6 !important;
+}
+.v-application .secondary--text.text--lighten-4 {
+  color: #a6a6a6 !important;
+  caret-color: #a6a6a6 !important;
+}
+.v-application .secondary.lighten-3 {
+  background-color: #8b8b8b !important;
+  border-color: #8b8b8b !important;
+}
+.v-application .secondary--text.text--lighten-3 {
+  color: #8b8b8b !important;
+  caret-color: #8b8b8b !important;
+}
+.v-application .secondary.lighten-2 {
+  background-color: #727272 !important;
+  border-color: #727272 !important;
+}
+.v-application .secondary--text.text--lighten-2 {
+  color: #727272 !important;
+  caret-color: #727272 !important;
+}
+.v-application .secondary.lighten-1 {
+  background-color: #595959 !important;
+  border-color: #595959 !important;
+}
+.v-application .secondary--text.text--lighten-1 {
+  color: #595959 !important;
+  caret-color: #595959 !important;
+}
+.v-application .secondary.darken-1 {
+  background-color: #2c2c2c !important;
+  border-color: #2c2c2c !important;
+}
+.v-application .secondary--text.text--darken-1 {
+  color: #2c2c2c !important;
+  caret-color: #2c2c2c !important;
+}
+.v-application .secondary.darken-2 {
+  background-color: #171717 !important;
+  border-color: #171717 !important;
+}
+.v-application .secondary--text.text--darken-2 {
+  color: #171717 !important;
+  caret-color: #171717 !important;
+}
+.v-application .secondary.darken-3 {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+.v-application .secondary--text.text--darken-3 {
+  color: #000000 !important;
+  caret-color: #000000 !important;
+}
+.v-application .secondary.darken-4 {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+.v-application .secondary--text.text--darken-4 {
+  color: #000000 !important;
+  caret-color: #000000 !important;
+}
+.v-application .accent {
+  background-color: #82b1ff !important;
+  border-color: #82b1ff !important;
+}
+.v-application .accent--text {
+  color: #82b1ff !important;
+  caret-color: #82b1ff !important;
+}
+.v-application .accent.lighten-5 {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+.v-application .accent--text.text--lighten-5 {
+  color: #ffffff !important;
+  caret-color: #ffffff !important;
+}
+.v-application .accent.lighten-4 {
+  background-color: #f8ffff !important;
+  border-color: #f8ffff !important;
+}
+.v-application .accent--text.text--lighten-4 {
+  color: #f8ffff !important;
+  caret-color: #f8ffff !important;
+}
+.v-application .accent.lighten-3 {
+  background-color: #daffff !important;
+  border-color: #daffff !important;
+}
+.v-application .accent--text.text--lighten-3 {
+  color: #daffff !important;
+  caret-color: #daffff !important;
+}
+.v-application .accent.lighten-2 {
+  background-color: #bce8ff !important;
+  border-color: #bce8ff !important;
+}
+.v-application .accent--text.text--lighten-2 {
+  color: #bce8ff !important;
+  caret-color: #bce8ff !important;
+}
+.v-application .accent.lighten-1 {
+  background-color: #9fccff !important;
+  border-color: #9fccff !important;
+}
+.v-application .accent--text.text--lighten-1 {
+  color: #9fccff !important;
+  caret-color: #9fccff !important;
+}
+.v-application .accent.darken-1 {
+  background-color: #6596e2 !important;
+  border-color: #6596e2 !important;
+}
+.v-application .accent--text.text--darken-1 {
+  color: #6596e2 !important;
+  caret-color: #6596e2 !important;
+}
+.v-application .accent.darken-2 {
+  background-color: #467dc6 !important;
+  border-color: #467dc6 !important;
+}
+.v-application .accent--text.text--darken-2 {
+  color: #467dc6 !important;
+  caret-color: #467dc6 !important;
+}
+.v-application .accent.darken-3 {
+  background-color: #2364aa !important;
+  border-color: #2364aa !important;
+}
+.v-application .accent--text.text--darken-3 {
+  color: #2364aa !important;
+  caret-color: #2364aa !important;
+}
+.v-application .accent.darken-4 {
+  background-color: #004c90 !important;
+  border-color: #004c90 !important;
+}
+.v-application .accent--text.text--darken-4 {
+  color: #004c90 !important;
+  caret-color: #004c90 !important;
+}
+.v-application .error {
+  background-color: #ff5252 !important;
+  border-color: #ff5252 !important;
+}
+.v-application .error--text {
+  color: #ff5252 !important;
+  caret-color: #ff5252 !important;
+}
+.v-application .error.lighten-5 {
+  background-color: #ffe4d5 !important;
+  border-color: #ffe4d5 !important;
+}
+.v-application .error--text.text--lighten-5 {
+  color: #ffe4d5 !important;
+  caret-color: #ffe4d5 !important;
+}
+.v-application .error.lighten-4 {
+  background-color: #ffc6b9 !important;
+  border-color: #ffc6b9 !important;
+}
+.v-application .error--text.text--lighten-4 {
+  color: #ffc6b9 !important;
+  caret-color: #ffc6b9 !important;
+}
+.v-application .error.lighten-3 {
+  background-color: #ffa99e !important;
+  border-color: #ffa99e !important;
+}
+.v-application .error--text.text--lighten-3 {
+  color: #ffa99e !important;
+  caret-color: #ffa99e !important;
+}
+.v-application .error.lighten-2 {
+  background-color: #ff8c84 !important;
+  border-color: #ff8c84 !important;
+}
+.v-application .error--text.text--lighten-2 {
+  color: #ff8c84 !important;
+  caret-color: #ff8c84 !important;
+}
+.v-application .error.lighten-1 {
+  background-color: #ff6f6a !important;
+  border-color: #ff6f6a !important;
+}
+.v-application .error--text.text--lighten-1 {
+  color: #ff6f6a !important;
+  caret-color: #ff6f6a !important;
+}
+.v-application .error.darken-1 {
+  background-color: #df323b !important;
+  border-color: #df323b !important;
+}
+.v-application .error--text.text--darken-1 {
+  color: #df323b !important;
+  caret-color: #df323b !important;
+}
+.v-application .error.darken-2 {
+  background-color: #bf0025 !important;
+  border-color: #bf0025 !important;
+}
+.v-application .error--text.text--darken-2 {
+  color: #bf0025 !important;
+  caret-color: #bf0025 !important;
+}
+.v-application .error.darken-3 {
+  background-color: #9f0010 !important;
+  border-color: #9f0010 !important;
+}
+.v-application .error--text.text--darken-3 {
+  color: #9f0010 !important;
+  caret-color: #9f0010 !important;
+}
+.v-application .error.darken-4 {
+  background-color: #800000 !important;
+  border-color: #800000 !important;
+}
+.v-application .error--text.text--darken-4 {
+  color: #800000 !important;
+  caret-color: #800000 !important;
+}
+.v-application .info {
+  background-color: #2196f3 !important;
+  border-color: #2196f3 !important;
+}
+.v-application .info--text {
+  color: #2196f3 !important;
+  caret-color: #2196f3 !important;
+}
+.v-application .info.lighten-5 {
+  background-color: #d4ffff !important;
+  border-color: #d4ffff !important;
+}
+.v-application .info--text.text--lighten-5 {
+  color: #d4ffff !important;
+  caret-color: #d4ffff !important;
+}
+.v-application .info.lighten-4 {
+  background-color: #b5ffff !important;
+  border-color: #b5ffff !important;
+}
+.v-application .info--text.text--lighten-4 {
+  color: #b5ffff !important;
+  caret-color: #b5ffff !important;
+}
+.v-application .info.lighten-3 {
+  background-color: #95e8ff !important;
+  border-color: #95e8ff !important;
+}
+.v-application .info--text.text--lighten-3 {
+  color: #95e8ff !important;
+  caret-color: #95e8ff !important;
+}
+.v-application .info.lighten-2 {
+  background-color: #75ccff !important;
+  border-color: #75ccff !important;
+}
+.v-application .info--text.text--lighten-2 {
+  color: #75ccff !important;
+  caret-color: #75ccff !important;
+}
+.v-application .info.lighten-1 {
+  background-color: #51b0ff !important;
+  border-color: #51b0ff !important;
+}
+.v-application .info--text.text--lighten-1 {
+  color: #51b0ff !important;
+  caret-color: #51b0ff !important;
+}
+.v-application .info.darken-1 {
+  background-color: #007cd6 !important;
+  border-color: #007cd6 !important;
+}
+.v-application .info--text.text--darken-1 {
+  color: #007cd6 !important;
+  caret-color: #007cd6 !important;
+}
+.v-application .info.darken-2 {
+  background-color: #0064ba !important;
+  border-color: #0064ba !important;
+}
+.v-application .info--text.text--darken-2 {
+  color: #0064ba !important;
+  caret-color: #0064ba !important;
+}
+.v-application .info.darken-3 {
+  background-color: #004d9f !important;
+  border-color: #004d9f !important;
+}
+.v-application .info--text.text--darken-3 {
+  color: #004d9f !important;
+  caret-color: #004d9f !important;
+}
+.v-application .info.darken-4 {
+  background-color: #003784 !important;
+  border-color: #003784 !important;
+}
+.v-application .info--text.text--darken-4 {
+  color: #003784 !important;
+  caret-color: #003784 !important;
+}
+.v-application .success {
+  background-color: #4caf50 !important;
+  border-color: #4caf50 !important;
+}
+.v-application .success--text {
+  color: #4caf50 !important;
+  caret-color: #4caf50 !important;
+}
+.v-application .success.lighten-5 {
+  background-color: #dcffd6 !important;
+  border-color: #dcffd6 !important;
+}
+.v-application .success--text.text--lighten-5 {
+  color: #dcffd6 !important;
+  caret-color: #dcffd6 !important;
+}
+.v-application .success.lighten-4 {
+  background-color: #beffba !important;
+  border-color: #beffba !important;
+}
+.v-application .success--text.text--lighten-4 {
+  color: #beffba !important;
+  caret-color: #beffba !important;
+}
+.v-application .success.lighten-3 {
+  background-color: #a2ff9e !important;
+  border-color: #a2ff9e !important;
+}
+.v-application .success--text.text--lighten-3 {
+  color: #a2ff9e !important;
+  caret-color: #a2ff9e !important;
+}
+.v-application .success.lighten-2 {
+  background-color: #85e783 !important;
+  border-color: #85e783 !important;
+}
+.v-application .success--text.text--lighten-2 {
+  color: #85e783 !important;
+  caret-color: #85e783 !important;
+}
+.v-application .success.lighten-1 {
+  background-color: #69cb69 !important;
+  border-color: #69cb69 !important;
+}
+.v-application .success--text.text--lighten-1 {
+  color: #69cb69 !important;
+  caret-color: #69cb69 !important;
+}
+.v-application .success.darken-1 {
+  background-color: #2d9437 !important;
+  border-color: #2d9437 !important;
+}
+.v-application .success--text.text--darken-1 {
+  color: #2d9437 !important;
+  caret-color: #2d9437 !important;
+}
+.v-application .success.darken-2 {
+  background-color: #00791e !important;
+  border-color: #00791e !important;
+}
+.v-application .success--text.text--darken-2 {
+  color: #00791e !important;
+  caret-color: #00791e !important;
+}
+.v-application .success.darken-3 {
+  background-color: #006000 !important;
+  border-color: #006000 !important;
+}
+.v-application .success--text.text--darken-3 {
+  color: #006000 !important;
+  caret-color: #006000 !important;
+}
+.v-application .success.darken-4 {
+  background-color: #004700 !important;
+  border-color: #004700 !important;
+}
+.v-application .success--text.text--darken-4 {
+  color: #004700 !important;
+  caret-color: #004700 !important;
+}
+.v-application .warning {
+  background-color: #fb8c00 !important;
+  border-color: #fb8c00 !important;
+}
+.v-application .warning--text {
+  color: #fb8c00 !important;
+  caret-color: #fb8c00 !important;
+}
+.v-application .warning.lighten-5 {
+  background-color: #ffff9e !important;
+  border-color: #ffff9e !important;
+}
+.v-application .warning--text.text--lighten-5 {
+  color: #ffff9e !important;
+  caret-color: #ffff9e !important;
+}
+.v-application .warning.lighten-4 {
+  background-color: #fffb82 !important;
+  border-color: #fffb82 !important;
+}
+.v-application .warning--text.text--lighten-4 {
+  color: #fffb82 !important;
+  caret-color: #fffb82 !important;
+}
+.v-application .warning.lighten-3 {
+  background-color: #ffdf67 !important;
+  border-color: #ffdf67 !important;
+}
+.v-application .warning--text.text--lighten-3 {
+  color: #ffdf67 !important;
+  caret-color: #ffdf67 !important;
+}
+.v-application .warning.lighten-2 {
+  background-color: #ffc24b !important;
+  border-color: #ffc24b !important;
+}
+.v-application .warning--text.text--lighten-2 {
+  color: #ffc24b !important;
+  caret-color: #ffc24b !important;
+}
+.v-application .warning.lighten-1 {
+  background-color: #ffa72d !important;
+  border-color: #ffa72d !important;
+}
+.v-application .warning--text.text--lighten-1 {
+  color: #ffa72d !important;
+  caret-color: #ffa72d !important;
+}
+.v-application .warning.darken-1 {
+  background-color: #db7200 !important;
+  border-color: #db7200 !important;
+}
+.v-application .warning--text.text--darken-1 {
+  color: #db7200 !important;
+  caret-color: #db7200 !important;
+}
+.v-application .warning.darken-2 {
+  background-color: #bb5900 !important;
+  border-color: #bb5900 !important;
+}
+.v-application .warning--text.text--darken-2 {
+  color: #bb5900 !important;
+  caret-color: #bb5900 !important;
+}
+.v-application .warning.darken-3 {
+  background-color: #9d4000 !important;
+  border-color: #9d4000 !important;
+}
+.v-application .warning--text.text--darken-3 {
+  color: #9d4000 !important;
+  caret-color: #9d4000 !important;
+}
+.v-application .warning.darken-4 {
+  background-color: #802700 !important;
+  border-color: #802700 !important;
+}
+.v-application .warning--text.text--darken-4 {
+  color: #802700 !important;
+  caret-color: #802700 !important;
+}</style><noscript data-vue-tag="ssr"><style>.g-image--loading{display:none;}</style></noscript>
+  </head>
+  <body >
+    <div data-app="true" data-server-rendered="true" id="app" id="inspire" class="v-application v-application--is-ltr theme--light"><div class="v-application--wrap"><header class="gb-toolbar v-sheet v-sheet--tile theme--dark v-toolbar v-toolbar--dense v-app-bar v-app-bar--fixed" style="height:48px;margin-top:0px;transform:translateY(0px);left:0px;right:0px;"><div class="v-toolbar__content" style="height:48px;"><button type="button" class="v-app-bar__nav-icon v-btn v-btn--flat v-btn--icon v-btn--round theme--dark v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-menu theme--dark"></i></span></button><div class="v-toolbar__title ml-0 pl-4" style="width:300px;"><span class="hidden-sm-and-down">skillhub</span></div><div class="spacer"></div><div class="v-input hidden-sm-and-down v-input--hide-details v-input--dense theme--dark v-text-field v-text-field--single-line v-text-field--solo v-text-field--solo-inverted v-text-field--solo-flat v-text-field--enclosed"><div class="v-input__control"><div class="v-input__slot"><div class="v-input__prepend-inner"><div class="v-input__icon v-input__icon--prepend-inner"><i aria-hidden="true" class="v-icon notranslate mdi mdi-magnify theme--dark"></i></div></div><div class="v-text-field__slot"><label for="input-49928" class="v-label theme--dark" style="left:0px;right:auto;position:absolute;">Search</label><input id="input-49928" type="text"></div></div></div></div><button type="button" class="v-btn v-btn--flat v-btn--icon v-btn--round theme--dark v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-apps theme--dark"></i></span></button><button type="button" class="v-btn v-btn--flat v-btn--icon v-btn--round theme--dark v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-bell theme--dark"></i></span></button></div></header><main class="v-content" style="padding-top:15408px;padding-right:0px;padding-bottom:0px;padding-left:0px;"><div class="v-content__wrap"><div class="container container--fluid pa-0"><div class="row no-gutters"><div class="col col-12"><div class="row no-gutters row--dense"><div class="height-30 bg-dark white--text jarallax col"><img src="https://i.udemycdn.com/course/750x422/2745650_cc33_3.jpg" class="jarallax-img opacity-20 g-image"><div class="container mt-8 pa-0"><div class="row mb-12 justify-center"><div dense="" class="col"><p class="display-2 mb-0">Lambda with Functional Programming in Java8</p><p class="headline mb-0">Lambda expression with Functional Programming Example</p><div><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">0 (0)</span></div><a href="https://www.udemy.com/course/lambda-with-functional-programming-in-java/" class="v-btn v-btn--contained theme--light v-size--default warning"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-share-outline theme--light"></i> Take me there!
+          </span></a></div></div></div></div></div></div></div><div class="row no-gutters"><div class="col col-12"><div class="container mt-4 pl-5"><div class="row mb-12 justify-center"><div dense="" class="col">
+            This Course basically designed for the people who has knowledge in prior knowledge about java.We will Cover the Followings in this course , LambdasStreamsParallel StreamsOptional New Interface Concepts Here the Sub Topics we are going to cover in this tutorial , 01 About the Course02 Why Java8 03 Java7 vs Java8 Example Part 104 Java7 vs Java8 Example Part 205 What is lambda06 Implement Runnable Using Lambda Expression07 Implement Comparator Using Lambda Expression08 How to install Java Decompiler in Eclipse09 Introduction to Functional Interfaces10 Consumer Interface Part-111 Consumer Interface Part-212 Consumer Interface Part-313 BiConsumer Interface Part 114 BiConsumer Interface Part 215 Predicate Interface Part 116 Predicate Interface Part 217 Predicate Interface Part 318 Predicate Interface Part 419 Function Interface Part 120 Function Interface Part 221 Function Interface Part 322 Unary and Binary Functional Interface23 Supplier Functional Interface24 Method Reference 25 Method Reference and Constructor Reference26 Lambda Local Variable27 Streams Introduction27 Streams Introduction 128 Streams Example Part 129 Streams Example Part 230 Streams Example Part 331 Streams Map Example Part 132 Streams Map Example Part 233 Streams FlatMap Example Part 134 Streams FlatMap Example Part 235 Streams FlatMap Example Part 336 Streams FlatMap Example Part 437 Streams Filter Example38 Streams Reduce Example Part 139 Streams Reduce Example Part 240 Streams Filter Map Reduce Example41 Streams MinBy, MaxBy Example42 Streams Limit Skip Example43 Streams AllMatch, AnyMatchExample44 Streams FindAny , FindFirst Example45 Streams Factory Method Example46 Numeric Stream Example 47 Numeric Stream Factory Method Example 48 Numeric Stream Factory Aggregation Method Example 49 Stream Boxing and UnBoxing Example 50 Numeric Stream Map Example 51 Stream Joining Example52 Stream Mapping and Counting Example53 Stream Summing and Averaging Example54 Stream Grouping By Example Part 155 Stream Grouping By Example Part 256 Stream Partitioning By Example57 Sequential vs Parallel Stream Example Part 158 Sequential vs Parallel Stream Example Part 259 Sequential vs Parallel Stream Use Case60 Parallel Stream When Not to Use Case Part 160 Parallel Stream When Not to Use Case Part 261 Optional Class Introduction62 Optional Class Example Part 163 Optional Methods Example Part 164 Optional If Present Method Example65 Optional Methods Example Part 266 Optional FlatMap Filter Example67 Interface Default and Static Method Introduction68 Default Method Sort Example69 Default Method Custom Sort Example70 Interface Method and Static Method Example
+          </div></div></div></div></div><div class="row no-gutters"><div class="col"><div class="container"><div class="headline pa-1 mb-0">#Related</div><div aria-label="Slideshow" class="vueperslides no-shadow vueperslides--fixed-height vueperslides--slide-multiple vueperslides--bullets-outside" style="height:300px;"><!----><div class="vueperslides__inner"><div aria-live="polite" class="vueperslides__parallax-wrapper" style="padding-bottom:25%;"><div class="vueperslides__track"><div class="vueperslides__track-inner" style="transition-duration:0ms;transform:translate3d(0%, 0, 0);will-change:auto;"><!----><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/boosting-machine-learning-models-in-python" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Boosting Machine Learning Models in Python</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Leverage ensemble techniques to maximize your machine learning models in Python">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">0 (0)</span></div></div></div><!----></div><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/learn-test-driven-development-in-java" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Learn Test Driven Development in Java</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Learn everything you need to know about TDD, Test driven development tutorial for Java through real examples.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.2 (676)</span></div></div></div><!----></div><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/java-tutorial-for-complete-beginners" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Java Tutorial for Complete Beginners</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Learn to program using the Java programming language">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.3 (75611)</span></div></div></div><!----></div><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/java-multithreading" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Java Multithreading</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Unveiling the mysteries of multithreading in Java. The ultimate Java multithreading course">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.3 (10343)</span></div></div></div><!----></div><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/mastering-android-programming" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Mastering Android Programming</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Learn the Android programming with Android SDK, Advance Java Concepts, OpenGL and SQLlite">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">3.6 (70)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/pythonic-python-part-i-the-basics" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Pythonic Python Part I: The Basics</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Fast and fun python lectures for programmers, with tons of example code; plenty of exercises, and explained solutions.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">3.7 (37)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/scala-for-java-developers-transition-up" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Scala for Java Developers: Transition Up!</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Scala for Java Developers: Transition Up!">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">3.2 (31)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/c-short-and-sweet-part-1" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>C++, Short and Sweet, Part 1</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="A first course on C++ based on the book Accelerated C++.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.3 (1391)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/programming-java-for-beginners-the-ultimate-java-tutorial" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Programming Java for Beginners - The Ultimate Java Tutorial</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Learn Java Programming at your own Pace. Comes Complete with Working Files and a Verifiable Certificate of Completion.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.3 (1194)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/ruby-programming-for-beginners" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Ruby Programming for Beginners</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Learn Ruby Programming the fast and easy way!">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">3.7 (651)</span></div></div></div><!----></div><!----></div></div></div><!----><!----><!----><!----><!----></div><!----><!----></div></div></div></div></div></div></main></div></div>
+    <script>window.__INITIAL_STATE__={"data":null,"context":{"course":{"id":"37786922-3ef1-11ea-9791-1b580a556b4a","vendorId":"2745650","created":"2020-01-24T21:35:08.047Z","updated":"2020-01-01T08:00:00.000Z","title":"Lambda with Functional Programming in Java8","headline":"Lambda expression with Functional Programming Example","description":"This Course basically designed for the people who has knowledge in prior knowledge about java.We will Cover the Followings in this course , LambdasStreamsParallel StreamsOptional New Interface Concepts Here the Sub Topics we are going to cover in this tutorial , 01 About the Course02 Why Java8 03 Java7 vs Java8 Example Part 104 Java7 vs Java8 Example Part 205 What is lambda06 Implement Runnable Using Lambda Expression07 Implement Comparator Using Lambda Expression08 How to install Java Decompiler in Eclipse09 Introduction to Functional Interfaces10 Consumer Interface Part-111 Consumer Interface Part-212 Consumer Interface Part-313 BiConsumer Interface Part 114 BiConsumer Interface Part 215 Predicate Interface Part 116 Predicate Interface Part 217 Predicate Interface Part 318 Predicate Interface Part 419 Function Interface Part 120 Function Interface Part 221 Function Interface Part 322 Unary and Binary Functional Interface23 Supplier Functional Interface24 Method Reference 25 Method Reference and Constructor Reference26 Lambda Local Variable27 Streams Introduction27 Streams Introduction 128 Streams Example Part 129 Streams Example Part 230 Streams Example Part 331 Streams Map Example Part 132 Streams Map Example Part 233 Streams FlatMap Example Part 134 Streams FlatMap Example Part 235 Streams FlatMap Example Part 336 Streams FlatMap Example Part 437 Streams Filter Example38 Streams Reduce Example Part 139 Streams Reduce Example Part 240 Streams Filter Map Reduce Example41 Streams MinBy, MaxBy Example42 Streams Limit Skip Example43 Streams AllMatch, AnyMatchExample44 Streams FindAny , FindFirst Example45 Streams Factory Method Example46 Numeric Stream Example 47 Numeric Stream Factory Method Example 48 Numeric Stream Factory Aggregation Method Example 49 Stream Boxing and UnBoxing Example 50 Numeric Stream Map Example 51 Stream Joining Example52 Stream Mapping and Counting Example53 Stream Summing and Averaging Example54 Stream Grouping By Example Part 155 Stream Grouping By Example Part 256 Stream Partitioning By Example57 Sequential vs Parallel Stream Example Part 158 Sequential vs Parallel Stream Example Part 259 Sequential vs Parallel Stream Use Case60 Parallel Stream When Not to Use Case Part 160 Parallel Stream When Not to Use Case Part 261 Optional Class Introduction62 Optional Class Example Part 163 Optional Methods Example Part 164 Optional If Present Method Example65 Optional Methods Example Part 266 Optional FlatMap Filter Example67 Interface Default and Static Method Introduction68 Default Method Sort Example69 Default Method Custom Sort Example70 Interface Method and Static Method Example","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F2745650_cc33_3.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Flambda-with-functional-programming-in-java\u002F","language":"en","tags":["Development","Programming Languages","Java"],"rating":0,"reviews":0,"isFree":false,"matches":["37729cc4-3ef1-11ea-9791-1b580a556b4a","37736016-3ef1-11ea-9791-1b580a556b4a","3772c3d9-3ef1-11ea-9791-1b580a556b4a","376a8670-3ef1-11ea-9791-1b580a556b4a","3779a1a9-3ef1-11ea-9791-1b580a556b4a","37769465-3ef1-11ea-9791-1b580a556b4a","37750dc6-3ef1-11ea-9791-1b580a556b4a","3772c3d8-3ef1-11ea-9791-1b580a556b4a","3770ef13-3ef1-11ea-9791-1b580a556b4a","376c3421-3ef1-11ea-9791-1b580a556b4a"],"slug":"lambda-with-functional-programming-in-java8"},"related":[{"id":"3779a1a9-3ef1-11ea-9791-1b580a556b4a","vendorId":"2742004","created":"2020-01-24T21:35:08.095Z","updated":"2020-01-01T08:00:00.000Z","title":"Boosting Machine Learning Models in Python","headline":"Leverage ensemble techniques to maximize your machine learning models in Python","description":"Machine learning ensembles are models composed of a few other models that are trained separately and then combined in some way to make an overall prediction. These powerful techniques are often used in applied machine learning to achieve the best overall performance.In this unique course, after installing the necessary tools you will jump straight into the bagging method so as to get the best results from algorithms that are highly sensitive to specific data—for example, algorithms based on decision trees. Next, you will discover another powerful and popular class of ensemble methods called boosting. Here you'll achieve maximal algorithm performance by training a sequence of models, where each given model improves the results of the previous one. You will then explore a much simpler technique called voting, where results from multiple models are achieved using simple statistics such as the mean average. You will also work hands-on with algorithms such as stacking and XGBoost to improve performance.By the end of this course, you will know how to use a variety of ensemble algorithms in the real world to boost your machine learning models.Please note that a working knowledge of Python 3; the ability to run simple commands in Shell (Terminal); and also some basic machine learning experience are core prerequisites for taking and getting the best out of this course.About the AuthorJakub Konczyk has enjoyed and programmed professionally since 1995. He is a Python and Django expert and has been involved in building complex systems since 2006. He loves to simplify and teach programming subjects and share this with others. He first discovered Machine Learning when he was trying to predict the real estate prices in one of the early stage start-ups, he was involved in. He failed miserably then. He then discovered a much more practical way to learn Machine Learning, which he would like to share with you in this course. It boils down to the “Keep it simple” mantra. He is the author of multiple bestselling video courses on Machine Learning and Deep Learning, including Real-World Deep Learning Python Projects and AI in Finance.","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F2742004_65b9.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fboosting-machine-learning-models-in-python\u002F","language":"en","tags":["Development","Data Science","Python"],"rating":0,"reviews":0,"isFree":false,"matches":["3777cce7-3ef1-11ea-9791-1b580a556b4a","3772c3d9-3ef1-11ea-9791-1b580a556b4a","3772eae1-3ef1-11ea-9791-1b580a556b4a","377a3de1-3ef1-11ea-9791-1b580a556b4a","3770a0f0-3ef1-11ea-9791-1b580a556b4a","376e08e0-3ef1-11ea-9791-1b580a556b4a","37769462-3ef1-11ea-9791-1b580a556b4a","3779a1a8-3ef1-11ea-9791-1b580a556b4a","3778de52-3ef1-11ea-9791-1b580a556b4a","377275b2-3ef1-11ea-9791-1b580a556b4a"],"slug":"boosting-machine-learning-models-in-python"},{"id":"37769465-3ef1-11ea-9791-1b580a556b4a","vendorId":"27868","created":"2020-01-24T21:35:07.943Z","updated":"2016-04-01T07:00:00.000Z","title":"Learn Test Driven Development in Java","headline":"Learn everything you need to know about TDD, Test driven development tutorial for Java through real examples.","description":" This “Java Training: Test Driven Development Tutorial for Java” course provides everything you need to know to get started with test driven development in Java. This course covers test driven development from scratch, through video lectures, demonstrations of practicing a test driven approach, and through exercises for you to complete, allowing you to gain valuable experience in using TDD. For more information on our “Java Training: Test Driven Development Tutorial for Java” courses, visit our course page. Sign up for this Java Training course now and learn from the ultimate test driven development tutorial for Java. ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F27868_5aff_4.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Flearn-test-driven-development-in-java\u002F","language":"en","tags":["Development","Software Testing","Java"],"rating":4.2,"reviews":676,"isFree":false,"matches":["376c3421-3ef1-11ea-9791-1b580a556b4a","37750dc6-3ef1-11ea-9791-1b580a556b4a","376e2ff9-3ef1-11ea-9791-1b580a556b4a","376cd064-3ef1-11ea-9791-1b580a556b4a","37713d39-3ef1-11ea-9791-1b580a556b4a","37744a76-3ef1-11ea-9791-1b580a556b4a","3776bb74-3ef1-11ea-9791-1b580a556b4a","376de1d7-3ef1-11ea-9791-1b580a556b4a","376e7e11-3ef1-11ea-9791-1b580a556b4a","37750dc4-3ef1-11ea-9791-1b580a556b4a"],"slug":"learn-test-driven-development-in-java"},{"id":"37750dc6-3ef1-11ea-9791-1b580a556b4a","vendorId":"24823","created":"2020-01-24T21:35:07.886Z","updated":"2019-11-01T07:00:00.000Z","title":"Java Tutorial for Complete Beginners","headline":"Learn to program using the Java programming language","description":" Learn to program in the Java programming language. This course assumes no prior programming knowledge, just a desire to learn to program. ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F24823_963e_14.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fjava-tutorial\u002F","language":"en","tags":["Development","Programming Languages","Java"],"rating":4.3,"reviews":75611,"isFree":true,"matches":["376c3421-3ef1-11ea-9791-1b580a556b4a","37713d39-3ef1-11ea-9791-1b580a556b4a","3776bb74-3ef1-11ea-9791-1b580a556b4a","376e2ff9-3ef1-11ea-9791-1b580a556b4a","37713d35-3ef1-11ea-9791-1b580a556b4a","37744a76-3ef1-11ea-9791-1b580a556b4a","376cd064-3ef1-11ea-9791-1b580a556b4a","377275b4-3ef1-11ea-9791-1b580a556b4a","377a64f9-3ef1-11ea-9791-1b580a556b4a","376e08e0-3ef1-11ea-9791-1b580a556b4a"],"slug":"java-tutorial-for-complete-beginners"},{"id":"37736016-3ef1-11ea-9791-1b580a556b4a","vendorId":"22169","created":"2020-01-24T21:35:07.814Z","updated":"2012-11-01T07:00:00.000Z","title":"Java Multithreading","headline":"Unveiling the mysteries of multithreading in Java. The ultimate Java multithreading course","description":"Discover how to write effective multi-threaded code in Java; learn why problems can occur with Java multithreading and how to fix those problems. ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F22169_1283_9.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fjava-multithreading\u002F","language":"en","tags":["Development","Programming Languages","Java"],"rating":4.3,"reviews":10343,"isFree":true,"matches":["3776bb74-3ef1-11ea-9791-1b580a556b4a","37750dc6-3ef1-11ea-9791-1b580a556b4a","37713d35-3ef1-11ea-9791-1b580a556b4a","376c3421-3ef1-11ea-9791-1b580a556b4a","37744a76-3ef1-11ea-9791-1b580a556b4a","37713d39-3ef1-11ea-9791-1b580a556b4a","376e2ff9-3ef1-11ea-9791-1b580a556b4a","37729cc4-3ef1-11ea-9791-1b580a556b4a","37769465-3ef1-11ea-9791-1b580a556b4a","377a64fb-3ef1-11ea-9791-1b580a556b4a"],"slug":"java-multithreading"},{"id":"3772c3d8-3ef1-11ea-9791-1b580a556b4a","vendorId":"21059","created":"2020-01-24T21:35:07.812Z","updated":"2012-08-01T07:00:00.000Z","title":"Mastering Android Programming","headline":"Learn the Android programming with Android SDK, Advance Java Concepts, OpenGL and SQLlite","description":"Our experienced team of developers and tutors have created and refined this course based on a proven system that works and is recognized in the industry.   The course will train you via a step-by-step, fun and easy to learn methodology which inherently is based on a simple principle of \"Learning by doing\". In this course you will  create lots of programs and applications while learning \"Key Concepts\" in each chapter.  After this course you should be able to take any Android Project and execute it successfully. ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F21059_ba03_9.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fmastering-android-programming\u002F","language":"en","tags":["Development","Programming Languages","Android Development"],"rating":3.6,"reviews":70,"isFree":false,"matches":["377534d3-3ef1-11ea-9791-1b580a556b4a","377275b4-3ef1-11ea-9791-1b580a556b4a","37716447-3ef1-11ea-9791-1b580a556b4a","3773ae31-3ef1-11ea-9791-1b580a556b4a","37722792-3ef1-11ea-9791-1b580a556b4a","37750dc6-3ef1-11ea-9791-1b580a556b4a","3771d975-3ef1-11ea-9791-1b580a556b4a","3773d548-3ef1-11ea-9791-1b580a556b4a","3771d977-3ef1-11ea-9791-1b580a556b4a","3776bb74-3ef1-11ea-9791-1b580a556b4a"],"slug":"mastering-android-programming"},{"id":"3772c3d9-3ef1-11ea-9791-1b580a556b4a","vendorId":"21282","created":"2020-01-24T21:35:07.812Z","updated":"2013-02-01T08:00:00.000Z","title":"Pythonic Python Part I: The Basics","headline":"Fast and fun python lectures for programmers, with tons of example code; plenty of exercises, and explained solutions.","description":"This is Pythonic Python - Part I of a complete Python course for programmers, in four parts. The focus, besides learning Python, is learning Pythonic idioms so that your code is beautiful, easy to read and modify, and fast-running. The Syllabus: Part I - The Python Basics Make yourself useful. lab 01 Birds Eye Viewlab 02 Branching and Loopinglab 03 Input and Exceptionslab 04 Formatting Stringslab 05 Functionslab 06 importlab 07 Attribute Scopelab 08 Flexible Functionslab 09 Sequence Slicinglab 10 Sequence Accumulatinglab 11 Sequence Differenceslab 12 list Facilitieslab 13 Sequences And Mutabilitylab 14 sys Library Part II The Buzz Heavy-hitting, time-saving, fun facilities. lab 15 Reuse Tricklab 16 list Scope Issuelab 17 Arguments And Mutabilitylab 18 list Comprehensionslab 19 Functional Programminglab 20 from importinglab 21 Dictionarieslab 22 Dictionary Marvelslab 23 Variable Arguments Protocolslab 24 raise An Exceptionlab 25 File IOlab 26 os Modulelab 27 Packageslab 28 Dynamic Codelab 29 Decoratorslab 30 Generators Part III Pythonic OOP So brilliant, you might need shades. lab 31 Classeslab 32 Containmentlab 33 Inheritancelab 34 Multiple Inheritancelab 35 Magical Powerslab 36 Privacy And Introspectionlab 37 Class Attributes and Scopelab 38 New Style Classeslab 39 Iteration Supportlab 40 Attribute Controllab 41 Static and Class Methodslab 42 Context Manager Part IV The Expert Know it all. lab 43 Deep Copieslab 44 Piping With subprocesslab 45 File Pattern globbinglab 46 Timing Your Codelab 47 unittest Frameworkslab 48 Option Parsing Frameworkslab 49 Catching Exceptionslab 50 Raising Exceptionslab 51 Inventing Exceptionslab 52 Namespace Reviewlab 53 Pitfallslab 54 Finding Modules","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F21282_a174_7.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fpythonic-python-part-i-the-basics\u002F","language":"en","tags":["Development","Programming Languages","Python"],"rating":3.7,"reviews":37,"isFree":false,"matches":["376e08e0-3ef1-11ea-9791-1b580a556b4a","3772eae1-3ef1-11ea-9791-1b580a556b4a","3770a0f0-3ef1-11ea-9791-1b580a556b4a","377a3de1-3ef1-11ea-9791-1b580a556b4a","3779a1a9-3ef1-11ea-9791-1b580a556b4a","376cd064-3ef1-11ea-9791-1b580a556b4a","3777cce7-3ef1-11ea-9791-1b580a556b4a","376a8670-3ef1-11ea-9791-1b580a556b4a","376e7e11-3ef1-11ea-9791-1b580a556b4a","37750dc6-3ef1-11ea-9791-1b580a556b4a"],"slug":"pythonic-python-part-i-the-basics"},{"id":"37729cc4-3ef1-11ea-9791-1b580a556b4a","vendorId":"20954","created":"2020-01-24T21:35:07.811Z","updated":"2012-07-01T07:00:00.000Z","title":"Scala for Java Developers: Transition Up!","headline":"Scala for Java Developers: Transition Up!","description":"This class shows you how to easily transition up from Java to Scala. Not only will you be shown the basics of Scala, but you will also see how you can integrate the Java -\u003E Scala transition in your daily work-flow. There is no need to abandon the existing Java code base completely, this class will show you a) the basics of Scala, and b) how to transition smoothly, painlessly, and guarantee you a soft landing as a Java programmer in Scala. Over 2.5 hours in 8 lectures, and we're expanding and adding new material based on students' feedback! ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F20954_16b0_4.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fscala-for-java-developers-transition-up\u002F","language":"en","tags":["Development","Programming Languages","Java"],"rating":3.2,"reviews":31,"isFree":false,"matches":["37786922-3ef1-11ea-9791-1b580a556b4a","377a64fb-3ef1-11ea-9791-1b580a556b4a","37736016-3ef1-11ea-9791-1b580a556b4a","37750dc6-3ef1-11ea-9791-1b580a556b4a","3776bb74-3ef1-11ea-9791-1b580a556b4a","376c3421-3ef1-11ea-9791-1b580a556b4a","37769465-3ef1-11ea-9791-1b580a556b4a","376cd066-3ef1-11ea-9791-1b580a556b4a","37744a76-3ef1-11ea-9791-1b580a556b4a","377534d3-3ef1-11ea-9791-1b580a556b4a"],"slug":"scala-for-java-developers-transition-up"},{"id":"3770ef13-3ef1-11ea-9791-1b580a556b4a","vendorId":"17503","created":"2020-01-24T21:35:07.603Z","updated":"2012-05-01T07:00:00.000Z","title":"C++, Short and Sweet, Part 1","headline":"A first course on C++ based on the book Accelerated C++.","description":"This course is for beginners who want to get started writing programs in C++, taught by Jeremy Siek, a professor at the University of Colorado. No prior knowledge of C++ is assumed. The course is based on the excellent textbook Accelerated C++ by Andrew Koenig and Barbara E. Moo. Like the textbook, the course quickly dives into problem solving and making use of the C++ standard library, including strings, vectors, and lists. The emphasis is on teaching you the parts of C++ that you will most likely need in your day-to-day programming. This course is Part 1 of a planned two-part sequence. Part 1 covers the first seven chapters of Accelerated C++, in particular, Chapters 0 through 6. The course consists of six videos of 50-60 minutes each. Part 2 of the course, forthcoming, will cover the second half of Accelerated C++, including how to write your own classes and generic functions.","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F17503_7fa8_9.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fcpp-short-and-sweet\u002F","language":"en","tags":["Development","Programming Languages","C++"],"rating":4.3,"reviews":1391,"isFree":true,"matches":["376de1d7-3ef1-11ea-9791-1b580a556b4a","37738723-3ef1-11ea-9791-1b580a556b4a","376ca951-3ef1-11ea-9791-1b580a556b4a","376e7e11-3ef1-11ea-9791-1b580a556b4a","37750dc6-3ef1-11ea-9791-1b580a556b4a","376cd064-3ef1-11ea-9791-1b580a556b4a","376e2ff9-3ef1-11ea-9791-1b580a556b4a","376c3421-3ef1-11ea-9791-1b580a556b4a","3772c3d9-3ef1-11ea-9791-1b580a556b4a","37777ec2-3ef1-11ea-9791-1b580a556b4a"],"slug":"c-short-and-sweet-part-1"},{"id":"376c3421-3ef1-11ea-9791-1b580a556b4a","vendorId":"9463","created":"2020-01-24T21:35:07.173Z","updated":"2017-01-01T08:00:00.000Z","title":"Programming Java for Beginners - The Ultimate Java Tutorial","headline":"Learn Java Programming at your own Pace. Comes Complete with Working Files and a Verifiable Certificate of Completion.","description":" Learn the basic concepts, tools, and functions that you will need to build fully functional programs with the popular programming language, Java. Build a strong foundation in Java and object-oriented programming with this tutorial for beginners. Java Development Kit Installation Types and Operators Object-Oriented Programming (OOP), Classes, and Objects Loops and Conditionals A Powerful Skill at Your Fingertips Learning the fundamentals of Java puts a powerful and very useful tool at your fingertips. Java is free, easy to learn, has excellent documentation, and is the base for all object-oriented programming languages. Jobs in java development are plentiful, and being able to learn Java will give you a strong background to more easily pick up other object-oriented languages such as C++, C#, Ruby, and Pascal. Content and Overview Suitable for beginning programmers, through this course of 115 lectures and 10 hours of content, you’ll learn all of the Java fundamentals and establish a strong understanding of the concept behind object-oriented programming (OOP). Each chapter closes with exercises, putting your new learned skills into practical use immediately. Starting with the installation of the Java Development Kit, this course will take you through Java variable types, operators, and how to use them. By creating classes and objects, you’ll a establish a strong understanding of OOP. With these basics mastered, the course will take you through program flow control by teaching you how to use for loops, while loops, and conditional if-else statements to add complexity and functionality to your programs. Students completing the course will have the knowledge to create functional and useful Java programs. Complete with working files and code samples, you’ll be able to work alongside the author as you work through each concept, and will receive a verifiable certificate of completion upon finishing the course. ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F9463_aa8c_7.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Flearn-to-program-with-java\u002F","language":"en","tags":["Development","Programming Languages","Java"],"rating":4.3,"reviews":1194,"isFree":false,"matches":["37750dc6-3ef1-11ea-9791-1b580a556b4a","3776bb74-3ef1-11ea-9791-1b580a556b4a","37713d39-3ef1-11ea-9791-1b580a556b4a","376e2ff9-3ef1-11ea-9791-1b580a556b4a","37713d35-3ef1-11ea-9791-1b580a556b4a","37744a76-3ef1-11ea-9791-1b580a556b4a","376cd064-3ef1-11ea-9791-1b580a556b4a","377534d3-3ef1-11ea-9791-1b580a556b4a","37738723-3ef1-11ea-9791-1b580a556b4a","3772eae1-3ef1-11ea-9791-1b580a556b4a"],"slug":"programming-java-for-beginners-the-ultimate-java-tutorial"},{"id":"376a8670-3ef1-11ea-9791-1b580a556b4a","vendorId":"8082","created":"2020-01-24T21:35:07.169Z","updated":"2019-08-01T07:00:00.000Z","title":"Ruby Programming for Beginners","headline":"Learn Ruby Programming the fast and easy way!","description":" Learn Ruby today! Ruby is famous for being easy to learn but most users only scratch the surface of what it can do. While a typical Ruby tutorial or book focuses on Ruby's trendier features this course reveals the secret inner workings of one of the world's most popular programming languages. It helps you learn Ruby in one of the easiest ways possible through 10 simple steps that will have you writing clear maintainable code in no time. Rather than bog you down with a lot of theory this course takes a hands-on approach and focuses on helping you learn Ruby so that you'reproductive on day one. Whether you're new to programming or just new to Ruby this Ruby tutorial is your guide to rapid real-world software development withthis unique and elegant language. Who uses Ruby? Ruby is an incredibly powerful and highly scalable object-oriented language. Leading technology companies & startups around the world use Ruby or the Ruby on Rails framework to power their websites & web applications. They include: * Amazon * Twitter * Electronic Arts * Yahoo * New York Times * 37 Signals * And many many more... ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F8082_e627_11.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Flearn-ruby-programming-in-ten-easy-steps\u002F","language":"en","tags":["Development","Programming Languages","Ruby"],"rating":3.7,"reviews":651,"isFree":false,"matches":["376c5b35-3ef1-11ea-9791-1b580a556b4a","376cd066-3ef1-11ea-9791-1b580a556b4a","37750dc6-3ef1-11ea-9791-1b580a556b4a","376e08e0-3ef1-11ea-9791-1b580a556b4a","376c3421-3ef1-11ea-9791-1b580a556b4a","37766d50-3ef1-11ea-9791-1b580a556b4a","376cd064-3ef1-11ea-9791-1b580a556b4a","376e7e11-3ef1-11ea-9791-1b580a556b4a","37742364-3ef1-11ea-9791-1b580a556b4a","376dbac4-3ef1-11ea-9791-1b580a556b4a"],"slug":"ruby-programming-for-beginners"}]}};(function(){var s;(s=document.currentScript||document.scripts[document.scripts.length-1]).parentNode.removeChild(s);}());</script><script src="/site/assets/js/app.e5c95575.js" defer></script><script src="/site/assets/js/page--src--templates--course-template-vue.a9c4e657.js" defer></script>
+  </body>
+</html>

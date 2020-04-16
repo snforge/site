@@ -1,0 +1,1 @@
+{"hash":"6d1e7dd52e8c17cf4930f349c6afc1a78b2e1c5e","data":{"records":{"id":"number","title":"number","belongsTo":{"totalCount":1,"pageInfo":{"totalPages":1,"currentPage":1},"edges":[{"node":{"__typename":"Post"}}]}}},"context":{}}

@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html data-html-server-rendered="true" lang="en" data-vue-tag="%7B%22lang%22:%7B%22ssr%22:%22en%22%7D%7D">
+  <head>
+    <title>Pain Free at Work - Gridsome</title><meta name="gridsome:hash" content="6d1e7dd52e8c17cf4930f349c6afc1a78b2e1c5e"><meta data-vue-tag="ssr" charset="utf-8"><meta data-vue-tag="ssr" name="generator" content="Gridsome v0.7.12"><meta data-vue-tag="ssr" data-key="viewport" name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta data-vue-tag="ssr" data-key="format-detection" name="format-detection" content="telephone=no"><link data-vue-tag="ssr" rel="icon" href="data:,"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="16x16" href="/site/assets/static/favicon.ce0531f.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="32x32" href="/site/assets/static/favicon.ac8d93a.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="96x96" href="/site/assets/static/favicon.b9532cc.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="76x76" href="/site/assets/static/favicon.f22e9f3.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="152x152" href="/site/assets/static/favicon.62d22cb.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="120x120" href="/site/assets/static/favicon.1539b60.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="167x167" href="/site/assets/static/favicon.dc0cdc5.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="180x180" href="/site/assets/static/favicon.7b22250.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"><link data-vue-tag="ssr" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css"><link rel="preload" href="/site/assets/css/0.styles.dded6410.css" as="style"><link rel="preload" href="/site/assets/js/app.e5c95575.js" as="script"><link rel="preload" href="/site/assets/js/page--src--templates--course-template-vue.a9c4e657.js" as="script"><link rel="prefetch" href="/site/assets/js/page--node-modules--gridsome--app--pages--404-vue.8ed2c588.js"><link rel="prefetch" href="/site/assets/js/page--src--pages--about-vue.d8fdab17.js"><link rel="prefetch" href="/site/assets/js/page--src--templates--index-template-vue.6cecc577.js"><link rel="prefetch" href="/site/assets/js/page--src--templates--tag-vue.c6b527ba.js"><link rel="prefetch" href="/site/assets/js/vendors~page--src--templates--course-template-vue~page--src--templates--index-template-vue.4ec5035c.js"><link rel="stylesheet" href="/site/assets/css/0.styles.dded6410.css"><style data-vue-tag="vuetify" type="text/css" id="vuetify-theme-stylesheet" nonce="undefined">.v-application a { color: #1976d2; }
+.v-application .primary {
+  background-color: #1976d2 !important;
+  border-color: #1976d2 !important;
+}
+.v-application .primary--text {
+  color: #1976d2 !important;
+  caret-color: #1976d2 !important;
+}
+.v-application .primary.lighten-5 {
+  background-color: #c7fdff !important;
+  border-color: #c7fdff !important;
+}
+.v-application .primary--text.text--lighten-5 {
+  color: #c7fdff !important;
+  caret-color: #c7fdff !important;
+}
+.v-application .primary.lighten-4 {
+  background-color: #a8e0ff !important;
+  border-color: #a8e0ff !important;
+}
+.v-application .primary--text.text--lighten-4 {
+  color: #a8e0ff !important;
+  caret-color: #a8e0ff !important;
+}
+.v-application .primary.lighten-3 {
+  background-color: #8ac5ff !important;
+  border-color: #8ac5ff !important;
+}
+.v-application .primary--text.text--lighten-3 {
+  color: #8ac5ff !important;
+  caret-color: #8ac5ff !important;
+}
+.v-application .primary.lighten-2 {
+  background-color: #6aaaff !important;
+  border-color: #6aaaff !important;
+}
+.v-application .primary--text.text--lighten-2 {
+  color: #6aaaff !important;
+  caret-color: #6aaaff !important;
+}
+.v-application .primary.lighten-1 {
+  background-color: #488fef !important;
+  border-color: #488fef !important;
+}
+.v-application .primary--text.text--lighten-1 {
+  color: #488fef !important;
+  caret-color: #488fef !important;
+}
+.v-application .primary.darken-1 {
+  background-color: #005eb6 !important;
+  border-color: #005eb6 !important;
+}
+.v-application .primary--text.text--darken-1 {
+  color: #005eb6 !important;
+  caret-color: #005eb6 !important;
+}
+.v-application .primary.darken-2 {
+  background-color: #00479b !important;
+  border-color: #00479b !important;
+}
+.v-application .primary--text.text--darken-2 {
+  color: #00479b !important;
+  caret-color: #00479b !important;
+}
+.v-application .primary.darken-3 {
+  background-color: #003180 !important;
+  border-color: #003180 !important;
+}
+.v-application .primary--text.text--darken-3 {
+  color: #003180 !important;
+  caret-color: #003180 !important;
+}
+.v-application .primary.darken-4 {
+  background-color: #001e67 !important;
+  border-color: #001e67 !important;
+}
+.v-application .primary--text.text--darken-4 {
+  color: #001e67 !important;
+  caret-color: #001e67 !important;
+}
+.v-application .secondary {
+  background-color: #424242 !important;
+  border-color: #424242 !important;
+}
+.v-application .secondary--text {
+  color: #424242 !important;
+  caret-color: #424242 !important;
+}
+.v-application .secondary.lighten-5 {
+  background-color: #c1c1c1 !important;
+  border-color: #c1c1c1 !important;
+}
+.v-application .secondary--text.text--lighten-5 {
+  color: #c1c1c1 !important;
+  caret-color: #c1c1c1 !important;
+}
+.v-application .secondary.lighten-4 {
+  background-color: #a6a6a6 !important;
+  border-color: #a6a6a6 !important;
+}
+.v-application .secondary--text.text--lighten-4 {
+  color: #a6a6a6 !important;
+  caret-color: #a6a6a6 !important;
+}
+.v-application .secondary.lighten-3 {
+  background-color: #8b8b8b !important;
+  border-color: #8b8b8b !important;
+}
+.v-application .secondary--text.text--lighten-3 {
+  color: #8b8b8b !important;
+  caret-color: #8b8b8b !important;
+}
+.v-application .secondary.lighten-2 {
+  background-color: #727272 !important;
+  border-color: #727272 !important;
+}
+.v-application .secondary--text.text--lighten-2 {
+  color: #727272 !important;
+  caret-color: #727272 !important;
+}
+.v-application .secondary.lighten-1 {
+  background-color: #595959 !important;
+  border-color: #595959 !important;
+}
+.v-application .secondary--text.text--lighten-1 {
+  color: #595959 !important;
+  caret-color: #595959 !important;
+}
+.v-application .secondary.darken-1 {
+  background-color: #2c2c2c !important;
+  border-color: #2c2c2c !important;
+}
+.v-application .secondary--text.text--darken-1 {
+  color: #2c2c2c !important;
+  caret-color: #2c2c2c !important;
+}
+.v-application .secondary.darken-2 {
+  background-color: #171717 !important;
+  border-color: #171717 !important;
+}
+.v-application .secondary--text.text--darken-2 {
+  color: #171717 !important;
+  caret-color: #171717 !important;
+}
+.v-application .secondary.darken-3 {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+.v-application .secondary--text.text--darken-3 {
+  color: #000000 !important;
+  caret-color: #000000 !important;
+}
+.v-application .secondary.darken-4 {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+.v-application .secondary--text.text--darken-4 {
+  color: #000000 !important;
+  caret-color: #000000 !important;
+}
+.v-application .accent {
+  background-color: #82b1ff !important;
+  border-color: #82b1ff !important;
+}
+.v-application .accent--text {
+  color: #82b1ff !important;
+  caret-color: #82b1ff !important;
+}
+.v-application .accent.lighten-5 {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+.v-application .accent--text.text--lighten-5 {
+  color: #ffffff !important;
+  caret-color: #ffffff !important;
+}
+.v-application .accent.lighten-4 {
+  background-color: #f8ffff !important;
+  border-color: #f8ffff !important;
+}
+.v-application .accent--text.text--lighten-4 {
+  color: #f8ffff !important;
+  caret-color: #f8ffff !important;
+}
+.v-application .accent.lighten-3 {
+  background-color: #daffff !important;
+  border-color: #daffff !important;
+}
+.v-application .accent--text.text--lighten-3 {
+  color: #daffff !important;
+  caret-color: #daffff !important;
+}
+.v-application .accent.lighten-2 {
+  background-color: #bce8ff !important;
+  border-color: #bce8ff !important;
+}
+.v-application .accent--text.text--lighten-2 {
+  color: #bce8ff !important;
+  caret-color: #bce8ff !important;
+}
+.v-application .accent.lighten-1 {
+  background-color: #9fccff !important;
+  border-color: #9fccff !important;
+}
+.v-application .accent--text.text--lighten-1 {
+  color: #9fccff !important;
+  caret-color: #9fccff !important;
+}
+.v-application .accent.darken-1 {
+  background-color: #6596e2 !important;
+  border-color: #6596e2 !important;
+}
+.v-application .accent--text.text--darken-1 {
+  color: #6596e2 !important;
+  caret-color: #6596e2 !important;
+}
+.v-application .accent.darken-2 {
+  background-color: #467dc6 !important;
+  border-color: #467dc6 !important;
+}
+.v-application .accent--text.text--darken-2 {
+  color: #467dc6 !important;
+  caret-color: #467dc6 !important;
+}
+.v-application .accent.darken-3 {
+  background-color: #2364aa !important;
+  border-color: #2364aa !important;
+}
+.v-application .accent--text.text--darken-3 {
+  color: #2364aa !important;
+  caret-color: #2364aa !important;
+}
+.v-application .accent.darken-4 {
+  background-color: #004c90 !important;
+  border-color: #004c90 !important;
+}
+.v-application .accent--text.text--darken-4 {
+  color: #004c90 !important;
+  caret-color: #004c90 !important;
+}
+.v-application .error {
+  background-color: #ff5252 !important;
+  border-color: #ff5252 !important;
+}
+.v-application .error--text {
+  color: #ff5252 !important;
+  caret-color: #ff5252 !important;
+}
+.v-application .error.lighten-5 {
+  background-color: #ffe4d5 !important;
+  border-color: #ffe4d5 !important;
+}
+.v-application .error--text.text--lighten-5 {
+  color: #ffe4d5 !important;
+  caret-color: #ffe4d5 !important;
+}
+.v-application .error.lighten-4 {
+  background-color: #ffc6b9 !important;
+  border-color: #ffc6b9 !important;
+}
+.v-application .error--text.text--lighten-4 {
+  color: #ffc6b9 !important;
+  caret-color: #ffc6b9 !important;
+}
+.v-application .error.lighten-3 {
+  background-color: #ffa99e !important;
+  border-color: #ffa99e !important;
+}
+.v-application .error--text.text--lighten-3 {
+  color: #ffa99e !important;
+  caret-color: #ffa99e !important;
+}
+.v-application .error.lighten-2 {
+  background-color: #ff8c84 !important;
+  border-color: #ff8c84 !important;
+}
+.v-application .error--text.text--lighten-2 {
+  color: #ff8c84 !important;
+  caret-color: #ff8c84 !important;
+}
+.v-application .error.lighten-1 {
+  background-color: #ff6f6a !important;
+  border-color: #ff6f6a !important;
+}
+.v-application .error--text.text--lighten-1 {
+  color: #ff6f6a !important;
+  caret-color: #ff6f6a !important;
+}
+.v-application .error.darken-1 {
+  background-color: #df323b !important;
+  border-color: #df323b !important;
+}
+.v-application .error--text.text--darken-1 {
+  color: #df323b !important;
+  caret-color: #df323b !important;
+}
+.v-application .error.darken-2 {
+  background-color: #bf0025 !important;
+  border-color: #bf0025 !important;
+}
+.v-application .error--text.text--darken-2 {
+  color: #bf0025 !important;
+  caret-color: #bf0025 !important;
+}
+.v-application .error.darken-3 {
+  background-color: #9f0010 !important;
+  border-color: #9f0010 !important;
+}
+.v-application .error--text.text--darken-3 {
+  color: #9f0010 !important;
+  caret-color: #9f0010 !important;
+}
+.v-application .error.darken-4 {
+  background-color: #800000 !important;
+  border-color: #800000 !important;
+}
+.v-application .error--text.text--darken-4 {
+  color: #800000 !important;
+  caret-color: #800000 !important;
+}
+.v-application .info {
+  background-color: #2196f3 !important;
+  border-color: #2196f3 !important;
+}
+.v-application .info--text {
+  color: #2196f3 !important;
+  caret-color: #2196f3 !important;
+}
+.v-application .info.lighten-5 {
+  background-color: #d4ffff !important;
+  border-color: #d4ffff !important;
+}
+.v-application .info--text.text--lighten-5 {
+  color: #d4ffff !important;
+  caret-color: #d4ffff !important;
+}
+.v-application .info.lighten-4 {
+  background-color: #b5ffff !important;
+  border-color: #b5ffff !important;
+}
+.v-application .info--text.text--lighten-4 {
+  color: #b5ffff !important;
+  caret-color: #b5ffff !important;
+}
+.v-application .info.lighten-3 {
+  background-color: #95e8ff !important;
+  border-color: #95e8ff !important;
+}
+.v-application .info--text.text--lighten-3 {
+  color: #95e8ff !important;
+  caret-color: #95e8ff !important;
+}
+.v-application .info.lighten-2 {
+  background-color: #75ccff !important;
+  border-color: #75ccff !important;
+}
+.v-application .info--text.text--lighten-2 {
+  color: #75ccff !important;
+  caret-color: #75ccff !important;
+}
+.v-application .info.lighten-1 {
+  background-color: #51b0ff !important;
+  border-color: #51b0ff !important;
+}
+.v-application .info--text.text--lighten-1 {
+  color: #51b0ff !important;
+  caret-color: #51b0ff !important;
+}
+.v-application .info.darken-1 {
+  background-color: #007cd6 !important;
+  border-color: #007cd6 !important;
+}
+.v-application .info--text.text--darken-1 {
+  color: #007cd6 !important;
+  caret-color: #007cd6 !important;
+}
+.v-application .info.darken-2 {
+  background-color: #0064ba !important;
+  border-color: #0064ba !important;
+}
+.v-application .info--text.text--darken-2 {
+  color: #0064ba !important;
+  caret-color: #0064ba !important;
+}
+.v-application .info.darken-3 {
+  background-color: #004d9f !important;
+  border-color: #004d9f !important;
+}
+.v-application .info--text.text--darken-3 {
+  color: #004d9f !important;
+  caret-color: #004d9f !important;
+}
+.v-application .info.darken-4 {
+  background-color: #003784 !important;
+  border-color: #003784 !important;
+}
+.v-application .info--text.text--darken-4 {
+  color: #003784 !important;
+  caret-color: #003784 !important;
+}
+.v-application .success {
+  background-color: #4caf50 !important;
+  border-color: #4caf50 !important;
+}
+.v-application .success--text {
+  color: #4caf50 !important;
+  caret-color: #4caf50 !important;
+}
+.v-application .success.lighten-5 {
+  background-color: #dcffd6 !important;
+  border-color: #dcffd6 !important;
+}
+.v-application .success--text.text--lighten-5 {
+  color: #dcffd6 !important;
+  caret-color: #dcffd6 !important;
+}
+.v-application .success.lighten-4 {
+  background-color: #beffba !important;
+  border-color: #beffba !important;
+}
+.v-application .success--text.text--lighten-4 {
+  color: #beffba !important;
+  caret-color: #beffba !important;
+}
+.v-application .success.lighten-3 {
+  background-color: #a2ff9e !important;
+  border-color: #a2ff9e !important;
+}
+.v-application .success--text.text--lighten-3 {
+  color: #a2ff9e !important;
+  caret-color: #a2ff9e !important;
+}
+.v-application .success.lighten-2 {
+  background-color: #85e783 !important;
+  border-color: #85e783 !important;
+}
+.v-application .success--text.text--lighten-2 {
+  color: #85e783 !important;
+  caret-color: #85e783 !important;
+}
+.v-application .success.lighten-1 {
+  background-color: #69cb69 !important;
+  border-color: #69cb69 !important;
+}
+.v-application .success--text.text--lighten-1 {
+  color: #69cb69 !important;
+  caret-color: #69cb69 !important;
+}
+.v-application .success.darken-1 {
+  background-color: #2d9437 !important;
+  border-color: #2d9437 !important;
+}
+.v-application .success--text.text--darken-1 {
+  color: #2d9437 !important;
+  caret-color: #2d9437 !important;
+}
+.v-application .success.darken-2 {
+  background-color: #00791e !important;
+  border-color: #00791e !important;
+}
+.v-application .success--text.text--darken-2 {
+  color: #00791e !important;
+  caret-color: #00791e !important;
+}
+.v-application .success.darken-3 {
+  background-color: #006000 !important;
+  border-color: #006000 !important;
+}
+.v-application .success--text.text--darken-3 {
+  color: #006000 !important;
+  caret-color: #006000 !important;
+}
+.v-application .success.darken-4 {
+  background-color: #004700 !important;
+  border-color: #004700 !important;
+}
+.v-application .success--text.text--darken-4 {
+  color: #004700 !important;
+  caret-color: #004700 !important;
+}
+.v-application .warning {
+  background-color: #fb8c00 !important;
+  border-color: #fb8c00 !important;
+}
+.v-application .warning--text {
+  color: #fb8c00 !important;
+  caret-color: #fb8c00 !important;
+}
+.v-application .warning.lighten-5 {
+  background-color: #ffff9e !important;
+  border-color: #ffff9e !important;
+}
+.v-application .warning--text.text--lighten-5 {
+  color: #ffff9e !important;
+  caret-color: #ffff9e !important;
+}
+.v-application .warning.lighten-4 {
+  background-color: #fffb82 !important;
+  border-color: #fffb82 !important;
+}
+.v-application .warning--text.text--lighten-4 {
+  color: #fffb82 !important;
+  caret-color: #fffb82 !important;
+}
+.v-application .warning.lighten-3 {
+  background-color: #ffdf67 !important;
+  border-color: #ffdf67 !important;
+}
+.v-application .warning--text.text--lighten-3 {
+  color: #ffdf67 !important;
+  caret-color: #ffdf67 !important;
+}
+.v-application .warning.lighten-2 {
+  background-color: #ffc24b !important;
+  border-color: #ffc24b !important;
+}
+.v-application .warning--text.text--lighten-2 {
+  color: #ffc24b !important;
+  caret-color: #ffc24b !important;
+}
+.v-application .warning.lighten-1 {
+  background-color: #ffa72d !important;
+  border-color: #ffa72d !important;
+}
+.v-application .warning--text.text--lighten-1 {
+  color: #ffa72d !important;
+  caret-color: #ffa72d !important;
+}
+.v-application .warning.darken-1 {
+  background-color: #db7200 !important;
+  border-color: #db7200 !important;
+}
+.v-application .warning--text.text--darken-1 {
+  color: #db7200 !important;
+  caret-color: #db7200 !important;
+}
+.v-application .warning.darken-2 {
+  background-color: #bb5900 !important;
+  border-color: #bb5900 !important;
+}
+.v-application .warning--text.text--darken-2 {
+  color: #bb5900 !important;
+  caret-color: #bb5900 !important;
+}
+.v-application .warning.darken-3 {
+  background-color: #9d4000 !important;
+  border-color: #9d4000 !important;
+}
+.v-application .warning--text.text--darken-3 {
+  color: #9d4000 !important;
+  caret-color: #9d4000 !important;
+}
+.v-application .warning.darken-4 {
+  background-color: #802700 !important;
+  border-color: #802700 !important;
+}
+.v-application .warning--text.text--darken-4 {
+  color: #802700 !important;
+  caret-color: #802700 !important;
+}</style><noscript data-vue-tag="ssr"><style>.g-image--loading{display:none;}</style></noscript>
+  </head>
+  <body >
+    <div data-app="true" data-server-rendered="true" id="app" id="inspire" class="v-application v-application--is-ltr theme--light"><div class="v-application--wrap"><header class="gb-toolbar v-sheet v-sheet--tile theme--dark v-toolbar v-toolbar--dense v-app-bar v-app-bar--fixed" style="height:48px;margin-top:0px;transform:translateY(0px);left:0px;right:0px;"><div class="v-toolbar__content" style="height:48px;"><button type="button" class="v-app-bar__nav-icon v-btn v-btn--flat v-btn--icon v-btn--round theme--dark v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-menu theme--dark"></i></span></button><div class="v-toolbar__title ml-0 pl-4" style="width:300px;"><span class="hidden-sm-and-down">skillhub</span></div><div class="spacer"></div><div class="v-input hidden-sm-and-down v-input--hide-details v-input--dense theme--dark v-text-field v-text-field--single-line v-text-field--solo v-text-field--solo-inverted v-text-field--solo-flat v-text-field--enclosed"><div class="v-input__control"><div class="v-input__slot"><div class="v-input__prepend-inner"><div class="v-input__icon v-input__icon--prepend-inner"><i aria-hidden="true" class="v-icon notranslate mdi mdi-magnify theme--dark"></i></div></div><div class="v-text-field__slot"><label for="input-41816" class="v-label theme--dark" style="left:0px;right:auto;position:absolute;">Search</label><input id="input-41816" type="text"></div></div></div></div><button type="button" class="v-btn v-btn--flat v-btn--icon v-btn--round theme--dark v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-apps theme--dark"></i></span></button><button type="button" class="v-btn v-btn--flat v-btn--icon v-btn--round theme--dark v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-bell theme--dark"></i></span></button></div></header><main class="v-content" style="padding-top:12912px;padding-right:0px;padding-bottom:0px;padding-left:0px;"><div class="v-content__wrap"><div class="container container--fluid pa-0"><div class="row no-gutters"><div class="col col-12"><div class="row no-gutters row--dense"><div class="height-30 bg-dark white--text jarallax col"><img src="https://i.udemycdn.com/course/750x422/21365_7823_6.jpg" class="jarallax-img opacity-20 g-image"><div class="container mt-8 pa-0"><div class="row mb-12 justify-center"><div dense="" class="col"><p class="display-2 mb-0">Pain Free at Work</p><p class="headline mb-0">Eliminate back pain, neck pain and wrist pain now!</p><div><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.9 (4)</span></div><a href="https://www.udemy.com/course/pain-free-at-work/" class="v-btn v-btn--contained theme--light v-size--default warning"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-share-outline theme--light"></i> Take me there!
+          </span></a></div></div></div></div></div></div></div><div class="row no-gutters"><div class="col col-12"><div class="container mt-4 pl-5"><div class="row mb-12 justify-center"><div dense="" class="col">
+            Pain Free at Work was designed by physical therapist Chantal Donnelly to prevent and reduce the aches and pains of office work. This research-based program will help to relieve headaches, neck pain, back pain and wrist pain associated with desk work. The Pain Free at Work exercise routine is the first of its kind to emphasize the importance of training specific muscles for sitting and typing. The program also features segments on posture, office ergonomics, stress management and wrist pain management. The Pain Free at Work program may increase energy, decrease the risk of repetitive strain injuries and improve productivity in the workplace.
+
+          </div></div></div></div></div><div class="row no-gutters"><div class="col"><div class="container"><div class="headline pa-1 mb-0">#Related</div><div aria-label="Slideshow" class="vueperslides no-shadow vueperslides--fixed-height vueperslides--slide-multiple vueperslides--bullets-outside" style="height:300px;"><!----><div class="vueperslides__inner"><div aria-live="polite" class="vueperslides__parallax-wrapper" style="padding-bottom:25%;"><div class="vueperslides__track"><div class="vueperslides__track-inner" style="transition-duration:0ms;transform:translate3d(0%, 0, 0);will-change:auto;"><!----><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/effective-learning-learn-to-learn" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Effective Learning - Learn to Learn</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Learn how to learn effectively">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">0 (0)</span></div></div></div><!----></div><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/easy-instructional-harmonium-for-yoga-kirtans-meditations" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Easy Instructional Harmonium for Yoga, Kirtans, Meditations</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Easy instructional harmonium for yoga classes, kirtans and personal meditations.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.6 (172)</span></div></div></div><!----></div><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/break-free-from-tinnitus-anxiety-access-your-wellbeing" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Break Free from Tinnitus Anxiety - Access your Wellbeing</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Chronic Tinnitus Sufferers Reduce the Noise, Anxiety, Stress. More peace, clarity, fun, happiness and relaxation">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">3 (3)</span></div></div></div><!----></div><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/yoga-for-insomnia-the-4-week-cure" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Yoga For Insomnia: The 4-week Cure</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Learn a variety of simple (yet potent) yogic techniques involving breath, movement and meditation to overcome insomnia.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.5 (27)</span></div></div></div><!----></div><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/orthopaedics-for-medical-students" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Orthopaedics for Medical Students</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Warrnambool Campus Orthopaedic Course">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.3 (43)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/real-pilates-7-day-core-strength-and-stamina-transformation" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Real Pilates 7 Day Core Strength &amp; Stamina Transformation</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Learn Simple moves to change your body and strengthen your core for everyday life with Real Pilates.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.7 (11)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/authentic-yoga-experience-series-1-3" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Authentic Yoga Experience Series 1 - 3</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Immerse Yourself, Learn Yoga Online FROM SCRATCH, into the most authentic Yoga Experience">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.3 (25)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/7-day-yoga-routine-increase-energy-and-balance-your-chakras" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>7 Day Yoga Routine: Increase Energy &amp; Balance Your Chakras</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Chakras for beginners course, 7 days of Study, Yoga Practice, and Meditation for chakra balancing and raising energy.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">3.7 (5)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/classroom-management-essentials" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Classroom Management Essentials</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Learn how to manage your classroom and spend more time teaching rather than disciplining">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.4 (68)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/kinesiology-taping-self-application-course" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Kinesiology Taping - Self application course</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Learn to apply Kinesiology tape to yourself or family/friends/patients.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.6 (105)</span></div></div></div><!----></div><!----></div></div></div><!----><!----><!----><!----><!----></div><!----><!----></div></div></div></div></div></div></main></div></div>
+    <script>window.__INITIAL_STATE__={"data":null,"context":{"course":{"id":"37733904-3ef1-11ea-9791-1b580a556b4a","vendorId":"21365","created":"2020-01-24T21:35:07.813Z","updated":"2012-07-01T07:00:00.000Z","title":"Pain Free at Work","headline":"Eliminate back pain, neck pain and wrist pain now!","description":"Pain Free at Work was designed by physical therapist Chantal Donnelly to prevent and reduce the aches and pains of office work. This research-based program will help to relieve headaches, neck pain, back pain and wrist pain associated with desk work. The Pain Free at Work exercise routine is the first of its kind to emphasize the importance of training specific muscles for sitting and typing. The program also features segments on posture, office ergonomics, stress management and wrist pain management. The Pain Free at Work program may increase energy, decrease the risk of repetitive strain injuries and improve productivity in the workplace.\n","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F21365_7823_6.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fpain-free-at-work\u002F","language":"en","tags":["Health & Fitness","General Health","Pain Relief"],"rating":4.9,"reviews":4,"isFree":false,"matches":["37742363-3ef1-11ea-9791-1b580a556b4a","37770994-3ef1-11ea-9791-1b580a556b4a","37718b52-3ef1-11ea-9791-1b580a556b4a","376c0d12-3ef1-11ea-9791-1b580a556b4a","3773fc57-3ef1-11ea-9791-1b580a556b4a","37713d34-3ef1-11ea-9791-1b580a556b4a","37729cc3-3ef1-11ea-9791-1b580a556b4a","3774e6b7-3ef1-11ea-9791-1b580a556b4a","377a3de4-3ef1-11ea-9791-1b580a556b4a","37711626-3ef1-11ea-9791-1b580a556b4a"],"slug":"pain-free-at-work"},"related":[{"id":"377a3de4-3ef1-11ea-9791-1b580a556b4a","vendorId":"2742924","created":"2020-01-24T21:35:08.097Z","updated":"2020-01-01T08:00:00.000Z","title":"Effective Learning - Learn to Learn","headline":"Learn how to learn effectively","description":"In this course you will learn the truth about effective learning. There is a lot of false information floating around and this course is made to counter that. In this course you are not learning about my google results, this course is made thru painstaking reading and personal research. You will learn a lot of new ideas and concepts about learning and I can give you a 100% guarantee, that you will learn something new. How can I give you that 100%? Well... a lot of the concepts presented in this course are not found anywhere in the web.Caution! You will not become super learner or super memorizer after this course. It is your job to take concepts from this course and develop them on your own.","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F2742924_dd77_3.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Feffective-learning-learn-to-learn\u002F","language":"en","tags":["Personal Development","Memory & Study Skills","Learning Strategies"],"rating":0,"reviews":0,"isFree":false,"matches":["37770997-3ef1-11ea-9791-1b580a556b4a","37769466-3ef1-11ea-9791-1b580a556b4a","376cd064-3ef1-11ea-9791-1b580a556b4a","376e2ff6-3ef1-11ea-9791-1b580a556b4a","376b97e0-3ef1-11ea-9791-1b580a556b4a","376d93b0-3ef1-11ea-9791-1b580a556b4a","377a64f9-3ef1-11ea-9791-1b580a556b4a","376e7e11-3ef1-11ea-9791-1b580a556b4a","37711626-3ef1-11ea-9791-1b580a556b4a","37742366-3ef1-11ea-9791-1b580a556b4a"],"slug":"effective-learning-learn-to-learn"},{"id":"37770994-3ef1-11ea-9791-1b580a556b4a","vendorId":"28902","created":"2020-01-24T21:35:07.946Z","updated":"2012-12-01T08:00:00.000Z","title":"Easy Instructional Harmonium for Yoga, Kirtans, Meditations","headline":"Easy instructional harmonium for yoga classes, kirtans and personal meditations.","description":"Join Raghunath in taking the mystery out of playing the harmonium. This beautiful instrument used in classical India kirtan is ideal for both personal meditation and group chanting. The course is designed for personal enjoyment and for those interested in leading kirtans, and looking to transform their yoga classes into sacred space using transcendental chants. In this instructional video and instructional ebook Raghunath breaks it all down and will have \"you off and chanting in no time.” The basics of the harmonium are accompanied by inspiring texts on the power of kirtan and sacred sound as well as full translations of the meaning of many familiar mantras and songs.The course is especially designed for non-musicians, those not familiar with musical instruments and those who do not know the meaning behind familiar mantras. Raghunath will explain it all and systematically take you through understanding, playing and sonic meditation. It is truly “harmonium playing made easy.\" Learn mantras, learn melodies – learn to free your voice and tap into the divinely sacred with the harmonium as your guide. ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F28902_efec_2.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Feasy-instructional-harmonium-for-yoga-kirtans-meditations\u002F","language":"en","tags":["Health & Fitness","Yoga","Harmonium"],"rating":4.6,"reviews":172,"isFree":false,"matches":["37733905-3ef1-11ea-9791-1b580a556b4a","376b70d3-3ef1-11ea-9791-1b580a556b4a","37722794-3ef1-11ea-9791-1b580a556b4a","37713d34-3ef1-11ea-9791-1b580a556b4a","3774e6b5-3ef1-11ea-9791-1b580a556b4a","37718b52-3ef1-11ea-9791-1b580a556b4a","37736017-3ef1-11ea-9791-1b580a556b4a","37742363-3ef1-11ea-9791-1b580a556b4a","377311f2-3ef1-11ea-9791-1b580a556b4a","37750dc7-3ef1-11ea-9791-1b580a556b4a"],"slug":"easy-instructional-harmonium-for-yoga-kirtans-meditations"},{"id":"3774e6b7-3ef1-11ea-9791-1b580a556b4a","vendorId":"24660","created":"2020-01-24T21:35:07.886Z","updated":"2018-05-01T07:00:00.000Z","title":"Break Free from Tinnitus Anxiety - Access your Wellbeing","headline":"Chronic Tinnitus Sufferers Reduce the Noise, Anxiety, Stress. More peace, clarity, fun, happiness and relaxation","description":"The aim of this program is to let go of tinnitus and live your life fully again.  These videos and audios give you a coaching experience and lead you gently to an insightful space where you can have health and wellbeing  realisations Practical information, hope and teach you how to lessen the effects of tinnitus. Rediscover your innate mental, emotional and spiritual well being. Reduce the tinnitus annoyance and effect on your life massively. Let go of tinnitus  Reclaim your health and happiness  Click on enrol now!","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F24660_120d_7.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fovercome-tinnitus-stress-and-reclaim-your-wellbeing\u002F","language":"en","tags":["Health & Fitness","Mental Health","Stress Management"],"rating":3,"reviews":3,"isFree":false,"matches":["37736017-3ef1-11ea-9791-1b580a556b4a","3773fc51-3ef1-11ea-9791-1b580a556b4a","37742363-3ef1-11ea-9791-1b580a556b4a","37761f39-3ef1-11ea-9791-1b580a556b4a","37711627-3ef1-11ea-9791-1b580a556b4a","37795388-3ef1-11ea-9791-1b580a556b4a","3774e6b5-3ef1-11ea-9791-1b580a556b4a","3773ae34-3ef1-11ea-9791-1b580a556b4a","37711620-3ef1-11ea-9791-1b580a556b4a","37749893-3ef1-11ea-9791-1b580a556b4a"],"slug":"break-free-from-tinnitus-anxiety-access-your-wellbeing"},{"id":"37742363-3ef1-11ea-9791-1b580a556b4a","vendorId":"23354","created":"2020-01-24T21:35:07.879Z","updated":"2012-08-01T07:00:00.000Z","title":"Yoga For Insomnia: The 4-week Cure","headline":"Learn a variety of simple (yet potent) yogic techniques involving breath, movement and meditation to overcome insomnia.","description":"There is a sleep crisis in this country.  Insomnia is an epidemic affecting millions of people.  Yoga is a natural solution to the stress and anxiety that feeds insomnia.  Yoga is a perfect antidote to sleeplessness precisely because it is so deeply soothing and relaxing for both the body and the mind.  In this simple yet effective “Yoga for Insomnia” course you will learn how to overcome insomnia with yoga which is designed and taught by Eddie Marashian, one of the top yoga instructors in Los Angeles.  Eddie is an expert at demystifying yoga so that all people can receive the benefits of this ancient healing practice. In this course you will receive:4 Motivational talks providing insight, inspiration, food for thought and positive intentions3 Routines of Yoga poses—AM, PM and Chair (perfect if you are injured, out of shape or stuck at the office)2 Calming breath exercises4 Healing, guided meditations4 Audio sleep-time relaxations2 Schedules--full and short--depending on the amount of time you can spend each dayI designed this “Yoga for Insomnia” course for anyone who has trouble sleeping.  You don’t have to be flexible or physically fit in order to subscribe to learn how to overcome insomnia with yoga, and complete beginners are most welcome.  If you can't dedicate 1 hour per day, I've also included a short version of the course that will only take 10-20 minutes.  To be successful in this course, all you need is a desire to heal your insomnia and the commitment to follow through.  Here's how it works: In the full schedule, each day you will:Start with a motivational talk (5 min.)Practice a basic routine of yoga poses to relax your body (15-20 min.)Pause for a centering breath exercise before dinner (10-15 min.)Follow a guided meditation before you get into bed (10 min.)Listen to a sleep-time relaxation as you fall asleep (15-20 min)In the short schedule, each day you will:  Choose one segment from the full routine to practice (5-15 min) Listen to a sleep-time relaxation as you fall asleep (15-20 min) You can change your life in 4 weeks!  I believe in your potential to heal.  Are you willing to give yoga a try?  I’ll be right here with you, supporting you each step of the way. Namaste, Eddie ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F23354_9e31_9.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fyoga-for-insomnia\u002F","language":"en","tags":["Health & Fitness","Yoga"],"rating":4.5,"reviews":27,"isFree":false,"matches":["37736017-3ef1-11ea-9791-1b580a556b4a","376b70d3-3ef1-11ea-9791-1b580a556b4a","37770994-3ef1-11ea-9791-1b580a556b4a","3774e6b5-3ef1-11ea-9791-1b580a556b4a","3773fc51-3ef1-11ea-9791-1b580a556b4a","37713d34-3ef1-11ea-9791-1b580a556b4a","37711620-3ef1-11ea-9791-1b580a556b4a","37711627-3ef1-11ea-9791-1b580a556b4a","3774e6b7-3ef1-11ea-9791-1b580a556b4a","377052da-3ef1-11ea-9791-1b580a556b4a"],"slug":"yoga-for-insomnia-the-4-week-cure"},{"id":"3773fc57-3ef1-11ea-9791-1b580a556b4a","vendorId":"23313","created":"2020-01-24T21:35:07.816Z","updated":"2018-08-01T07:00:00.000Z","title":"Orthopaedics for Medical Students","headline":"Warrnambool Campus Orthopaedic Course","description":"This case is primarily intended for Deakin University medical students doing the musculoskeletal block in Year 3 at the South West Healthcare where I work and teach, although it is not directly supported or endorsed by Deakin University.  Much of the teaching will be given as clinical and skills teaching, and the purpose of this part of the course is to provide students with the background to the important conditions that they need to know about but may not see during the rotation.  The course is open for anybody interested, but will be of most interest to medical students in their clinical years undertaking a musculoskeletal\u002Forthopaedic attachment.","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F23313_8e1f_5.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Forthopaedics-for-medical-students-k\u002F","language":"en","tags":["Health & Fitness","Other","Anatomy"],"rating":4.3,"reviews":43,"isFree":true,"matches":["376e2ff7-3ef1-11ea-9791-1b580a556b4a","3778de51-3ef1-11ea-9791-1b580a556b4a","37738729-3ef1-11ea-9791-1b580a556b4a","37770994-3ef1-11ea-9791-1b580a556b4a","37718b51-3ef1-11ea-9791-1b580a556b4a","376e2ff9-3ef1-11ea-9791-1b580a556b4a","3774e6b4-3ef1-11ea-9791-1b580a556b4a","376c0d12-3ef1-11ea-9791-1b580a556b4a","37781b04-3ef1-11ea-9791-1b580a556b4a","3779c8ba-3ef1-11ea-9791-1b580a556b4a"],"slug":"orthopaedics-for-medical-students"},{"id":"37729cc3-3ef1-11ea-9791-1b580a556b4a","vendorId":"20971","created":"2020-01-24T21:35:07.811Z","updated":"2012-09-01T07:00:00.000Z","title":"Real Pilates 7 Day Core Strength & Stamina Transformation","headline":"Learn Simple moves to change your body and strengthen your core for everyday life with Real Pilates.","description":"Real Pilates is hard-core training that will change your body from the inside out. By teaching you to work out smarter, this online pilates class will build a foundation you can use to transform your entire approach to exercise and shape, sculpt and strengthen your entire body. Experience this core program, designed to address each part of you from large muscle group to small and also challenge your mind to become part of the new body you are about to build. Whether you are new to Pilates or just want to reinvent your practice, this Real Pilates is the perfect way to reset your fitness routine. Welcome to Real Pilates. ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F20971_74a5_2.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Freal-pilates-7-day-core-strength-stamina-transformation\u002F","language":"en","tags":["Health & Fitness","Fitness"],"rating":4.7,"reviews":11,"isFree":false,"matches":["377311f2-3ef1-11ea-9791-1b580a556b4a","3772eae5-3ef1-11ea-9791-1b580a556b4a","3772c3d4-3ef1-11ea-9791-1b580a556b4a","376b70d3-3ef1-11ea-9791-1b580a556b4a","37713d34-3ef1-11ea-9791-1b580a556b4a","376ad490-3ef1-11ea-9791-1b580a556b4a","37711620-3ef1-11ea-9791-1b580a556b4a","37733905-3ef1-11ea-9791-1b580a556b4a","37729cc9-3ef1-11ea-9791-1b580a556b4a","37742367-3ef1-11ea-9791-1b580a556b4a"],"slug":"real-pilates-7-day-core-strength-and-stamina-transformation"},{"id":"37718b52-3ef1-11ea-9791-1b580a556b4a","vendorId":"18664","created":"2020-01-24T21:35:07.692Z","updated":"2012-07-01T07:00:00.000Z","title":"Authentic Yoga Experience Series 1 - 3","headline":"Immerse Yourself, Learn Yoga Online FROM SCRATCH, into the most authentic Yoga Experience","description":"Learn yoga online with Perumal for personal growth, health, energy optimisation and stress reduction.The video courses are easy to follow since the cameras provide detailed viewing from 3 different angles, all asana (postures) are realized in a lateral, frontal and overhead perspective. The combined video courses are complete with pranayama, preparatory exercises for joints, sun salutation, strength, stretching and relaxation\u002Fmeditation to feel refreshed, relaxed and simultaneously energized.A step by step progressive course approach to learn yoga online allows the student to achieve the right state of flow in order to improve mobility, breathing and circulation while strengthening muscles, tendons and ligaments leading to genuine mental and physical well being. Those following these video courses feel results of calm and clarity along with highly increased energy while experiencing stress reduction.The most important aspect of Yoga with Perumal video courses is the ability to grow progressively from yoga forms and a sequence that may be followed at one’s own pace from beginner through advanced. These courses are thorough with easy to comprehend video edits and supportive text enabling the realization of the hidden aspects of yoga from videos to supportive manuals. Now, you have the opportunity to learn yoga online, get started with the most authentic yoga experience today! ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F18664_0ef8_12.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fyoga-with-perumal-complete-courses-1-3\u002F","language":"en","tags":["Health & Fitness","Yoga"],"rating":4.3,"reviews":25,"isFree":false,"matches":["3772279a-3ef1-11ea-9791-1b580a556b4a","377275b3-3ef1-11ea-9791-1b580a556b4a","376b70d3-3ef1-11ea-9791-1b580a556b4a","37750dc7-3ef1-11ea-9791-1b580a556b4a","37733905-3ef1-11ea-9791-1b580a556b4a","37770994-3ef1-11ea-9791-1b580a556b4a","3772eae5-3ef1-11ea-9791-1b580a556b4a","37722794-3ef1-11ea-9791-1b580a556b4a","377311f2-3ef1-11ea-9791-1b580a556b4a","37713d34-3ef1-11ea-9791-1b580a556b4a"],"slug":"authentic-yoga-experience-series-1-3"},{"id":"37713d34-3ef1-11ea-9791-1b580a556b4a","vendorId":"18273","created":"2020-01-24T21:35:07.689Z","updated":"2013-03-01T08:00:00.000Z","title":"7 Day Yoga Routine: Increase Energy & Balance Your Chakras","headline":"Chakras for beginners course, 7 days of Study, Yoga Practice, and Meditation for chakra balancing and raising energy.","description":"This seven day Chakras for Beginners course is a holistic approach created to highlight the power of the chakras and chakra balancing through meditation, journal writing, yoga postures, and breathing techniques. Studying the chakras separately one day at a time breaks down the information so the depth of each can be easily digested. This Chakras for Beginners course will show you how effective consistent practice with clear intention can be for finding and keeping peace. Studying the energy within guides you to find a deeper understanding of yourself. Following my instruction you will learn what the chakras are and how focusing on balancing chakra will bring you greater self-understanding, self-confidence, and less stress. So what is a chakra? The term chakra translates to wheel or disk. Within our body there are seven major chakras, which can be thought of as energy centers. Each chakra correlates to our levels of consciousness, from the most primitive to transcendent. The seven chakras are: Muladhara (root), Svadhisthana (sweetness), Manipura (lustrious gem), Anahata (unstuck), Vissudha (purification), Ajna (Command Center), and Sahasara (thousand fold). The first chakra starts with the most primitive level of consciousness and gradually develops until you reach the seventh chakra and highest level of consciousness. ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F18273_8928_7.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fintroduction-to-the-chakras\u002F","language":"en","tags":["Health & Fitness","Yoga"],"rating":3.7,"reviews":5,"isFree":false,"matches":["376b70d3-3ef1-11ea-9791-1b580a556b4a","37770994-3ef1-11ea-9791-1b580a556b4a","37729cc9-3ef1-11ea-9791-1b580a556b4a","3774e6b5-3ef1-11ea-9791-1b580a556b4a","37733905-3ef1-11ea-9791-1b580a556b4a","3772c3d4-3ef1-11ea-9791-1b580a556b4a","37742363-3ef1-11ea-9791-1b580a556b4a","37761f33-3ef1-11ea-9791-1b580a556b4a","37718b52-3ef1-11ea-9791-1b580a556b4a","3772eae5-3ef1-11ea-9791-1b580a556b4a"],"slug":"7-day-yoga-routine-increase-energy-and-balance-your-chakras"},{"id":"37711626-3ef1-11ea-9791-1b580a556b4a","vendorId":"18181","created":"2020-01-24T21:35:07.688Z","updated":"2018-04-01T07:00:00.000Z","title":"Classroom Management Essentials","headline":"Learn how to manage your classroom and spend more time teaching rather than disciplining","description":"Classroom management is consistently identified as a major concern for teachers. Yet, it is absolutely an essential component of effective teaching. This course helps teachers learn how to effectively manage a classroom.  The primary goal of the course is to introduce a practical model for understanding and deconstructing the tasks involved in the process of classroom management and on learning practical, easy to implement strategies that enable teachers to spend more time teaching rather than disciplining! Specifically, participants in this course will learn:   Common misconceptions about classroom management How to develop effective rules and routines The role relationships play in one’s classroom management plan Techniques for preventing misbehavior Strategies for dealing with minor and more serious misbehavior Plus much, much more!   The course is divided into seven chapters.  Each chapter begins with a lecture presented by Dr. Tracey Garrett, a specialist in the field of classroom management.  Then, each chapter has a self-guided component where participants can review and expand on the material presented in the first lecture at their own pace.  Finally, the remaining lectures in each chapter are interviews of teachers at different grade levels offering insight into their practice. ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F18181_f6ad_9.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fclassroom-management-essentials\u002F","language":"en","tags":["Teaching & Academics","Teacher Training","Classroom Management"],"rating":4.4,"reviews":68,"isFree":false,"matches":["377a3de4-3ef1-11ea-9791-1b580a556b4a","37770998-3ef1-11ea-9791-1b580a556b4a","3775aa06-3ef1-11ea-9791-1b580a556b4a","37755be3-3ef1-11ea-9791-1b580a556b4a","377582f9-3ef1-11ea-9791-1b580a556b4a","37777ec1-3ef1-11ea-9791-1b580a556b4a","37716449-3ef1-11ea-9791-1b580a556b4a","37770997-3ef1-11ea-9791-1b580a556b4a","3775f820-3ef1-11ea-9791-1b580a556b4a","37744a79-3ef1-11ea-9791-1b580a556b4a"],"slug":"classroom-management-essentials"},{"id":"376c0d12-3ef1-11ea-9791-1b580a556b4a","vendorId":"9071","created":"2020-01-24T21:35:07.172Z","updated":"2017-12-01T08:00:00.000Z","title":"Kinesiology Taping - Self application course","headline":"Learn to apply Kinesiology tape to yourself or family\u002Ffriends\u002Fpatients.","description":" This course aims to teach the theory and practical components to kinesiology taping, including what kinesiology taping is, how to prepare it and how to apply it for different purposes and complaints. This course can be completed in as quickly as 1 day or can be dragged out as long as you wish. No previous experience with taping is required, nor is anatomical knowledge required, however it does make things easier when it comes to applying the tape to areas not taught. The course is comprised of written materials as well as video instruction for how to prepare and apply the tape. This course is recommended for anyone looking to gain a new skill and looking to be able to apply Kinesiology tape to themselves or family\u002Ffriends\u002Fpatients for pain relief and faster recovery from injury.","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F9071_560b_4.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fkinesiology-taping\u002F","language":"en","tags":["Health & Fitness","General Health","Kinesiology Taping"],"rating":4.6,"reviews":105,"isFree":false,"matches":["37722793-3ef1-11ea-9791-1b580a556b4a","377a64f8-3ef1-11ea-9791-1b580a556b4a","37761f3a-3ef1-11ea-9791-1b580a556b4a","37777ec1-3ef1-11ea-9791-1b580a556b4a","377a3de4-3ef1-11ea-9791-1b580a556b4a","3772c3d4-3ef1-11ea-9791-1b580a556b4a","376e2ff6-3ef1-11ea-9791-1b580a556b4a","37716444-3ef1-11ea-9791-1b580a556b4a","376f1a51-3ef1-11ea-9791-1b580a556b4a","376be600-3ef1-11ea-9791-1b580a556b4a"],"slug":"kinesiology-taping-self-application-course"}]}};(function(){var s;(s=document.currentScript||document.scripts[document.scripts.length-1]).parentNode.removeChild(s);}());</script><script src="/site/assets/js/app.e5c95575.js" defer></script><script src="/site/assets/js/page--src--templates--course-template-vue.a9c4e657.js" defer></script>
+  </body>
+</html>

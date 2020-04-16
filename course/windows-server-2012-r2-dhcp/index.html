@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html data-html-server-rendered="true" lang="en" data-vue-tag="%7B%22lang%22:%7B%22ssr%22:%22en%22%7D%7D">
+  <head>
+    <title>安装和配置 Windows Server 2012 R2 DHCP 服务 - Gridsome</title><meta name="gridsome:hash" content="6d1e7dd52e8c17cf4930f349c6afc1a78b2e1c5e"><meta data-vue-tag="ssr" charset="utf-8"><meta data-vue-tag="ssr" name="generator" content="Gridsome v0.7.12"><meta data-vue-tag="ssr" data-key="viewport" name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta data-vue-tag="ssr" data-key="format-detection" name="format-detection" content="telephone=no"><link data-vue-tag="ssr" rel="icon" href="data:,"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="16x16" href="/site/assets/static/favicon.ce0531f.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="32x32" href="/site/assets/static/favicon.ac8d93a.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="96x96" href="/site/assets/static/favicon.b9532cc.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="76x76" href="/site/assets/static/favicon.f22e9f3.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="152x152" href="/site/assets/static/favicon.62d22cb.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="120x120" href="/site/assets/static/favicon.1539b60.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="167x167" href="/site/assets/static/favicon.dc0cdc5.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="180x180" href="/site/assets/static/favicon.7b22250.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"><link data-vue-tag="ssr" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css"><link rel="preload" href="/site/assets/css/0.styles.dded6410.css" as="style"><link rel="preload" href="/site/assets/js/app.e5c95575.js" as="script"><link rel="preload" href="/site/assets/js/page--src--templates--course-template-vue.a9c4e657.js" as="script"><link rel="prefetch" href="/site/assets/js/page--node-modules--gridsome--app--pages--404-vue.8ed2c588.js"><link rel="prefetch" href="/site/assets/js/page--src--pages--about-vue.d8fdab17.js"><link rel="prefetch" href="/site/assets/js/page--src--templates--index-template-vue.6cecc577.js"><link rel="prefetch" href="/site/assets/js/page--src--templates--tag-vue.c6b527ba.js"><link rel="prefetch" href="/site/assets/js/vendors~page--src--templates--course-template-vue~page--src--templates--index-template-vue.4ec5035c.js"><link rel="stylesheet" href="/site/assets/css/0.styles.dded6410.css"><style data-vue-tag="vuetify" type="text/css" id="vuetify-theme-stylesheet" nonce="undefined">.v-application a { color: #1976d2; }
+.v-application .primary {
+  background-color: #1976d2 !important;
+  border-color: #1976d2 !important;
+}
+.v-application .primary--text {
+  color: #1976d2 !important;
+  caret-color: #1976d2 !important;
+}
+.v-application .primary.lighten-5 {
+  background-color: #c7fdff !important;
+  border-color: #c7fdff !important;
+}
+.v-application .primary--text.text--lighten-5 {
+  color: #c7fdff !important;
+  caret-color: #c7fdff !important;
+}
+.v-application .primary.lighten-4 {
+  background-color: #a8e0ff !important;
+  border-color: #a8e0ff !important;
+}
+.v-application .primary--text.text--lighten-4 {
+  color: #a8e0ff !important;
+  caret-color: #a8e0ff !important;
+}
+.v-application .primary.lighten-3 {
+  background-color: #8ac5ff !important;
+  border-color: #8ac5ff !important;
+}
+.v-application .primary--text.text--lighten-3 {
+  color: #8ac5ff !important;
+  caret-color: #8ac5ff !important;
+}
+.v-application .primary.lighten-2 {
+  background-color: #6aaaff !important;
+  border-color: #6aaaff !important;
+}
+.v-application .primary--text.text--lighten-2 {
+  color: #6aaaff !important;
+  caret-color: #6aaaff !important;
+}
+.v-application .primary.lighten-1 {
+  background-color: #488fef !important;
+  border-color: #488fef !important;
+}
+.v-application .primary--text.text--lighten-1 {
+  color: #488fef !important;
+  caret-color: #488fef !important;
+}
+.v-application .primary.darken-1 {
+  background-color: #005eb6 !important;
+  border-color: #005eb6 !important;
+}
+.v-application .primary--text.text--darken-1 {
+  color: #005eb6 !important;
+  caret-color: #005eb6 !important;
+}
+.v-application .primary.darken-2 {
+  background-color: #00479b !important;
+  border-color: #00479b !important;
+}
+.v-application .primary--text.text--darken-2 {
+  color: #00479b !important;
+  caret-color: #00479b !important;
+}
+.v-application .primary.darken-3 {
+  background-color: #003180 !important;
+  border-color: #003180 !important;
+}
+.v-application .primary--text.text--darken-3 {
+  color: #003180 !important;
+  caret-color: #003180 !important;
+}
+.v-application .primary.darken-4 {
+  background-color: #001e67 !important;
+  border-color: #001e67 !important;
+}
+.v-application .primary--text.text--darken-4 {
+  color: #001e67 !important;
+  caret-color: #001e67 !important;
+}
+.v-application .secondary {
+  background-color: #424242 !important;
+  border-color: #424242 !important;
+}
+.v-application .secondary--text {
+  color: #424242 !important;
+  caret-color: #424242 !important;
+}
+.v-application .secondary.lighten-5 {
+  background-color: #c1c1c1 !important;
+  border-color: #c1c1c1 !important;
+}
+.v-application .secondary--text.text--lighten-5 {
+  color: #c1c1c1 !important;
+  caret-color: #c1c1c1 !important;
+}
+.v-application .secondary.lighten-4 {
+  background-color: #a6a6a6 !important;
+  border-color: #a6a6a6 !important;
+}
+.v-application .secondary--text.text--lighten-4 {
+  color: #a6a6a6 !important;
+  caret-color: #a6a6a6 !important;
+}
+.v-application .secondary.lighten-3 {
+  background-color: #8b8b8b !important;
+  border-color: #8b8b8b !important;
+}
+.v-application .secondary--text.text--lighten-3 {
+  color: #8b8b8b !important;
+  caret-color: #8b8b8b !important;
+}
+.v-application .secondary.lighten-2 {
+  background-color: #727272 !important;
+  border-color: #727272 !important;
+}
+.v-application .secondary--text.text--lighten-2 {
+  color: #727272 !important;
+  caret-color: #727272 !important;
+}
+.v-application .secondary.lighten-1 {
+  background-color: #595959 !important;
+  border-color: #595959 !important;
+}
+.v-application .secondary--text.text--lighten-1 {
+  color: #595959 !important;
+  caret-color: #595959 !important;
+}
+.v-application .secondary.darken-1 {
+  background-color: #2c2c2c !important;
+  border-color: #2c2c2c !important;
+}
+.v-application .secondary--text.text--darken-1 {
+  color: #2c2c2c !important;
+  caret-color: #2c2c2c !important;
+}
+.v-application .secondary.darken-2 {
+  background-color: #171717 !important;
+  border-color: #171717 !important;
+}
+.v-application .secondary--text.text--darken-2 {
+  color: #171717 !important;
+  caret-color: #171717 !important;
+}
+.v-application .secondary.darken-3 {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+.v-application .secondary--text.text--darken-3 {
+  color: #000000 !important;
+  caret-color: #000000 !important;
+}
+.v-application .secondary.darken-4 {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+.v-application .secondary--text.text--darken-4 {
+  color: #000000 !important;
+  caret-color: #000000 !important;
+}
+.v-application .accent {
+  background-color: #82b1ff !important;
+  border-color: #82b1ff !important;
+}
+.v-application .accent--text {
+  color: #82b1ff !important;
+  caret-color: #82b1ff !important;
+}
+.v-application .accent.lighten-5 {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+.v-application .accent--text.text--lighten-5 {
+  color: #ffffff !important;
+  caret-color: #ffffff !important;
+}
+.v-application .accent.lighten-4 {
+  background-color: #f8ffff !important;
+  border-color: #f8ffff !important;
+}
+.v-application .accent--text.text--lighten-4 {
+  color: #f8ffff !important;
+  caret-color: #f8ffff !important;
+}
+.v-application .accent.lighten-3 {
+  background-color: #daffff !important;
+  border-color: #daffff !important;
+}
+.v-application .accent--text.text--lighten-3 {
+  color: #daffff !important;
+  caret-color: #daffff !important;
+}
+.v-application .accent.lighten-2 {
+  background-color: #bce8ff !important;
+  border-color: #bce8ff !important;
+}
+.v-application .accent--text.text--lighten-2 {
+  color: #bce8ff !important;
+  caret-color: #bce8ff !important;
+}
+.v-application .accent.lighten-1 {
+  background-color: #9fccff !important;
+  border-color: #9fccff !important;
+}
+.v-application .accent--text.text--lighten-1 {
+  color: #9fccff !important;
+  caret-color: #9fccff !important;
+}
+.v-application .accent.darken-1 {
+  background-color: #6596e2 !important;
+  border-color: #6596e2 !important;
+}
+.v-application .accent--text.text--darken-1 {
+  color: #6596e2 !important;
+  caret-color: #6596e2 !important;
+}
+.v-application .accent.darken-2 {
+  background-color: #467dc6 !important;
+  border-color: #467dc6 !important;
+}
+.v-application .accent--text.text--darken-2 {
+  color: #467dc6 !important;
+  caret-color: #467dc6 !important;
+}
+.v-application .accent.darken-3 {
+  background-color: #2364aa !important;
+  border-color: #2364aa !important;
+}
+.v-application .accent--text.text--darken-3 {
+  color: #2364aa !important;
+  caret-color: #2364aa !important;
+}
+.v-application .accent.darken-4 {
+  background-color: #004c90 !important;
+  border-color: #004c90 !important;
+}
+.v-application .accent--text.text--darken-4 {
+  color: #004c90 !important;
+  caret-color: #004c90 !important;
+}
+.v-application .error {
+  background-color: #ff5252 !important;
+  border-color: #ff5252 !important;
+}
+.v-application .error--text {
+  color: #ff5252 !important;
+  caret-color: #ff5252 !important;
+}
+.v-application .error.lighten-5 {
+  background-color: #ffe4d5 !important;
+  border-color: #ffe4d5 !important;
+}
+.v-application .error--text.text--lighten-5 {
+  color: #ffe4d5 !important;
+  caret-color: #ffe4d5 !important;
+}
+.v-application .error.lighten-4 {
+  background-color: #ffc6b9 !important;
+  border-color: #ffc6b9 !important;
+}
+.v-application .error--text.text--lighten-4 {
+  color: #ffc6b9 !important;
+  caret-color: #ffc6b9 !important;
+}
+.v-application .error.lighten-3 {
+  background-color: #ffa99e !important;
+  border-color: #ffa99e !important;
+}
+.v-application .error--text.text--lighten-3 {
+  color: #ffa99e !important;
+  caret-color: #ffa99e !important;
+}
+.v-application .error.lighten-2 {
+  background-color: #ff8c84 !important;
+  border-color: #ff8c84 !important;
+}
+.v-application .error--text.text--lighten-2 {
+  color: #ff8c84 !important;
+  caret-color: #ff8c84 !important;
+}
+.v-application .error.lighten-1 {
+  background-color: #ff6f6a !important;
+  border-color: #ff6f6a !important;
+}
+.v-application .error--text.text--lighten-1 {
+  color: #ff6f6a !important;
+  caret-color: #ff6f6a !important;
+}
+.v-application .error.darken-1 {
+  background-color: #df323b !important;
+  border-color: #df323b !important;
+}
+.v-application .error--text.text--darken-1 {
+  color: #df323b !important;
+  caret-color: #df323b !important;
+}
+.v-application .error.darken-2 {
+  background-color: #bf0025 !important;
+  border-color: #bf0025 !important;
+}
+.v-application .error--text.text--darken-2 {
+  color: #bf0025 !important;
+  caret-color: #bf0025 !important;
+}
+.v-application .error.darken-3 {
+  background-color: #9f0010 !important;
+  border-color: #9f0010 !important;
+}
+.v-application .error--text.text--darken-3 {
+  color: #9f0010 !important;
+  caret-color: #9f0010 !important;
+}
+.v-application .error.darken-4 {
+  background-color: #800000 !important;
+  border-color: #800000 !important;
+}
+.v-application .error--text.text--darken-4 {
+  color: #800000 !important;
+  caret-color: #800000 !important;
+}
+.v-application .info {
+  background-color: #2196f3 !important;
+  border-color: #2196f3 !important;
+}
+.v-application .info--text {
+  color: #2196f3 !important;
+  caret-color: #2196f3 !important;
+}
+.v-application .info.lighten-5 {
+  background-color: #d4ffff !important;
+  border-color: #d4ffff !important;
+}
+.v-application .info--text.text--lighten-5 {
+  color: #d4ffff !important;
+  caret-color: #d4ffff !important;
+}
+.v-application .info.lighten-4 {
+  background-color: #b5ffff !important;
+  border-color: #b5ffff !important;
+}
+.v-application .info--text.text--lighten-4 {
+  color: #b5ffff !important;
+  caret-color: #b5ffff !important;
+}
+.v-application .info.lighten-3 {
+  background-color: #95e8ff !important;
+  border-color: #95e8ff !important;
+}
+.v-application .info--text.text--lighten-3 {
+  color: #95e8ff !important;
+  caret-color: #95e8ff !important;
+}
+.v-application .info.lighten-2 {
+  background-color: #75ccff !important;
+  border-color: #75ccff !important;
+}
+.v-application .info--text.text--lighten-2 {
+  color: #75ccff !important;
+  caret-color: #75ccff !important;
+}
+.v-application .info.lighten-1 {
+  background-color: #51b0ff !important;
+  border-color: #51b0ff !important;
+}
+.v-application .info--text.text--lighten-1 {
+  color: #51b0ff !important;
+  caret-color: #51b0ff !important;
+}
+.v-application .info.darken-1 {
+  background-color: #007cd6 !important;
+  border-color: #007cd6 !important;
+}
+.v-application .info--text.text--darken-1 {
+  color: #007cd6 !important;
+  caret-color: #007cd6 !important;
+}
+.v-application .info.darken-2 {
+  background-color: #0064ba !important;
+  border-color: #0064ba !important;
+}
+.v-application .info--text.text--darken-2 {
+  color: #0064ba !important;
+  caret-color: #0064ba !important;
+}
+.v-application .info.darken-3 {
+  background-color: #004d9f !important;
+  border-color: #004d9f !important;
+}
+.v-application .info--text.text--darken-3 {
+  color: #004d9f !important;
+  caret-color: #004d9f !important;
+}
+.v-application .info.darken-4 {
+  background-color: #003784 !important;
+  border-color: #003784 !important;
+}
+.v-application .info--text.text--darken-4 {
+  color: #003784 !important;
+  caret-color: #003784 !important;
+}
+.v-application .success {
+  background-color: #4caf50 !important;
+  border-color: #4caf50 !important;
+}
+.v-application .success--text {
+  color: #4caf50 !important;
+  caret-color: #4caf50 !important;
+}
+.v-application .success.lighten-5 {
+  background-color: #dcffd6 !important;
+  border-color: #dcffd6 !important;
+}
+.v-application .success--text.text--lighten-5 {
+  color: #dcffd6 !important;
+  caret-color: #dcffd6 !important;
+}
+.v-application .success.lighten-4 {
+  background-color: #beffba !important;
+  border-color: #beffba !important;
+}
+.v-application .success--text.text--lighten-4 {
+  color: #beffba !important;
+  caret-color: #beffba !important;
+}
+.v-application .success.lighten-3 {
+  background-color: #a2ff9e !important;
+  border-color: #a2ff9e !important;
+}
+.v-application .success--text.text--lighten-3 {
+  color: #a2ff9e !important;
+  caret-color: #a2ff9e !important;
+}
+.v-application .success.lighten-2 {
+  background-color: #85e783 !important;
+  border-color: #85e783 !important;
+}
+.v-application .success--text.text--lighten-2 {
+  color: #85e783 !important;
+  caret-color: #85e783 !important;
+}
+.v-application .success.lighten-1 {
+  background-color: #69cb69 !important;
+  border-color: #69cb69 !important;
+}
+.v-application .success--text.text--lighten-1 {
+  color: #69cb69 !important;
+  caret-color: #69cb69 !important;
+}
+.v-application .success.darken-1 {
+  background-color: #2d9437 !important;
+  border-color: #2d9437 !important;
+}
+.v-application .success--text.text--darken-1 {
+  color: #2d9437 !important;
+  caret-color: #2d9437 !important;
+}
+.v-application .success.darken-2 {
+  background-color: #00791e !important;
+  border-color: #00791e !important;
+}
+.v-application .success--text.text--darken-2 {
+  color: #00791e !important;
+  caret-color: #00791e !important;
+}
+.v-application .success.darken-3 {
+  background-color: #006000 !important;
+  border-color: #006000 !important;
+}
+.v-application .success--text.text--darken-3 {
+  color: #006000 !important;
+  caret-color: #006000 !important;
+}
+.v-application .success.darken-4 {
+  background-color: #004700 !important;
+  border-color: #004700 !important;
+}
+.v-application .success--text.text--darken-4 {
+  color: #004700 !important;
+  caret-color: #004700 !important;
+}
+.v-application .warning {
+  background-color: #fb8c00 !important;
+  border-color: #fb8c00 !important;
+}
+.v-application .warning--text {
+  color: #fb8c00 !important;
+  caret-color: #fb8c00 !important;
+}
+.v-application .warning.lighten-5 {
+  background-color: #ffff9e !important;
+  border-color: #ffff9e !important;
+}
+.v-application .warning--text.text--lighten-5 {
+  color: #ffff9e !important;
+  caret-color: #ffff9e !important;
+}
+.v-application .warning.lighten-4 {
+  background-color: #fffb82 !important;
+  border-color: #fffb82 !important;
+}
+.v-application .warning--text.text--lighten-4 {
+  color: #fffb82 !important;
+  caret-color: #fffb82 !important;
+}
+.v-application .warning.lighten-3 {
+  background-color: #ffdf67 !important;
+  border-color: #ffdf67 !important;
+}
+.v-application .warning--text.text--lighten-3 {
+  color: #ffdf67 !important;
+  caret-color: #ffdf67 !important;
+}
+.v-application .warning.lighten-2 {
+  background-color: #ffc24b !important;
+  border-color: #ffc24b !important;
+}
+.v-application .warning--text.text--lighten-2 {
+  color: #ffc24b !important;
+  caret-color: #ffc24b !important;
+}
+.v-application .warning.lighten-1 {
+  background-color: #ffa72d !important;
+  border-color: #ffa72d !important;
+}
+.v-application .warning--text.text--lighten-1 {
+  color: #ffa72d !important;
+  caret-color: #ffa72d !important;
+}
+.v-application .warning.darken-1 {
+  background-color: #db7200 !important;
+  border-color: #db7200 !important;
+}
+.v-application .warning--text.text--darken-1 {
+  color: #db7200 !important;
+  caret-color: #db7200 !important;
+}
+.v-application .warning.darken-2 {
+  background-color: #bb5900 !important;
+  border-color: #bb5900 !important;
+}
+.v-application .warning--text.text--darken-2 {
+  color: #bb5900 !important;
+  caret-color: #bb5900 !important;
+}
+.v-application .warning.darken-3 {
+  background-color: #9d4000 !important;
+  border-color: #9d4000 !important;
+}
+.v-application .warning--text.text--darken-3 {
+  color: #9d4000 !important;
+  caret-color: #9d4000 !important;
+}
+.v-application .warning.darken-4 {
+  background-color: #802700 !important;
+  border-color: #802700 !important;
+}
+.v-application .warning--text.text--darken-4 {
+  color: #802700 !important;
+  caret-color: #802700 !important;
+}</style><noscript data-vue-tag="ssr"><style>.g-image--loading{display:none;}</style></noscript>
+  </head>
+  <body >
+    <div data-app="true" data-server-rendered="true" id="app" id="inspire" class="v-application v-application--is-ltr theme--light"><div class="v-application--wrap"><header class="gb-toolbar v-sheet v-sheet--tile theme--dark v-toolbar v-toolbar--dense v-app-bar v-app-bar--fixed" style="height:48px;margin-top:0px;transform:translateY(0px);left:0px;right:0px;"><div class="v-toolbar__content" style="height:48px;"><button type="button" class="v-app-bar__nav-icon v-btn v-btn--flat v-btn--icon v-btn--round theme--dark v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-menu theme--dark"></i></span></button><div class="v-toolbar__title ml-0 pl-4" style="width:300px;"><span class="hidden-sm-and-down">skillhub</span></div><div class="spacer"></div><div class="v-input hidden-sm-and-down v-input--hide-details v-input--dense theme--dark v-text-field v-text-field--single-line v-text-field--solo v-text-field--solo-inverted v-text-field--solo-flat v-text-field--enclosed"><div class="v-input__control"><div class="v-input__slot"><div class="v-input__prepend-inner"><div class="v-input__icon v-input__icon--prepend-inner"><i aria-hidden="true" class="v-icon notranslate mdi mdi-magnify theme--dark"></i></div></div><div class="v-text-field__slot"><label for="input-2036" class="v-label theme--dark" style="left:0px;right:auto;position:absolute;">Search</label><input id="input-2036" type="text"></div></div></div></div><button type="button" class="v-btn v-btn--flat v-btn--icon v-btn--round theme--dark v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-apps theme--dark"></i></span></button><button type="button" class="v-btn v-btn--flat v-btn--icon v-btn--round theme--dark v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-bell theme--dark"></i></span></button></div></header><main class="v-content" style="padding-top:672px;padding-right:0px;padding-bottom:0px;padding-left:0px;"><div class="v-content__wrap"><div class="container container--fluid pa-0"><div class="row no-gutters"><div class="col col-12"><div class="row no-gutters row--dense"><div class="height-30 bg-dark white--text jarallax col"><img src="https://i.udemycdn.com/course/750x422/2745684_ee62.jpg" class="jarallax-img opacity-20 g-image"><div class="container mt-8 pa-0"><div class="row mb-12 justify-center"><div dense="" class="col"><p class="display-2 mb-0">安装和配置 Windows Server 2012 R2 DHCP 服务</p><p class="headline mb-0">Windows Server 2012 R2 系列课程</p><div><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">0 (0)</span></div><a href="https://www.udemy.com/course/windows-server-2012-r2-dhcp/" class="v-btn v-btn--contained theme--light v-size--default warning"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-share-outline theme--light"></i> Take me there!
+          </span></a></div></div></div></div></div></div></div><div class="row no-gutters"><div class="col col-12"><div class="container mt-4 pl-5"><div class="row mb-12 justify-center"><div dense="" class="col">
+            安装和配置 Windows Server 2012 R2 DHCP 课程,通过这一个课程的介绍，学员将掌握 Windows Server 2012 R2 中，DHCP 的工作原理，能够在 Windows Server 2012 R2 的桌面体验和 Server Core 模式中,通过 GUI 和 Powershell 完成安装，初始化，作用域创建，选项设置，策略筛选，服务器迁移，高可用性和可靠性配置，为目标设备提供 IPv4 和 IPv6 的地址。
+          </div></div></div></div></div><div class="row no-gutters"><div class="col"><div class="container"><div class="headline pa-1 mb-0">#Related</div><div aria-label="Slideshow" class="vueperslides no-shadow vueperslides--fixed-height vueperslides--slide-multiple vueperslides--bullets-outside" style="height:300px;"><!----><div class="vueperslides__inner"><div aria-live="polite" class="vueperslides__parallax-wrapper" style="padding-bottom:25%;"><div class="vueperslides__track"><div class="vueperslides__track-inner" style="transition-duration:0ms;transform:translate3d(0%, 0, 0);will-change:auto;"><!----><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/s-t0-247-symantec-cluster-server-6-1-unix-technical-exam" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>ST0-247 Symantec Cluster Server 6.1 UNIX Technical Exam</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="ST0-247 Symantec Cluster Server 6.1 UNIX Technical Practice Exam || Get Certification">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">0 (0)</span></div></div></div><!----></div><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/curso-basico-de-linux-debian-10" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Curso Básico de Linux - Debian 10</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Interface de linha de comando do linux de uma forma descomplicada">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">0 (0)</span></div></div></div><!----></div><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/s-t0-248-symantec-foundation-unix-technical-assessment-exam" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>ST0-248 Symantec Foundation UNIX Technical Assessment Exam</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="ST0-248 Symantec Foundation UNIX Technical Assessment Practice Exam || Get Certification">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">0 (0)</span></div></div></div><!----></div><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/official-upgrading-to-mcsa-windows-server-2016-70-743" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>OFFICIAL Upgrading to MCSA Windows Server 2016 (70-743)</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="The most complete Upgrading to MCSA Windows Server 2016 (70-743) certification preparation you've ever seen!">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">0 (0)</span></div></div></div><!----></div><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/windows-server-2012-dhcp" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>安装和配置 Windows Server 2012 DHCP 服务</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Windows Server 2012 系列课程">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">0 (0)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/windows-8-for-dummies-video-training" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Windows 8 For Dummies Video Training</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Online Video Windows 8 Training Course">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.3 (17)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/operador-debian-gnu-linux" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Operador Debian GNU/Linux</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Aprenda como usar Debian GNU/Linux a nivel básico, explicado paso a paso.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4 (18)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/ip-subnetting-masterclass-learn-the-easy-way-to-subnet" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>IP Subnetting Masterclass - Learn the Easy Way to Subnet</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Learn subnetting in 15 seconds flat with my subnetting cheat sheet in this subnetting tutorial.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.6 (117)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/apple-mac-os-x-lion-server-tutorial-a-definitive-guide" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Apple Mac OS X Lion Server Tutorial - A Definitive Guide</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Learn how to unleash the power of OS X Lion Server">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.5 (10)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/ccnp-switch-300-115-video-boot-camp-with-chris-bryant" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>CCNP SWITCH 300-115 Video Boot Camp With Chris Bryant</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Pass The CCNP SWITCH 300-115 Exam With Chris Bryant -- AND Prepare For Real-World Networking Success!">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.6 (714)</span></div></div></div><!----></div><!----></div></div></div><!----><!----><!----><!----><!----></div><!----><!----></div></div></div></div></div></div></main></div></div>
+    <script>window.__INITIAL_STATE__={"data":null,"context":{"course":{"id":"37786925-3ef1-11ea-9791-1b580a556b4a","vendorId":"2745684","created":"2020-01-24T21:35:08.047Z","updated":"2020-01-01T08:00:00.000Z","title":"安装和配置 Windows Server 2012 R2 DHCP 服务","headline":"Windows Server 2012 R2 系列课程","description":"安装和配置 Windows Server 2012 R2 DHCP 课程,通过这一个课程的介绍，学员将掌握 Windows Server 2012 R2 中，DHCP 的工作原理，能够在 Windows Server 2012 R2 的桌面体验和 Server Core 模式中,通过 GUI 和 Powershell 完成安装，初始化，作用域创建，选项设置，策略筛选，服务器迁移，高可用性和可靠性配置，为目标设备提供 IPv4 和 IPv6 的地址。","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F2745684_ee62.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fwindows-server-2012-r2-dhcp\u002F","language":"zh","tags":["IT & Software","Operating Systems","Windows Server"],"rating":0,"reviews":0,"isFree":false,"matches":["37786924-3ef1-11ea-9791-1b580a556b4a","377ab312-3ef1-11ea-9791-1b580a556b4a","3778421b-3ef1-11ea-9791-1b580a556b4a","3779a1aa-3ef1-11ea-9791-1b580a556b4a","37789030-3ef1-11ea-9791-1b580a556b4a","37764644-3ef1-11ea-9791-1b580a556b4a","37720083-3ef1-11ea-9791-1b580a556b4a","3776e286-3ef1-11ea-9791-1b580a556b4a","37711621-3ef1-11ea-9791-1b580a556b4a","376b49c1-3ef1-11ea-9791-1b580a556b4a"],"slug":"windows-server-2012-r2-dhcp"},"related":[{"id":"377ab312-3ef1-11ea-9791-1b580a556b4a","vendorId":"2743824","created":"2020-01-24T21:35:08.151Z","updated":"2020-01-01T08:00:00.000Z","title":"ST0-247 Symantec Cluster Server 6.1 UNIX Technical Exam","headline":"ST0-247 Symantec Cluster Server 6.1 UNIX Technical Practice Exam || Get Certification","description":"Sample QuestionsQ) The Failover service group named GroupA is FROZEN and is ONLINE|PARTIAL in a twosystem cluster. The power is unplugged from the system on which GroupA is ONLINE|PARTIAL. Given the following configuration file: group GroupA ( SystemList = { SystemA = 1, SystemB = 2 } AutoFailover = 1 AutoStartList = { SystemA, SystemB } Parallel = 0 ) What will be the state of GroupA on the surviving system?\ta) ONLINE\tb) OFFLINE\tc) ONLINE|PARTIAL\td) OFFLINE|PARTIAL Q) What additional functionality is added to the Java GUI when accessing the VCS Simulator rather than a running cluster? (Choose two.)\ta) Power off\u002Fon a system\tb) Delete a system\tc) Fault a resource\td) Fault a heartbeat link\te) Power off\u002Fon a disk array\tf) Remove a heartbeat link\tQ) Two Process resources named ResourceA and ResourceB are configured in a service group using the command-line interface. ResourceA is configured as a child to ResourceB, and the Critical attribute of ResourceB is modified from the default value. What is the expected result of shutting down the ResourceB process outside of VCS?\ta) Both ResourceA and ResourceB go offline.\tb) ResourceA is online and ResourceB is restarted.\tc) ResourceB is faulted and the service group fails over\td) ResourceB is faulted and ResourceA is online. Q) A two-system cluster has three failover service groups as shown in the exhibit. The RedSG and WhiteSG service groups are online on node1; the BlueSG service group is online on node2. All resources are enabled and critical. Which action does VCS take when a resource in the WhiteSG service group faults?\ta) The WhiteSG service group enters a faulted state, and the RedSG service group remains online\tb) The WhiteSG service group enters a faulted state on node1, and the BlueSG service group is taken offline.\tc) The WhiteSG service group enters a faulted state on node1 and fails over to node2.\td) The WhiteSG service group enters a faulted state on node1, and the RedSG service group is taken offline. Q) A parallel service group named net_sg is online on SystemA, SystemB, and SystemC in a threenode cluster. The service group contains a critical NIC resource and a non-critical Phantom resource. If the network device specified in the NIC attribute fails on SystemA, the net_sg service group state is _____.\ta) Faulted on SystemA, online on SystemB and SystemC\tb) Faulted on SystemA, SystemB, and SystemC\tc) Offline on SystemA, online on SystemB and SystemC\td) Partially online on SystemA, online on SystemB and SystemC ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F2743824_4b26.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fst0-247-symantec-cluster-server-61-unix-technical-exam\u002F","language":"en","tags":["IT & Software","IT Certification","Server Administration"],"rating":0,"reviews":0,"isFree":false,"matches":["37789030-3ef1-11ea-9791-1b580a556b4a","3779a1a5-3ef1-11ea-9791-1b580a556b4a","3779a1a0-3ef1-11ea-9791-1b580a556b4a","37795382-3ef1-11ea-9791-1b580a556b4a","377a3de2-3ef1-11ea-9791-1b580a556b4a","37789033-3ef1-11ea-9791-1b580a556b4a","37792c72-3ef1-11ea-9791-1b580a556b4a","3777f3f0-3ef1-11ea-9791-1b580a556b4a","37789037-3ef1-11ea-9791-1b580a556b4a","37786926-3ef1-11ea-9791-1b580a556b4a"],"slug":"s-t0-247-symantec-cluster-server-6-1-unix-technical-exam"},{"id":"3779a1aa-3ef1-11ea-9791-1b580a556b4a","vendorId":"2741998","created":"2020-01-24T21:35:08.095Z","updated":"2020-01-01T08:00:00.000Z","title":"Curso Básico de Linux - Debian 10","headline":"Interface de linha de comando do linux de uma forma descomplicada","description":"Nesse curso você aprenderá conceitos básicos essenciais para o bom uso do Linux, esse curso é indicado para pessoas iniciantes. Aqui você aprenderá a diferença entre as distribuições, aprenderá conceitos básicos de virtualizadores, fazer o download do Debian 10 e sua instalação, configurações de serviços e muito mais.Tudo com uma linguagem simples e direta. Seja bem vindo!","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F2741998_4ba9.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fcurso-basico-de-linux-debian-10\u002F","language":"pt","tags":["IT & Software","Operating Systems","Linux"],"rating":0,"reviews":0,"isFree":true,"matches":["37764644-3ef1-11ea-9791-1b580a556b4a","3779a1ab-3ef1-11ea-9791-1b580a556b4a","3779efc1-3ef1-11ea-9791-1b580a556b4a","37792c76-3ef1-11ea-9791-1b580a556b4a","3779c8b9-3ef1-11ea-9791-1b580a556b4a","377a16d0-3ef1-11ea-9791-1b580a556b4a","377a3de5-3ef1-11ea-9791-1b580a556b4a","377311f1-3ef1-11ea-9791-1b580a556b4a","3778de59-3ef1-11ea-9791-1b580a556b4a","37790560-3ef1-11ea-9791-1b580a556b4a"],"slug":"curso-basico-de-linux-debian-10"},{"id":"37789030-3ef1-11ea-9791-1b580a556b4a","vendorId":"2746084","created":"2020-01-24T21:35:08.048Z","updated":"2020-01-01T08:00:00.000Z","title":"ST0-248 Symantec Foundation UNIX Technical Assessment Exam","headline":"ST0-248 Symantec Foundation UNIX Technical Assessment Practice Exam || Get Certification","description":"Sample QuestionsQ) When does vxprint fail to display volume configuration after a system reboot?\ta) when the vxinstall-run file exists\tb) when the vxinstall-run file is nonexistent\tc) when the install-db file exists\td) when the install-db file is nonexistent Q) Which two options are available when deporting a disk group? (Select two.)\ta) rename\tb) dynamic\tc) shared\td) new host\te) temporary Q) An administrator is having issues with a volume. Which Veritas Volume Manager command shows kernel state information for volumes in a disk group to assist in troubleshooting?\ta) vxinfo\tb) vxiod\tc) vxprint\td) vxdg Q) Which plex state indicates that Veritas Volume Manager knows that a plex contains a consistent copy (mirror) of the volume contents, but the volume remains disabled?\ta) ACTIVE\tb) CLEAN\tc) SYNC\td) ONLINE Q) Given the following command using 72g LUNs: vxassist -g datadg make datavol 72g layout=raid5 ncol=3 How many LUNs are required to construct the datavol volume?\ta) 3\tb) 4\tc) 5\td) 6 ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F2746084_7b56_2.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fst0-248-symantec-foundation-unix-technical-assessment-exam\u002F","language":"en","tags":["IT & Software","IT Certification","Data Storage"],"rating":0,"reviews":0,"isFree":false,"matches":["3779a1a5-3ef1-11ea-9791-1b580a556b4a","377ab312-3ef1-11ea-9791-1b580a556b4a","37786926-3ef1-11ea-9791-1b580a556b4a","3779a1a0-3ef1-11ea-9791-1b580a556b4a","37792c74-3ef1-11ea-9791-1b580a556b4a","37789033-3ef1-11ea-9791-1b580a556b4a","377a3de2-3ef1-11ea-9791-1b580a556b4a","37789034-3ef1-11ea-9791-1b580a556b4a","37792c73-3ef1-11ea-9791-1b580a556b4a","377a8c0b-3ef1-11ea-9791-1b580a556b4a"],"slug":"s-t0-248-symantec-foundation-unix-technical-assessment-exam"},{"id":"3778421b-3ef1-11ea-9791-1b580a556b4a","vendorId":"2745412","created":"2020-01-24T21:35:08.047Z","updated":"2020-01-01T08:00:00.000Z","title":"OFFICIAL Upgrading to MCSA Windows Server 2016 (70-743)","headline":"The most complete Upgrading to MCSA Windows Server 2016 (70-743) certification preparation you've ever seen!","description":"With the evolution of the market, just having an undergraduate degree is no longer enough. The demands of society as a whole have increased a lot and this reflects on the way companies produce.In the globalized economy, providing the basics to the consumer is no longer enough. To satisfy their customer and not lose business, it is essential that companies focus their efforts on ensuring their satisfaction with the service as a whole.Precisely for this reason, companies are investing in new practices and seeking professionals with diversified knowledge to meet their demands. After all, cutting-edge services start with structuring a skilled team.The corporate environment began to require professionals to be able to combine quality training with complementary courses and certifications. Teams must have specific knowledge for each service they provide, avoiding poor quality in meeting external demands and ensuring that the customer's desire is always met.In some cases, the demand for continuing education is so great that businesses directly encourage professionals to take courses. After all, by investing in the professional, the company maintains its high level of engagement and, at the same time, increases its competitiveness.Often their readjustment \u002F promotion or even new opportunities depend on a validation of knowledge.It is not enough today for the professional just to have the practical knowledge. This knowledge must be proven.Through this preparatory course, you are able to take the Upgrading to MCSA Windows Server 2016 (70-743) certification exam. The largest companies in the world use WindowsWhat are you waiting for?The world is ours!","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F2745412_3ada_2.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fofficial-upgrading-to-mcsa-windows-server-2016-70-743\u002F","language":"en","tags":["IT & Software","IT Certification","Windows Server"],"rating":0,"reviews":0,"isFree":false,"matches":["3778421a-3ef1-11ea-9791-1b580a556b4a","37792c71-3ef1-11ea-9791-1b580a556b4a","37781b05-3ef1-11ea-9791-1b580a556b4a","3777f3f0-3ef1-11ea-9791-1b580a556b4a","37792c70-3ef1-11ea-9791-1b580a556b4a","37792c72-3ef1-11ea-9791-1b580a556b4a","37792c78-3ef1-11ea-9791-1b580a556b4a","3777a5da-3ef1-11ea-9791-1b580a556b4a","3777a5d2-3ef1-11ea-9791-1b580a556b4a","3779c8b2-3ef1-11ea-9791-1b580a556b4a"],"slug":"official-upgrading-to-mcsa-windows-server-2016-70-743"},{"id":"37786924-3ef1-11ea-9791-1b580a556b4a","vendorId":"2745624","created":"2020-01-24T21:35:08.047Z","updated":"2020-01-01T08:00:00.000Z","title":"安装和配置 Windows Server 2012 DHCP 服务","headline":"Windows Server 2012 系列课程","description":"Windows Server 2012 DHCP 管理课程,通过这一个课程的介绍，学员将掌握 Windows Server 2012 中，DHCP 的工作原理，能够在 Windows Server 2012 的桌面体验和 Server Core 模式中,通过 GUI 和 Powershell 完成安装，初始化，作用域创建，选项设置，策略筛选，服务器迁移，高可用性和可靠性配置，为目标设备提供 IPv4 和 IPv6 的地址。","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F2745624_0590.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fwindows-server-2012-dhcp\u002F","language":"zh","tags":["IT & Software","Operating Systems","Windows Server"],"rating":0,"reviews":0,"isFree":false,"matches":["37786925-3ef1-11ea-9791-1b580a556b4a","3778421b-3ef1-11ea-9791-1b580a556b4a","37764644-3ef1-11ea-9791-1b580a556b4a","3779a1aa-3ef1-11ea-9791-1b580a556b4a","377ab312-3ef1-11ea-9791-1b580a556b4a","3776e286-3ef1-11ea-9791-1b580a556b4a","377757b8-3ef1-11ea-9791-1b580a556b4a","37711621-3ef1-11ea-9791-1b580a556b4a","3779efc1-3ef1-11ea-9791-1b580a556b4a","3777a5da-3ef1-11ea-9791-1b580a556b4a"],"slug":"windows-server-2012-dhcp"},{"id":"3776e286-3ef1-11ea-9791-1b580a556b4a","vendorId":"28304","created":"2020-01-24T21:35:07.945Z","updated":"2012-12-01T08:00:00.000Z","title":"Windows 8 For Dummies Video Training","headline":"Online Video Windows 8 Training Course","description":"With this video, Andy Rathbone, best-selling author of Windows 8 For Dummies, shows you step by step how to use every new feature of Windows 8. Tackle the all-new Start screen, use the Charms bar, organize and launch apps, and then connect to the Internet, manage the Windows Mail app, and add your social media accounts. Toss in networking, security, and how to manage photos, video, and music, and you have the ultimate show-and-tell! Windows 8 Training: Windows 8 for Dummies -Discover how to: • Launch apps from the Start screen • Locate and use the desktop • Customize Windows security • Use the newest Internet Explorer • Set up a home network • Play music and videos Take this Windows 8 Training: Windows 8 for Dummies course now and learn basics of Windows 8.\u003C\u002Fp\u003E","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F28304_10ba_9.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fwindows-8-for-dummies\u002F","language":"en","tags":["Office Productivity","Microsoft","Microsoft Windows"],"rating":4.3,"reviews":17,"isFree":false,"matches":["376e2ff2-3ef1-11ea-9791-1b580a556b4a","3773fc50-3ef1-11ea-9791-1b580a556b4a","3770a0f8-3ef1-11ea-9791-1b580a556b4a","3772c3d0-3ef1-11ea-9791-1b580a556b4a","3771d978-3ef1-11ea-9791-1b580a556b4a","37711622-3ef1-11ea-9791-1b580a556b4a","376e7e14-3ef1-11ea-9791-1b580a556b4a","3779c8b6-3ef1-11ea-9791-1b580a556b4a","3770c801-3ef1-11ea-9791-1b580a556b4a","37749892-3ef1-11ea-9791-1b580a556b4a"],"slug":"windows-8-for-dummies-video-training"},{"id":"37764644-3ef1-11ea-9791-1b580a556b4a","vendorId":"27041","created":"2020-01-24T21:35:07.942Z","updated":"2013-12-01T08:00:00.000Z","title":"Operador Debian GNU\u002FLinux","headline":"Aprenda como usar Debian GNU\u002FLinux a nivel básico, explicado paso a paso.","description":" El curso básico y necesario para todo aquel que nunca ha instalado y trabajado en un sistema operativo GNU\u002FLinux. Este curso es simplemente la introducción perfecta a este nuevo mundo. En esta serie de videos veremos desde cómo descargar e instalar Debian GNU\u002FLinux desde cero, porque ¿cómo vas a aprender Linux sin saber instalarlo al menos? Aquí aprenderás los fundamentos de instalación y podrás hacerlo paso a paso viendo los videos que el curso ofrece. Luego en esta misma instalación harás el resto del curso con los videos paso a paso. Aprenderás los principios necesarios para iniciarte como usuario de Debian y cualquier otro GNU\u002FLinux. Verás comandos básicos y algunas de las herramientas que este sistema operativo ofrece. Pasarás de ser un usuario sin conocimientos de Linux a un usuario Operador de un sistema operativo GNU\u002FLinux. El mundo de la informática evoluciona a pasos enormes y la demanda de usuarios con conocimientos en estos sistemas operativos es enorme. Muchas empresas están optando por implementar sus servicios en estos sistemas operativos así que anímate que no hay mejor inversión que la educación. Para motivar tu aprendizaje estaré disponible las primeras 48 horas para guiarte paso a paso y responder a cualquier interrogante que tengas. ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F27041_af80_7.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Foperador-debian-gnu-linux\u002F","language":"es","tags":["IT & Software","Network & Security","GNU"],"rating":4,"reviews":18,"isFree":false,"matches":["3779a1aa-3ef1-11ea-9791-1b580a556b4a","3779a1ab-3ef1-11ea-9791-1b580a556b4a","377a16d0-3ef1-11ea-9791-1b580a556b4a","37790560-3ef1-11ea-9791-1b580a556b4a","377582f0-3ef1-11ea-9791-1b580a556b4a","37786928-3ef1-11ea-9791-1b580a556b4a","3775aa0a-3ef1-11ea-9791-1b580a556b4a","37792c76-3ef1-11ea-9791-1b580a556b4a","377a3de5-3ef1-11ea-9791-1b580a556b4a","3773d545-3ef1-11ea-9791-1b580a556b4a"],"slug":"operador-debian-gnu-linux"},{"id":"37720083-3ef1-11ea-9791-1b580a556b4a","vendorId":"19450","created":"2020-01-24T21:35:07.696Z","updated":"2012-06-01T07:00:00.000Z","title":"IP Subnetting Masterclass - Learn the Easy Way to Subnet","headline":"Learn subnetting in 15 seconds flat with my subnetting cheat sheet in this subnetting tutorial.","description":"Most IT Engineers Can’t Subnet…here’s why…Understanding IP Subnetting is a vital skill for every IT\nengineer and yet most don’t know how to do it or go about it completely the\nwrong way. Once you understand a few simple techniques of this subnetting\ntutorial, you can actually easily subnet any IP address in your head.Does this sound\nfamiliar?“I have to use a subnet calculator to work it out”“I can’t pass my exams because I am too slow at\nsubnetting”“I keep failing technical interviews because I can’t\nsubnet”“I’m overwhelmed as to where to start”“I worry about looking stupid at work if there is a\nsubnetting fault on the network”This is where Subnetting Secrets comes in. When I left the\npolice force and went into IT I used to dread subnetting but when I was forced\nto write some notes to teach a class one day I stumbled across an easy way to\nsubnet. If you can count to eight in your head then you can use my method explained in this\nsubnetting tutorial to:Learn to subnetPass exams with easeAnswer technical interview questions with confidenceQuickly troubleshoot subnetting issues at workEasily work out a simple subnetting design for your office\nnetworkand much more… The techniques taught in this subnetting\ntutorial have\nbeen tried and tested by myself to learn to subnet,  pass my MCSE, A+, Network+, CCNA, CCNP and\nmany other non-IT exams as well as easily \npass interviews for Cisco and BT. They have been used by many other\nstudents to effectively study for and pass their exams also. I know they will\nhelp you too.What’s Included in the subnetting\ntutorial?Subnetting Secrets\nincludes:Over 40 subnetting lessons in the pdfNetwork design tipsThe long and short way to subnetVLSM lessonsWildcard masking tips for access lists and OSPFOver 27 videos on subnetting and designBinary and hex primerExam style questionsHow to subnet in your head in secondsand much more… ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F19450_ec32_2.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fsubnetting-secrets-learn-the-easy-way-to-subnet\u002F","language":"en","tags":["IT & Software","IT Certification","Subnetting"],"rating":4.6,"reviews":117,"isFree":false,"matches":["377a8c01-3ef1-11ea-9791-1b580a556b4a","37713d3c-3ef1-11ea-9791-1b580a556b4a","3777cce2-3ef1-11ea-9791-1b580a556b4a","3779a1a0-3ef1-11ea-9791-1b580a556b4a","3779a1a1-3ef1-11ea-9791-1b580a556b4a","376cd065-3ef1-11ea-9791-1b580a556b4a","3776bb76-3ef1-11ea-9791-1b580a556b4a","376be600-3ef1-11ea-9791-1b580a556b4a","376ea524-3ef1-11ea-9791-1b580a556b4a","3777a5d1-3ef1-11ea-9791-1b580a556b4a"],"slug":"ip-subnetting-masterclass-learn-the-easy-way-to-subnet"},{"id":"37711621-3ef1-11ea-9791-1b580a556b4a","vendorId":"17745","created":"2020-01-24T21:35:07.687Z","updated":"2017-01-01T08:00:00.000Z","title":"Apple Mac OS X Lion Server Tutorial - A Definitive Guide","headline":"Learn how to unleash the power of OS X Lion Server","description":"A Verifiable Certificate of Completion is presented to all students who undertake this course. This Apple OS X Lion Server training course will teach you how to install, configure and monitor OS X Lion Server. Whether you are setting it up for a school, home network or business, you will learn the ins and outs of using Lion Server to its fullest capabilities. The video tutorial starts with the installation basic and advanced setup of your server. You will learn how to setup and configure a DNS server and DHCP service. You will learn about managing users and groups, using Profile Manager, client preferences, and configuring services. Chris also shows you how to manage your server using Server App throughout. As you dig deeper into Lion Server, you will learn how to configure a Time Machine service, setup file sharing using AFP, SMB, FTP and more. You will setup a Mail server, web hosting, Wiki server, Addressbook server, iCal server, iChat server and more! By the conclusion of this computer based training tutorial for Apple OSX Lion Server, you will have learned everything you need to know to setup and manage an OSX Lion Server of your own! Working files are included with this training video course. What You Will Learn  - How to install and administer OS X Lion Server in a commercial environment. - How to set up services and securely manage Mac services and users. - How to set up Web Hosting, Wiki Server, iCal Server, File Sharing and a whole host of other important aspects of Mac Server .  Who Should Take This Course - Anyone who needs to share Mac services on a network of any size. - Anyone who needs an understanding of using Mac Server in a commercial environment. - Anyone who needs to share files and services Mac to Mac or Mac to PC . What People Are Saying \"I was running into problem after problem installing Mac Server, 20 minutes after watching the installation videos I had completed the task. Well worth the money\" -David Allen \"Easy to follow, explains everything in great detail. I've learned so much\" -Frank Hatch ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F17745_2a7b_7.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Flearning-os-x-lion-server\u002F","language":"en","tags":["IT & Software","Network & Security","macOS"],"rating":4.5,"reviews":10,"isFree":false,"matches":["3773ae32-3ef1-11ea-9791-1b580a556b4a","3774bfa5-3ef1-11ea-9791-1b580a556b4a","3771d978-3ef1-11ea-9791-1b580a556b4a","3770c800-3ef1-11ea-9791-1b580a556b4a","376ad491-3ef1-11ea-9791-1b580a556b4a","376e5705-3ef1-11ea-9791-1b580a556b4a","376c5b33-3ef1-11ea-9791-1b580a556b4a","3773d54a-3ef1-11ea-9791-1b580a556b4a","37764641-3ef1-11ea-9791-1b580a556b4a","376c5b32-3ef1-11ea-9791-1b580a556b4a"],"slug":"apple-mac-os-x-lion-server-tutorial-a-definitive-guide"},{"id":"376b49c1-3ef1-11ea-9791-1b580a556b4a","vendorId":"8746","created":"2020-01-24T21:35:07.170Z","updated":"2018-08-01T07:00:00.000Z","title":"CCNP SWITCH 300-115 Video Boot Camp With Chris Bryant","headline":"Pass The CCNP SWITCH 300-115 Exam With Chris Bryant -- AND Prepare For Real-World Networking Success!","description":"The CCNP SWITCH exam is a tough one, and I'm ready to help you pass it with my CCNP SWITCH Video Boot Camp.   I've packed this course with real-world networking examples, so while you're learning the skills you need to pass the CCNP SWITCH exam, you're also learning important real-world networking skills that you'll use long after you earn your CCNP.All videos fully downloadable and my Udemy courses all carry a 30-day money-back guarantee!I've been preparing CCNP candidates for success on the SWITCH exam for years with my no-nonsense lectures using REAL Cisco switches - no simulators here - and now I'm going to do the same for you.No prepackaged slides here - you'll see CCNP Switch Lab after lab on REAL Cisco switches, all designed to teach you the finer points of advanced Cisco switching and prepare you for success in the exam room and real-world networking.  From advanced STP features to multicasting and everything in between it's all here - and there's a forum right here on this site where you can ask me questions.  Your access to this online course is unlimited - you can watch the videos as often as you like and for as long as it takes for you to pass!                                                      Let's get started!                                                      Chris Bryant                                                     CCIE #12933                                                      \"The Computer Certification Bulldog\"  ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F8746_c3c9_7.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fccnp-switch-video-boot-camp\u002F","language":"en","tags":["IT & Software","IT Certification","CCNP Routing and Switching"],"rating":4.6,"reviews":714,"isFree":false,"matches":["376be601-3ef1-11ea-9791-1b580a556b4a","376b49c0-3ef1-11ea-9791-1b580a556b4a","376cd065-3ef1-11ea-9791-1b580a556b4a","376be600-3ef1-11ea-9791-1b580a556b4a","3776bb76-3ef1-11ea-9791-1b580a556b4a","37713d3c-3ef1-11ea-9791-1b580a556b4a","377a64fd-3ef1-11ea-9791-1b580a556b4a","3779a1a1-3ef1-11ea-9791-1b580a556b4a","3777cce2-3ef1-11ea-9791-1b580a556b4a","3779a1a0-3ef1-11ea-9791-1b580a556b4a"],"slug":"ccnp-switch-300-115-video-boot-camp-with-chris-bryant"}]}};(function(){var s;(s=document.currentScript||document.scripts[document.scripts.length-1]).parentNode.removeChild(s);}());</script><script src="/site/assets/js/app.e5c95575.js" defer></script><script src="/site/assets/js/page--src--templates--course-template-vue.a9c4e657.js" defer></script>
+  </body>
+</html>

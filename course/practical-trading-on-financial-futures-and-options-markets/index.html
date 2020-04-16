@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html data-html-server-rendered="true" lang="en" data-vue-tag="%7B%22lang%22:%7B%22ssr%22:%22en%22%7D%7D">
+  <head>
+    <title>Practical Trading on Financial Futures &amp; Options Markets - Gridsome</title><meta name="gridsome:hash" content="6d1e7dd52e8c17cf4930f349c6afc1a78b2e1c5e"><meta data-vue-tag="ssr" charset="utf-8"><meta data-vue-tag="ssr" name="generator" content="Gridsome v0.7.12"><meta data-vue-tag="ssr" data-key="viewport" name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta data-vue-tag="ssr" data-key="format-detection" name="format-detection" content="telephone=no"><link data-vue-tag="ssr" rel="icon" href="data:,"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="16x16" href="/site/assets/static/favicon.ce0531f.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="32x32" href="/site/assets/static/favicon.ac8d93a.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="96x96" href="/site/assets/static/favicon.b9532cc.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="76x76" href="/site/assets/static/favicon.f22e9f3.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="152x152" href="/site/assets/static/favicon.62d22cb.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="120x120" href="/site/assets/static/favicon.1539b60.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="167x167" href="/site/assets/static/favicon.dc0cdc5.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="180x180" href="/site/assets/static/favicon.7b22250.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"><link data-vue-tag="ssr" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css"><link rel="preload" href="/site/assets/css/0.styles.dded6410.css" as="style"><link rel="preload" href="/site/assets/js/app.e5c95575.js" as="script"><link rel="preload" href="/site/assets/js/page--src--templates--course-template-vue.a9c4e657.js" as="script"><link rel="prefetch" href="/site/assets/js/page--node-modules--gridsome--app--pages--404-vue.8ed2c588.js"><link rel="prefetch" href="/site/assets/js/page--src--pages--about-vue.d8fdab17.js"><link rel="prefetch" href="/site/assets/js/page--src--templates--index-template-vue.6cecc577.js"><link rel="prefetch" href="/site/assets/js/page--src--templates--tag-vue.c6b527ba.js"><link rel="prefetch" href="/site/assets/js/vendors~page--src--templates--course-template-vue~page--src--templates--index-template-vue.4ec5035c.js"><link rel="stylesheet" href="/site/assets/css/0.styles.dded6410.css"><style data-vue-tag="vuetify" type="text/css" id="vuetify-theme-stylesheet" nonce="undefined">.v-application a { color: #1976d2; }
+.v-application .primary {
+  background-color: #1976d2 !important;
+  border-color: #1976d2 !important;
+}
+.v-application .primary--text {
+  color: #1976d2 !important;
+  caret-color: #1976d2 !important;
+}
+.v-application .primary.lighten-5 {
+  background-color: #c7fdff !important;
+  border-color: #c7fdff !important;
+}
+.v-application .primary--text.text--lighten-5 {
+  color: #c7fdff !important;
+  caret-color: #c7fdff !important;
+}
+.v-application .primary.lighten-4 {
+  background-color: #a8e0ff !important;
+  border-color: #a8e0ff !important;
+}
+.v-application .primary--text.text--lighten-4 {
+  color: #a8e0ff !important;
+  caret-color: #a8e0ff !important;
+}
+.v-application .primary.lighten-3 {
+  background-color: #8ac5ff !important;
+  border-color: #8ac5ff !important;
+}
+.v-application .primary--text.text--lighten-3 {
+  color: #8ac5ff !important;
+  caret-color: #8ac5ff !important;
+}
+.v-application .primary.lighten-2 {
+  background-color: #6aaaff !important;
+  border-color: #6aaaff !important;
+}
+.v-application .primary--text.text--lighten-2 {
+  color: #6aaaff !important;
+  caret-color: #6aaaff !important;
+}
+.v-application .primary.lighten-1 {
+  background-color: #488fef !important;
+  border-color: #488fef !important;
+}
+.v-application .primary--text.text--lighten-1 {
+  color: #488fef !important;
+  caret-color: #488fef !important;
+}
+.v-application .primary.darken-1 {
+  background-color: #005eb6 !important;
+  border-color: #005eb6 !important;
+}
+.v-application .primary--text.text--darken-1 {
+  color: #005eb6 !important;
+  caret-color: #005eb6 !important;
+}
+.v-application .primary.darken-2 {
+  background-color: #00479b !important;
+  border-color: #00479b !important;
+}
+.v-application .primary--text.text--darken-2 {
+  color: #00479b !important;
+  caret-color: #00479b !important;
+}
+.v-application .primary.darken-3 {
+  background-color: #003180 !important;
+  border-color: #003180 !important;
+}
+.v-application .primary--text.text--darken-3 {
+  color: #003180 !important;
+  caret-color: #003180 !important;
+}
+.v-application .primary.darken-4 {
+  background-color: #001e67 !important;
+  border-color: #001e67 !important;
+}
+.v-application .primary--text.text--darken-4 {
+  color: #001e67 !important;
+  caret-color: #001e67 !important;
+}
+.v-application .secondary {
+  background-color: #424242 !important;
+  border-color: #424242 !important;
+}
+.v-application .secondary--text {
+  color: #424242 !important;
+  caret-color: #424242 !important;
+}
+.v-application .secondary.lighten-5 {
+  background-color: #c1c1c1 !important;
+  border-color: #c1c1c1 !important;
+}
+.v-application .secondary--text.text--lighten-5 {
+  color: #c1c1c1 !important;
+  caret-color: #c1c1c1 !important;
+}
+.v-application .secondary.lighten-4 {
+  background-color: #a6a6a6 !important;
+  border-color: #a6a6a6 !important;
+}
+.v-application .secondary--text.text--lighten-4 {
+  color: #a6a6a6 !important;
+  caret-color: #a6a6a6 !important;
+}
+.v-application .secondary.lighten-3 {
+  background-color: #8b8b8b !important;
+  border-color: #8b8b8b !important;
+}
+.v-application .secondary--text.text--lighten-3 {
+  color: #8b8b8b !important;
+  caret-color: #8b8b8b !important;
+}
+.v-application .secondary.lighten-2 {
+  background-color: #727272 !important;
+  border-color: #727272 !important;
+}
+.v-application .secondary--text.text--lighten-2 {
+  color: #727272 !important;
+  caret-color: #727272 !important;
+}
+.v-application .secondary.lighten-1 {
+  background-color: #595959 !important;
+  border-color: #595959 !important;
+}
+.v-application .secondary--text.text--lighten-1 {
+  color: #595959 !important;
+  caret-color: #595959 !important;
+}
+.v-application .secondary.darken-1 {
+  background-color: #2c2c2c !important;
+  border-color: #2c2c2c !important;
+}
+.v-application .secondary--text.text--darken-1 {
+  color: #2c2c2c !important;
+  caret-color: #2c2c2c !important;
+}
+.v-application .secondary.darken-2 {
+  background-color: #171717 !important;
+  border-color: #171717 !important;
+}
+.v-application .secondary--text.text--darken-2 {
+  color: #171717 !important;
+  caret-color: #171717 !important;
+}
+.v-application .secondary.darken-3 {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+.v-application .secondary--text.text--darken-3 {
+  color: #000000 !important;
+  caret-color: #000000 !important;
+}
+.v-application .secondary.darken-4 {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+.v-application .secondary--text.text--darken-4 {
+  color: #000000 !important;
+  caret-color: #000000 !important;
+}
+.v-application .accent {
+  background-color: #82b1ff !important;
+  border-color: #82b1ff !important;
+}
+.v-application .accent--text {
+  color: #82b1ff !important;
+  caret-color: #82b1ff !important;
+}
+.v-application .accent.lighten-5 {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+.v-application .accent--text.text--lighten-5 {
+  color: #ffffff !important;
+  caret-color: #ffffff !important;
+}
+.v-application .accent.lighten-4 {
+  background-color: #f8ffff !important;
+  border-color: #f8ffff !important;
+}
+.v-application .accent--text.text--lighten-4 {
+  color: #f8ffff !important;
+  caret-color: #f8ffff !important;
+}
+.v-application .accent.lighten-3 {
+  background-color: #daffff !important;
+  border-color: #daffff !important;
+}
+.v-application .accent--text.text--lighten-3 {
+  color: #daffff !important;
+  caret-color: #daffff !important;
+}
+.v-application .accent.lighten-2 {
+  background-color: #bce8ff !important;
+  border-color: #bce8ff !important;
+}
+.v-application .accent--text.text--lighten-2 {
+  color: #bce8ff !important;
+  caret-color: #bce8ff !important;
+}
+.v-application .accent.lighten-1 {
+  background-color: #9fccff !important;
+  border-color: #9fccff !important;
+}
+.v-application .accent--text.text--lighten-1 {
+  color: #9fccff !important;
+  caret-color: #9fccff !important;
+}
+.v-application .accent.darken-1 {
+  background-color: #6596e2 !important;
+  border-color: #6596e2 !important;
+}
+.v-application .accent--text.text--darken-1 {
+  color: #6596e2 !important;
+  caret-color: #6596e2 !important;
+}
+.v-application .accent.darken-2 {
+  background-color: #467dc6 !important;
+  border-color: #467dc6 !important;
+}
+.v-application .accent--text.text--darken-2 {
+  color: #467dc6 !important;
+  caret-color: #467dc6 !important;
+}
+.v-application .accent.darken-3 {
+  background-color: #2364aa !important;
+  border-color: #2364aa !important;
+}
+.v-application .accent--text.text--darken-3 {
+  color: #2364aa !important;
+  caret-color: #2364aa !important;
+}
+.v-application .accent.darken-4 {
+  background-color: #004c90 !important;
+  border-color: #004c90 !important;
+}
+.v-application .accent--text.text--darken-4 {
+  color: #004c90 !important;
+  caret-color: #004c90 !important;
+}
+.v-application .error {
+  background-color: #ff5252 !important;
+  border-color: #ff5252 !important;
+}
+.v-application .error--text {
+  color: #ff5252 !important;
+  caret-color: #ff5252 !important;
+}
+.v-application .error.lighten-5 {
+  background-color: #ffe4d5 !important;
+  border-color: #ffe4d5 !important;
+}
+.v-application .error--text.text--lighten-5 {
+  color: #ffe4d5 !important;
+  caret-color: #ffe4d5 !important;
+}
+.v-application .error.lighten-4 {
+  background-color: #ffc6b9 !important;
+  border-color: #ffc6b9 !important;
+}
+.v-application .error--text.text--lighten-4 {
+  color: #ffc6b9 !important;
+  caret-color: #ffc6b9 !important;
+}
+.v-application .error.lighten-3 {
+  background-color: #ffa99e !important;
+  border-color: #ffa99e !important;
+}
+.v-application .error--text.text--lighten-3 {
+  color: #ffa99e !important;
+  caret-color: #ffa99e !important;
+}
+.v-application .error.lighten-2 {
+  background-color: #ff8c84 !important;
+  border-color: #ff8c84 !important;
+}
+.v-application .error--text.text--lighten-2 {
+  color: #ff8c84 !important;
+  caret-color: #ff8c84 !important;
+}
+.v-application .error.lighten-1 {
+  background-color: #ff6f6a !important;
+  border-color: #ff6f6a !important;
+}
+.v-application .error--text.text--lighten-1 {
+  color: #ff6f6a !important;
+  caret-color: #ff6f6a !important;
+}
+.v-application .error.darken-1 {
+  background-color: #df323b !important;
+  border-color: #df323b !important;
+}
+.v-application .error--text.text--darken-1 {
+  color: #df323b !important;
+  caret-color: #df323b !important;
+}
+.v-application .error.darken-2 {
+  background-color: #bf0025 !important;
+  border-color: #bf0025 !important;
+}
+.v-application .error--text.text--darken-2 {
+  color: #bf0025 !important;
+  caret-color: #bf0025 !important;
+}
+.v-application .error.darken-3 {
+  background-color: #9f0010 !important;
+  border-color: #9f0010 !important;
+}
+.v-application .error--text.text--darken-3 {
+  color: #9f0010 !important;
+  caret-color: #9f0010 !important;
+}
+.v-application .error.darken-4 {
+  background-color: #800000 !important;
+  border-color: #800000 !important;
+}
+.v-application .error--text.text--darken-4 {
+  color: #800000 !important;
+  caret-color: #800000 !important;
+}
+.v-application .info {
+  background-color: #2196f3 !important;
+  border-color: #2196f3 !important;
+}
+.v-application .info--text {
+  color: #2196f3 !important;
+  caret-color: #2196f3 !important;
+}
+.v-application .info.lighten-5 {
+  background-color: #d4ffff !important;
+  border-color: #d4ffff !important;
+}
+.v-application .info--text.text--lighten-5 {
+  color: #d4ffff !important;
+  caret-color: #d4ffff !important;
+}
+.v-application .info.lighten-4 {
+  background-color: #b5ffff !important;
+  border-color: #b5ffff !important;
+}
+.v-application .info--text.text--lighten-4 {
+  color: #b5ffff !important;
+  caret-color: #b5ffff !important;
+}
+.v-application .info.lighten-3 {
+  background-color: #95e8ff !important;
+  border-color: #95e8ff !important;
+}
+.v-application .info--text.text--lighten-3 {
+  color: #95e8ff !important;
+  caret-color: #95e8ff !important;
+}
+.v-application .info.lighten-2 {
+  background-color: #75ccff !important;
+  border-color: #75ccff !important;
+}
+.v-application .info--text.text--lighten-2 {
+  color: #75ccff !important;
+  caret-color: #75ccff !important;
+}
+.v-application .info.lighten-1 {
+  background-color: #51b0ff !important;
+  border-color: #51b0ff !important;
+}
+.v-application .info--text.text--lighten-1 {
+  color: #51b0ff !important;
+  caret-color: #51b0ff !important;
+}
+.v-application .info.darken-1 {
+  background-color: #007cd6 !important;
+  border-color: #007cd6 !important;
+}
+.v-application .info--text.text--darken-1 {
+  color: #007cd6 !important;
+  caret-color: #007cd6 !important;
+}
+.v-application .info.darken-2 {
+  background-color: #0064ba !important;
+  border-color: #0064ba !important;
+}
+.v-application .info--text.text--darken-2 {
+  color: #0064ba !important;
+  caret-color: #0064ba !important;
+}
+.v-application .info.darken-3 {
+  background-color: #004d9f !important;
+  border-color: #004d9f !important;
+}
+.v-application .info--text.text--darken-3 {
+  color: #004d9f !important;
+  caret-color: #004d9f !important;
+}
+.v-application .info.darken-4 {
+  background-color: #003784 !important;
+  border-color: #003784 !important;
+}
+.v-application .info--text.text--darken-4 {
+  color: #003784 !important;
+  caret-color: #003784 !important;
+}
+.v-application .success {
+  background-color: #4caf50 !important;
+  border-color: #4caf50 !important;
+}
+.v-application .success--text {
+  color: #4caf50 !important;
+  caret-color: #4caf50 !important;
+}
+.v-application .success.lighten-5 {
+  background-color: #dcffd6 !important;
+  border-color: #dcffd6 !important;
+}
+.v-application .success--text.text--lighten-5 {
+  color: #dcffd6 !important;
+  caret-color: #dcffd6 !important;
+}
+.v-application .success.lighten-4 {
+  background-color: #beffba !important;
+  border-color: #beffba !important;
+}
+.v-application .success--text.text--lighten-4 {
+  color: #beffba !important;
+  caret-color: #beffba !important;
+}
+.v-application .success.lighten-3 {
+  background-color: #a2ff9e !important;
+  border-color: #a2ff9e !important;
+}
+.v-application .success--text.text--lighten-3 {
+  color: #a2ff9e !important;
+  caret-color: #a2ff9e !important;
+}
+.v-application .success.lighten-2 {
+  background-color: #85e783 !important;
+  border-color: #85e783 !important;
+}
+.v-application .success--text.text--lighten-2 {
+  color: #85e783 !important;
+  caret-color: #85e783 !important;
+}
+.v-application .success.lighten-1 {
+  background-color: #69cb69 !important;
+  border-color: #69cb69 !important;
+}
+.v-application .success--text.text--lighten-1 {
+  color: #69cb69 !important;
+  caret-color: #69cb69 !important;
+}
+.v-application .success.darken-1 {
+  background-color: #2d9437 !important;
+  border-color: #2d9437 !important;
+}
+.v-application .success--text.text--darken-1 {
+  color: #2d9437 !important;
+  caret-color: #2d9437 !important;
+}
+.v-application .success.darken-2 {
+  background-color: #00791e !important;
+  border-color: #00791e !important;
+}
+.v-application .success--text.text--darken-2 {
+  color: #00791e !important;
+  caret-color: #00791e !important;
+}
+.v-application .success.darken-3 {
+  background-color: #006000 !important;
+  border-color: #006000 !important;
+}
+.v-application .success--text.text--darken-3 {
+  color: #006000 !important;
+  caret-color: #006000 !important;
+}
+.v-application .success.darken-4 {
+  background-color: #004700 !important;
+  border-color: #004700 !important;
+}
+.v-application .success--text.text--darken-4 {
+  color: #004700 !important;
+  caret-color: #004700 !important;
+}
+.v-application .warning {
+  background-color: #fb8c00 !important;
+  border-color: #fb8c00 !important;
+}
+.v-application .warning--text {
+  color: #fb8c00 !important;
+  caret-color: #fb8c00 !important;
+}
+.v-application .warning.lighten-5 {
+  background-color: #ffff9e !important;
+  border-color: #ffff9e !important;
+}
+.v-application .warning--text.text--lighten-5 {
+  color: #ffff9e !important;
+  caret-color: #ffff9e !important;
+}
+.v-application .warning.lighten-4 {
+  background-color: #fffb82 !important;
+  border-color: #fffb82 !important;
+}
+.v-application .warning--text.text--lighten-4 {
+  color: #fffb82 !important;
+  caret-color: #fffb82 !important;
+}
+.v-application .warning.lighten-3 {
+  background-color: #ffdf67 !important;
+  border-color: #ffdf67 !important;
+}
+.v-application .warning--text.text--lighten-3 {
+  color: #ffdf67 !important;
+  caret-color: #ffdf67 !important;
+}
+.v-application .warning.lighten-2 {
+  background-color: #ffc24b !important;
+  border-color: #ffc24b !important;
+}
+.v-application .warning--text.text--lighten-2 {
+  color: #ffc24b !important;
+  caret-color: #ffc24b !important;
+}
+.v-application .warning.lighten-1 {
+  background-color: #ffa72d !important;
+  border-color: #ffa72d !important;
+}
+.v-application .warning--text.text--lighten-1 {
+  color: #ffa72d !important;
+  caret-color: #ffa72d !important;
+}
+.v-application .warning.darken-1 {
+  background-color: #db7200 !important;
+  border-color: #db7200 !important;
+}
+.v-application .warning--text.text--darken-1 {
+  color: #db7200 !important;
+  caret-color: #db7200 !important;
+}
+.v-application .warning.darken-2 {
+  background-color: #bb5900 !important;
+  border-color: #bb5900 !important;
+}
+.v-application .warning--text.text--darken-2 {
+  color: #bb5900 !important;
+  caret-color: #bb5900 !important;
+}
+.v-application .warning.darken-3 {
+  background-color: #9d4000 !important;
+  border-color: #9d4000 !important;
+}
+.v-application .warning--text.text--darken-3 {
+  color: #9d4000 !important;
+  caret-color: #9d4000 !important;
+}
+.v-application .warning.darken-4 {
+  background-color: #802700 !important;
+  border-color: #802700 !important;
+}
+.v-application .warning--text.text--darken-4 {
+  color: #802700 !important;
+  caret-color: #802700 !important;
+}</style><noscript data-vue-tag="ssr"><style>.g-image--loading{display:none;}</style></noscript>
+  </head>
+  <body >
+    <div data-app="true" data-server-rendered="true" id="app" id="inspire" class="v-application v-application--is-ltr theme--light"><div class="v-application--wrap"><header class="gb-toolbar v-sheet v-sheet--tile theme--dark v-toolbar v-toolbar--dense v-app-bar v-app-bar--fixed" style="height:48px;margin-top:0px;transform:translateY(0px);left:0px;right:0px;"><div class="v-toolbar__content" style="height:48px;"><button type="button" class="v-app-bar__nav-icon v-btn v-btn--flat v-btn--icon v-btn--round theme--dark v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-menu theme--dark"></i></span></button><div class="v-toolbar__title ml-0 pl-4" style="width:300px;"><span class="hidden-sm-and-down">skillhub</span></div><div class="spacer"></div><div class="v-input hidden-sm-and-down v-input--hide-details v-input--dense theme--dark v-text-field v-text-field--single-line v-text-field--solo v-text-field--solo-inverted v-text-field--solo-flat v-text-field--enclosed"><div class="v-input__control"><div class="v-input__slot"><div class="v-input__prepend-inner"><div class="v-input__icon v-input__icon--prepend-inner"><i aria-hidden="true" class="v-icon notranslate mdi mdi-magnify theme--dark"></i></div></div><div class="v-text-field__slot"><label for="input-18260" class="v-label theme--dark" style="left:0px;right:auto;position:absolute;">Search</label><input id="input-18260" type="text"></div></div></div></div><button type="button" class="v-btn v-btn--flat v-btn--icon v-btn--round theme--dark v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-apps theme--dark"></i></span></button><button type="button" class="v-btn v-btn--flat v-btn--icon v-btn--round theme--dark v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-bell theme--dark"></i></span></button></div></header><main class="v-content" style="padding-top:5664px;padding-right:0px;padding-bottom:0px;padding-left:0px;"><div class="v-content__wrap"><div class="container container--fluid pa-0"><div class="row no-gutters"><div class="col col-12"><div class="row no-gutters row--dense"><div class="height-30 bg-dark white--text jarallax col"><img src="https://i.udemycdn.com/course/750x422/28172_dfd9_10.jpg" class="jarallax-img opacity-20 g-image"><div class="container mt-8 pa-0"><div class="row mb-12 justify-center"><div dense="" class="col"><p class="display-2 mb-0">Practical Trading on Financial Futures &amp; Options Markets</p><p class="headline mb-0">2nd Edition Course - Interactive learning on financial markets!</p><div><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">3.2 (2)</span></div><a href="https://www.udemy.com/course/getting-started-with-option-spreads/" class="v-btn v-btn--contained theme--light v-size--default warning"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-share-outline theme--light"></i> Take me there!
+          </span></a></div></div></div></div></div></div></div><div class="row no-gutters"><div class="col col-12"><div class="container mt-4 pl-5"><div class="row mb-12 justify-center"><div dense="" class="col">
+             This is our revised 2nd edition course with significant improvements as a step by step guide on how professionals trade the markets.  Experience practical interactive learning beyond classroom &amp; theory!  While going through our course, you'll execute trades on a trading platform as we walk you through set ups each week! You'll learn debit / credit spreads using Crude Oil, Gold and conventions across different futures markets. We'll cover how to plan &amp; monitor vertical spreads to start. Oahu Capital is a registered CTA (commodity trade advisor) and member of the National Futures Association (NFA). NFA ID: #0427607. Google: &quot;Oahu Capital&quot; or &quot;Oahu Education&quot; for both our websites
+          </div></div></div></div></div><div class="row no-gutters"><div class="col"><div class="container"><div class="headline pa-1 mb-0">#Related</div><div aria-label="Slideshow" class="vueperslides no-shadow vueperslides--fixed-height vueperslides--slide-multiple vueperslides--bullets-outside" style="height:300px;"><!----><div class="vueperslides__inner"><div aria-live="polite" class="vueperslides__parallax-wrapper" style="padding-bottom:25%;"><div class="vueperslides__track"><div class="vueperslides__track-inner" style="transition-duration:0ms;transform:translate3d(0%, 0, 0);will-change:auto;"><!----><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/derivatives-trading-course-for-beginners-deeply-explained" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Derivatives Trading Course For Beginners Deeply Explained</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="The Complete Derivatives Trading Course For Beginners Great For Options/Stock/Commodity/Futures/Currency/Forex Explained">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">5 (1)</span></div></div></div><!----></div><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/morgan-e-p7" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Morgan教你学习量化投资与程序化交易 (EP7:量化选股:基本面与技术面因子)</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="- Quantitative Investing &amp; Algorithm Trading">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">0 (0)</span></div></div></div><!----></div><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/acheter-et-vendre-les-actions-comme-un-pro" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Acheter et vendre les actions comme un pro</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Acheter et vendre les actions , finance, négociation d'actions, bourse">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">0 (0)</span></div></div></div><!----></div><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/morgan-e-p8" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Morgan教你学习量化投资与程序化交易 (EP8:量化择时:打造自己的多空系统)</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="- Quantitative Investing &amp; Algorithm Trading">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">0 (0)</span></div></div></div><!----></div><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/managing-your-personal-finances" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Managing Your Personal Finances</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="This is a short course on how to better manage your personal finances.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">3.7 (168)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/oracle-procurement-contracts-fundamentals-oracle-ebs-r12i" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Oracle Procurement Contracts Fundamentals (Oracle EBS R12i)</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Oracle Procurement Contracts Tutorial Training - Covers basics to advanced of Procurement Contracts module">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">3.8 (13)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/social-media-finance-course-fintech-2018-trends" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Social Media Finance Course: Fintech 2018 Trends</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Unlock financing for your start up or business with social media and fintech platforms. Insights into Fintech Marketing">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.1 (9)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/the-complete-forex-trader" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>The Complete Forex Trader</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="A practical application of the retail Forex market. A lock, stock and barrel approach to successful Forex trading">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.1 (208)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/introduction-to-java-programming-for-online-learners" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Introduction to Java Programming for Online Learners</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Supplemental instruction on java concepts found in online programming courses, designed to help students truly learn.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.1 (195)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/simple-strategy-for-swing-trading-the-stock-market" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Simple Strategy for Swing Trading the Stock Market</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Use my favorite Technical Indicator and the Trading Strategy I've developed for Swing Trading Stocks">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.4 (349)</span></div></div></div><!----></div><!----></div></div></div><!----><!----><!----><!----><!----></div><!----><!----></div></div></div></div></div></div></main></div></div>
+    <script>window.__INITIAL_STATE__={"data":null,"context":{"course":{"id":"3776bb77-3ef1-11ea-9791-1b580a556b4a","vendorId":"28172","created":"2020-01-24T21:35:07.944Z","updated":"2019-03-01T08:00:00.000Z","title":"Practical Trading on Financial Futures & Options Markets","headline":"2nd Edition Course - Interactive learning on financial markets!","description":" This is our revised 2nd edition course with significant improvements as a step by step guide on how professionals trade the markets.  Experience practical interactive learning beyond classroom & theory!  While going through our course, you'll execute trades on a trading platform as we walk you through set ups each week! You'll learn debit \u002F credit spreads using Crude Oil, Gold and conventions across different futures markets. We'll cover how to plan & monitor vertical spreads to start. Oahu Capital is a registered CTA (commodity trade advisor) and member of the National Futures Association (NFA). NFA ID: #0427607. Google: \"Oahu Capital\" or \"Oahu Education\" for both our websites","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F28172_dfd9_10.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fgetting-started-with-option-spreads\u002F","language":"en","tags":["Business","Finance","Financial Trading"],"rating":3.2,"reviews":2,"isFree":false,"matches":["376a8672-3ef1-11ea-9791-1b580a556b4a","377ab310-3ef1-11ea-9791-1b580a556b4a","37722790-3ef1-11ea-9791-1b580a556b4a","37781b0a-3ef1-11ea-9791-1b580a556b4a","37750dc8-3ef1-11ea-9791-1b580a556b4a","377757ba-3ef1-11ea-9791-1b580a556b4a","376e2ff9-3ef1-11ea-9791-1b580a556b4a","37797a91-3ef1-11ea-9791-1b580a556b4a","37744a72-3ef1-11ea-9791-1b580a556b4a","37770998-3ef1-11ea-9791-1b580a556b4a"],"slug":"practical-trading-on-financial-futures-and-options-markets"},"related":[{"id":"377ab310-3ef1-11ea-9791-1b580a556b4a","vendorId":"2743836","created":"2020-01-24T21:35:08.151Z","updated":"2020-01-01T08:00:00.000Z","title":"Derivatives Trading Course For Beginners Deeply Explained","headline":"The Complete Derivatives Trading Course For Beginners Great For Options\u002FStock\u002FCommodity\u002FFutures\u002FCurrency\u002FForex Explained","description":"Learn everything you need to know in order to start your derivatives trading journey today!This course is specifically designed for beginners so that they can find all the relevant information in one place with clearly explained lectures. This course is regularly updated as you can read below and has ongoing support for lifetime!I am trading the derivatives market since 2010 with dedication,passion and love for the nature of the business which I still find very exciting just like the first days!This ultimate derivatives trading course has been specifically designed for any type of market such as Options,Stock,Forex,Commodity and Cryptocurrency, it works perfectly for all. The logic and philosophy structure of the business is the same , can be applied anywhere!At the moment, 90% of the new derivatives market traders are loosing their entire capital in the first 3 months which is the results of poor foundation , making your first steps in the market is only possible (if you want to do it in the right way) once you covered the fundamentals of the business, start building and leveling up! That's called scaling , this course is taking care of the part you can start scaling on , foundation area.I like to build highly beneficial quiz lectures for my intellectual students where they can test and verify knowledgeThe best part, you do not need any prior business experience to get started!I will thoroughly explain: - Completely understand how the derivatives market works- Derivatives market philosophy, psychology and logic which are key elements of success- What is the derivatives market- Where are derivatives traded- Who are the traders that all take part in the market- How to read and understand derivatives points- What's the purpose of derivatives in the trading world- What are the purpose of the Hedgers and how they operate- What are the purpose of the Speculators and how they operate- Completely understand the types of derivatives and how they operate- Find out what are the uses of the derivatives market and obligations- Margin trading- Have a complete understand of CFDs- You will receive ongoing support- etc .. a lot moreBasically this is Derivatives Trading From A to Z for BeginnersThe teaching process shows you the structure on how you can always determine specific responses by yourself,  this won't affect if you are taking this course in 2050 , information might change, but the structure on how to determine and find out that info won't change, that's what I like to teach.This course is for complete beginners! All you need is an open mind and a passion to be successful!As with all my courses:you have unlimited lifetime access at no extra costs, everall future additional lectures, bonuses, etc in this course are always freethere's an unconditional, never any questions asked full 30 day money-back-in-full guaranteemy help is always available to you if you get stuck or have a question - my support is legendary on UdemyCan't wait to see you inside!Scrembo","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F2743836_9e82_2.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fderivatives-trading-course-for-beginners-deeply-explained\u002F","language":"en","tags":["Finance & Accounting","Investing & Trading","Derivatives Trading"],"rating":5,"reviews":1,"isFree":false,"matches":["377a64f9-3ef1-11ea-9791-1b580a556b4a","376a8672-3ef1-11ea-9791-1b580a556b4a","3776bb77-3ef1-11ea-9791-1b580a556b4a","376b97e0-3ef1-11ea-9791-1b580a556b4a","37722790-3ef1-11ea-9791-1b580a556b4a","376d93b0-3ef1-11ea-9791-1b580a556b4a","37716443-3ef1-11ea-9791-1b580a556b4a","376b22b0-3ef1-11ea-9791-1b580a556b4a","3778b74b-3ef1-11ea-9791-1b580a556b4a","37750dc6-3ef1-11ea-9791-1b580a556b4a"],"slug":"derivatives-trading-course-for-beginners-deeply-explained"},{"id":"37797a91-3ef1-11ea-9791-1b580a556b4a","vendorId":"2748824","created":"2020-01-24T21:35:08.094Z","updated":"2020-01-01T08:00:00.000Z","title":"Morgan教你学习量化投资与程序化交易 (EP7:量化选股:基本面与技术面因子)","headline":"- Quantitative Investing & Algorithm Trading","description":"讲者具有15+年以上在研究量化投资与程序化交易方面的经验，使用Multicharts与Trade Station的Easy Language超过12年，信息管理专业出身，也具备中国与台湾多种金融证照，包含证券分析师(CSIA)，对于如何结合IT技术与金融操作，有相当丰富的多年实务经历。过往曾教导许多家教学生，但都没有保存起来教学纪录，觉得有点可惜，因此结合过去多年经验，重新设计了本影音课程，本课程是给对于量化投资有兴趣的人一个入门的基本介绍，并且会教导你如何使用现有平台(Multicharts)，打造属于自己的交易武器与工具。对于初学者、进阶者在学习量化与程序化投资上会遇到的问题，希望都能透过本课程来解决，以及找到正确的方向学习成长。本课程将会分阶段逐步推出，每个系列(EP)下面包含若干子主题，因此可以针对自己想学的主题单独聆听。EP7本EP将讲述量化选股的两大主流:基本面因子与技术面因子，并且透过回测，实证两种因子的可用性与范例说明，希望能带给学员一个入门的观念建立。备注:若学员已经有熟悉或有兴趣的量化平台，本课程也能够提供一个完整量化投资的学习思路，因为所学习的知识与方法，并不一定只局限在使用Multicharts上，本课程的出发点，还是希望能够推广量化投资，讲者自身也涉猎了非常多国内外不同的量化平台与系统，因此虽以Multicharts为例，但背后经验与内容，其实万变不离其宗，都可以套用在其他平台上面。","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F2748824_ef50.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fquantitative_investment_ep7\u002F","language":"zh","tags":["Finance & Accounting","Investing & Trading","Stock Trading"],"rating":0,"reviews":0,"isFree":false,"matches":["377757ba-3ef1-11ea-9791-1b580a556b4a","376a8672-3ef1-11ea-9791-1b580a556b4a","37722790-3ef1-11ea-9791-1b580a556b4a","37790564-3ef1-11ea-9791-1b580a556b4a","3776bb77-3ef1-11ea-9791-1b580a556b4a","37781b0a-3ef1-11ea-9791-1b580a556b4a","377a64fc-3ef1-11ea-9791-1b580a556b4a","377ab310-3ef1-11ea-9791-1b580a556b4a","37769462-3ef1-11ea-9791-1b580a556b4a","37750dc8-3ef1-11ea-9791-1b580a556b4a"],"slug":"morgan-e-p7"},{"id":"37781b0a-3ef1-11ea-9791-1b580a556b4a","vendorId":"2744936","created":"2020-01-24T21:35:08.047Z","updated":"2020-01-01T08:00:00.000Z","title":"Acheter et vendre les actions comme un pro","headline":"Acheter et vendre les actions , finance, négociation d'actions, bourse","description":"Trader depuis plus de 20 ans avec une expérience inégalée, vous apprenez dans ce cour la façon pour faire fructifier votre capital de manière professionnelle, c'est à dire pour gagner et de façon durable.C'est avec la plus pure tradition et la meilleure éthique financière que cet enseignement a été fait pour vous donner les meilleures bases et acquis financiers qui feront faire fructifier le capital que vous avez investi en bourse sur les actions.Ce cour se remboursera de part lui même en appliquant ses enseignements très clairs.","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F2744936_035d.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Facheter-et-vendre-les-actions-comme-un-pro\u002F","language":"fr","tags":["Business","Finance","Stock Trading"],"rating":0,"reviews":0,"isFree":false,"matches":["376a8672-3ef1-11ea-9791-1b580a556b4a","3776bb77-3ef1-11ea-9791-1b580a556b4a","37790564-3ef1-11ea-9791-1b580a556b4a","3777cce1-3ef1-11ea-9791-1b580a556b4a","377757ba-3ef1-11ea-9791-1b580a556b4a","3777cce4-3ef1-11ea-9791-1b580a556b4a","37797a91-3ef1-11ea-9791-1b580a556b4a","37722790-3ef1-11ea-9791-1b580a556b4a","37781b02-3ef1-11ea-9791-1b580a556b4a","37744a72-3ef1-11ea-9791-1b580a556b4a"],"slug":"acheter-et-vendre-les-actions-comme-un-pro"},{"id":"377757ba-3ef1-11ea-9791-1b580a556b4a","vendorId":"2749264","created":"2020-01-24T21:35:08.041Z","updated":"2020-01-01T08:00:00.000Z","title":"Morgan教你学习量化投资与程序化交易 (EP8:量化择时:打造自己的多空系统)","headline":"- Quantitative Investing & Algorithm Trading","description":"讲者具有15+年以上在研究量化投资与程序化交易方面的经验，使用Multicharts与Trade Station的Easy Language超过12年，信息管理专业出身，也具备中国与台湾多种金融证照，包含证券分析师(CSIA)，对于如何结合IT技术与金融操作，有相当丰富的多年实务经历。过往曾教导许多家教学生，但都没有保存起来教学纪录，觉得有点可惜，因此结合过去多年经验，重新设计了本影音课程，本课程是给对于量化投资有兴趣的人一个入门的基本介绍，并且会教导你如何使用现有平台(Multicharts)，打造属于自己的交易武器与工具。对于初学者、进阶者在学习量化与程序化投资上会遇到的问题，希望都能透过本课程来解决，以及找到正确的方向学习成长。本课程将会分阶段逐步推出，每个系列(EP)下面包含若干子主题，因此可以针对自己想学的主题单独聆听。EP8本EP将把投资绩效的三大核心中，最后一块的择时(Timing Selection)做个说明，并且以范例讲解，要如何打造自己的一个择时系统出来。备注:若学员已经有熟悉或有兴趣的量化平台，本课程也能够提供一个完整量化投资的学习思路，因为所学习的知识与方法，并不一定只局限在使用Multicharts上，本课程的出发点，还是希望能够推广量化投资，讲者自身也涉猎了非常多国内外不同的量化平台与系统，因此虽以Multicharts为例，但背后经验与内容，其实万变不离其宗，都可以套用在其他平台上面。","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F2749264_3fbe.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fquantitative_investment_ep8\u002F","language":"zh","tags":["Finance & Accounting","Investing & Trading","Investing"],"rating":0,"reviews":0,"isFree":false,"matches":["37797a91-3ef1-11ea-9791-1b580a556b4a","376a8672-3ef1-11ea-9791-1b580a556b4a","37722790-3ef1-11ea-9791-1b580a556b4a","3776bb77-3ef1-11ea-9791-1b580a556b4a","37790564-3ef1-11ea-9791-1b580a556b4a","37781b0a-3ef1-11ea-9791-1b580a556b4a","377a64fc-3ef1-11ea-9791-1b580a556b4a","377ab310-3ef1-11ea-9791-1b580a556b4a","37795385-3ef1-11ea-9791-1b580a556b4a","37769462-3ef1-11ea-9791-1b580a556b4a"],"slug":"morgan-e-p8"},{"id":"37770998-3ef1-11ea-9791-1b580a556b4a","vendorId":"28646","created":"2020-01-24T21:35:07.946Z","updated":"2014-05-01T07:00:00.000Z","title":"Managing Your Personal Finances","headline":"This is a short course on how to better manage your personal finances.","description":" Learn about Basic Money Management through an interactive presentation of a free PDF E-Book available from the MoneySENSE website (http:\u002F\u002Fwww.moneysense.gov.sg) entitled My Money Book. You will find tips that people from all walks of life have found handy. These tips can help you meet your needs today and also plan ahead for the future. Examples: Tip: Live within your means, and do not take on too much debt. Always Make sure you can service your debt even if interest rates rise or your income falls. (Lee Hsien Loong, Prime Minister of Singapore) Tip: Invest simply. If you don't understand an investment, don't put money into it. And remember especially that promises of high investment returns mean a high risk of losing your money. Keep it simple and hold your investments for the long term. (Tharman Shanmugaratnam, Deputy Prime Minister of Singapore) ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F28646_923d_4.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fmanaging-your-personal-finances\u002F","language":"en","tags":["Personal Development","Personal Finance"],"rating":3.7,"reviews":168,"isFree":true,"matches":["3775aa06-3ef1-11ea-9791-1b580a556b4a","37755be3-3ef1-11ea-9791-1b580a556b4a","3773fc59-3ef1-11ea-9791-1b580a556b4a","377730aa-3ef1-11ea-9791-1b580a556b4a","37711626-3ef1-11ea-9791-1b580a556b4a","3771b266-3ef1-11ea-9791-1b580a556b4a","3775aa09-3ef1-11ea-9791-1b580a556b4a","37716449-3ef1-11ea-9791-1b580a556b4a","377a3de8-3ef1-11ea-9791-1b580a556b4a","377ab314-3ef1-11ea-9791-1b580a556b4a"],"slug":"managing-your-personal-finances"},{"id":"37750dc8-3ef1-11ea-9791-1b580a556b4a","vendorId":"24887","created":"2020-01-24T21:35:07.886Z","updated":"2012-11-01T07:00:00.000Z","title":"Oracle Procurement Contracts Fundamentals (Oracle EBS R12i)","headline":"Oracle Procurement Contracts Tutorial Training - Covers basics to advanced of Procurement Contracts module","description":"Oracle Procurement Contracts are a part of Oracle Advanced Procurement, which enables Standardizing Contract Processes with enterprise standards, policies that govern their use and tools to allow flexible contract administration. It allows you to take control of your contract Lifecycle, from authoring and negotiation through implementation, enforcement, evaluation and closeout. Participants will learn how to create and maintain online Contract standard term library, Authoring Contracts, Creating and using Contract Templates, how to leverage workflow driven process to maintain standards, Contract online review and approval, ensure proper approval and keep full history, Contract negotiation with Suppliers, integrate online changes and approvals. The “Oracle for Beginners: Oracle Tutorial for Procurement Contracts” course will also include Contract Signatures and Printing, and integration with Oracle Sourcing and Oracle Purchasing. Finally participants will learn how to set up and implement Oracle Procurement Contracts in this Oracle for beginner’s course. With Oracle E Business Suite procurement solutions, buyers, requests, and suppliers gain secure access to a single, centralized contract so they can view and use the most up-to-date pricing, terms, and conditions. “Oracle for Beginners: Oracle Tutorial for Procurement Contracts” Course Completion Certificate Now get a verifiable course completion Certificate from aclnz.com\u003C\u002Fp\u003E","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F24887_bc10_4.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Foracle-procurement-contracts\u002F","language":"en","tags":["Office Productivity","Oracle","Oracle Certification"],"rating":3.8,"reviews":13,"isFree":false,"matches":["3771b262-3ef1-11ea-9791-1b580a556b4a","377757b5-3ef1-11ea-9791-1b580a556b4a","37781b00-3ef1-11ea-9791-1b580a556b4a","3779a1a4-3ef1-11ea-9791-1b580a556b4a","37781b01-3ef1-11ea-9791-1b580a556b4a","37797a96-3ef1-11ea-9791-1b580a556b4a","3777f3f4-3ef1-11ea-9791-1b580a556b4a","37795380-3ef1-11ea-9791-1b580a556b4a","37784219-3ef1-11ea-9791-1b580a556b4a","37797a95-3ef1-11ea-9791-1b580a556b4a"],"slug":"oracle-procurement-contracts-fundamentals-oracle-ebs-r12i"},{"id":"37744a72-3ef1-11ea-9791-1b580a556b4a","vendorId":"23598","created":"2020-01-24T21:35:07.880Z","updated":"2017-12-01T08:00:00.000Z","title":"Social Media Finance Course: Fintech 2018 Trends","headline":"Unlock financing for your start up or business with social media and fintech platforms. Insights into Fintech Marketing","description":"Are you starting a business? Are you an entrepreneur?  Do you own your own business?  Every entrepreneur needs money to start and grow a business. A loan may not be your solution.  Do you know how to use your facebook friends, instigram, linkedin and other platforms on the internet to get money for your start up or your existing business?  If you don't this is the course you want to take.   Today there are numerous ways to fund to your startup and existing business.  I know how challenging it can be starting a business or wanting to start a business. I have done it three times.  You will need some sort of money to build a web site, hire programmers, marketing, digital marketing and more.   In this course, we will look at the latest funding trends on how other entrepreneurs just like you utilized social media, the internet and other platforms to access capital.  A bank loan; forget it.  Today, the internet is the new trend on how to get money for your business. This course will show you how to use social media to get money for your business. The course will teach you how to work your facebook friends, instigram followers and other social platforms to gain access to money for your startup or your existing operation.  I have personally used these strategies to fund my business. Also, this course will discuss how to implement application protocol integration, automation systems, and other configurations to enable you to maximize your social media presence.  We will provide you with:\"Certificate of Completion\" by Nicoya Tech and Lendinero on \"Entrepreneurial Finance Course\" The basics of digital marketing and digital finance ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F23598_aada_6.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fhow-to-raise-money-for-your-business-using-social-media\u002F","language":"en","tags":["Business","Finance","Social Media Marketing"],"rating":4.1,"reviews":9,"isFree":false,"matches":["37722795-3ef1-11ea-9791-1b580a556b4a","3776bb79-3ef1-11ea-9791-1b580a556b4a","3776bb70-3ef1-11ea-9791-1b580a556b4a","3776bb71-3ef1-11ea-9791-1b580a556b4a","37769460-3ef1-11ea-9791-1b580a556b4a","3777a5d4-3ef1-11ea-9791-1b580a556b4a","377a3de7-3ef1-11ea-9791-1b580a556b4a","3776946a-3ef1-11ea-9791-1b580a556b4a","3772c3da-3ef1-11ea-9791-1b580a556b4a","3775f824-3ef1-11ea-9791-1b580a556b4a"],"slug":"social-media-finance-course-fintech-2018-trends"},{"id":"37722790-3ef1-11ea-9791-1b580a556b4a","vendorId":"20185","created":"2020-01-24T21:35:07.697Z","updated":"2017-06-01T07:00:00.000Z","title":"The Complete Forex Trader","headline":"A practical application of the retail Forex market. A lock, stock and barrel approach to successful Forex trading","description":"In this Forex Trading Course, I have shared my personal experience on how I developed THAT winning strategy. In this course, I will teach you How to Trade Forex with these easy to follow rules.","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F20185_5ac3_7.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fforextrader\u002F","language":"en","tags":["Business","Finance","Forex"],"rating":4.1,"reviews":208,"isFree":false,"matches":["376a8672-3ef1-11ea-9791-1b580a556b4a","3776bb77-3ef1-11ea-9791-1b580a556b4a","377ab310-3ef1-11ea-9791-1b580a556b4a","37797a91-3ef1-11ea-9791-1b580a556b4a","377757ba-3ef1-11ea-9791-1b580a556b4a","37790564-3ef1-11ea-9791-1b580a556b4a","37781b0a-3ef1-11ea-9791-1b580a556b4a","37769468-3ef1-11ea-9791-1b580a556b4a","37777ec6-3ef1-11ea-9791-1b580a556b4a","377275b6-3ef1-11ea-9791-1b580a556b4a"],"slug":"the-complete-forex-trader"},{"id":"376e2ff9-3ef1-11ea-9791-1b580a556b4a","vendorId":"12975","created":"2020-01-24T21:35:07.178Z","updated":"2018-01-01T08:00:00.000Z","title":"Introduction to Java Programming for Online Learners","headline":"Supplemental instruction on java concepts found in online programming courses, designed to help students truly learn.","description":" This course provides instruction through video lectures and materials which will teach (you) the student how to program in Java from the very basic level to an intermediate level of programming. The intent is to aid anyone who is struggling in learning how to program and would like to see practical examples and demonstrations. This course is not affiliated with any university and will not provide answers to any homework assignments for any reason. Topics covered will include but not be limited to: Syntax and commands Creating variables Creating methods Working with files Exception handling Creating Classes Object-Oriented programming basics Basic Unit Testing Graphics and GUI programming In the end, this course is a stand-alone course, however it would be a huge aid to the online student who is taking a self-directed course, an individual who is trying to learn how to program, or even a high school student looking to get a head start on computer science material they might encounter in college. The material is organized in a start-to-finish fashion, building on knowledge with each section, so it is best to proceed through each section in order. Each section should amount to about a week worth of learning, lining up with most popular online course formats. Additionally, the course works hard to build practical knowledge that will help a student excel in their coursework, and also builds a strong foundation for a start to a career in programming for anyone looking to learn! As an added bonus, several useful programs are built throughout this course, and the end result of the course includes full source code for a working Sudoku game, amongst other programs, such as card game score calculators and basics physics formula calculation programs. ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F12975_4998_7.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Flearning-to-program-in-java-a-supplement-for-online-academic-learners\u002F","language":"en","tags":["Development","Web Development","Java"],"rating":4.1,"reviews":195,"isFree":false,"matches":["37750dc6-3ef1-11ea-9791-1b580a556b4a","376c3421-3ef1-11ea-9791-1b580a556b4a","3776bb74-3ef1-11ea-9791-1b580a556b4a","37713d39-3ef1-11ea-9791-1b580a556b4a","376cd064-3ef1-11ea-9791-1b580a556b4a","37744a76-3ef1-11ea-9791-1b580a556b4a","37713d35-3ef1-11ea-9791-1b580a556b4a","37738723-3ef1-11ea-9791-1b580a556b4a","377a64f9-3ef1-11ea-9791-1b580a556b4a","376b22b0-3ef1-11ea-9791-1b580a556b4a"],"slug":"introduction-to-java-programming-for-online-learners"},{"id":"376a8672-3ef1-11ea-9791-1b580a556b4a","vendorId":"2762","created":"2020-01-24T21:35:07.169Z","updated":"2019-03-01T08:00:00.000Z","title":"Simple Strategy for Swing Trading the Stock Market","headline":"Use my favorite Technical Indicator and the Trading Strategy I've developed for Swing Trading Stocks","description":"I've been a full-time trader of the Stock Market for almost twenty years, and I have developed a very simple and effective strategy for Swing Trading Stocks, ETF's - plus the Forex, Cryptocurrency and Commodity Markets.  My strategy combines both Fundamental and Technical Analysis, but relies mostly on Technical Analysis of stock charts. This course will concentrate on Technical Analysis, and you will learn everything I know about correctly reading stock charts in about 80 minutes!  By training yourself to read and correctly interpret the information charts give you, you will be able to predict which way a stock will most likely move in the near future.  Charts can actually give you a glimpse of the future, and are a must have tool in the successful trader's arsenal.In my Beginners Guide to Technical Analysis of Stock Charts here on Udemy, I covered fifty different technical indicators.  In this course, I teach the one indicator I use for all of my Buy and Sell Signals, and it's accuracy rate is about 80%. Two of the most important lessons included in this course are how to handle a false Buy Signal to keep losses to an absolute minimum, and when to lock in profits to maximize your gains. The trading strategy I teach in this course will provide you with a plan for entering and exiting trades with confidence. I look forward to helping you to become a successful Trader!Happy Trading! Tom  ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F2762_231c_20.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fswing-trading-the-stock-market\u002F","language":"en","tags":["Business","Finance","Swing Trading"],"rating":4.4,"reviews":349,"isFree":false,"matches":["37722790-3ef1-11ea-9791-1b580a556b4a","377ab310-3ef1-11ea-9791-1b580a556b4a","37781b0a-3ef1-11ea-9791-1b580a556b4a","3776bb77-3ef1-11ea-9791-1b580a556b4a","37797a91-3ef1-11ea-9791-1b580a556b4a","377757ba-3ef1-11ea-9791-1b580a556b4a","37790564-3ef1-11ea-9791-1b580a556b4a","37777ec6-3ef1-11ea-9791-1b580a556b4a","37769468-3ef1-11ea-9791-1b580a556b4a","3774e6b8-3ef1-11ea-9791-1b580a556b4a"],"slug":"simple-strategy-for-swing-trading-the-stock-market"}]}};(function(){var s;(s=document.currentScript||document.scripts[document.scripts.length-1]).parentNode.removeChild(s);}());</script><script src="/site/assets/js/app.e5c95575.js" defer></script><script src="/site/assets/js/page--src--templates--course-template-vue.a9c4e657.js" defer></script>
+  </body>
+</html>

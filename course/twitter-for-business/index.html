@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html data-html-server-rendered="true" lang="en" data-vue-tag="%7B%22lang%22:%7B%22ssr%22:%22en%22%7D%7D">
+  <head>
+    <title>Twitter for Business - Gridsome</title><meta name="gridsome:hash" content="6d1e7dd52e8c17cf4930f349c6afc1a78b2e1c5e"><meta data-vue-tag="ssr" charset="utf-8"><meta data-vue-tag="ssr" name="generator" content="Gridsome v0.7.12"><meta data-vue-tag="ssr" data-key="viewport" name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta data-vue-tag="ssr" data-key="format-detection" name="format-detection" content="telephone=no"><link data-vue-tag="ssr" rel="icon" href="data:,"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="16x16" href="/site/assets/static/favicon.ce0531f.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="32x32" href="/site/assets/static/favicon.ac8d93a.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="96x96" href="/site/assets/static/favicon.b9532cc.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="76x76" href="/site/assets/static/favicon.f22e9f3.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="152x152" href="/site/assets/static/favicon.62d22cb.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="120x120" href="/site/assets/static/favicon.1539b60.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="167x167" href="/site/assets/static/favicon.dc0cdc5.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="180x180" href="/site/assets/static/favicon.7b22250.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"><link data-vue-tag="ssr" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css"><link rel="preload" href="/site/assets/css/0.styles.dded6410.css" as="style"><link rel="preload" href="/site/assets/js/app.e5c95575.js" as="script"><link rel="preload" href="/site/assets/js/page--src--templates--course-template-vue.a9c4e657.js" as="script"><link rel="prefetch" href="/site/assets/js/page--node-modules--gridsome--app--pages--404-vue.8ed2c588.js"><link rel="prefetch" href="/site/assets/js/page--src--pages--about-vue.d8fdab17.js"><link rel="prefetch" href="/site/assets/js/page--src--templates--index-template-vue.6cecc577.js"><link rel="prefetch" href="/site/assets/js/page--src--templates--tag-vue.c6b527ba.js"><link rel="prefetch" href="/site/assets/js/vendors~page--src--templates--course-template-vue~page--src--templates--index-template-vue.4ec5035c.js"><link rel="stylesheet" href="/site/assets/css/0.styles.dded6410.css"><style data-vue-tag="vuetify" type="text/css" id="vuetify-theme-stylesheet" nonce="undefined">.v-application a { color: #1976d2; }
+.v-application .primary {
+  background-color: #1976d2 !important;
+  border-color: #1976d2 !important;
+}
+.v-application .primary--text {
+  color: #1976d2 !important;
+  caret-color: #1976d2 !important;
+}
+.v-application .primary.lighten-5 {
+  background-color: #c7fdff !important;
+  border-color: #c7fdff !important;
+}
+.v-application .primary--text.text--lighten-5 {
+  color: #c7fdff !important;
+  caret-color: #c7fdff !important;
+}
+.v-application .primary.lighten-4 {
+  background-color: #a8e0ff !important;
+  border-color: #a8e0ff !important;
+}
+.v-application .primary--text.text--lighten-4 {
+  color: #a8e0ff !important;
+  caret-color: #a8e0ff !important;
+}
+.v-application .primary.lighten-3 {
+  background-color: #8ac5ff !important;
+  border-color: #8ac5ff !important;
+}
+.v-application .primary--text.text--lighten-3 {
+  color: #8ac5ff !important;
+  caret-color: #8ac5ff !important;
+}
+.v-application .primary.lighten-2 {
+  background-color: #6aaaff !important;
+  border-color: #6aaaff !important;
+}
+.v-application .primary--text.text--lighten-2 {
+  color: #6aaaff !important;
+  caret-color: #6aaaff !important;
+}
+.v-application .primary.lighten-1 {
+  background-color: #488fef !important;
+  border-color: #488fef !important;
+}
+.v-application .primary--text.text--lighten-1 {
+  color: #488fef !important;
+  caret-color: #488fef !important;
+}
+.v-application .primary.darken-1 {
+  background-color: #005eb6 !important;
+  border-color: #005eb6 !important;
+}
+.v-application .primary--text.text--darken-1 {
+  color: #005eb6 !important;
+  caret-color: #005eb6 !important;
+}
+.v-application .primary.darken-2 {
+  background-color: #00479b !important;
+  border-color: #00479b !important;
+}
+.v-application .primary--text.text--darken-2 {
+  color: #00479b !important;
+  caret-color: #00479b !important;
+}
+.v-application .primary.darken-3 {
+  background-color: #003180 !important;
+  border-color: #003180 !important;
+}
+.v-application .primary--text.text--darken-3 {
+  color: #003180 !important;
+  caret-color: #003180 !important;
+}
+.v-application .primary.darken-4 {
+  background-color: #001e67 !important;
+  border-color: #001e67 !important;
+}
+.v-application .primary--text.text--darken-4 {
+  color: #001e67 !important;
+  caret-color: #001e67 !important;
+}
+.v-application .secondary {
+  background-color: #424242 !important;
+  border-color: #424242 !important;
+}
+.v-application .secondary--text {
+  color: #424242 !important;
+  caret-color: #424242 !important;
+}
+.v-application .secondary.lighten-5 {
+  background-color: #c1c1c1 !important;
+  border-color: #c1c1c1 !important;
+}
+.v-application .secondary--text.text--lighten-5 {
+  color: #c1c1c1 !important;
+  caret-color: #c1c1c1 !important;
+}
+.v-application .secondary.lighten-4 {
+  background-color: #a6a6a6 !important;
+  border-color: #a6a6a6 !important;
+}
+.v-application .secondary--text.text--lighten-4 {
+  color: #a6a6a6 !important;
+  caret-color: #a6a6a6 !important;
+}
+.v-application .secondary.lighten-3 {
+  background-color: #8b8b8b !important;
+  border-color: #8b8b8b !important;
+}
+.v-application .secondary--text.text--lighten-3 {
+  color: #8b8b8b !important;
+  caret-color: #8b8b8b !important;
+}
+.v-application .secondary.lighten-2 {
+  background-color: #727272 !important;
+  border-color: #727272 !important;
+}
+.v-application .secondary--text.text--lighten-2 {
+  color: #727272 !important;
+  caret-color: #727272 !important;
+}
+.v-application .secondary.lighten-1 {
+  background-color: #595959 !important;
+  border-color: #595959 !important;
+}
+.v-application .secondary--text.text--lighten-1 {
+  color: #595959 !important;
+  caret-color: #595959 !important;
+}
+.v-application .secondary.darken-1 {
+  background-color: #2c2c2c !important;
+  border-color: #2c2c2c !important;
+}
+.v-application .secondary--text.text--darken-1 {
+  color: #2c2c2c !important;
+  caret-color: #2c2c2c !important;
+}
+.v-application .secondary.darken-2 {
+  background-color: #171717 !important;
+  border-color: #171717 !important;
+}
+.v-application .secondary--text.text--darken-2 {
+  color: #171717 !important;
+  caret-color: #171717 !important;
+}
+.v-application .secondary.darken-3 {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+.v-application .secondary--text.text--darken-3 {
+  color: #000000 !important;
+  caret-color: #000000 !important;
+}
+.v-application .secondary.darken-4 {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+.v-application .secondary--text.text--darken-4 {
+  color: #000000 !important;
+  caret-color: #000000 !important;
+}
+.v-application .accent {
+  background-color: #82b1ff !important;
+  border-color: #82b1ff !important;
+}
+.v-application .accent--text {
+  color: #82b1ff !important;
+  caret-color: #82b1ff !important;
+}
+.v-application .accent.lighten-5 {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+.v-application .accent--text.text--lighten-5 {
+  color: #ffffff !important;
+  caret-color: #ffffff !important;
+}
+.v-application .accent.lighten-4 {
+  background-color: #f8ffff !important;
+  border-color: #f8ffff !important;
+}
+.v-application .accent--text.text--lighten-4 {
+  color: #f8ffff !important;
+  caret-color: #f8ffff !important;
+}
+.v-application .accent.lighten-3 {
+  background-color: #daffff !important;
+  border-color: #daffff !important;
+}
+.v-application .accent--text.text--lighten-3 {
+  color: #daffff !important;
+  caret-color: #daffff !important;
+}
+.v-application .accent.lighten-2 {
+  background-color: #bce8ff !important;
+  border-color: #bce8ff !important;
+}
+.v-application .accent--text.text--lighten-2 {
+  color: #bce8ff !important;
+  caret-color: #bce8ff !important;
+}
+.v-application .accent.lighten-1 {
+  background-color: #9fccff !important;
+  border-color: #9fccff !important;
+}
+.v-application .accent--text.text--lighten-1 {
+  color: #9fccff !important;
+  caret-color: #9fccff !important;
+}
+.v-application .accent.darken-1 {
+  background-color: #6596e2 !important;
+  border-color: #6596e2 !important;
+}
+.v-application .accent--text.text--darken-1 {
+  color: #6596e2 !important;
+  caret-color: #6596e2 !important;
+}
+.v-application .accent.darken-2 {
+  background-color: #467dc6 !important;
+  border-color: #467dc6 !important;
+}
+.v-application .accent--text.text--darken-2 {
+  color: #467dc6 !important;
+  caret-color: #467dc6 !important;
+}
+.v-application .accent.darken-3 {
+  background-color: #2364aa !important;
+  border-color: #2364aa !important;
+}
+.v-application .accent--text.text--darken-3 {
+  color: #2364aa !important;
+  caret-color: #2364aa !important;
+}
+.v-application .accent.darken-4 {
+  background-color: #004c90 !important;
+  border-color: #004c90 !important;
+}
+.v-application .accent--text.text--darken-4 {
+  color: #004c90 !important;
+  caret-color: #004c90 !important;
+}
+.v-application .error {
+  background-color: #ff5252 !important;
+  border-color: #ff5252 !important;
+}
+.v-application .error--text {
+  color: #ff5252 !important;
+  caret-color: #ff5252 !important;
+}
+.v-application .error.lighten-5 {
+  background-color: #ffe4d5 !important;
+  border-color: #ffe4d5 !important;
+}
+.v-application .error--text.text--lighten-5 {
+  color: #ffe4d5 !important;
+  caret-color: #ffe4d5 !important;
+}
+.v-application .error.lighten-4 {
+  background-color: #ffc6b9 !important;
+  border-color: #ffc6b9 !important;
+}
+.v-application .error--text.text--lighten-4 {
+  color: #ffc6b9 !important;
+  caret-color: #ffc6b9 !important;
+}
+.v-application .error.lighten-3 {
+  background-color: #ffa99e !important;
+  border-color: #ffa99e !important;
+}
+.v-application .error--text.text--lighten-3 {
+  color: #ffa99e !important;
+  caret-color: #ffa99e !important;
+}
+.v-application .error.lighten-2 {
+  background-color: #ff8c84 !important;
+  border-color: #ff8c84 !important;
+}
+.v-application .error--text.text--lighten-2 {
+  color: #ff8c84 !important;
+  caret-color: #ff8c84 !important;
+}
+.v-application .error.lighten-1 {
+  background-color: #ff6f6a !important;
+  border-color: #ff6f6a !important;
+}
+.v-application .error--text.text--lighten-1 {
+  color: #ff6f6a !important;
+  caret-color: #ff6f6a !important;
+}
+.v-application .error.darken-1 {
+  background-color: #df323b !important;
+  border-color: #df323b !important;
+}
+.v-application .error--text.text--darken-1 {
+  color: #df323b !important;
+  caret-color: #df323b !important;
+}
+.v-application .error.darken-2 {
+  background-color: #bf0025 !important;
+  border-color: #bf0025 !important;
+}
+.v-application .error--text.text--darken-2 {
+  color: #bf0025 !important;
+  caret-color: #bf0025 !important;
+}
+.v-application .error.darken-3 {
+  background-color: #9f0010 !important;
+  border-color: #9f0010 !important;
+}
+.v-application .error--text.text--darken-3 {
+  color: #9f0010 !important;
+  caret-color: #9f0010 !important;
+}
+.v-application .error.darken-4 {
+  background-color: #800000 !important;
+  border-color: #800000 !important;
+}
+.v-application .error--text.text--darken-4 {
+  color: #800000 !important;
+  caret-color: #800000 !important;
+}
+.v-application .info {
+  background-color: #2196f3 !important;
+  border-color: #2196f3 !important;
+}
+.v-application .info--text {
+  color: #2196f3 !important;
+  caret-color: #2196f3 !important;
+}
+.v-application .info.lighten-5 {
+  background-color: #d4ffff !important;
+  border-color: #d4ffff !important;
+}
+.v-application .info--text.text--lighten-5 {
+  color: #d4ffff !important;
+  caret-color: #d4ffff !important;
+}
+.v-application .info.lighten-4 {
+  background-color: #b5ffff !important;
+  border-color: #b5ffff !important;
+}
+.v-application .info--text.text--lighten-4 {
+  color: #b5ffff !important;
+  caret-color: #b5ffff !important;
+}
+.v-application .info.lighten-3 {
+  background-color: #95e8ff !important;
+  border-color: #95e8ff !important;
+}
+.v-application .info--text.text--lighten-3 {
+  color: #95e8ff !important;
+  caret-color: #95e8ff !important;
+}
+.v-application .info.lighten-2 {
+  background-color: #75ccff !important;
+  border-color: #75ccff !important;
+}
+.v-application .info--text.text--lighten-2 {
+  color: #75ccff !important;
+  caret-color: #75ccff !important;
+}
+.v-application .info.lighten-1 {
+  background-color: #51b0ff !important;
+  border-color: #51b0ff !important;
+}
+.v-application .info--text.text--lighten-1 {
+  color: #51b0ff !important;
+  caret-color: #51b0ff !important;
+}
+.v-application .info.darken-1 {
+  background-color: #007cd6 !important;
+  border-color: #007cd6 !important;
+}
+.v-application .info--text.text--darken-1 {
+  color: #007cd6 !important;
+  caret-color: #007cd6 !important;
+}
+.v-application .info.darken-2 {
+  background-color: #0064ba !important;
+  border-color: #0064ba !important;
+}
+.v-application .info--text.text--darken-2 {
+  color: #0064ba !important;
+  caret-color: #0064ba !important;
+}
+.v-application .info.darken-3 {
+  background-color: #004d9f !important;
+  border-color: #004d9f !important;
+}
+.v-application .info--text.text--darken-3 {
+  color: #004d9f !important;
+  caret-color: #004d9f !important;
+}
+.v-application .info.darken-4 {
+  background-color: #003784 !important;
+  border-color: #003784 !important;
+}
+.v-application .info--text.text--darken-4 {
+  color: #003784 !important;
+  caret-color: #003784 !important;
+}
+.v-application .success {
+  background-color: #4caf50 !important;
+  border-color: #4caf50 !important;
+}
+.v-application .success--text {
+  color: #4caf50 !important;
+  caret-color: #4caf50 !important;
+}
+.v-application .success.lighten-5 {
+  background-color: #dcffd6 !important;
+  border-color: #dcffd6 !important;
+}
+.v-application .success--text.text--lighten-5 {
+  color: #dcffd6 !important;
+  caret-color: #dcffd6 !important;
+}
+.v-application .success.lighten-4 {
+  background-color: #beffba !important;
+  border-color: #beffba !important;
+}
+.v-application .success--text.text--lighten-4 {
+  color: #beffba !important;
+  caret-color: #beffba !important;
+}
+.v-application .success.lighten-3 {
+  background-color: #a2ff9e !important;
+  border-color: #a2ff9e !important;
+}
+.v-application .success--text.text--lighten-3 {
+  color: #a2ff9e !important;
+  caret-color: #a2ff9e !important;
+}
+.v-application .success.lighten-2 {
+  background-color: #85e783 !important;
+  border-color: #85e783 !important;
+}
+.v-application .success--text.text--lighten-2 {
+  color: #85e783 !important;
+  caret-color: #85e783 !important;
+}
+.v-application .success.lighten-1 {
+  background-color: #69cb69 !important;
+  border-color: #69cb69 !important;
+}
+.v-application .success--text.text--lighten-1 {
+  color: #69cb69 !important;
+  caret-color: #69cb69 !important;
+}
+.v-application .success.darken-1 {
+  background-color: #2d9437 !important;
+  border-color: #2d9437 !important;
+}
+.v-application .success--text.text--darken-1 {
+  color: #2d9437 !important;
+  caret-color: #2d9437 !important;
+}
+.v-application .success.darken-2 {
+  background-color: #00791e !important;
+  border-color: #00791e !important;
+}
+.v-application .success--text.text--darken-2 {
+  color: #00791e !important;
+  caret-color: #00791e !important;
+}
+.v-application .success.darken-3 {
+  background-color: #006000 !important;
+  border-color: #006000 !important;
+}
+.v-application .success--text.text--darken-3 {
+  color: #006000 !important;
+  caret-color: #006000 !important;
+}
+.v-application .success.darken-4 {
+  background-color: #004700 !important;
+  border-color: #004700 !important;
+}
+.v-application .success--text.text--darken-4 {
+  color: #004700 !important;
+  caret-color: #004700 !important;
+}
+.v-application .warning {
+  background-color: #fb8c00 !important;
+  border-color: #fb8c00 !important;
+}
+.v-application .warning--text {
+  color: #fb8c00 !important;
+  caret-color: #fb8c00 !important;
+}
+.v-application .warning.lighten-5 {
+  background-color: #ffff9e !important;
+  border-color: #ffff9e !important;
+}
+.v-application .warning--text.text--lighten-5 {
+  color: #ffff9e !important;
+  caret-color: #ffff9e !important;
+}
+.v-application .warning.lighten-4 {
+  background-color: #fffb82 !important;
+  border-color: #fffb82 !important;
+}
+.v-application .warning--text.text--lighten-4 {
+  color: #fffb82 !important;
+  caret-color: #fffb82 !important;
+}
+.v-application .warning.lighten-3 {
+  background-color: #ffdf67 !important;
+  border-color: #ffdf67 !important;
+}
+.v-application .warning--text.text--lighten-3 {
+  color: #ffdf67 !important;
+  caret-color: #ffdf67 !important;
+}
+.v-application .warning.lighten-2 {
+  background-color: #ffc24b !important;
+  border-color: #ffc24b !important;
+}
+.v-application .warning--text.text--lighten-2 {
+  color: #ffc24b !important;
+  caret-color: #ffc24b !important;
+}
+.v-application .warning.lighten-1 {
+  background-color: #ffa72d !important;
+  border-color: #ffa72d !important;
+}
+.v-application .warning--text.text--lighten-1 {
+  color: #ffa72d !important;
+  caret-color: #ffa72d !important;
+}
+.v-application .warning.darken-1 {
+  background-color: #db7200 !important;
+  border-color: #db7200 !important;
+}
+.v-application .warning--text.text--darken-1 {
+  color: #db7200 !important;
+  caret-color: #db7200 !important;
+}
+.v-application .warning.darken-2 {
+  background-color: #bb5900 !important;
+  border-color: #bb5900 !important;
+}
+.v-application .warning--text.text--darken-2 {
+  color: #bb5900 !important;
+  caret-color: #bb5900 !important;
+}
+.v-application .warning.darken-3 {
+  background-color: #9d4000 !important;
+  border-color: #9d4000 !important;
+}
+.v-application .warning--text.text--darken-3 {
+  color: #9d4000 !important;
+  caret-color: #9d4000 !important;
+}
+.v-application .warning.darken-4 {
+  background-color: #802700 !important;
+  border-color: #802700 !important;
+}
+.v-application .warning--text.text--darken-4 {
+  color: #802700 !important;
+  caret-color: #802700 !important;
+}</style><noscript data-vue-tag="ssr"><style>.g-image--loading{display:none;}</style></noscript>
+  </head>
+  <body >
+    <div data-app="true" data-server-rendered="true" id="app" id="inspire" class="v-application v-application--is-ltr theme--light"><div class="v-application--wrap"><header class="gb-toolbar v-sheet v-sheet--tile theme--dark v-toolbar v-toolbar--dense v-app-bar v-app-bar--fixed" style="height:48px;margin-top:0px;transform:translateY(0px);left:0px;right:0px;"><div class="v-toolbar__content" style="height:48px;"><button type="button" class="v-app-bar__nav-icon v-btn v-btn--flat v-btn--icon v-btn--round theme--dark v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-menu theme--dark"></i></span></button><div class="v-toolbar__title ml-0 pl-4" style="width:300px;"><span class="hidden-sm-and-down">skillhub</span></div><div class="spacer"></div><div class="v-input hidden-sm-and-down v-input--hide-details v-input--dense theme--dark v-text-field v-text-field--single-line v-text-field--solo v-text-field--solo-inverted v-text-field--solo-flat v-text-field--enclosed"><div class="v-input__control"><div class="v-input__slot"><div class="v-input__prepend-inner"><div class="v-input__icon v-input__icon--prepend-inner"><i aria-hidden="true" class="v-icon notranslate mdi mdi-magnify theme--dark"></i></div></div><div class="v-text-field__slot"><label for="input-24968" class="v-label theme--dark" style="left:0px;right:auto;position:absolute;">Search</label><input id="input-24968" type="text"></div></div></div></div><button type="button" class="v-btn v-btn--flat v-btn--icon v-btn--round theme--dark v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-apps theme--dark"></i></span></button><button type="button" class="v-btn v-btn--flat v-btn--icon v-btn--round theme--dark v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-bell theme--dark"></i></span></button></div></header><main class="v-content" style="padding-top:7728px;padding-right:0px;padding-bottom:0px;padding-left:0px;"><div class="v-content__wrap"><div class="container container--fluid pa-0"><div class="row no-gutters"><div class="col col-12"><div class="row no-gutters row--dense"><div class="height-30 bg-dark white--text jarallax col"><img src="https://i.udemycdn.com/course/750x422/21038_ae99_14.jpg" class="jarallax-img opacity-20 g-image"><div class="container mt-8 pa-0"><div class="row mb-12 justify-center"><div dense="" class="col"><p class="display-2 mb-0">Twitter for Business</p><p class="headline mb-0">Learn to Twitter for Business and Master Twitter Marketing</p><div><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.6 (414)</span></div><a href="https://www.udemy.com/course/twitter-for-business-schwartzman/" class="v-btn v-btn--contained theme--light v-size--default warning"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-share-outline theme--light"></i> Take me there!
+          </span></a></div></div></div></div></div></div></div><div class="row no-gutters"><div class="col col-12"><div class="container mt-4 pl-5"><div class="row mb-12 justify-center"><div dense="" class="col">
+            Now that you know how to use Facebook for Business, learn Twitter for business and add Twitter marketing to your digital job skills. There are 465 million Twitter accounts sharing 175 million tweets each day. Twitter is where business professionals shares news and information, build and strengthen their network of contacts, generate leads, develop new business and even get hired. If you want to leverage the fastest and most intimate online social network for business, take this course right now and learn to Twitter. You don't need to be a techie to take this course. Whether you're a digital immigrant or a Facebook ninja, this course is for you! This course also includes an arsenal of supplemental materials including exclusive audio recordings of discussions with some of the biggest thought leaders. Learn about Twitter today. 
+          </div></div></div></div></div><div class="row no-gutters"><div class="col"><div class="container"><div class="headline pa-1 mb-0">#Related</div><div aria-label="Slideshow" class="vueperslides no-shadow vueperslides--fixed-height vueperslides--slide-multiple vueperslides--bullets-outside" style="height:300px;"><!----><div class="vueperslides__inner"><div aria-live="polite" class="vueperslides__parallax-wrapper" style="padding-bottom:25%;"><div class="vueperslides__track"><div class="vueperslides__track-inner" style="transition-duration:0ms;transform:translate3d(0%, 0, 0);will-change:auto;"><!----><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/learn-the-power-of-social-media-stories-for-marketing" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Learn The Power of Social Media Stories for Marketing</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Promote yourself using social media stories just like senior marketers do">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">0 (0)</span></div></div></div><!----></div><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/reseaux-sociaux" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Réseaux sociaux</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Comment utiliser les réseaux sociaux pour développer ses affaires">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">0 (0)</span></div></div></div><!----></div><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/web-copy-writing-consistently-outperform-your-competitors" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Web CopyWriting: Consistently Outperform Your Competitors</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Discover the key strategies behind winning content for websites, blogs, social media and email marketing.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">3.5 (43)</span></div></div></div><!----></div><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/social-media-selling-system" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Social Media Selling System</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Leveraging Social Media for your Small Business Sales. Learn how to increase sales using Social Media.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4 (457)</span></div></div></div><!----></div><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/digital-marketing-the-ultimate-guide-to-strategic-marketing" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Digital Marketing: The Ultimate Guide to Strategic Marketing</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Master Digital Marketing: Instagram, Optimization, Social Media, Analytics, SEO, PPC, Email, WebCopy, UX, Content Mkt">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.1 (606)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/twitter-for-real-estate" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Twitter for Real Estate</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Learn Twitter from A to Z and leverage it to help expand your reach, build your brand and win more business.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.5 (9)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/i-tweet-therefore-i-am" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>I Tweet, Therefore I Am</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="A step-by-step Twitter training, practical guide to using Twitter to grow your business and build customer loyalty.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">3.7 (14)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/social-media-management" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Social Media Management</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Digital marketing training to Learn How to Use Social Media, Social Media Strategy and Social Media Marketing.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.2 (2004)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/how-to-use-twitter-to-build-authority-in-your-market-sector" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>How To Use Twitter To Build Authority In Your Market Sector</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Learn how to leverage the power of Twitter to build authority for yourself or your company in your market.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.4 (127)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/how-to-market-your-business" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>How to Market Your Business</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="The definitive course for creating a successful marketing plan for your business">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.4 (17)</span></div></div></div><!----></div><!----></div></div></div><!----><!----><!----><!----><!----></div><!----><!----></div></div></div></div></div></div></main></div></div>
+    <script>window.__INITIAL_STATE__={"data":null,"context":{"course":{"id":"37729cc7-3ef1-11ea-9791-1b580a556b4a","vendorId":"21038","created":"2020-01-24T21:35:07.811Z","updated":"2015-01-01T08:00:00.000Z","title":"Twitter for Business","headline":"Learn to Twitter for Business and Master Twitter Marketing","description":"Now that you know how to use Facebook for Business, learn Twitter for business and add Twitter marketing to your digital job skills. There are 465 million Twitter accounts sharing 175 million tweets each day. Twitter is where business professionals shares news and information, build and strengthen their network of contacts, generate leads, develop new business and even get hired. If you want to leverage the fastest and most intimate online social network for business, take this course right now and learn to Twitter. You don't need to be a techie to take this course. Whether you're a digital immigrant or a Facebook ninja, this course is for you! This course also includes an arsenal of supplemental materials including exclusive audio recordings of discussions with some of the biggest thought leaders. Learn about Twitter today. ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F21038_ae99_14.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Ftwitter-for-business-schwartzman\u002F","language":"en","tags":["Marketing","Social Media Marketing","Twitter Marketing"],"rating":4.6,"reviews":414,"isFree":true,"matches":["37761f32-3ef1-11ea-9791-1b580a556b4a","37747188-3ef1-11ea-9791-1b580a556b4a","37702bc1-3ef1-11ea-9791-1b580a556b4a","37722795-3ef1-11ea-9791-1b580a556b4a","3777a5d4-3ef1-11ea-9791-1b580a556b4a","3776bb79-3ef1-11ea-9791-1b580a556b4a","3776bb71-3ef1-11ea-9791-1b580a556b4a","37777ec0-3ef1-11ea-9791-1b580a556b4a","37769460-3ef1-11ea-9791-1b580a556b4a","376cf772-3ef1-11ea-9791-1b580a556b4a"],"slug":"twitter-for-business"},"related":[{"id":"3777a5d4-3ef1-11ea-9791-1b580a556b4a","vendorId":"2750120","created":"2020-01-24T21:35:08.042Z","updated":"2020-01-01T08:00:00.000Z","title":"Learn The Power of Social Media Stories for Marketing","headline":"Promote yourself using social media stories just like senior marketers do","description":"The organic reach of business accounts on a number of social platforms is decreasing.Stories provide a great ROI in terms of the time and effort they require and the benefits they offer.Stories are also extremely popular with customers and users right now.Four out of five major brands report using stories to promote themselves, and that should tell you something about how big this is going to be going forward.With this video course you will:learn precisely what a story islearn how to create a storylearn how to have huge success using stories to grow your audiencelearn how to increase brand loyaltyhow to promote yourself using stories just like major brands do","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F2750120_4deb.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fthe-power-of-social-media-stories-for-marketers-n\u002F","language":"en","tags":["Marketing","Social Media Marketing"],"rating":0,"reviews":0,"isFree":false,"matches":["37722795-3ef1-11ea-9791-1b580a556b4a","3776bb79-3ef1-11ea-9791-1b580a556b4a","3776bb70-3ef1-11ea-9791-1b580a556b4a","3776bb71-3ef1-11ea-9791-1b580a556b4a","3775f824-3ef1-11ea-9791-1b580a556b4a","37769460-3ef1-11ea-9791-1b580a556b4a","377275b5-3ef1-11ea-9791-1b580a556b4a","3772c3da-3ef1-11ea-9791-1b580a556b4a","37777ec0-3ef1-11ea-9791-1b580a556b4a","3776946a-3ef1-11ea-9791-1b580a556b4a"],"slug":"learn-the-power-of-social-media-stories-for-marketing"},{"id":"37777ec0-3ef1-11ea-9791-1b580a556b4a","vendorId":"2749442","created":"2020-01-24T21:35:08.041Z","updated":"2020-01-01T08:00:00.000Z","title":"Réseaux sociaux","headline":"Comment utiliser les réseaux sociaux pour développer ses affaires","description":"Principes- Pourquoi les réseaux sociaux- Pourquoi utiliser les réseaux sociaux- Objectif et stratégie- Stratégie Push et Pull- Pourquoi impliquer les employés- Ce que les employés peuvent apporter- Sujets de vidéos- Comment s’assurer de la qualité du contenu- Sur quels réseaux sociaux publier quoiLes fonctions de base de Facebook- La terminologie- Ouvrir un compte Facebook- Formulaire d’inscription Facebook- Exercice : créez votre compte Facebook- Page Facebook, mur, accueil, amis, messages, commentaires- Publier- J’aime, commenter, partager- Identifier, supprimer l’identification (taguer, détaguer)- Exercice de publicationGérer son compte Facebook- Gérer les paramètres de Facebook- Facebook, comment gérer son compte- Créer une nouvelle pageDiffuser plus large sur Facebook- Les cercles concentriques de diffusion- Faire diffuser ses publications- Amis de la page personnelle- Peupler une page corpo ou évènement- Exercice pour élargir une diffusion et créer une campagneDiffuser sur d’autres pages que la sienne- Comment publier ailleurs- Chercher une page de groupe, s’inscrire- Mettre en signet les pages de publication- Diffuser les nouvelles et commenter- Commenter sur une page Facebook publique- Publier en choisissant son compte- Exercice : trouver des groupes et y publierConseils généraux d’utilisation des réseaux sociaux- Facebook : conseils pratiques d’utilisation- Conseils pour tous les réseaux sociaux- Commenter sur une autre page Facebook publique- Conseils pour tous les réseaux sociaux- Conseils généraux- Techniques de réponse- Conseils pratiques- Forums- Réponses toutes faites- Insultes graves, diffamationCampagnes de publicité Facebook- Campagnes publicitaires Facebook- Créer une publicité : bouton vert- Page gestionnaire de publicité- Créer une audience avec des paramètres- Créer une audience personnalisée- Comment créer une audience personnaliséeLinkedIn- S’inscrire sur LinkedIn- Remplir son profil LinkedIn- Nourrir son réseau LinkedIn- Peupler LinkedIn- Chercher une personne ou un groupe- Partager et rédiger un article- Écrire une nouvelle- Diffuser- Exercice- Créer une page entrepriseYouTube- Créer un compte YouTube- Les trois types de vidéos- Faites vivre vos vidéos- SujetsInstagram- Caractéristiques- Créer un compte Instagram- ExerciceTwitter- Ouvrir un compte Twitter- Comment utiliser Twitter- ExerciceCréer du contenu- Créer du contenu écrit- Exercice- Faire des photos- Exercice- Faire du contenu vidéo- ExercicePlan d’action pour vos réseaux sociaux","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F2749442_1534.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Freseaux-sociaux\u002F","language":"fr","tags":["Marketing","Social Media Marketing"],"rating":0,"reviews":0,"isFree":false,"matches":["3776bb79-3ef1-11ea-9791-1b580a556b4a","37722795-3ef1-11ea-9791-1b580a556b4a","3776946a-3ef1-11ea-9791-1b580a556b4a","3777a5d4-3ef1-11ea-9791-1b580a556b4a","3772c3da-3ef1-11ea-9791-1b580a556b4a","3776bb70-3ef1-11ea-9791-1b580a556b4a","3775f824-3ef1-11ea-9791-1b580a556b4a","377275b7-3ef1-11ea-9791-1b580a556b4a","377275b5-3ef1-11ea-9791-1b580a556b4a","37744a72-3ef1-11ea-9791-1b580a556b4a"],"slug":"reseaux-sociaux"},{"id":"3776bb71-3ef1-11ea-9791-1b580a556b4a","vendorId":"27625","created":"2020-01-24T21:35:07.944Z","updated":"2015-02-01T08:00:00.000Z","title":"Web CopyWriting: Consistently Outperform Your Competitors","headline":"Discover the key strategies behind winning content for websites, blogs, social media and email marketing.","description":"Learn How the Web affects how people read online and what can you do to make your writing more effective. Online the user is in charge. If they cannot understand what your website is about or what your offer is, they will quickly leave. Your online copy plays then, an essential role in grabbing the user's attention and keeping them interested. Writing for the web is different to writing for print and other media. There are various considerations when it comes to language, style, layout, and content. You have to understand how to develop an effective 'tone of voice' and how to move the online reader through your site. This engaging, practical Copywriting Training course will show you how and help demystify online copywriting. This Copywriting Training Course will demonstrate how to build persuasive web pages that demand attention and engage with the user. You will learn - through a combination of theory and examples - how to craft successful digital copy from scratch right through the drafting and editing stages.","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F27625_56eb_4.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fweb-copywriting-that-works\u002F","language":"en","tags":["Marketing","Content Marketing","Copywriting"],"rating":3.5,"reviews":43,"isFree":false,"matches":["37769460-3ef1-11ea-9791-1b580a556b4a","3777a5d4-3ef1-11ea-9791-1b580a556b4a","3776bb70-3ef1-11ea-9791-1b580a556b4a","37722795-3ef1-11ea-9791-1b580a556b4a","377534d9-3ef1-11ea-9791-1b580a556b4a","37722798-3ef1-11ea-9791-1b580a556b4a","3776bb79-3ef1-11ea-9791-1b580a556b4a","3774e6b8-3ef1-11ea-9791-1b580a556b4a","3776946a-3ef1-11ea-9791-1b580a556b4a","377052d1-3ef1-11ea-9791-1b580a556b4a"],"slug":"web-copy-writing-consistently-outperform-your-competitors"},{"id":"3776bb79-3ef1-11ea-9791-1b580a556b4a","vendorId":"28236","created":"2020-01-24T21:35:07.944Z","updated":"2013-03-01T08:00:00.000Z","title":"Social Media Selling System","headline":"Leveraging Social Media for your Small Business Sales. Learn how to increase sales using Social Media.","description":"Social media marketing won't help you unless it's backed up by sales for your business. But how exactly do social media tie in with your sales process? That's what we answer in this “Social Media Marketing Course: How to Increase Sales.” Learn how to turn social media marketing into steady sales for your small business and how to increase sales using social media. The three step process for converting your social media \"fans\" into customersHow to translate your offline sales funnel to the online worldThe average length of a social media sales cycleHow to multiply and leverage your follow-up using Twitter and FacebookExactly how to approach a new prospect on social media Take this Social Media Marketing Course now and learn how to increase sales using social media.\u003C\u002Fp\u003E ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F28236_79f9_5.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Flkr-social-media-selling-system\u002F","language":"en","tags":["Marketing","Social Media Marketing"],"rating":4,"reviews":457,"isFree":true,"matches":["37722795-3ef1-11ea-9791-1b580a556b4a","3777a5d4-3ef1-11ea-9791-1b580a556b4a","3775f824-3ef1-11ea-9791-1b580a556b4a","3776bb70-3ef1-11ea-9791-1b580a556b4a","3776946a-3ef1-11ea-9791-1b580a556b4a","37777ec0-3ef1-11ea-9791-1b580a556b4a","3772c3da-3ef1-11ea-9791-1b580a556b4a","3776bb71-3ef1-11ea-9791-1b580a556b4a","37744a72-3ef1-11ea-9791-1b580a556b4a","3770c804-3ef1-11ea-9791-1b580a556b4a"],"slug":"social-media-selling-system"},{"id":"37769460-3ef1-11ea-9791-1b580a556b4a","vendorId":"27854","created":"2020-01-24T21:35:07.942Z","updated":"2019-07-01T07:00:00.000Z","title":"Digital Marketing: The Ultimate Guide to Strategic Marketing","headline":"Master Digital Marketing: Instagram, Optimization, Social Media, Analytics, SEO, PPC, Email, WebCopy, UX, Content Mkt","description":"Join over 6200 marketers and excel as a Digital Marketing expert with 14 Courses in One.+++ 30,5 Hours - 223 AWESOME VIDEO LECTURES, SLIDES, ARTICLES and CASE STUDIES +++IMPORTANT: this course is very substantial, and updated on a regular basis. However, do not be scared! You can decide to learn specific topics OR go for the entire course. If you feel you know already some parts you can skip them and focus on other ones. Remember we are always here to help you!Our Digital Marketing material has been developed with the support of top professionals from The Oxford College of Marketing. All our speakers have at least 15 years experience in working and consulting for the top UK and US companies.TEN GOALS YOU CAN ACHIEVE FROM \"DIGITAL MARKETING MANAGEMENT.\"Apply the latest Psychology and Neuromarketing techniques to Outperform your competitorsIncrease the Conversion Rate of any of your marketing activityDefine a Social Media Strategy to drive traffic and leadsAvoid common mistakes that can cost you a fortunePerform market research to validate your idea Write Copy That SellsFine tune your email marketing strategyOptimize your search engines ranking with SEOCreate ads with Google Adwords that make you profitsMeasure results and track success with Google Analytics14 TOPICS INCLUDED AND UPDATED IN THIS COURSE:Conversion Rate Optimization (CRO)Social Media Strategy for Business GrowthWeb CopyWriting Web Analytics Social Media Channels Email Marketing SEO - Search Engine Optimization PPC Web Usability (UX) Content Marketing Campaign Planning Digital Marketing Research Affiliate MarketingNeuromarketing ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F27854_4103_4.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fdigital-marketing-management\u002F","language":"en","tags":["Marketing","Digital Marketing"],"rating":4.1,"reviews":606,"isFree":false,"matches":["37722795-3ef1-11ea-9791-1b580a556b4a","3776bb71-3ef1-11ea-9791-1b580a556b4a","37722798-3ef1-11ea-9791-1b580a556b4a","377534d9-3ef1-11ea-9791-1b580a556b4a","3777a5d4-3ef1-11ea-9791-1b580a556b4a","37729cc5-3ef1-11ea-9791-1b580a556b4a","376e7e14-3ef1-11ea-9791-1b580a556b4a","376e2ff1-3ef1-11ea-9791-1b580a556b4a","37720089-3ef1-11ea-9791-1b580a556b4a","3776bb79-3ef1-11ea-9791-1b580a556b4a"],"slug":"digital-marketing-the-ultimate-guide-to-strategic-marketing"},{"id":"37761f32-3ef1-11ea-9791-1b580a556b4a","vendorId":"26849","created":"2020-01-24T21:35:07.940Z","updated":"2012-11-01T07:00:00.000Z","title":"Twitter for Real Estate","headline":"Learn Twitter from A to Z and leverage it to help expand your reach, build your brand and win more business.","description":" You’re stuck in a rut. Your old-school promotion isn’t producing results, which doesn’t surprise you since you just read in the Harvard Business Review that traditional marketing is dead. And that’s not really news either, because you keep hearing about how people are trusting traditional advertising less and less and trusting peer\u002Fsocial recommendations more and more. You’ve tried growing your business with \"the aggregators,\" but a lot of those leads are low quality, all of them are \"cold\" by nature, and the prices for those services just keep going up. Size of Sphere = Size of Income? So, you find yourself in this place where you’ve maxed out your sphere of influence using traditional methods. And anyone who’s been in real estate longer than 5 minutes knows that the size of your sphere determines the size of your income. More connections = more money, right? New Life for Your Business And you think, “Those old, cold and expensive methods just aren’t working for me. I need to find a new way to expand my network and inject new life into my business.” And so, for all those reasons, you decide to give Twitter a try. And here’s what you discover: That Twitter users are the most active and dynamic in all of Social Media  That you can use keywords and laser-focused geo-targeting to connect with people right in your community That there’s not a lot of competition, because most people do the wrong things, get no results and blame Twitter for the lackluster ROI - when in reality the problem wasn't Twitter at all, but simply those people doing the wrong things That Twitter is exploding, and there are now nearly HALF A BILLION people using the platform Grow Your Network So, you start connecting with more and more people, growing your network every single day. You quickly realize that Twitter users love to engage and make new connections. And you discover a few things that you did not expect. That the learning curve is not that steep. And that Twitter is actually fun. Yes, FUN! You nurture along hundreds of relationships, building and building a little bit more each and every week. And you wake up one day and realize that you’ve expanded your network dramatically while doing 99% of it at home in front of your computer. Or from your smart phone or you iPad. And you realize that what you heard was actually true: that Twitter really is the greatest relationship creation machine of all time. And you think, \"I only wish I had started using Twitter sooner.\" Take this course and let me show you how to grow your sphere of influence using Twitter.... PS: This course isn't going to be ideally suited to all personalities or communication styles. If you purchase this course and feel even a smidgen of disappointment, Udemy will give you your money back, so long as it's within the first 30 days, no questions asked. PPS: Here is some \"Social Proofing\" I've received from a myriad of key players in the real estate industry.  PPPS: Here is what happened when an industry VIP followed my advice and dramatically improved his Twitter experience quickly. ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F26849_3608_5.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Ftwitter-for-real-estate\u002F","language":"en","tags":["Business","Real Estate","Twitter Marketing"],"rating":4.5,"reviews":9,"isFree":false,"matches":["37729cc7-3ef1-11ea-9791-1b580a556b4a","37702bc1-3ef1-11ea-9791-1b580a556b4a","37747188-3ef1-11ea-9791-1b580a556b4a","3776bb71-3ef1-11ea-9791-1b580a556b4a","3776bb79-3ef1-11ea-9791-1b580a556b4a","3777a5d4-3ef1-11ea-9791-1b580a556b4a","377a64f6-3ef1-11ea-9791-1b580a556b4a","37711624-3ef1-11ea-9791-1b580a556b4a","37738726-3ef1-11ea-9791-1b580a556b4a","3776bb70-3ef1-11ea-9791-1b580a556b4a"],"slug":"twitter-for-real-estate"},{"id":"37747188-3ef1-11ea-9791-1b580a556b4a","vendorId":"23905","created":"2020-01-24T21:35:07.882Z","updated":"2012-11-01T07:00:00.000Z","title":"I Tweet, Therefore I Am","headline":"A step-by-step Twitter training, practical guide to using Twitter to grow your business and build customer loyalty.","description":"Plenty of people are still fearful of Twitter. Learning how to use Twitter is like learning math - listen to the instructor and you're in a fog on this Twitter Training: Twitter Guidelines for Business course. Then do the exercises, and you get it! We can show you what to do, how to do it, and why it's important for your self-marketing success. Take this Twitter Training: Twitter Guidelines for Business course and use Twitter smartly. \u003C\u002Fp\u003E ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F23905_378e_3.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fi-tweet-therefore-i-am-sales-success-webinar-series\u002F","language":"en","tags":["Marketing","Social Media Marketing","Twitter Marketing"],"rating":3.7,"reviews":14,"isFree":false,"matches":["37729cc7-3ef1-11ea-9791-1b580a556b4a","37702bc1-3ef1-11ea-9791-1b580a556b4a","37761f32-3ef1-11ea-9791-1b580a556b4a","37722795-3ef1-11ea-9791-1b580a556b4a","37789031-3ef1-11ea-9791-1b580a556b4a","3770ef17-3ef1-11ea-9791-1b580a556b4a","377275b7-3ef1-11ea-9791-1b580a556b4a","377052d9-3ef1-11ea-9791-1b580a556b4a","377275b5-3ef1-11ea-9791-1b580a556b4a","3772c3da-3ef1-11ea-9791-1b580a556b4a"],"slug":"i-tweet-therefore-i-am"},{"id":"37722795-3ef1-11ea-9791-1b580a556b4a","vendorId":"20176","created":"2020-01-24T21:35:07.697Z","updated":"2015-01-01T08:00:00.000Z","title":"Social Media Management","headline":"Digital marketing training to Learn How to Use Social Media, Social Media Strategy and Social Media Marketing.","description":" Social media management training for social media managers, executives and entry-level employees from the top-rated social media training provider. Learn on your desktop, smart phone or tablet. We help employers manage the risks and capitalize on the opportunities of social media in the workplace through expert-led, self-paced online training videos and tutorials. We also offer Facebook Training, Twitter Training, Linkedin Training, SEO Training and more . ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F20176_02fb_16.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fsocial-media-for-business\u002F","language":"en","tags":["Marketing","Social Media Marketing"],"rating":4.2,"reviews":2004,"isFree":true,"matches":["3776bb79-3ef1-11ea-9791-1b580a556b4a","3777a5d4-3ef1-11ea-9791-1b580a556b4a","37769460-3ef1-11ea-9791-1b580a556b4a","3776bb70-3ef1-11ea-9791-1b580a556b4a","3772c3da-3ef1-11ea-9791-1b580a556b4a","37744a72-3ef1-11ea-9791-1b580a556b4a","3776bb71-3ef1-11ea-9791-1b580a556b4a","3776946a-3ef1-11ea-9791-1b580a556b4a","37777ec0-3ef1-11ea-9791-1b580a556b4a","377275b7-3ef1-11ea-9791-1b580a556b4a"],"slug":"social-media-management"},{"id":"37702bc1-3ef1-11ea-9791-1b580a556b4a","vendorId":"16577","created":"2020-01-24T21:35:07.592Z","updated":"2013-09-01T07:00:00.000Z","title":"How To Use Twitter To Build Authority In Your Market Sector","headline":"Learn how to leverage the power of Twitter to build authority for yourself or your company in your market.","description":"Even if you have been using Twitter for some time the ideas within this course will help you become more efficient and productive in your use of Social Media. This course consists of 17 Lectures with over 2 hours and 20 mintues of video, which takes you through the principals used in building yourself up as an authoritative figure within your market sector on Twitter. During this series we will learn how to identify your target market, create a professional Twitter profile and find content to share. Then you will learn how to combine all of these into an efficient and effective strategy using freely available online tools. At the end of this course you will have created a semi-automated system that will allow you to curate content around your area of expertise and share it with your target audience all day whilst you work. You'll also learn how to engage with your audience, monitor the social space and measure the effectiveness of your social media strategy. You will learn how to: Identify your area of expertise The tools required to manage a business Twitter account Perfecting your profile Where to find content to share How to put them together Looking for opportunities to engage Taking it mobile Growing follower numbers Twitter chats Monitoring & Measurement Who is this course for? This course is suitable for business owners, marketers, PR professionals, sales representatives, consultants and anyone else that would like to be able to use Twitter to promote themselves or their business.  Get in touch with me via Twitter @SeanClark if you have any questions.","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F16577_2179_6.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fhow-to-use-twitter-to-build-authority\u002F","language":"en","tags":["Marketing","Social Media Marketing","Twitter Marketing"],"rating":4.4,"reviews":127,"isFree":true,"matches":["37747188-3ef1-11ea-9791-1b580a556b4a","37761f32-3ef1-11ea-9791-1b580a556b4a","37729cc7-3ef1-11ea-9791-1b580a556b4a","3774e6b8-3ef1-11ea-9791-1b580a556b4a","3777a5d4-3ef1-11ea-9791-1b580a556b4a","376cf772-3ef1-11ea-9791-1b580a556b4a","37769468-3ef1-11ea-9791-1b580a556b4a","377275b6-3ef1-11ea-9791-1b580a556b4a","377a64f6-3ef1-11ea-9791-1b580a556b4a","3776bb70-3ef1-11ea-9791-1b580a556b4a"],"slug":"how-to-use-twitter-to-build-authority-in-your-market-sector"},{"id":"376cf772-3ef1-11ea-9791-1b580a556b4a","vendorId":"10967","created":"2020-01-24T21:35:07.175Z","updated":"2018-05-01T07:00:00.000Z","title":"How to Market Your Business","headline":"The definitive course for creating a successful marketing plan for your business","description":"","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F10967_280c_5.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fhow-to-market-your-business\u002F","language":"en","tags":["Marketing","Marketing Fundamentals","Business Strategy"],"rating":4.4,"reviews":17,"isFree":false,"matches":["3774e6b8-3ef1-11ea-9791-1b580a556b4a","377a3de9-3ef1-11ea-9791-1b580a556b4a","377275b6-3ef1-11ea-9791-1b580a556b4a","376c0d11-3ef1-11ea-9791-1b580a556b4a","376cf773-3ef1-11ea-9791-1b580a556b4a","377757b6-3ef1-11ea-9791-1b580a556b4a","376cf774-3ef1-11ea-9791-1b580a556b4a","3776bb70-3ef1-11ea-9791-1b580a556b4a","3770c804-3ef1-11ea-9791-1b580a556b4a","3776bb71-3ef1-11ea-9791-1b580a556b4a"],"slug":"how-to-market-your-business"}]}};(function(){var s;(s=document.currentScript||document.scripts[document.scripts.length-1]).parentNode.removeChild(s);}());</script><script src="/site/assets/js/app.e5c95575.js" defer></script><script src="/site/assets/js/page--src--templates--course-template-vue.a9c4e657.js" defer></script>
+  </body>
+</html>

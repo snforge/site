@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html data-html-server-rendered="true" lang="en" data-vue-tag="%7B%22lang%22:%7B%22ssr%22:%22en%22%7D%7D">
+  <head>
+    <title>How to Design a Logo - a Beginners Course - Gridsome</title><meta name="gridsome:hash" content="6d1e7dd52e8c17cf4930f349c6afc1a78b2e1c5e"><meta data-vue-tag="ssr" charset="utf-8"><meta data-vue-tag="ssr" name="generator" content="Gridsome v0.7.12"><meta data-vue-tag="ssr" data-key="viewport" name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta data-vue-tag="ssr" data-key="format-detection" name="format-detection" content="telephone=no"><link data-vue-tag="ssr" rel="icon" href="data:,"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="16x16" href="/site/assets/static/favicon.ce0531f.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="32x32" href="/site/assets/static/favicon.ac8d93a.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="96x96" href="/site/assets/static/favicon.b9532cc.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="76x76" href="/site/assets/static/favicon.f22e9f3.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="152x152" href="/site/assets/static/favicon.62d22cb.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="120x120" href="/site/assets/static/favicon.1539b60.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="167x167" href="/site/assets/static/favicon.dc0cdc5.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="180x180" href="/site/assets/static/favicon.7b22250.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"><link data-vue-tag="ssr" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css"><link rel="preload" href="/site/assets/css/0.styles.dded6410.css" as="style"><link rel="preload" href="/site/assets/js/app.e5c95575.js" as="script"><link rel="preload" href="/site/assets/js/page--src--templates--course-template-vue.a9c4e657.js" as="script"><link rel="prefetch" href="/site/assets/js/page--node-modules--gridsome--app--pages--404-vue.8ed2c588.js"><link rel="prefetch" href="/site/assets/js/page--src--pages--about-vue.d8fdab17.js"><link rel="prefetch" href="/site/assets/js/page--src--templates--index-template-vue.6cecc577.js"><link rel="prefetch" href="/site/assets/js/page--src--templates--tag-vue.c6b527ba.js"><link rel="prefetch" href="/site/assets/js/vendors~page--src--templates--course-template-vue~page--src--templates--index-template-vue.4ec5035c.js"><link rel="stylesheet" href="/site/assets/css/0.styles.dded6410.css"><style data-vue-tag="vuetify" type="text/css" id="vuetify-theme-stylesheet" nonce="undefined">.v-application a { color: #1976d2; }
+.v-application .primary {
+  background-color: #1976d2 !important;
+  border-color: #1976d2 !important;
+}
+.v-application .primary--text {
+  color: #1976d2 !important;
+  caret-color: #1976d2 !important;
+}
+.v-application .primary.lighten-5 {
+  background-color: #c7fdff !important;
+  border-color: #c7fdff !important;
+}
+.v-application .primary--text.text--lighten-5 {
+  color: #c7fdff !important;
+  caret-color: #c7fdff !important;
+}
+.v-application .primary.lighten-4 {
+  background-color: #a8e0ff !important;
+  border-color: #a8e0ff !important;
+}
+.v-application .primary--text.text--lighten-4 {
+  color: #a8e0ff !important;
+  caret-color: #a8e0ff !important;
+}
+.v-application .primary.lighten-3 {
+  background-color: #8ac5ff !important;
+  border-color: #8ac5ff !important;
+}
+.v-application .primary--text.text--lighten-3 {
+  color: #8ac5ff !important;
+  caret-color: #8ac5ff !important;
+}
+.v-application .primary.lighten-2 {
+  background-color: #6aaaff !important;
+  border-color: #6aaaff !important;
+}
+.v-application .primary--text.text--lighten-2 {
+  color: #6aaaff !important;
+  caret-color: #6aaaff !important;
+}
+.v-application .primary.lighten-1 {
+  background-color: #488fef !important;
+  border-color: #488fef !important;
+}
+.v-application .primary--text.text--lighten-1 {
+  color: #488fef !important;
+  caret-color: #488fef !important;
+}
+.v-application .primary.darken-1 {
+  background-color: #005eb6 !important;
+  border-color: #005eb6 !important;
+}
+.v-application .primary--text.text--darken-1 {
+  color: #005eb6 !important;
+  caret-color: #005eb6 !important;
+}
+.v-application .primary.darken-2 {
+  background-color: #00479b !important;
+  border-color: #00479b !important;
+}
+.v-application .primary--text.text--darken-2 {
+  color: #00479b !important;
+  caret-color: #00479b !important;
+}
+.v-application .primary.darken-3 {
+  background-color: #003180 !important;
+  border-color: #003180 !important;
+}
+.v-application .primary--text.text--darken-3 {
+  color: #003180 !important;
+  caret-color: #003180 !important;
+}
+.v-application .primary.darken-4 {
+  background-color: #001e67 !important;
+  border-color: #001e67 !important;
+}
+.v-application .primary--text.text--darken-4 {
+  color: #001e67 !important;
+  caret-color: #001e67 !important;
+}
+.v-application .secondary {
+  background-color: #424242 !important;
+  border-color: #424242 !important;
+}
+.v-application .secondary--text {
+  color: #424242 !important;
+  caret-color: #424242 !important;
+}
+.v-application .secondary.lighten-5 {
+  background-color: #c1c1c1 !important;
+  border-color: #c1c1c1 !important;
+}
+.v-application .secondary--text.text--lighten-5 {
+  color: #c1c1c1 !important;
+  caret-color: #c1c1c1 !important;
+}
+.v-application .secondary.lighten-4 {
+  background-color: #a6a6a6 !important;
+  border-color: #a6a6a6 !important;
+}
+.v-application .secondary--text.text--lighten-4 {
+  color: #a6a6a6 !important;
+  caret-color: #a6a6a6 !important;
+}
+.v-application .secondary.lighten-3 {
+  background-color: #8b8b8b !important;
+  border-color: #8b8b8b !important;
+}
+.v-application .secondary--text.text--lighten-3 {
+  color: #8b8b8b !important;
+  caret-color: #8b8b8b !important;
+}
+.v-application .secondary.lighten-2 {
+  background-color: #727272 !important;
+  border-color: #727272 !important;
+}
+.v-application .secondary--text.text--lighten-2 {
+  color: #727272 !important;
+  caret-color: #727272 !important;
+}
+.v-application .secondary.lighten-1 {
+  background-color: #595959 !important;
+  border-color: #595959 !important;
+}
+.v-application .secondary--text.text--lighten-1 {
+  color: #595959 !important;
+  caret-color: #595959 !important;
+}
+.v-application .secondary.darken-1 {
+  background-color: #2c2c2c !important;
+  border-color: #2c2c2c !important;
+}
+.v-application .secondary--text.text--darken-1 {
+  color: #2c2c2c !important;
+  caret-color: #2c2c2c !important;
+}
+.v-application .secondary.darken-2 {
+  background-color: #171717 !important;
+  border-color: #171717 !important;
+}
+.v-application .secondary--text.text--darken-2 {
+  color: #171717 !important;
+  caret-color: #171717 !important;
+}
+.v-application .secondary.darken-3 {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+.v-application .secondary--text.text--darken-3 {
+  color: #000000 !important;
+  caret-color: #000000 !important;
+}
+.v-application .secondary.darken-4 {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+.v-application .secondary--text.text--darken-4 {
+  color: #000000 !important;
+  caret-color: #000000 !important;
+}
+.v-application .accent {
+  background-color: #82b1ff !important;
+  border-color: #82b1ff !important;
+}
+.v-application .accent--text {
+  color: #82b1ff !important;
+  caret-color: #82b1ff !important;
+}
+.v-application .accent.lighten-5 {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+.v-application .accent--text.text--lighten-5 {
+  color: #ffffff !important;
+  caret-color: #ffffff !important;
+}
+.v-application .accent.lighten-4 {
+  background-color: #f8ffff !important;
+  border-color: #f8ffff !important;
+}
+.v-application .accent--text.text--lighten-4 {
+  color: #f8ffff !important;
+  caret-color: #f8ffff !important;
+}
+.v-application .accent.lighten-3 {
+  background-color: #daffff !important;
+  border-color: #daffff !important;
+}
+.v-application .accent--text.text--lighten-3 {
+  color: #daffff !important;
+  caret-color: #daffff !important;
+}
+.v-application .accent.lighten-2 {
+  background-color: #bce8ff !important;
+  border-color: #bce8ff !important;
+}
+.v-application .accent--text.text--lighten-2 {
+  color: #bce8ff !important;
+  caret-color: #bce8ff !important;
+}
+.v-application .accent.lighten-1 {
+  background-color: #9fccff !important;
+  border-color: #9fccff !important;
+}
+.v-application .accent--text.text--lighten-1 {
+  color: #9fccff !important;
+  caret-color: #9fccff !important;
+}
+.v-application .accent.darken-1 {
+  background-color: #6596e2 !important;
+  border-color: #6596e2 !important;
+}
+.v-application .accent--text.text--darken-1 {
+  color: #6596e2 !important;
+  caret-color: #6596e2 !important;
+}
+.v-application .accent.darken-2 {
+  background-color: #467dc6 !important;
+  border-color: #467dc6 !important;
+}
+.v-application .accent--text.text--darken-2 {
+  color: #467dc6 !important;
+  caret-color: #467dc6 !important;
+}
+.v-application .accent.darken-3 {
+  background-color: #2364aa !important;
+  border-color: #2364aa !important;
+}
+.v-application .accent--text.text--darken-3 {
+  color: #2364aa !important;
+  caret-color: #2364aa !important;
+}
+.v-application .accent.darken-4 {
+  background-color: #004c90 !important;
+  border-color: #004c90 !important;
+}
+.v-application .accent--text.text--darken-4 {
+  color: #004c90 !important;
+  caret-color: #004c90 !important;
+}
+.v-application .error {
+  background-color: #ff5252 !important;
+  border-color: #ff5252 !important;
+}
+.v-application .error--text {
+  color: #ff5252 !important;
+  caret-color: #ff5252 !important;
+}
+.v-application .error.lighten-5 {
+  background-color: #ffe4d5 !important;
+  border-color: #ffe4d5 !important;
+}
+.v-application .error--text.text--lighten-5 {
+  color: #ffe4d5 !important;
+  caret-color: #ffe4d5 !important;
+}
+.v-application .error.lighten-4 {
+  background-color: #ffc6b9 !important;
+  border-color: #ffc6b9 !important;
+}
+.v-application .error--text.text--lighten-4 {
+  color: #ffc6b9 !important;
+  caret-color: #ffc6b9 !important;
+}
+.v-application .error.lighten-3 {
+  background-color: #ffa99e !important;
+  border-color: #ffa99e !important;
+}
+.v-application .error--text.text--lighten-3 {
+  color: #ffa99e !important;
+  caret-color: #ffa99e !important;
+}
+.v-application .error.lighten-2 {
+  background-color: #ff8c84 !important;
+  border-color: #ff8c84 !important;
+}
+.v-application .error--text.text--lighten-2 {
+  color: #ff8c84 !important;
+  caret-color: #ff8c84 !important;
+}
+.v-application .error.lighten-1 {
+  background-color: #ff6f6a !important;
+  border-color: #ff6f6a !important;
+}
+.v-application .error--text.text--lighten-1 {
+  color: #ff6f6a !important;
+  caret-color: #ff6f6a !important;
+}
+.v-application .error.darken-1 {
+  background-color: #df323b !important;
+  border-color: #df323b !important;
+}
+.v-application .error--text.text--darken-1 {
+  color: #df323b !important;
+  caret-color: #df323b !important;
+}
+.v-application .error.darken-2 {
+  background-color: #bf0025 !important;
+  border-color: #bf0025 !important;
+}
+.v-application .error--text.text--darken-2 {
+  color: #bf0025 !important;
+  caret-color: #bf0025 !important;
+}
+.v-application .error.darken-3 {
+  background-color: #9f0010 !important;
+  border-color: #9f0010 !important;
+}
+.v-application .error--text.text--darken-3 {
+  color: #9f0010 !important;
+  caret-color: #9f0010 !important;
+}
+.v-application .error.darken-4 {
+  background-color: #800000 !important;
+  border-color: #800000 !important;
+}
+.v-application .error--text.text--darken-4 {
+  color: #800000 !important;
+  caret-color: #800000 !important;
+}
+.v-application .info {
+  background-color: #2196f3 !important;
+  border-color: #2196f3 !important;
+}
+.v-application .info--text {
+  color: #2196f3 !important;
+  caret-color: #2196f3 !important;
+}
+.v-application .info.lighten-5 {
+  background-color: #d4ffff !important;
+  border-color: #d4ffff !important;
+}
+.v-application .info--text.text--lighten-5 {
+  color: #d4ffff !important;
+  caret-color: #d4ffff !important;
+}
+.v-application .info.lighten-4 {
+  background-color: #b5ffff !important;
+  border-color: #b5ffff !important;
+}
+.v-application .info--text.text--lighten-4 {
+  color: #b5ffff !important;
+  caret-color: #b5ffff !important;
+}
+.v-application .info.lighten-3 {
+  background-color: #95e8ff !important;
+  border-color: #95e8ff !important;
+}
+.v-application .info--text.text--lighten-3 {
+  color: #95e8ff !important;
+  caret-color: #95e8ff !important;
+}
+.v-application .info.lighten-2 {
+  background-color: #75ccff !important;
+  border-color: #75ccff !important;
+}
+.v-application .info--text.text--lighten-2 {
+  color: #75ccff !important;
+  caret-color: #75ccff !important;
+}
+.v-application .info.lighten-1 {
+  background-color: #51b0ff !important;
+  border-color: #51b0ff !important;
+}
+.v-application .info--text.text--lighten-1 {
+  color: #51b0ff !important;
+  caret-color: #51b0ff !important;
+}
+.v-application .info.darken-1 {
+  background-color: #007cd6 !important;
+  border-color: #007cd6 !important;
+}
+.v-application .info--text.text--darken-1 {
+  color: #007cd6 !important;
+  caret-color: #007cd6 !important;
+}
+.v-application .info.darken-2 {
+  background-color: #0064ba !important;
+  border-color: #0064ba !important;
+}
+.v-application .info--text.text--darken-2 {
+  color: #0064ba !important;
+  caret-color: #0064ba !important;
+}
+.v-application .info.darken-3 {
+  background-color: #004d9f !important;
+  border-color: #004d9f !important;
+}
+.v-application .info--text.text--darken-3 {
+  color: #004d9f !important;
+  caret-color: #004d9f !important;
+}
+.v-application .info.darken-4 {
+  background-color: #003784 !important;
+  border-color: #003784 !important;
+}
+.v-application .info--text.text--darken-4 {
+  color: #003784 !important;
+  caret-color: #003784 !important;
+}
+.v-application .success {
+  background-color: #4caf50 !important;
+  border-color: #4caf50 !important;
+}
+.v-application .success--text {
+  color: #4caf50 !important;
+  caret-color: #4caf50 !important;
+}
+.v-application .success.lighten-5 {
+  background-color: #dcffd6 !important;
+  border-color: #dcffd6 !important;
+}
+.v-application .success--text.text--lighten-5 {
+  color: #dcffd6 !important;
+  caret-color: #dcffd6 !important;
+}
+.v-application .success.lighten-4 {
+  background-color: #beffba !important;
+  border-color: #beffba !important;
+}
+.v-application .success--text.text--lighten-4 {
+  color: #beffba !important;
+  caret-color: #beffba !important;
+}
+.v-application .success.lighten-3 {
+  background-color: #a2ff9e !important;
+  border-color: #a2ff9e !important;
+}
+.v-application .success--text.text--lighten-3 {
+  color: #a2ff9e !important;
+  caret-color: #a2ff9e !important;
+}
+.v-application .success.lighten-2 {
+  background-color: #85e783 !important;
+  border-color: #85e783 !important;
+}
+.v-application .success--text.text--lighten-2 {
+  color: #85e783 !important;
+  caret-color: #85e783 !important;
+}
+.v-application .success.lighten-1 {
+  background-color: #69cb69 !important;
+  border-color: #69cb69 !important;
+}
+.v-application .success--text.text--lighten-1 {
+  color: #69cb69 !important;
+  caret-color: #69cb69 !important;
+}
+.v-application .success.darken-1 {
+  background-color: #2d9437 !important;
+  border-color: #2d9437 !important;
+}
+.v-application .success--text.text--darken-1 {
+  color: #2d9437 !important;
+  caret-color: #2d9437 !important;
+}
+.v-application .success.darken-2 {
+  background-color: #00791e !important;
+  border-color: #00791e !important;
+}
+.v-application .success--text.text--darken-2 {
+  color: #00791e !important;
+  caret-color: #00791e !important;
+}
+.v-application .success.darken-3 {
+  background-color: #006000 !important;
+  border-color: #006000 !important;
+}
+.v-application .success--text.text--darken-3 {
+  color: #006000 !important;
+  caret-color: #006000 !important;
+}
+.v-application .success.darken-4 {
+  background-color: #004700 !important;
+  border-color: #004700 !important;
+}
+.v-application .success--text.text--darken-4 {
+  color: #004700 !important;
+  caret-color: #004700 !important;
+}
+.v-application .warning {
+  background-color: #fb8c00 !important;
+  border-color: #fb8c00 !important;
+}
+.v-application .warning--text {
+  color: #fb8c00 !important;
+  caret-color: #fb8c00 !important;
+}
+.v-application .warning.lighten-5 {
+  background-color: #ffff9e !important;
+  border-color: #ffff9e !important;
+}
+.v-application .warning--text.text--lighten-5 {
+  color: #ffff9e !important;
+  caret-color: #ffff9e !important;
+}
+.v-application .warning.lighten-4 {
+  background-color: #fffb82 !important;
+  border-color: #fffb82 !important;
+}
+.v-application .warning--text.text--lighten-4 {
+  color: #fffb82 !important;
+  caret-color: #fffb82 !important;
+}
+.v-application .warning.lighten-3 {
+  background-color: #ffdf67 !important;
+  border-color: #ffdf67 !important;
+}
+.v-application .warning--text.text--lighten-3 {
+  color: #ffdf67 !important;
+  caret-color: #ffdf67 !important;
+}
+.v-application .warning.lighten-2 {
+  background-color: #ffc24b !important;
+  border-color: #ffc24b !important;
+}
+.v-application .warning--text.text--lighten-2 {
+  color: #ffc24b !important;
+  caret-color: #ffc24b !important;
+}
+.v-application .warning.lighten-1 {
+  background-color: #ffa72d !important;
+  border-color: #ffa72d !important;
+}
+.v-application .warning--text.text--lighten-1 {
+  color: #ffa72d !important;
+  caret-color: #ffa72d !important;
+}
+.v-application .warning.darken-1 {
+  background-color: #db7200 !important;
+  border-color: #db7200 !important;
+}
+.v-application .warning--text.text--darken-1 {
+  color: #db7200 !important;
+  caret-color: #db7200 !important;
+}
+.v-application .warning.darken-2 {
+  background-color: #bb5900 !important;
+  border-color: #bb5900 !important;
+}
+.v-application .warning--text.text--darken-2 {
+  color: #bb5900 !important;
+  caret-color: #bb5900 !important;
+}
+.v-application .warning.darken-3 {
+  background-color: #9d4000 !important;
+  border-color: #9d4000 !important;
+}
+.v-application .warning--text.text--darken-3 {
+  color: #9d4000 !important;
+  caret-color: #9d4000 !important;
+}
+.v-application .warning.darken-4 {
+  background-color: #802700 !important;
+  border-color: #802700 !important;
+}
+.v-application .warning--text.text--darken-4 {
+  color: #802700 !important;
+  caret-color: #802700 !important;
+}</style><noscript data-vue-tag="ssr"><style>.g-image--loading{display:none;}</style></noscript>
+  </head>
+  <body >
+    <div data-app="true" data-server-rendered="true" id="app" id="inspire" class="v-application v-application--is-ltr theme--light"><div class="v-application--wrap"><header class="gb-toolbar v-sheet v-sheet--tile theme--dark v-toolbar v-toolbar--dense v-app-bar v-app-bar--fixed" style="height:48px;margin-top:0px;transform:translateY(0px);left:0px;right:0px;"><div class="v-toolbar__content" style="height:48px;"><button type="button" class="v-app-bar__nav-icon v-btn v-btn--flat v-btn--icon v-btn--round theme--dark v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-menu theme--dark"></i></span></button><div class="v-toolbar__title ml-0 pl-4" style="width:300px;"><span class="hidden-sm-and-down">skillhub</span></div><div class="spacer"></div><div class="v-input hidden-sm-and-down v-input--hide-details v-input--dense theme--dark v-text-field v-text-field--single-line v-text-field--solo v-text-field--solo-inverted v-text-field--solo-flat v-text-field--enclosed"><div class="v-input__control"><div class="v-input__slot"><div class="v-input__prepend-inner"><div class="v-input__icon v-input__icon--prepend-inner"><i aria-hidden="true" class="v-icon notranslate mdi mdi-magnify theme--dark"></i></div></div><div class="v-text-field__slot"><label for="input-7808" class="v-label theme--dark" style="left:0px;right:auto;position:absolute;">Search</label><input id="input-7808" type="text"></div></div></div></div><button type="button" class="v-btn v-btn--flat v-btn--icon v-btn--round theme--dark v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-apps theme--dark"></i></span></button><button type="button" class="v-btn v-btn--flat v-btn--icon v-btn--round theme--dark v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-bell theme--dark"></i></span></button></div></header><main class="v-content" style="padding-top:2448px;padding-right:0px;padding-bottom:0px;padding-left:0px;"><div class="v-content__wrap"><div class="container container--fluid pa-0"><div class="row no-gutters"><div class="col col-12"><div class="row no-gutters row--dense"><div class="height-30 bg-dark white--text jarallax col"><img src="https://i.udemycdn.com/course/750x422/20461_7e8e_22.jpg" class="jarallax-img opacity-20 g-image"><div class="container mt-8 pa-0"><div class="row mb-12 justify-center"><div dense="" class="col"><p class="display-2 mb-0">How to Design a Logo - a Beginners Course</p><p class="headline mb-0">Learn how to design a logo from client brief to finished design.</p><div><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.3 (798)</span></div><a href="https://www.udemy.com/course/how-to-design-a-logo-a-beginners-course/" class="v-btn v-btn--contained theme--light v-size--default warning"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-share-outline theme--light"></i> Take me there!
+          </span></a></div></div></div></div></div></div></div><div class="row no-gutters"><div class="col col-12"><div class="container mt-4 pl-5"><div class="row mb-12 justify-center"><div dense="" class="col">
+             Creating logos isn't easy, especially when working with particular clients. And with so many designers out there, differentiating yourself can be difficult. Knowing how to effectively map out your ideas will be the foundation on which you can craft extraordinary logos and bring something fresh to the table that clients can't refuse. This is how you make clients happy, draw attention to your work, build your client base, and potentially earn more money. Learn How to Design an Eye-Catching and Effective Logo Every Time. Generating and Sketching Design Ideas Quickly Fonts and Text Positioning Color and Format Options Using Adobe Illustrator for Creation of Logos Submitting Design Ideas and Working with Clients Make Every Client Happy by Designing a Great Logo The most difficult part of working as a designer is being able to generate a logo that a client will be happy with. The key is knowing how to understand a client's expectations, and using the right tools to draft ideas quickly. As a designer, you should also know how to properly position text, and how to choose the right colors and fonts that will represent a business in the best and most accurate way. Contents and Overview This course, containing over 42 lectures and 2.5 hours of content, provides step-by-step instructions on logo design. No logo design experience is required; however, you should have a full or free trial version of Adobe Illustrator, even though you don't need prior knowledge working in this program. You'll receive a 61-page eBook on how to design logos, as well as information on how to receive a logo design brief from a client. Then you'll learn how to collect reference materials and imagery to sketch out ideas. Upon completion of this course, you'll understand mind mapping and mood boards, which help you brainstorm logos. You'll know how to create unique symbols, add elements to a word, use geometric shapes and initials, and position text properly. Students will nail the basics of Illustrator, know where to find free fonts, and create logos in color, black and white, and in different formats. You'll also receive tips on sending ideas to clients, making changes and finalizing a logo, and pricing your work. All of these skills will make you a more valuable designer or allow you to use your creativity to make your own logos. 
+          </div></div></div></div></div><div class="row no-gutters"><div class="col"><div class="container"><div class="headline pa-1 mb-0">#Related</div><div aria-label="Slideshow" class="vueperslides no-shadow vueperslides--fixed-height vueperslides--slide-multiple vueperslides--bullets-outside" style="height:300px;"><!----><div class="vueperslides__inner"><div aria-live="polite" class="vueperslides__parallax-wrapper" style="padding-bottom:25%;"><div class="vueperslides__track"><div class="vueperslides__track-inner" style="transition-duration:0ms;transform:translate3d(0%, 0, 0);will-change:auto;"><!----><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/learn-web-designing-and-htm-l5-cs-s3-essentials-in-4-hours" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Learn Web Designing &amp; HTML5/CSS3 Essentials in 4-Hours</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Convert Photoshop Designs into Stunning HTML5 &amp; CSS3 websites with confidence. Absolutely no prior experience necessary!">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.3 (894)</span></div></div></div><!----></div><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/learn-to-design-a-letterhead-a-beginners-course" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Learn to Design a Letterhead - A Beginners Course</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Learn how to design a letterhead from rough sketch through to setting your document up ready to go to print.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.1 (632)</span></div></div></div><!----></div><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/logo-header-and-image-basics-for-online-business-wordpress" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Logo, Header and Image Basics for Online Business/Wordpress</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Tactics for the beginner to cut the crap and launch an idea, not work with a designer. How-to, tips, and tricks.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4 (2)</span></div></div></div><!----></div><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/designing-and-launching-a-business-website-that-converts" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Designing &amp; Launching a Business Website That Converts</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Learn how to create a website that converts through this step-by-step guide.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">0 (0)</span></div></div></div><!----></div><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/graphic-design-for-real-beginners" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Graphic Design For Real Beginners</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Sharpen your design skills and start designing like a pro instantly by learning these simple principles and techniques.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">3.9 (66)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/introduction-to-web-and-e-commerce-user-e-xperience-design" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Introduction to Web and eCommerce User eXperience Design</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Get an overview of the What, Why and How of web and ecommerce user experience design and find out how to learn more.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.1 (2034)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/user-experience-ux-conceptual-model-design" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>User Experience (UX) Conceptual Model Design</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Learn the secret of intuitive design: Design a great conceptual model.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4 (43)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/photoshop-for-web-design-beginners" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Photoshop for Web Design Beginners</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Perfect Photoshop course for beginner web designers who want learn to how to make a clean simple web page design.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.3 (5096)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/learning-creative-web-design-the-easy-way" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Learning Creative Web Design The Easy Way.</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Master the art of Creative Web Design at your own pace with adobe creative suite training. Certificate awarded.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">3.3 (50)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/web-design-from-the-ground-up" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Web Design from the Ground Up</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Learn web design online: Everything you need to know about XHTML and CSS, the basic building blocks of web design.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.7 (37)</span></div></div></div><!----></div><!----></div></div></div><!----><!----><!----><!----><!----></div><!----><!----></div></div></div></div></div></div></main></div></div>
+    <script>window.__INITIAL_STATE__={"data":null,"context":{"course":{"id":"37724ea3-3ef1-11ea-9791-1b580a556b4a","vendorId":"20461","created":"2020-01-24T21:35:07.699Z","updated":"2015-10-01T07:00:00.000Z","title":"How to Design a Logo - a Beginners Course","headline":"Learn how to design a logo from client brief to finished design.","description":" Creating logos isn't easy, especially when working with particular clients. And with so many designers out there, differentiating yourself can be difficult. Knowing how to effectively map out your ideas will be the foundation on which you can craft extraordinary logos and bring something fresh to the table that clients can't refuse. This is how you make clients happy, draw attention to your work, build your client base, and potentially earn more money. Learn How to Design an Eye-Catching and Effective Logo Every Time. Generating and Sketching Design Ideas Quickly Fonts and Text Positioning Color and Format Options Using Adobe Illustrator for Creation of Logos Submitting Design Ideas and Working with Clients Make Every Client Happy by Designing a Great Logo The most difficult part of working as a designer is being able to generate a logo that a client will be happy with. The key is knowing how to understand a client's expectations, and using the right tools to draft ideas quickly. As a designer, you should also know how to properly position text, and how to choose the right colors and fonts that will represent a business in the best and most accurate way. Contents and Overview This course, containing over 42 lectures and 2.5 hours of content, provides step-by-step instructions on logo design. No logo design experience is required; however, you should have a full or free trial version of Adobe Illustrator, even though you don't need prior knowledge working in this program. You'll receive a 61-page eBook on how to design logos, as well as information on how to receive a logo design brief from a client. Then you'll learn how to collect reference materials and imagery to sketch out ideas. Upon completion of this course, you'll understand mind mapping and mood boards, which help you brainstorm logos. You'll know how to create unique symbols, add elements to a word, use geometric shapes and initials, and position text properly. Students will nail the basics of Illustrator, know where to find free fonts, and create logos in color, black and white, and in different formats. You'll also receive tips on sending ideas to clients, making changes and finalizing a logo, and pricing your work. All of these skills will make you a more valuable designer or allow you to use your creativity to make your own logos. ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F20461_7e8e_22.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fhow-to-design-a-logo-a-beginners-course\u002F","language":"en","tags":["Design","Graphic Design","Logo Design"],"rating":4.3,"reviews":798,"isFree":false,"matches":["3772c3d7-3ef1-11ea-9791-1b580a556b4a","37718b59-3ef1-11ea-9791-1b580a556b4a","377004b0-3ef1-11ea-9791-1b580a556b4a","3773872a-3ef1-11ea-9791-1b580a556b4a","3770c806-3ef1-11ea-9791-1b580a556b4a","376ea526-3ef1-11ea-9791-1b580a556b4a","37720087-3ef1-11ea-9791-1b580a556b4a","376aad81-3ef1-11ea-9791-1b580a556b4a","3776bb75-3ef1-11ea-9791-1b580a556b4a","3770ef19-3ef1-11ea-9791-1b580a556b4a"],"slug":"how-to-design-a-logo-a-beginners-course"},"related":[{"id":"3776bb75-3ef1-11ea-9791-1b580a556b4a","vendorId":"28295","created":"2020-01-24T21:35:07.944Z","updated":"2016-03-01T08:00:00.000Z","title":"Learn Web Designing & HTML5\u002FCSS3 Essentials in 4-Hours","headline":"Convert Photoshop Designs into Stunning HTML5 & CSS3 websites with confidence. Absolutely no prior experience necessary!","description":"** Course Updated November 26th, 2014! ** New lecture added: Code a CSS Sticky Footer - - - The Best Way to Learn HTML5 & CSS3 PSD to HTML5\u002FCSS3 is a simple course that will teach you to take a Photoshop Mockup Design and hand-code it into a beautiful, semantic, valid HTML5 & CSS3 website. Start Speaking the Language Right Away Just like learning a human language, the best way of learning is by speaking from day 1—this course is similar in the sense that we'll begin speaking HTML5 & CSS3 right away! I believe this is the best way to learn HTML5 and CSS3. It's simple. It's easy. You can do it! If you’ve always wanted to know how to build your own website, or have wanted a simple and comprehensive way to dive into PSD to HTML5 & CSS3, this course is definitely for you. Real World Example One of my students, who had no previous web design experience, took my course and ran with the skills he acquired. He built a brand new website for his Barbershop in Vancouver! So, what are you waiting for? Do you want to hand-code your first website in 4-hours? Let's do this! ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F28295_6948_7.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fbuild-beautiful-html5-website\u002F","language":"en","tags":["Development","Web Development","CSS"],"rating":4.3,"reviews":894,"isFree":false,"matches":["376aad81-3ef1-11ea-9791-1b580a556b4a","37733906-3ef1-11ea-9791-1b580a556b4a","377004b0-3ef1-11ea-9791-1b580a556b4a","376e7e12-3ef1-11ea-9791-1b580a556b4a","3774e6b2-3ef1-11ea-9791-1b580a556b4a","376dbac1-3ef1-11ea-9791-1b580a556b4a","37750dc4-3ef1-11ea-9791-1b580a556b4a","37716446-3ef1-11ea-9791-1b580a556b4a","376ea528-3ef1-11ea-9791-1b580a556b4a","3775d118-3ef1-11ea-9791-1b580a556b4a"],"slug":"learn-web-designing-and-htm-l5-cs-s3-essentials-in-4-hours"},{"id":"3773872a-3ef1-11ea-9791-1b580a556b4a","vendorId":"22445","created":"2020-01-24T21:35:07.814Z","updated":"2012-10-01T07:00:00.000Z","title":"Learn to Design a Letterhead - A Beginners Course","headline":"Learn how to design a letterhead from rough sketch through to setting your document up ready to go to print.","description":" In this free letterhead design course you will learn about: Common positioning of letterhead elements How to sketch out your letterhead ideas How to add small details that add that extra something to your design Some tricks of the graphic design trade How to get your letterhead ready for print You will also get a downloadable pdf with each section that you can keep and use for reference. ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F22445_5e51_5.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Flearn-to-design-a-letterhead\u002F","language":"en","tags":["Design","Graphic Design"],"rating":4.1,"reviews":632,"isFree":true,"matches":["37724ea3-3ef1-11ea-9791-1b580a556b4a","377004b0-3ef1-11ea-9791-1b580a556b4a","37718b59-3ef1-11ea-9791-1b580a556b4a","3778b742-3ef1-11ea-9791-1b580a556b4a","37733900-3ef1-11ea-9791-1b580a556b4a","3772c3d7-3ef1-11ea-9791-1b580a556b4a","376ea526-3ef1-11ea-9791-1b580a556b4a","376f1a51-3ef1-11ea-9791-1b580a556b4a","3773fc58-3ef1-11ea-9791-1b580a556b4a","3773d540-3ef1-11ea-9791-1b580a556b4a"],"slug":"learn-to-design-a-letterhead-a-beginners-course"},{"id":"3772c3d7-3ef1-11ea-9791-1b580a556b4a","vendorId":"21227","created":"2020-01-24T21:35:07.812Z","updated":"2012-11-01T07:00:00.000Z","title":"Logo, Header and Image Basics for Online Business\u002FWordpress","headline":"Tactics for the beginner to cut the crap and launch an idea, not work with a designer. How-to, tips, and tricks.","description":"Familiar with these stopping points in launching or updating your website? \"I need a header, still waiting on my graphic designer\" \"I don't have a logo yet, I'm working on that\" \"My sales page has no graphics, my website is bland...\" These all seem like graphic designer things that cost $100-1000 each, but let's cut the crap, you need to launch, now... this WordPress for Designers course is about the tactics to get you a working logo, header, and sales page images so you can move beyond that \"stuck\" point, WITHOUT a graphic designer, and without tons of time invested. In this WordPress for Designers course we will learn WordPress tips and tricks and how-to instruction in the form of resourceful websites, text and video instruction that will be invaluable as an online entrepreneur. This course will erase the excuse that you MUST have a graphic designer to move forward.\u003C\u002Fp\u003E\u003C\u002Fp\u003E\u003C\u002Fp\u003E ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F21227_fefc_7.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Flogo-header-and-image-basics-for-online-business-wordpress\u002F","language":"en","tags":["Design","Web Design","Logo Design"],"rating":4,"reviews":2,"isFree":false,"matches":["37724ea3-3ef1-11ea-9791-1b580a556b4a","37718b59-3ef1-11ea-9791-1b580a556b4a","377004b0-3ef1-11ea-9791-1b580a556b4a","37720087-3ef1-11ea-9791-1b580a556b4a","376ea521-3ef1-11ea-9791-1b580a556b4a","376b97e0-3ef1-11ea-9791-1b580a556b4a","3776bb75-3ef1-11ea-9791-1b580a556b4a","3773fc58-3ef1-11ea-9791-1b580a556b4a","37733906-3ef1-11ea-9791-1b580a556b4a","376ea526-3ef1-11ea-9791-1b580a556b4a"],"slug":"logo-header-and-image-basics-for-online-business-wordpress"},{"id":"37720087-3ef1-11ea-9791-1b580a556b4a","vendorId":"20085","created":"2020-01-24T21:35:07.696Z","updated":"2012-06-01T07:00:00.000Z","title":"Designing & Launching a Business Website That Converts","headline":"Learn how to create a website that converts through this step-by-step guide.","description":"","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F20085_e03f_5.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fdesign-launch-business-website\u002F","language":"en","tags":["Design","Web Design","Business Strategy"],"rating":0,"reviews":0,"isFree":false,"matches":["377004b0-3ef1-11ea-9791-1b580a556b4a","37702bc2-3ef1-11ea-9791-1b580a556b4a","377757b1-3ef1-11ea-9791-1b580a556b4a","3779c8b5-3ef1-11ea-9791-1b580a556b4a","37718b57-3ef1-11ea-9791-1b580a556b4a","3776bb75-3ef1-11ea-9791-1b580a556b4a","376aad81-3ef1-11ea-9791-1b580a556b4a","376b97e0-3ef1-11ea-9791-1b580a556b4a","3772c3d7-3ef1-11ea-9791-1b580a556b4a","3773d543-3ef1-11ea-9791-1b580a556b4a"],"slug":"designing-and-launching-a-business-website-that-converts"},{"id":"37718b59-3ef1-11ea-9791-1b580a556b4a","vendorId":"19164","created":"2020-01-24T21:35:07.693Z","updated":"2014-10-01T07:00:00.000Z","title":"Graphic Design For Real Beginners","headline":"Sharpen your design skills and start designing like a pro instantly by learning these simple principles and techniques.","description":"Course Description: Want to explore a career as a graphic designer or improve your current design skills? Here is a great opportunity to start with the basics and learn directly from an award-winning experienced designer!  Design with confidence as you master techniques that can be immediately applied to creating: print media, presentations, web pages, pitch pages, mobile apps, eBook covers, and more... ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F19164_7194_9.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fdesign-like-a-pro-graphic-design-fundamentals\u002F","language":"en","tags":["Design","Graphic Design"],"rating":3.9,"reviews":66,"isFree":false,"matches":["377004b0-3ef1-11ea-9791-1b580a556b4a","376ea526-3ef1-11ea-9791-1b580a556b4a","3772c3d7-3ef1-11ea-9791-1b580a556b4a","37724ea3-3ef1-11ea-9791-1b580a556b4a","3776bb75-3ef1-11ea-9791-1b580a556b4a","37733900-3ef1-11ea-9791-1b580a556b4a","376aad81-3ef1-11ea-9791-1b580a556b4a","3773fc58-3ef1-11ea-9791-1b580a556b4a","3770c806-3ef1-11ea-9791-1b580a556b4a","376b97e0-3ef1-11ea-9791-1b580a556b4a"],"slug":"graphic-design-for-real-beginners"},{"id":"3770ef19-3ef1-11ea-9791-1b580a556b4a","vendorId":"17482","created":"2020-01-24T21:35:07.604Z","updated":"2013-12-01T08:00:00.000Z","title":"Introduction to Web and eCommerce User eXperience Design","headline":"Get an overview of the What, Why and How of web and ecommerce user experience design and find out how to learn more.","description":"This free, 30-minute course provides an introduction and overview to a track of related courses being developed by The Online User eXperience Institute (OUXI), aimed at the small web business owner and other web designers and developers with little or no prior training in web user experience design.  It provides the main foundational points you need to know before taking any of those courses, and they are not repeated in those courses, so please start here.The concepts taught in this course are expanded upon by other courses in this OUXI curriculum track. The small fee you invest in these other courses could pay off in thousands of dollars in increased revenues from your ecommerce web site.  This course explains how.In particular, this course provides an overview of the key elements of the design of a web user interface that will impact the user experience: usability, persuasion and graphic design.  It illustrates these elements with concrete examples from real websites.The course also explains why and how the quality of the user experience will directly impact the bottom-line of eCommerce web sites.  The mission of OUXI is to provide:· A broad and comprehensive curriculum of training in designing for the User eXperience· Consisting of engaging and interactive multimedia courses· Taught by a consortium of top experts in industry and academia· Affordable and available· To anyone, any time, anywhere in the world· Via the World Wide WebThe Institute will thus serve as a universal portal to the current collective knowledge in the field of designing for the User eXperience.We have a long term plan for developing the curriculum, laid out on the Course List page on the OUXI website, and are soliciting votes from you, our potential students, to help decide which courses to develop first.The Institute will also provide a Bookstore, and a portal to other respected professional resources via the Institute Library.  ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F17482_f4cd_6.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fintroduction-to-web-and-ecommerce-user-experience-design\u002F","language":"en","tags":["Design","User Experience","User Experience Design"],"rating":4.1,"reviews":2034,"isFree":true,"matches":["3770c806-3ef1-11ea-9791-1b580a556b4a","3776e283-3ef1-11ea-9791-1b580a556b4a","376aad81-3ef1-11ea-9791-1b580a556b4a","377757b1-3ef1-11ea-9791-1b580a556b4a","3776bb75-3ef1-11ea-9791-1b580a556b4a","37750dc4-3ef1-11ea-9791-1b580a556b4a","377004b0-3ef1-11ea-9791-1b580a556b4a","37716446-3ef1-11ea-9791-1b580a556b4a","376ecc37-3ef1-11ea-9791-1b580a556b4a","376be602-3ef1-11ea-9791-1b580a556b4a"],"slug":"introduction-to-web-and-e-commerce-user-e-xperience-design"},{"id":"3770c806-3ef1-11ea-9791-1b580a556b4a","vendorId":"17173","created":"2020-01-24T21:35:07.602Z","updated":"2015-09-01T07:00:00.000Z","title":"User Experience (UX) Conceptual Model Design","headline":"Learn the secret of intuitive design: Design a great conceptual model.","description":" OVER 500 SUCCESSFUL STUDENTS HAVE ALREADY TAKEN THIS COURSE Design a great user experience (UX) by first designing a conceptual model. Why are some websites, software, apps, and devices easy to use and others are not? Why do users like some products and reject others? Designers of products that are easy to use know the secret -- They design a conceptual model of the product that matches the target audience's mental model of how it should work. In this course you will learn the secret of how to create a conceptual model. About This Course: Over 500 very happy students Unconditional 30 day money back guarantee from Udemy All future upgrades and lectures are included for FREE Some examples of what's in the course: How to create a conceptual model How to connect a conceptual model to the users' mental models How to decide on major user objects and their \"views\" How to make critical conceptual model decisions before you wireframe or prototype a single screen How to make sure that the conceptual model of what you design fits the users' mental models How to use the data you have from user research to create your conceptual model The critical components of navigation and action bar design How to use card sorting techniques to organize information in a way that makes sense to your audience Quizzes throughout the course to test your knowledge Exercises throughout the course to practice what you are learning and much, much more! Click the BuyNow button at the top right of this page and get started right away. You don't want to delay learning the secret of using a conceptual model to create products that are a delight and easy to use. ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F17173_479f_13.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fsecrets-of-intuitive-usable-design-the-conceptual-model\u002F","language":"en","tags":["Design","User Experience","User Experience Design"],"rating":4,"reviews":43,"isFree":false,"matches":["3776e283-3ef1-11ea-9791-1b580a556b4a","3779a1a6-3ef1-11ea-9791-1b580a556b4a","3770ef19-3ef1-11ea-9791-1b580a556b4a","376ecc37-3ef1-11ea-9791-1b580a556b4a","37724ea4-3ef1-11ea-9791-1b580a556b4a","37718b59-3ef1-11ea-9791-1b580a556b4a","37724ea3-3ef1-11ea-9791-1b580a556b4a","37781b03-3ef1-11ea-9791-1b580a556b4a","377004b0-3ef1-11ea-9791-1b580a556b4a","37720087-3ef1-11ea-9791-1b580a556b4a"],"slug":"user-experience-ux-conceptual-model-design"},{"id":"377004b0-3ef1-11ea-9791-1b580a556b4a","vendorId":"15639","created":"2020-01-24T21:35:07.590Z","updated":"2014-02-01T08:00:00.000Z","title":"Photoshop for Web Design Beginners","headline":"Perfect Photoshop course for beginner web designers who want learn to how to make a clean simple web page design.","description":" Photoshop is one of the best tools, so learn it with this Photoshop Web Design Tutorial! I have been using Photoshop since version 3 and every time it gets better and better. I have created litterally thousands of designs and over that time I have found that there are number of key skills and tools us web designers use in almost every design. This is why I created, along with the team at Web Courses, a series of screencast tutorials ideal for beginner web designers who wants to Learn Web Design with Photoshop. 1. The Power of File and New In this lesson, you will learn how to open a new document and apply the settings you need to set up before you start designing in Photoshop. 2. Changing, Using and Installing Brushes A look at paintbrushes. The different types of brushes that you can use as well as installing some new brushes, so you can do some really nice affects on your design. 3. The Key to Custom Shapes Shapes is something we use a lot when we're designing a web page. It's used to make the layout and lots of other elements on the screen. We get used to this really useful tool in this lesson. 4. The Core of Photoshop, Layers and Groups Layers are the most important part of Photoshop, as they allow you to make changes to specific areas on the screen. You can further group these layers together to make it more manageable when you're designing. 5. The Shortcuts to Moving and Resizing In this lesson we're going to be looking at how to move layers around the screen and how to resize them using the free transform tool, something you will use a lot in your designs. 6. Getting the Most from Zooming and Panning We are going to look at how to look around your design and see the details by using the zoom tool. So in this lesson we look into two very important features of using Photoshop daily, zooming and panning. 7. Creating Cool Effects with Blending Modes Blending modes are when you have two layers interacting with each other and effects are different things you can apply to single layer, things like shadows, inners shadows, gradients etc. 8. Text, Love it or Hate it Texts are one of the trickiest things in Photoshop, reason being that its not really made to do it. So in this lesson, we're going to find easy ways to work with Photoshop and texts. 9. Clean Web Page Design using Photoshop We are going to be creating a webpage design in Photoshop. We are going to use grids to organize everything and get things in line and various other tricks to make the perfect web page.","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F15639_13f2_6.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fphotoshop-for-web-design-beginners\u002F","language":"en","tags":["Design","Design Tools","Photoshop"],"rating":4.3,"reviews":5096,"isFree":true,"matches":["37733906-3ef1-11ea-9791-1b580a556b4a","3776bb75-3ef1-11ea-9791-1b580a556b4a","376dbac1-3ef1-11ea-9791-1b580a556b4a","376aad81-3ef1-11ea-9791-1b580a556b4a","37718b59-3ef1-11ea-9791-1b580a556b4a","376ea526-3ef1-11ea-9791-1b580a556b4a","3773fc58-3ef1-11ea-9791-1b580a556b4a","377079e2-3ef1-11ea-9791-1b580a556b4a","376ad491-3ef1-11ea-9791-1b580a556b4a","37702bc2-3ef1-11ea-9791-1b580a556b4a"],"slug":"photoshop-for-web-design-beginners"},{"id":"376ea526-3ef1-11ea-9791-1b580a556b4a","vendorId":"15329","created":"2020-01-24T21:35:07.586Z","updated":"2017-01-01T08:00:00.000Z","title":"Learning Creative Web Design The Easy Way.","headline":"Master the art of Creative Web Design at your own pace with adobe creative suite training. Certificate awarded.","description":"  A Verifiable Certificate of Completion is presented to all students who undertake this course. Since its first release in 2003, the Adobe Creative Suite has set the industry standard for professional design across multiple fields and media, with graphics tools ready to help you create any look you could want. Now in this unique Adobe Creative Suite Web Design training course from InfiniteSkills, you'll learn everything you need to know to create and launch a visually-impressive and functional website from start to finish. No matter which version of Creative Suite you're using, you'll see how Adobe's powerful programs can be combined into a seamless workflow to produce the vision you want for the web. You'll learn wireframing in Illustrator, graphical layout in Photoshop and total HTML conversion in Dreamweaver, with key tips on using Adobe Flash and Adobe Acrobat along the way. Led by graphics and web standards expert Geoff Blake, there simply isn't a better guide for building a web presence from the ground up. Start with adobe creative suite training today. ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F15329_324e_11.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fcreative-web-design\u002F","language":"en","tags":["Design","Web Design"],"rating":3.3,"reviews":50,"isFree":false,"matches":["377004b0-3ef1-11ea-9791-1b580a556b4a","37718b59-3ef1-11ea-9791-1b580a556b4a","376aad81-3ef1-11ea-9791-1b580a556b4a","3776bb75-3ef1-11ea-9791-1b580a556b4a","376dbac1-3ef1-11ea-9791-1b580a556b4a","3773fc54-3ef1-11ea-9791-1b580a556b4a","376e7e12-3ef1-11ea-9791-1b580a556b4a","3773d540-3ef1-11ea-9791-1b580a556b4a","37733900-3ef1-11ea-9791-1b580a556b4a","37702bc2-3ef1-11ea-9791-1b580a556b4a"],"slug":"learning-creative-web-design-the-easy-way"},{"id":"376aad81-3ef1-11ea-9791-1b580a556b4a","vendorId":"8157","created":"2020-01-24T21:35:07.169Z","updated":"2011-06-01T07:00:00.000Z","title":"Web Design from the Ground Up","headline":"Learn web design online: Everything you need to know about XHTML and CSS, the basic building blocks of web design.","description":"Web Design is one of the fastest growing, and best paid fields in the world today! In this highly informative web design course, veteran web designer and developer Steven Taylor takes you through the entire process of building a complete website from scratch. Starting with nothing but a blank page on Note Pad, Steve shows you step-by-step how to build a beautiful, fully functional website, while teaching you everything you need to know about HTML and CSS, the basic building blocks of the web. But that's not all you will learn in this exciting online web design training: introduction to Photoshop and JavaScript are also covered, along with a complete tutorial on integrating PayPal's popular eCommerce solution into your site. Whether you are starting a career in web design or just want to build your own website, \"Web Design from the Ground Up\" will give you the essential tools and information you need to create beautiful, intuitive sites using the latest web standards.\u003C\u002Fp\u003E ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F8157_5a6d_9.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fweb-design-from-the-ground-up\u002F","language":"en","tags":["Design","Web Design"],"rating":4.7,"reviews":37,"isFree":false,"matches":["3776bb75-3ef1-11ea-9791-1b580a556b4a","376ea528-3ef1-11ea-9791-1b580a556b4a","377004b0-3ef1-11ea-9791-1b580a556b4a","37702bc2-3ef1-11ea-9791-1b580a556b4a","376dbac1-3ef1-11ea-9791-1b580a556b4a","377757b1-3ef1-11ea-9791-1b580a556b4a","376e7e12-3ef1-11ea-9791-1b580a556b4a","37718b57-3ef1-11ea-9791-1b580a556b4a","37750dc4-3ef1-11ea-9791-1b580a556b4a","37744a70-3ef1-11ea-9791-1b580a556b4a"],"slug":"web-design-from-the-ground-up"}]}};(function(){var s;(s=document.currentScript||document.scripts[document.scripts.length-1]).parentNode.removeChild(s);}());</script><script src="/site/assets/js/app.e5c95575.js" defer></script><script src="/site/assets/js/page--src--templates--course-template-vue.a9c4e657.js" defer></script>
+  </body>
+</html>

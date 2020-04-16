@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html data-html-server-rendered="true" lang="en" data-vue-tag="%7B%22lang%22:%7B%22ssr%22:%22en%22%7D%7D">
+  <head>
+    <title>Beginning Mobile Game Development - Gridsome</title><meta name="gridsome:hash" content="6d1e7dd52e8c17cf4930f349c6afc1a78b2e1c5e"><meta data-vue-tag="ssr" charset="utf-8"><meta data-vue-tag="ssr" name="generator" content="Gridsome v0.7.12"><meta data-vue-tag="ssr" data-key="viewport" name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta data-vue-tag="ssr" data-key="format-detection" name="format-detection" content="telephone=no"><link data-vue-tag="ssr" rel="icon" href="data:,"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="16x16" href="/site/assets/static/favicon.ce0531f.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="32x32" href="/site/assets/static/favicon.ac8d93a.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="96x96" href="/site/assets/static/favicon.b9532cc.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="76x76" href="/site/assets/static/favicon.f22e9f3.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="152x152" href="/site/assets/static/favicon.62d22cb.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="120x120" href="/site/assets/static/favicon.1539b60.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="167x167" href="/site/assets/static/favicon.dc0cdc5.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="180x180" href="/site/assets/static/favicon.7b22250.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"><link data-vue-tag="ssr" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css"><link rel="preload" href="/site/assets/css/0.styles.dded6410.css" as="style"><link rel="preload" href="/site/assets/js/app.e5c95575.js" as="script"><link rel="preload" href="/site/assets/js/page--src--templates--course-template-vue.a9c4e657.js" as="script"><link rel="prefetch" href="/site/assets/js/page--node-modules--gridsome--app--pages--404-vue.8ed2c588.js"><link rel="prefetch" href="/site/assets/js/page--src--pages--about-vue.d8fdab17.js"><link rel="prefetch" href="/site/assets/js/page--src--templates--index-template-vue.6cecc577.js"><link rel="prefetch" href="/site/assets/js/page--src--templates--tag-vue.c6b527ba.js"><link rel="prefetch" href="/site/assets/js/vendors~page--src--templates--course-template-vue~page--src--templates--index-template-vue.4ec5035c.js"><link rel="stylesheet" href="/site/assets/css/0.styles.dded6410.css"><style data-vue-tag="vuetify" type="text/css" id="vuetify-theme-stylesheet" nonce="undefined">.v-application a { color: #1976d2; }
+.v-application .primary {
+  background-color: #1976d2 !important;
+  border-color: #1976d2 !important;
+}
+.v-application .primary--text {
+  color: #1976d2 !important;
+  caret-color: #1976d2 !important;
+}
+.v-application .primary.lighten-5 {
+  background-color: #c7fdff !important;
+  border-color: #c7fdff !important;
+}
+.v-application .primary--text.text--lighten-5 {
+  color: #c7fdff !important;
+  caret-color: #c7fdff !important;
+}
+.v-application .primary.lighten-4 {
+  background-color: #a8e0ff !important;
+  border-color: #a8e0ff !important;
+}
+.v-application .primary--text.text--lighten-4 {
+  color: #a8e0ff !important;
+  caret-color: #a8e0ff !important;
+}
+.v-application .primary.lighten-3 {
+  background-color: #8ac5ff !important;
+  border-color: #8ac5ff !important;
+}
+.v-application .primary--text.text--lighten-3 {
+  color: #8ac5ff !important;
+  caret-color: #8ac5ff !important;
+}
+.v-application .primary.lighten-2 {
+  background-color: #6aaaff !important;
+  border-color: #6aaaff !important;
+}
+.v-application .primary--text.text--lighten-2 {
+  color: #6aaaff !important;
+  caret-color: #6aaaff !important;
+}
+.v-application .primary.lighten-1 {
+  background-color: #488fef !important;
+  border-color: #488fef !important;
+}
+.v-application .primary--text.text--lighten-1 {
+  color: #488fef !important;
+  caret-color: #488fef !important;
+}
+.v-application .primary.darken-1 {
+  background-color: #005eb6 !important;
+  border-color: #005eb6 !important;
+}
+.v-application .primary--text.text--darken-1 {
+  color: #005eb6 !important;
+  caret-color: #005eb6 !important;
+}
+.v-application .primary.darken-2 {
+  background-color: #00479b !important;
+  border-color: #00479b !important;
+}
+.v-application .primary--text.text--darken-2 {
+  color: #00479b !important;
+  caret-color: #00479b !important;
+}
+.v-application .primary.darken-3 {
+  background-color: #003180 !important;
+  border-color: #003180 !important;
+}
+.v-application .primary--text.text--darken-3 {
+  color: #003180 !important;
+  caret-color: #003180 !important;
+}
+.v-application .primary.darken-4 {
+  background-color: #001e67 !important;
+  border-color: #001e67 !important;
+}
+.v-application .primary--text.text--darken-4 {
+  color: #001e67 !important;
+  caret-color: #001e67 !important;
+}
+.v-application .secondary {
+  background-color: #424242 !important;
+  border-color: #424242 !important;
+}
+.v-application .secondary--text {
+  color: #424242 !important;
+  caret-color: #424242 !important;
+}
+.v-application .secondary.lighten-5 {
+  background-color: #c1c1c1 !important;
+  border-color: #c1c1c1 !important;
+}
+.v-application .secondary--text.text--lighten-5 {
+  color: #c1c1c1 !important;
+  caret-color: #c1c1c1 !important;
+}
+.v-application .secondary.lighten-4 {
+  background-color: #a6a6a6 !important;
+  border-color: #a6a6a6 !important;
+}
+.v-application .secondary--text.text--lighten-4 {
+  color: #a6a6a6 !important;
+  caret-color: #a6a6a6 !important;
+}
+.v-application .secondary.lighten-3 {
+  background-color: #8b8b8b !important;
+  border-color: #8b8b8b !important;
+}
+.v-application .secondary--text.text--lighten-3 {
+  color: #8b8b8b !important;
+  caret-color: #8b8b8b !important;
+}
+.v-application .secondary.lighten-2 {
+  background-color: #727272 !important;
+  border-color: #727272 !important;
+}
+.v-application .secondary--text.text--lighten-2 {
+  color: #727272 !important;
+  caret-color: #727272 !important;
+}
+.v-application .secondary.lighten-1 {
+  background-color: #595959 !important;
+  border-color: #595959 !important;
+}
+.v-application .secondary--text.text--lighten-1 {
+  color: #595959 !important;
+  caret-color: #595959 !important;
+}
+.v-application .secondary.darken-1 {
+  background-color: #2c2c2c !important;
+  border-color: #2c2c2c !important;
+}
+.v-application .secondary--text.text--darken-1 {
+  color: #2c2c2c !important;
+  caret-color: #2c2c2c !important;
+}
+.v-application .secondary.darken-2 {
+  background-color: #171717 !important;
+  border-color: #171717 !important;
+}
+.v-application .secondary--text.text--darken-2 {
+  color: #171717 !important;
+  caret-color: #171717 !important;
+}
+.v-application .secondary.darken-3 {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+.v-application .secondary--text.text--darken-3 {
+  color: #000000 !important;
+  caret-color: #000000 !important;
+}
+.v-application .secondary.darken-4 {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+.v-application .secondary--text.text--darken-4 {
+  color: #000000 !important;
+  caret-color: #000000 !important;
+}
+.v-application .accent {
+  background-color: #82b1ff !important;
+  border-color: #82b1ff !important;
+}
+.v-application .accent--text {
+  color: #82b1ff !important;
+  caret-color: #82b1ff !important;
+}
+.v-application .accent.lighten-5 {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+.v-application .accent--text.text--lighten-5 {
+  color: #ffffff !important;
+  caret-color: #ffffff !important;
+}
+.v-application .accent.lighten-4 {
+  background-color: #f8ffff !important;
+  border-color: #f8ffff !important;
+}
+.v-application .accent--text.text--lighten-4 {
+  color: #f8ffff !important;
+  caret-color: #f8ffff !important;
+}
+.v-application .accent.lighten-3 {
+  background-color: #daffff !important;
+  border-color: #daffff !important;
+}
+.v-application .accent--text.text--lighten-3 {
+  color: #daffff !important;
+  caret-color: #daffff !important;
+}
+.v-application .accent.lighten-2 {
+  background-color: #bce8ff !important;
+  border-color: #bce8ff !important;
+}
+.v-application .accent--text.text--lighten-2 {
+  color: #bce8ff !important;
+  caret-color: #bce8ff !important;
+}
+.v-application .accent.lighten-1 {
+  background-color: #9fccff !important;
+  border-color: #9fccff !important;
+}
+.v-application .accent--text.text--lighten-1 {
+  color: #9fccff !important;
+  caret-color: #9fccff !important;
+}
+.v-application .accent.darken-1 {
+  background-color: #6596e2 !important;
+  border-color: #6596e2 !important;
+}
+.v-application .accent--text.text--darken-1 {
+  color: #6596e2 !important;
+  caret-color: #6596e2 !important;
+}
+.v-application .accent.darken-2 {
+  background-color: #467dc6 !important;
+  border-color: #467dc6 !important;
+}
+.v-application .accent--text.text--darken-2 {
+  color: #467dc6 !important;
+  caret-color: #467dc6 !important;
+}
+.v-application .accent.darken-3 {
+  background-color: #2364aa !important;
+  border-color: #2364aa !important;
+}
+.v-application .accent--text.text--darken-3 {
+  color: #2364aa !important;
+  caret-color: #2364aa !important;
+}
+.v-application .accent.darken-4 {
+  background-color: #004c90 !important;
+  border-color: #004c90 !important;
+}
+.v-application .accent--text.text--darken-4 {
+  color: #004c90 !important;
+  caret-color: #004c90 !important;
+}
+.v-application .error {
+  background-color: #ff5252 !important;
+  border-color: #ff5252 !important;
+}
+.v-application .error--text {
+  color: #ff5252 !important;
+  caret-color: #ff5252 !important;
+}
+.v-application .error.lighten-5 {
+  background-color: #ffe4d5 !important;
+  border-color: #ffe4d5 !important;
+}
+.v-application .error--text.text--lighten-5 {
+  color: #ffe4d5 !important;
+  caret-color: #ffe4d5 !important;
+}
+.v-application .error.lighten-4 {
+  background-color: #ffc6b9 !important;
+  border-color: #ffc6b9 !important;
+}
+.v-application .error--text.text--lighten-4 {
+  color: #ffc6b9 !important;
+  caret-color: #ffc6b9 !important;
+}
+.v-application .error.lighten-3 {
+  background-color: #ffa99e !important;
+  border-color: #ffa99e !important;
+}
+.v-application .error--text.text--lighten-3 {
+  color: #ffa99e !important;
+  caret-color: #ffa99e !important;
+}
+.v-application .error.lighten-2 {
+  background-color: #ff8c84 !important;
+  border-color: #ff8c84 !important;
+}
+.v-application .error--text.text--lighten-2 {
+  color: #ff8c84 !important;
+  caret-color: #ff8c84 !important;
+}
+.v-application .error.lighten-1 {
+  background-color: #ff6f6a !important;
+  border-color: #ff6f6a !important;
+}
+.v-application .error--text.text--lighten-1 {
+  color: #ff6f6a !important;
+  caret-color: #ff6f6a !important;
+}
+.v-application .error.darken-1 {
+  background-color: #df323b !important;
+  border-color: #df323b !important;
+}
+.v-application .error--text.text--darken-1 {
+  color: #df323b !important;
+  caret-color: #df323b !important;
+}
+.v-application .error.darken-2 {
+  background-color: #bf0025 !important;
+  border-color: #bf0025 !important;
+}
+.v-application .error--text.text--darken-2 {
+  color: #bf0025 !important;
+  caret-color: #bf0025 !important;
+}
+.v-application .error.darken-3 {
+  background-color: #9f0010 !important;
+  border-color: #9f0010 !important;
+}
+.v-application .error--text.text--darken-3 {
+  color: #9f0010 !important;
+  caret-color: #9f0010 !important;
+}
+.v-application .error.darken-4 {
+  background-color: #800000 !important;
+  border-color: #800000 !important;
+}
+.v-application .error--text.text--darken-4 {
+  color: #800000 !important;
+  caret-color: #800000 !important;
+}
+.v-application .info {
+  background-color: #2196f3 !important;
+  border-color: #2196f3 !important;
+}
+.v-application .info--text {
+  color: #2196f3 !important;
+  caret-color: #2196f3 !important;
+}
+.v-application .info.lighten-5 {
+  background-color: #d4ffff !important;
+  border-color: #d4ffff !important;
+}
+.v-application .info--text.text--lighten-5 {
+  color: #d4ffff !important;
+  caret-color: #d4ffff !important;
+}
+.v-application .info.lighten-4 {
+  background-color: #b5ffff !important;
+  border-color: #b5ffff !important;
+}
+.v-application .info--text.text--lighten-4 {
+  color: #b5ffff !important;
+  caret-color: #b5ffff !important;
+}
+.v-application .info.lighten-3 {
+  background-color: #95e8ff !important;
+  border-color: #95e8ff !important;
+}
+.v-application .info--text.text--lighten-3 {
+  color: #95e8ff !important;
+  caret-color: #95e8ff !important;
+}
+.v-application .info.lighten-2 {
+  background-color: #75ccff !important;
+  border-color: #75ccff !important;
+}
+.v-application .info--text.text--lighten-2 {
+  color: #75ccff !important;
+  caret-color: #75ccff !important;
+}
+.v-application .info.lighten-1 {
+  background-color: #51b0ff !important;
+  border-color: #51b0ff !important;
+}
+.v-application .info--text.text--lighten-1 {
+  color: #51b0ff !important;
+  caret-color: #51b0ff !important;
+}
+.v-application .info.darken-1 {
+  background-color: #007cd6 !important;
+  border-color: #007cd6 !important;
+}
+.v-application .info--text.text--darken-1 {
+  color: #007cd6 !important;
+  caret-color: #007cd6 !important;
+}
+.v-application .info.darken-2 {
+  background-color: #0064ba !important;
+  border-color: #0064ba !important;
+}
+.v-application .info--text.text--darken-2 {
+  color: #0064ba !important;
+  caret-color: #0064ba !important;
+}
+.v-application .info.darken-3 {
+  background-color: #004d9f !important;
+  border-color: #004d9f !important;
+}
+.v-application .info--text.text--darken-3 {
+  color: #004d9f !important;
+  caret-color: #004d9f !important;
+}
+.v-application .info.darken-4 {
+  background-color: #003784 !important;
+  border-color: #003784 !important;
+}
+.v-application .info--text.text--darken-4 {
+  color: #003784 !important;
+  caret-color: #003784 !important;
+}
+.v-application .success {
+  background-color: #4caf50 !important;
+  border-color: #4caf50 !important;
+}
+.v-application .success--text {
+  color: #4caf50 !important;
+  caret-color: #4caf50 !important;
+}
+.v-application .success.lighten-5 {
+  background-color: #dcffd6 !important;
+  border-color: #dcffd6 !important;
+}
+.v-application .success--text.text--lighten-5 {
+  color: #dcffd6 !important;
+  caret-color: #dcffd6 !important;
+}
+.v-application .success.lighten-4 {
+  background-color: #beffba !important;
+  border-color: #beffba !important;
+}
+.v-application .success--text.text--lighten-4 {
+  color: #beffba !important;
+  caret-color: #beffba !important;
+}
+.v-application .success.lighten-3 {
+  background-color: #a2ff9e !important;
+  border-color: #a2ff9e !important;
+}
+.v-application .success--text.text--lighten-3 {
+  color: #a2ff9e !important;
+  caret-color: #a2ff9e !important;
+}
+.v-application .success.lighten-2 {
+  background-color: #85e783 !important;
+  border-color: #85e783 !important;
+}
+.v-application .success--text.text--lighten-2 {
+  color: #85e783 !important;
+  caret-color: #85e783 !important;
+}
+.v-application .success.lighten-1 {
+  background-color: #69cb69 !important;
+  border-color: #69cb69 !important;
+}
+.v-application .success--text.text--lighten-1 {
+  color: #69cb69 !important;
+  caret-color: #69cb69 !important;
+}
+.v-application .success.darken-1 {
+  background-color: #2d9437 !important;
+  border-color: #2d9437 !important;
+}
+.v-application .success--text.text--darken-1 {
+  color: #2d9437 !important;
+  caret-color: #2d9437 !important;
+}
+.v-application .success.darken-2 {
+  background-color: #00791e !important;
+  border-color: #00791e !important;
+}
+.v-application .success--text.text--darken-2 {
+  color: #00791e !important;
+  caret-color: #00791e !important;
+}
+.v-application .success.darken-3 {
+  background-color: #006000 !important;
+  border-color: #006000 !important;
+}
+.v-application .success--text.text--darken-3 {
+  color: #006000 !important;
+  caret-color: #006000 !important;
+}
+.v-application .success.darken-4 {
+  background-color: #004700 !important;
+  border-color: #004700 !important;
+}
+.v-application .success--text.text--darken-4 {
+  color: #004700 !important;
+  caret-color: #004700 !important;
+}
+.v-application .warning {
+  background-color: #fb8c00 !important;
+  border-color: #fb8c00 !important;
+}
+.v-application .warning--text {
+  color: #fb8c00 !important;
+  caret-color: #fb8c00 !important;
+}
+.v-application .warning.lighten-5 {
+  background-color: #ffff9e !important;
+  border-color: #ffff9e !important;
+}
+.v-application .warning--text.text--lighten-5 {
+  color: #ffff9e !important;
+  caret-color: #ffff9e !important;
+}
+.v-application .warning.lighten-4 {
+  background-color: #fffb82 !important;
+  border-color: #fffb82 !important;
+}
+.v-application .warning--text.text--lighten-4 {
+  color: #fffb82 !important;
+  caret-color: #fffb82 !important;
+}
+.v-application .warning.lighten-3 {
+  background-color: #ffdf67 !important;
+  border-color: #ffdf67 !important;
+}
+.v-application .warning--text.text--lighten-3 {
+  color: #ffdf67 !important;
+  caret-color: #ffdf67 !important;
+}
+.v-application .warning.lighten-2 {
+  background-color: #ffc24b !important;
+  border-color: #ffc24b !important;
+}
+.v-application .warning--text.text--lighten-2 {
+  color: #ffc24b !important;
+  caret-color: #ffc24b !important;
+}
+.v-application .warning.lighten-1 {
+  background-color: #ffa72d !important;
+  border-color: #ffa72d !important;
+}
+.v-application .warning--text.text--lighten-1 {
+  color: #ffa72d !important;
+  caret-color: #ffa72d !important;
+}
+.v-application .warning.darken-1 {
+  background-color: #db7200 !important;
+  border-color: #db7200 !important;
+}
+.v-application .warning--text.text--darken-1 {
+  color: #db7200 !important;
+  caret-color: #db7200 !important;
+}
+.v-application .warning.darken-2 {
+  background-color: #bb5900 !important;
+  border-color: #bb5900 !important;
+}
+.v-application .warning--text.text--darken-2 {
+  color: #bb5900 !important;
+  caret-color: #bb5900 !important;
+}
+.v-application .warning.darken-3 {
+  background-color: #9d4000 !important;
+  border-color: #9d4000 !important;
+}
+.v-application .warning--text.text--darken-3 {
+  color: #9d4000 !important;
+  caret-color: #9d4000 !important;
+}
+.v-application .warning.darken-4 {
+  background-color: #802700 !important;
+  border-color: #802700 !important;
+}
+.v-application .warning--text.text--darken-4 {
+  color: #802700 !important;
+  caret-color: #802700 !important;
+}</style><noscript data-vue-tag="ssr"><style>.g-image--loading{display:none;}</style></noscript>
+  </head>
+  <body >
+    <div data-app="true" data-server-rendered="true" id="app" id="inspire" class="v-application v-application--is-ltr theme--light"><div class="v-application--wrap"><header class="gb-toolbar v-sheet v-sheet--tile theme--dark v-toolbar v-toolbar--dense v-app-bar v-app-bar--fixed" style="height:48px;margin-top:0px;transform:translateY(0px);left:0px;right:0px;"><div class="v-toolbar__content" style="height:48px;"><button type="button" class="v-app-bar__nav-icon v-btn v-btn--flat v-btn--icon v-btn--round theme--dark v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-menu theme--dark"></i></span></button><div class="v-toolbar__title ml-0 pl-4" style="width:300px;"><span class="hidden-sm-and-down">skillhub</span></div><div class="spacer"></div><div class="v-input hidden-sm-and-down v-input--hide-details v-input--dense theme--dark v-text-field v-text-field--single-line v-text-field--solo v-text-field--solo-inverted v-text-field--solo-flat v-text-field--enclosed"><div class="v-input__control"><div class="v-input__slot"><div class="v-input__prepend-inner"><div class="v-input__icon v-input__icon--prepend-inner"><i aria-hidden="true" class="v-icon notranslate mdi mdi-magnify theme--dark"></i></div></div><div class="v-text-field__slot"><label for="input-3908" class="v-label theme--dark" style="left:0px;right:auto;position:absolute;">Search</label><input id="input-3908" type="text"></div></div></div></div><button type="button" class="v-btn v-btn--flat v-btn--icon v-btn--round theme--dark v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-apps theme--dark"></i></span></button><button type="button" class="v-btn v-btn--flat v-btn--icon v-btn--round theme--dark v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-bell theme--dark"></i></span></button></div></header><main class="v-content" style="padding-top:1248px;padding-right:0px;padding-bottom:0px;padding-left:0px;"><div class="v-content__wrap"><div class="container container--fluid pa-0"><div class="row no-gutters"><div class="col col-12"><div class="row no-gutters row--dense"><div class="height-30 bg-dark white--text jarallax col"><img src="https://i.udemycdn.com/course/750x422/28577_c4d8_3.jpg" class="jarallax-img opacity-20 g-image"><div class="container mt-8 pa-0"><div class="row mb-12 justify-center"><div dense="" class="col"><p class="display-2 mb-0">Beginning Mobile Game Development</p><p class="headline mb-0">Discover how to use the Corona SDK framework to create your own mobile games.</p><div><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.4 (116)</span></div><a href="https://www.udemy.com/course/beginning-mobile-game-development/" class="v-btn v-btn--contained theme--light v-size--default warning"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-share-outline theme--light"></i> Take me there!
+          </span></a></div></div></div></div></div></div></div><div class="row no-gutters"><div class="col col-12"><div class="container mt-4 pl-5"><div class="row mb-12 justify-center"><div dense="" class="col">
+            Aimed at beginners, this video tutorial course will guide you through the creation of your own game for iOS or Android. The Corona SDK framework used for this course is one of the most powerful 2D game engines available, and the free version is all you need to get started making your own games! You Can Get Started, Right Now! The videos can be viewed online and the sample code can be downloaded to your computer so you can follow along. Since it’s all online and all digital, you don’t have to wait, you can start finding out how to make your own game right now. Play games other people make, or finally take control and make your own games. &quot;You got me up to speed in record time and my first game should be out in 4-6 weeks time. Congrats on an awesome course.&quot; - Tim Buchalka Imagine how it will feel when people around the world download and play what you’ve created!
+          </div></div></div></div></div><div class="row no-gutters"><div class="col"><div class="container"><div class="headline pa-1 mb-0">#Related</div><div aria-label="Slideshow" class="vueperslides no-shadow vueperslides--fixed-height vueperslides--slide-multiple vueperslides--bullets-outside" style="height:300px;"><!----><div class="vueperslides__inner"><div aria-live="polite" class="vueperslides__parallax-wrapper" style="padding-bottom:25%;"><div class="vueperslides__track"><div class="vueperslides__track-inner" style="transition-duration:0ms;transform:translate3d(0%, 0, 0);will-change:auto;"><!----><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/unity3-d-augmented-reality-game-using-vuforia-android-and-i-os" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Unity3D Augmented Reality Game using Vuforia Android &amp; iOS</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Unity3D Experience in Creating augmented reality">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">0 (0)</span></div></div></div><!----></div><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/developing-mobile-websites" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Developing Mobile Websites</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Learn how to use HTML5, CSS, JavaScript, and other tools to create mobile websites from the experts at Webucator.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4 (2)</span></div></div></div><!----></div><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/become-an-i-os-developer-from-scratch" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Become an iOS Developer from Scratch</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="A step-by-step iOS development tutorial for aspiring developers with no coding or Objective-C experience.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.2 (2347)</span></div></div></div><!----></div><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/beginner-mobile-app-development-with-appcelerator-titanium" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Beginner Mobile App Development with Appcelerator Titanium</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Learn to develop native iPhone, Android, Blackberry, and Mobile Web apps with Open Source tools.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">3.2 (17)</span></div></div></div><!----></div><div aria-hidden="false" class="vueperslide vueperslide--visible" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/mobile-marketing-academy" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Mobile Marketing Academy</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="MOBILE IS NOT JUST APPS! Learn from expert founders how to incorporate mobile for your business and marketing strategy.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4 (12)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/this-is-how-you-make-i-phone-apps-i-os-development-course" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>This Is How You Make iPhone Apps - iOS Development Course</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Learn every step in iOS App Development with iOS app development tutorial, from creating to submitting to app store.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.5 (2487)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/unity-3d-game-development-i-os-android-and-web-beginners" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Unity 3d Game Development - iOS, Android, &amp; Web - Beginners</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Want to get into making high quality games, but don't know where to start? This series is a perfect choice for you.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">3.1 (23)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/create-a-htm-l5-game-from-scratch" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Create a HTML5 Game from Scratch</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Learn how to make html5 games with this HTML5 game development tutorial.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4.1 (189)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/actionscript-3-beginner-to-advanced-mobile-games" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Actionscript 3 (Beginner to Advanced) + Mobile Games</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Build mobile and browser-based games using ActionScript 3. This course is intended for beginners as well intermediates.">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-half theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">3.8 (69)</span></div></div></div><!----></div><div aria-hidden="true" class="vueperslide" style="width:16.666666666666668%;"><!----><div class="pa-1"><div class="ma-0 pa-0 gb-course-card v-card v-sheet theme--light" style="height:286px;"><div class="v-responsive v-image white--text align-end" style="height:140px;"><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));background-position:center center;"></div><div class="v-responsive__content"><a href="/site/course/beginners-how-to-create-i-phone-and-i-pad-apps-zero-coding" class="gb-link" style="text-decoration:none;"><p class="pl-4 pb-2 ma-0 title gb-course-card-title"><span>Beginners - How To Create iPhone And iPad Apps - Zero Coding</span></p></a></div></div><div class="v-card__text text--primary" style="height:100px;"><div class="subtitle" style="overflow:hidden;"><span style="box-shadow:transparent 0 0;"><span aria-label="Learn How To Create IOS Apps And Never Do A Hard Days Work Again - Zero Coding Needed">…</span></span></div></div><div class="spacer"></div><div class="v-card__actions pa-3"><div class="v-rating v-rating--readonly v-rating--dense"><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star theme--light orange--text text--accent-2" style="font-size:18px;"></i><i role="button" class="v-icon notranslate v-icon--link mdi mdi-star-outline theme--light white--text" style="font-size:18px;"></i></div><span class="grey--text text--lighten-1 mr-2 caption pt-1">4 (22)</span></div></div></div><!----></div><!----></div></div></div><!----><!----><!----><!----><!----></div><!----><!----></div></div></div></div></div></div></main></div></div>
+    <script>window.__INITIAL_STATE__={"data":null,"context":{"course":{"id":"37770990-3ef1-11ea-9791-1b580a556b4a","vendorId":"28577","created":"2020-01-24T21:35:07.946Z","updated":"2016-07-01T07:00:00.000Z","title":"Beginning Mobile Game Development","headline":"Discover how to use the Corona SDK framework to create your own mobile games.","description":"Aimed at beginners, this video tutorial course will guide you through the creation of your own game for iOS or Android. The Corona SDK framework used for this course is one of the most powerful 2D game engines available, and the free version is all you need to get started making your own games! You Can Get Started, Right Now! The videos can be viewed online and the sample code can be downloaded to your computer so you can follow along. Since it’s all online and all digital, you don’t have to wait, you can start finding out how to make your own game right now. Play games other people make, or finally take control and make your own games. \"You got me up to speed in record time and my first game should be out in 4-6 weeks time. Congrats on an awesome course.\" - Tim Buchalka Imagine how it will feel when people around the world download and play what you’ve created!","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F28577_c4d8_3.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fbeginning-mobile-game-development\u002F","language":"en","tags":["Development","Game Development","Corona SDK"],"rating":4.4,"reviews":116,"isFree":false,"matches":["37790565-3ef1-11ea-9791-1b580a556b4a","3773ae31-3ef1-11ea-9791-1b580a556b4a","37720084-3ef1-11ea-9791-1b580a556b4a","37724ea6-3ef1-11ea-9791-1b580a556b4a","3770ef15-3ef1-11ea-9791-1b580a556b4a","376afba1-3ef1-11ea-9791-1b580a556b4a","3773d548-3ef1-11ea-9791-1b580a556b4a","37716441-3ef1-11ea-9791-1b580a556b4a","37744a70-3ef1-11ea-9791-1b580a556b4a","37736018-3ef1-11ea-9791-1b580a556b4a"],"slug":"beginning-mobile-game-development"},"related":[{"id":"37790565-3ef1-11ea-9791-1b580a556b4a","vendorId":"2747856","created":"2020-01-24T21:35:08.093Z","updated":"2020-01-01T08:00:00.000Z","title":"Unity3D Augmented Reality Game using Vuforia Android & iOS","headline":"Unity3D Experience in Creating augmented reality","description":"In this course we will learn how to :-Understand a foreign code of an other developer-Use vuforia-Analyse a problem-search on google the exact problem-Fix faced problems-prepare a game for augmented reality-Use best practice in unity3D-think when facing a new problem-build on android-fix android control problems-fix augmented reality control problemsUnity3D,Augmented reality,Android","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F2747856_b525_2.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Funity3d-augmented-reality-game-using-vuforia-android-ios\u002F","language":"en","tags":["Development","Game Development","Augmented Reality"],"rating":0,"reviews":0,"isFree":false,"matches":["37770990-3ef1-11ea-9791-1b580a556b4a","37720084-3ef1-11ea-9791-1b580a556b4a","3773ae31-3ef1-11ea-9791-1b580a556b4a","3772c3d8-3ef1-11ea-9791-1b580a556b4a","3770ef15-3ef1-11ea-9791-1b580a556b4a","37724ea6-3ef1-11ea-9791-1b580a556b4a","3773d548-3ef1-11ea-9791-1b580a556b4a","3771d975-3ef1-11ea-9791-1b580a556b4a","377534d3-3ef1-11ea-9791-1b580a556b4a","3771d977-3ef1-11ea-9791-1b580a556b4a"],"slug":"unity3-d-augmented-reality-game-using-vuforia-android-and-i-os"},{"id":"37744a70-3ef1-11ea-9791-1b580a556b4a","vendorId":"23850","created":"2020-01-24T21:35:07.880Z","updated":"2012-09-01T07:00:00.000Z","title":"Developing Mobile Websites","headline":"Learn how to use HTML5, CSS, JavaScript, and other tools to create mobile websites from the experts at Webucator.","description":"In this “Developing Mobile Web Sites: How to Make a Mobile Website “class, you will learn to use HTML5, CSS, JavaScript, and other tools create websites that are responsive: sites that adapt their layout to the client device being used, whether it be a Smartphone, tablet computer, or desktop computer\u002Flaptop. You will learn to use CSS media queries, mobile-friendly HTML5 features, JavaScript enhancements, and various frameworks to build websites that look as good on an iPhone or Android as they do on a desktop or laptop computer. Take this Developing Mobile Websites course and learn how to make a mobile website.\u003C\u002Fp\u003E ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F23850_8ef2_4.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fdeveloping-mobile-websites\u002F","language":"en","tags":["Development","Mobile Apps","Mobile Web Sites"],"rating":4,"reviews":2,"isFree":false,"matches":["3774e6b2-3ef1-11ea-9791-1b580a556b4a","377311f4-3ef1-11ea-9791-1b580a556b4a","376aad81-3ef1-11ea-9791-1b580a556b4a","37750dc4-3ef1-11ea-9791-1b580a556b4a","3773ae31-3ef1-11ea-9791-1b580a556b4a","3776bb75-3ef1-11ea-9791-1b580a556b4a","37702bc4-3ef1-11ea-9791-1b580a556b4a","37744a75-3ef1-11ea-9791-1b580a556b4a","376b22b0-3ef1-11ea-9791-1b580a556b4a","37716441-3ef1-11ea-9791-1b580a556b4a"],"slug":"developing-mobile-websites"},{"id":"3773d548-3ef1-11ea-9791-1b580a556b4a","vendorId":"22878","created":"2020-01-24T21:35:07.816Z","updated":"2017-01-01T08:00:00.000Z","title":"Become an iOS Developer from Scratch","headline":"A step-by-step iOS development tutorial for aspiring developers with no coding or Objective-C experience.","description":" A step-by-step guide to building an iPhone or iPad app for Beginners.This is a course designed for beginners who have never coded in Objective-C or build an iOS app. In this iOS development video-based training course, expert developer and trainer Bob McCune teaches you how to build iOS apps using the iOS SDK from Apple. iOS is the standard SDK (software development kit) for iPad, iPhone and iPad devices. Using the SDK, Bob walks you through creating a fully functional app, and applying the tools and techniques available to you. In this iOS development tutorial, you start by accessing, downloading and setting up the SDK from Apple. Next, you will explore and setup Xcode to build your App. You will cover essential Objective-C topics, such as classes, methods, building objects, and coding conventions. Jumping right into development, you will work with strings, controllers, manage application data, create views and other UI elements, and work with iCloud. You will learn how to create a universal project, and create specific interfaces for each device. By the completion of this iOS development tutorial course you will be able to create a fully functioning iPhone or iPad app. ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F22878_2e5f_7.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fthe-art-of-real-ios-programming\u002F","language":"en","tags":["Development","Mobile Apps","iOS Development"],"rating":4.2,"reviews":2347,"isFree":true,"matches":["37724ea6-3ef1-11ea-9791-1b580a556b4a","376afba1-3ef1-11ea-9791-1b580a556b4a","3771d975-3ef1-11ea-9791-1b580a556b4a","37716447-3ef1-11ea-9791-1b580a556b4a","3771d977-3ef1-11ea-9791-1b580a556b4a","377534d3-3ef1-11ea-9791-1b580a556b4a","377275b4-3ef1-11ea-9791-1b580a556b4a","37722792-3ef1-11ea-9791-1b580a556b4a","3773ae31-3ef1-11ea-9791-1b580a556b4a","37720084-3ef1-11ea-9791-1b580a556b4a"],"slug":"become-an-i-os-developer-from-scratch"},{"id":"3773ae31-3ef1-11ea-9791-1b580a556b4a","vendorId":"22584","created":"2020-01-24T21:35:07.815Z","updated":"2015-05-01T07:00:00.000Z","title":"Beginner Mobile App Development with Appcelerator Titanium","headline":"Learn to develop native iPhone, Android, Blackberry, and Mobile Web apps with Open Source tools.","description":"The key learning objectives of this Appcelerator Titanium Tutorial is the use of Titanium Studio and programming iPhone and Android apps. The course consists of video lectures and hands-on exercises. The student will be learning Titanium App Development by installing the open source software on their computer (PC or Mac) and build apps.  The course can be completed in 10 weeks. Mobile technology is a growing technology field.  Building apps for various platforms in a single code line helps small and medium businesses to maintain their own mobile apps.  The Appcelerator Titanium Tutorial instructor is available to answer questions through email. You can get started with this content at udemy.com and then take the course online for college credit at http:\u002F\u002Fgrcc.edu\u002FMobileApps\u003C\u002Fp\u003E ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F22584_22f3_4.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fmobile-phone-development\u002F","language":"en","tags":["Development","Mobile Apps","Appcelerator Titanium"],"rating":3.2,"reviews":17,"isFree":false,"matches":["37724ea6-3ef1-11ea-9791-1b580a556b4a","37744a70-3ef1-11ea-9791-1b580a556b4a","37797a90-3ef1-11ea-9791-1b580a556b4a","37770990-3ef1-11ea-9791-1b580a556b4a","3771d977-3ef1-11ea-9791-1b580a556b4a","3773d548-3ef1-11ea-9791-1b580a556b4a","3772c3d8-3ef1-11ea-9791-1b580a556b4a","376afba1-3ef1-11ea-9791-1b580a556b4a","377534d3-3ef1-11ea-9791-1b580a556b4a","3774e6b2-3ef1-11ea-9791-1b580a556b4a"],"slug":"beginner-mobile-app-development-with-appcelerator-titanium"},{"id":"37736018-3ef1-11ea-9791-1b580a556b4a","vendorId":"21799","created":"2020-01-24T21:35:07.814Z","updated":"2012-09-01T07:00:00.000Z","title":"Mobile Marketing Academy","headline":"MOBILE IS NOT JUST APPS! Learn from expert founders how to incorporate mobile for your business and marketing strategy.","description":" Crazy Mobile Stats•  91% of Adults have their phone within arm’s reach 24\u002F7•  There are 5X’s as many mobile phones as PC’s in the world•  90% of Text Messages are read within 3 minutes of being delivered•  9 out of 10 mobile searches lead to an action, and over half purchase.•  81% of smartphoe users have done product research via a smartphone  &•  15% of Mobile Users would interrupt sex to check a text message!!=====================================================================The Mobile Revolution is here. By 2014 more people will be accessing the web using their mobile device more than on a computerRemember the stories of millions made with those early to ecommerce and affiliate marketing? Now is the next wave of marketing that is ripe for the plucking for those in early.  This course will teach you to be ahead of the curve and ahead of your competitors========================================================================Learn from Experts, NOT GurusWhat we did was simple, we brought in 3 of the mobile industry leading experts. These guys have been profiting with mobile for years AND they are going to teach you the in’s and out’s of mobile marketing.(1) Josh Wexelbaum, Founder & CEO at Leadsmob.comMobile Expert on SMS, APPS, and Paid Traffic. Josh got his start in the lead generation industry 12 years ago. He has purchased media across hundreds of sites, spending over $60,000 per day in advertising, and purchased billions of impressions on sites like Hotmail and Google. Josh has consulted with Fortune 1000 companies on lead generation strategies. He's an in-demand speaker at conferences like iDate and has written for industry publications like FeedFront(2) Rob Keast,  Partner and Head of Mobile Technology at WhatRunsWhere.com.Rob researches new mobile technologies and develops the best mobile advertising intelligence products in the market. He works closely with agency customers to develop an enterprise mobile marketing and advertising intelligence solution. Rob is the sales and marketing side of WhatRunsWhere in Europe.(3) Carlos Del Rio, Director of Conversion Analysis & Digital Strategy at Unbounce.comHe has contributed to top marketing blog SEOmoz and has spoken at major events on both SEO and Conversion Rate Optimization. Carlos is the co-author of User Driven Change: Give Them What They Want and A Strategic Framework for Emerging Media.==========================================================================================Remember, 91% of Adults have their phone within arm’s reach 24\u002F7......... Don’t get left out.  ========================================================================================== ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F21799_042d_7.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fmobile-marketing-academy\u002F","language":"en","tags":["Marketing","Video & Mobile Marketing","Mobile Marketing"],"rating":4,"reviews":12,"isFree":false,"matches":["3775d11a-3ef1-11ea-9791-1b580a556b4a","376cf772-3ef1-11ea-9791-1b580a556b4a","3774e6b8-3ef1-11ea-9791-1b580a556b4a","3776bb70-3ef1-11ea-9791-1b580a556b4a","37769460-3ef1-11ea-9791-1b580a556b4a","37722798-3ef1-11ea-9791-1b580a556b4a","3770ef17-3ef1-11ea-9791-1b580a556b4a","3776bb71-3ef1-11ea-9791-1b580a556b4a","377275b6-3ef1-11ea-9791-1b580a556b4a","37770990-3ef1-11ea-9791-1b580a556b4a"],"slug":"mobile-marketing-academy"},{"id":"37724ea6-3ef1-11ea-9791-1b580a556b4a","vendorId":"20366","created":"2020-01-24T21:35:07.699Z","updated":"2012-07-01T07:00:00.000Z","title":"This Is How You Make iPhone Apps - iOS Development Course","headline":"Learn every step in iOS App Development with iOS app development tutorial, from creating to submitting to app store.","description":"I'll teach you how to make iPhone apps with this complete iOS development tutorial. You'll learn how to create apps using the same tools and techniques used to make the top apps in The App Store. No coding experience? No problem. We'll create our first app in Lesson 2 without writing a single line of code. Then in Lesson 3 of this iOS app development tutorial, we'll learn how to write code in Apple's Objective-C programming language. Once we've gotten the hang of programming, we'll create three more apps as we explore Apple's iOS software development kit. I'll walk you through every detail of developing the apps from project creation, through every line of code, and on to testing the app. Finally, in the last lesson I'll let you watch over my shoulder as I submit an app to The App Store. Take the course now, learn iOS development now and have your first fully functional iPhone app before the end of the day.","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F20366_6760_9.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fiosdevelopment\u002F","language":"en","tags":["Development","Mobile Apps","iOS Development"],"rating":4.5,"reviews":2487,"isFree":true,"matches":["3773d548-3ef1-11ea-9791-1b580a556b4a","3771d977-3ef1-11ea-9791-1b580a556b4a","3771d975-3ef1-11ea-9791-1b580a556b4a","376afba1-3ef1-11ea-9791-1b580a556b4a","3773ae31-3ef1-11ea-9791-1b580a556b4a","37722792-3ef1-11ea-9791-1b580a556b4a","37716447-3ef1-11ea-9791-1b580a556b4a","3778b749-3ef1-11ea-9791-1b580a556b4a","3779c8b0-3ef1-11ea-9791-1b580a556b4a","37749896-3ef1-11ea-9791-1b580a556b4a"],"slug":"this-is-how-you-make-i-phone-apps-i-os-development-course"},{"id":"37720084-3ef1-11ea-9791-1b580a556b4a","vendorId":"19615","created":"2020-01-24T21:35:07.696Z","updated":"2012-07-01T07:00:00.000Z","title":"Unity 3d Game Development - iOS, Android, & Web - Beginners","headline":"Want to get into making high quality games, but don't know where to start? This series is a perfect choice for you.","description":"In this series we will learn how to create a variety of different games for web, iOS, and android.  We will learn the basic concepts of game development and learn about game programming using unity.","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F19615_2f71_3.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Funity-3d-game-development-ios-android-web-beginners\u002F","language":"en","tags":["Development","Game Development","Unity"],"rating":3.1,"reviews":23,"isFree":false,"matches":["377275b4-3ef1-11ea-9791-1b580a556b4a","3773d548-3ef1-11ea-9791-1b580a556b4a","37770990-3ef1-11ea-9791-1b580a556b4a","37790565-3ef1-11ea-9791-1b580a556b4a","3770ef15-3ef1-11ea-9791-1b580a556b4a","3775d112-3ef1-11ea-9791-1b580a556b4a","37716441-3ef1-11ea-9791-1b580a556b4a","376afba1-3ef1-11ea-9791-1b580a556b4a","377534d3-3ef1-11ea-9791-1b580a556b4a","376de1d7-3ef1-11ea-9791-1b580a556b4a"],"slug":"unity-3d-game-development-i-os-android-and-web-beginners"},{"id":"37716441-3ef1-11ea-9791-1b580a556b4a","vendorId":"18854","created":"2020-01-24T21:35:07.690Z","updated":"2015-09-01T07:00:00.000Z","title":"Create a HTML5 Game from Scratch","headline":"Learn how to make html5 games with this HTML5 game development tutorial.","description":" At ZENVA we specialize in making high-quality technology courses that will give you all the skills you need to turn your ideas into reality. Get in touch to find out about our latest courses and discounts: Making games is a lot easier than you think. Imagine you could learn how to make HTML5 games that run in all browsers and Windows 8 with our HTML5 game development tutorial in only 2.5 hours! Well, that is exactly what this course does. We know you've always wanted to make your own games. Don't keep postponing it. Start TODAY Learn how to create a Zelda-like action game demo from scratch using only Javascript and HTML. No experience or previous knowledge is required! Although knowing the basics of HTML and Javascript is recommended. This HTML5 game development tutorial is aimed for both beginners and more advanced users who may have HTML5 experience but haven't got into games yet. Some of the topics you'll learn by building this game from total scratch: ● Creating a basic game that can be embed in any website and can be played with just a web browser. ● Displaying a map and characters on the screen. ● Moving a player on this map. ● Using collision detection to simulate the shooting of bad guys. ● Adding enemies to your games. ● Adding sound to your games. ● Putting it all together to create a fun playable demo. ● All game files, including images and sound are available at the end of each chapter for download. This HTML5 game development tutorial has been created by Jacob Deichert in collaboration with Pablo Farias. Jacob has created comprehensive HTML5 game dev screencast tutorials on YouTube and other platforms. Pablo is the author of another awesome game dev course called HTML5 Mobile Game Development for Beginners, which you are also welcome to check out. ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F18854_af00_4.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fcreate-a-html5-game-from-scratch\u002F","language":"en","tags":["Development","Game Development","Game Development Fundamentals"],"rating":4.1,"reviews":189,"isFree":true,"matches":["37750dc4-3ef1-11ea-9791-1b580a556b4a","3775d118-3ef1-11ea-9791-1b580a556b4a","376b97e1-3ef1-11ea-9791-1b580a556b4a","376e7e12-3ef1-11ea-9791-1b580a556b4a","3776bb75-3ef1-11ea-9791-1b580a556b4a","37733906-3ef1-11ea-9791-1b580a556b4a","37797a90-3ef1-11ea-9791-1b580a556b4a","37744a70-3ef1-11ea-9791-1b580a556b4a","3775d112-3ef1-11ea-9791-1b580a556b4a","376dbac2-3ef1-11ea-9791-1b580a556b4a"],"slug":"create-a-htm-l5-game-from-scratch"},{"id":"3770ef15-3ef1-11ea-9791-1b580a556b4a","vendorId":"17683","created":"2020-01-24T21:35:07.603Z","updated":"2014-01-01T08:00:00.000Z","title":"Actionscript 3 (Beginner to Advanced) + Mobile Games","headline":"Build mobile and browser-based games using ActionScript 3. This course is intended for beginners as well intermediates.","description":"UPDATE: As this course was created in 2013, Adobe Animate CC is essentially Flash Flash Professional with significant new functionalities. All ActionScript 3 (AS3) codes (for game building) discussed in this course will work in Adobe Animate.From a beginner level, subscribers of this Actionscript 3 tutorial course will learn ActionScript 3.0 programming--from defining variables to creating functions to handling conditional statements. As they go along through the Actionscript 3 tutorial courses, the knowledge that they have acquired will enable them to create browser-based games in the advanced level. At the last part of the lecture, they will learn how to convert you games into mobile (iOS and android) applications. Additionally, they will also have access to the flash files that were used during the lectures. The total running time of all the Actionscript 3 tutorial is estimated to by 5 hours. Codes will be explained line by line and you will learn Actionscript 3 concept by concept. The instructor of this Actionscript 3 tutorial course has been teaching flash, programming, and interactivity design to college students since 2009. \u003C\u002Fp\u003E ","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F17683_5caf_4.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fflash-actionscript-30-beginner-to-advanced\u002F","language":"en","tags":["Design","Design Tools","ActionScript"],"rating":3.8,"reviews":69,"isFree":false,"matches":["376dbac0-3ef1-11ea-9791-1b580a556b4a","37720084-3ef1-11ea-9791-1b580a556b4a","377275b4-3ef1-11ea-9791-1b580a556b4a","376b22b0-3ef1-11ea-9791-1b580a556b4a","37770990-3ef1-11ea-9791-1b580a556b4a","377311f4-3ef1-11ea-9791-1b580a556b4a","3773ae31-3ef1-11ea-9791-1b580a556b4a","37750dc6-3ef1-11ea-9791-1b580a556b4a","3774bfa2-3ef1-11ea-9791-1b580a556b4a","376e5706-3ef1-11ea-9791-1b580a556b4a"],"slug":"actionscript-3-beginner-to-advanced-mobile-games"},{"id":"376afba1-3ef1-11ea-9791-1b580a556b4a","vendorId":"8416","created":"2020-01-24T21:35:07.170Z","updated":"2017-01-01T08:00:00.000Z","title":"Beginners - How To Create iPhone And iPad Apps - Zero Coding","headline":"Learn How To Create IOS Apps And Never Do A Hard Days Work Again - Zero Coding Needed","description":"A Verifiable Certificate of Completion is presented to all students who undertake this course.   In this course, you will learn how to create apps for iPhone and iPad devices. Expert trainer and published author Tony Bove introduces you to using the iOS Software Development Kit (SDK) and Xcode to build apps for the iPhone, iPad and Universal apps. Even if you have never programmed before or built apps before, by the end of this course you will be fully capable of building apps and submitting them to the App Store. Before you even start building an app, Tony takes you through what makes a good app, and the limitations you will face on the iPhone and iPad platforms. You will learn how to design a good user interface, how to use the iOS simulator, how to program in Xcode, and how an app runs. From there, you will jump right into building apps: designing the interface, including iAds in your app, animating, timing, and much more. You will also learn how to build iPad specific apps to take advantage of a larger screen and additional features. Finally, you will learn how to package your apps, and prepare them for submission to the app store. By the conclusion of this course you will be fully capable of designing, creating and submitting an app to the Apple App Store, using the iOS SDK and Xcode. The author has included working files, to allow you to work alongside him as he builds an app throughout this video tutorial.","image":"https:\u002F\u002Fi.udemycdn.com\u002Fcourse\u002F750x422\u002F8416_140f_11.jpg","url":"https:\u002F\u002Fwww.udemy.com\u002Fcourse\u002Fbeginners-guide-to-iphone-ipad-app-creation\u002F","language":"en","tags":["Development","Mobile Apps","iOS Development"],"rating":4,"reviews":22,"isFree":false,"matches":["3773d548-3ef1-11ea-9791-1b580a556b4a","3771d977-3ef1-11ea-9791-1b580a556b4a","37724ea6-3ef1-11ea-9791-1b580a556b4a","3771d975-3ef1-11ea-9791-1b580a556b4a","377275b4-3ef1-11ea-9791-1b580a556b4a","37716447-3ef1-11ea-9791-1b580a556b4a","377534d3-3ef1-11ea-9791-1b580a556b4a","3773ae31-3ef1-11ea-9791-1b580a556b4a","3775d112-3ef1-11ea-9791-1b580a556b4a","37770990-3ef1-11ea-9791-1b580a556b4a"],"slug":"beginners-how-to-create-i-phone-and-i-pad-apps-zero-coding"}]}};(function(){var s;(s=document.currentScript||document.scripts[document.scripts.length-1]).parentNode.removeChild(s);}());</script><script src="/site/assets/js/app.e5c95575.js" defer></script><script src="/site/assets/js/page--src--templates--course-template-vue.a9c4e657.js" defer></script>
+  </body>
+</html>
